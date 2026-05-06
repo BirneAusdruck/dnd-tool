@@ -1,0 +1,304 @@
+{
+  "feats": [
+    {
+      "index": "alert",
+      "name": "Alert",
+      "prerequisite": null,
+      "desc": "Always on the lookout for danger (2024 überarbeitet).",
+      "benefits": [
+        "+5 auf Initiative",
+        "Du kannst einmal pro Initiative-Runde deine Initiative mit einer willigen Kreatur tauschen",
+        "Du kannst nicht überrascht werden, solange du bei Bewusstsein bist"
+      ]
+    },
+    {
+      "index": "athlete",
+      "name": "Athlete",
+      "prerequisite": null,
+      "desc": "Extensive physical training (2024).",
+      "benefits": [
+        "+1 auf STR, DEX oder CON (max 20)",
+        "Aufstehen kostet nur 5 Fuß Bewegung",
+        "Klettern und Schwimmen kosten keine zusätzliche Bewegung",
+        "Weitsprung-Distanz verdoppelt sich"
+      ]
+    },
+    {
+      "index": "charger",
+      "name": "Charger",
+      "prerequisite": null,
+      "desc": "Mastered the art of the charge (2024).",
+      "benefits": [
+        "+1 auf STR oder CON (max 20)",
+        "Bonusaktion: Nach Dash einen Nahkampfangriff oder Abdrängen; bei Treffer +1W8 extra Schaden",
+        "Wenn du angestürmt bist, werden Gelegenheitsangriffe gegen dich mit Nachteil ausgeführt"
+      ]
+    },
+    {
+      "index": "crossbow-expert",
+      "name": "Crossbow Expert",
+      "prerequisite": null,
+      "desc": "Extensive practice with crossbows (2024).",
+      "benefits": [
+        "+1 auf DEX (max 20)",
+        "Ignoriere die Nachladen-Eigenschaft von Armbrüsten",
+        "Kein Nachteil bei Nahkampf-Fernkampfangriffen",
+        "Bonusaktion: Angriff mit Handarmbrust nach Einhand-Waffenangriff"
+      ]
+    },
+    {
+      "index": "dual-wielder",
+      "name": "Dual Wielder",
+      "prerequisite": null,
+      "desc": "Master fighting with two weapons (2024).",
+      "benefits": [
+        "+1 auf STR oder DEX (max 20)",
+        "+1 auf RK beim Führen von zwei Waffen",
+        "Zweiwaffenkampf auch mit nicht-leichten Waffen möglich",
+        "Gleichzeitiges Ziehen/Wegstecken beider Waffen"
+      ]
+    },
+    {
+      "index": "durable",
+      "name": "Durable",
+      "prerequisite": null,
+      "desc": "Hardy and resilient (2024).",
+      "benefits": [
+        "+1 auf CON (max 20)",
+        "Wenn du Trefferwürfel ausgibst: Erhalte mindestens 1 TP pro Trefferwürfel, auch wenn der Wurf 0 oder weniger ergibt",
+        "Einmal pro Langen Erholung: Maximale TP wiederherstellen statt zu würfeln"
+      ]
+    },
+    {
+      "index": "great-weapon-master",
+      "name": "Great Weapon Master",
+      "prerequisite": null,
+      "desc": "Put the weight of a weapon to your advantage (2024 überarbeitet).",
+      "benefits": [
+        "+1 auf STR (max 20)",
+        "Bei einem kritischen Treffer oder wenn du eine Kreatur auf 0 TP reduzierst: Bonusaktion-Nahkampfangriff",
+        "Schwere Waffe: Füge deinen Profizienzbonus zu Schadenwürfen hinzu"
+      ]
+    },
+    {
+      "index": "healer",
+      "name": "Healer",
+      "prerequisite": null,
+      "desc": "Able physician (2024).",
+      "benefits": [
+        "Bonusaktion mit Heilerskit: Kreatur erhält 1W8 + WIS-Modifier TP (einmal pro Kurzer Erholung pro Kreatur)",
+        "Wenn du einen Heilzauber wirkst: Ziel erhält zusätzlich max. deiner Profizienzbonus als TP"
+      ]
+    },
+    {
+      "index": "inspiring-leader",
+      "name": "Inspiring Leader",
+      "prerequisite": "WIS oder CHA 13",
+      "desc": "You can spend 10 minutes inspiring companions (2024).",
+      "benefits": [
+        "Voraussetzung: WIS oder CHA 13",
+        "10-Minuten-Ansprache nach Langer Erholung: bis zu 6 Verbündete erhalten temporäre TP = dein Level + WIS- oder CHA-Modifier"
+      ]
+    },
+    {
+      "index": "lucky",
+      "name": "Lucky",
+      "prerequisite": null,
+      "desc": "Inexplicable luck (2024, unverändert).",
+      "benefits": [
+        "3 Glückspunkte pro Lange Erholung",
+        "Verwende 1 Punkt: Würfle einen weiteren W20 und wähle den besseren",
+        "Verwende 1 Punkt: Zwinge einen Angreifer, seinen Wurf zu wiederholen und den schlechteren zu nehmen"
+      ]
+    },
+    {
+      "index": "mage-slayer",
+      "name": "Mage Slayer",
+      "prerequisite": null,
+      "desc": "Practiced techniques against spellcasters (2024).",
+      "benefits": [
+        "+1 auf STR, DEX, CON, INT, WIS oder CHA (max 20)",
+        "Reaktion: Greife eine Kreatur in Reichweite an, wenn sie einen Zauber wirkt",
+        "Wenn du eine zaubernde Kreatur triffst: Nachteil auf ihren Konzentrationsrettungswurf"
+      ]
+    },
+    {
+      "index": "magic-initiate",
+      "name": "Magic Initiate",
+      "prerequisite": null,
+      "desc": "Choose a spellcasting class (2024).",
+      "benefits": [
+        "Lerne 2 Zaubertricks aus der Zauberliste einer Klasse (INT, WIS oder CHA als Zauberwirkattribut)",
+        "Lerne 1 Stufe-1-Zauber aus derselben Klasse",
+        "Wirke den Stufe-1-Zauber einmal pro Lange Erholung ohne Zauberplatz"
+      ]
+    },
+    {
+      "index": "mobile",
+      "name": "Mobile",
+      "prerequisite": null,
+      "desc": "Exceptionally speedy and agile (2024, unverändert).",
+      "benefits": [
+        "Geschwindigkeit +10 Fuß",
+        "Dash durch schwieriges Gelände ohne Malus",
+        "Kein Gelegenheitsangriff von Kreaturen, die du in diesem Zug angegriffen hast"
+      ]
+    },
+    {
+      "index": "observant",
+      "name": "Observant",
+      "prerequisite": null,
+      "desc": "Quick to notice details (2024).",
+      "benefits": [
+        "+1 auf INT oder WIS (max 20)",
+        "+5 auf passive Wahrnehmung und passive Untersuchung",
+        "Lippenlesen wenn du Mundbewegungen sehen kannst",
+        "Reaktion: Erkenne Illusionen und verwandelte Kreaturen innerhalb von 18 m als solche"
+      ]
+    },
+    {
+      "index": "polearm-master",
+      "name": "Polearm Master",
+      "prerequisite": null,
+      "desc": "Keep enemies at bay with reach weapons (2024).",
+      "benefits": [
+        "+1 auf STR (max 20)",
+        "Bonusaktion: Angriff mit dem Schaft (1W4 Wucht) nach Angriff mit Stab/Hellebarde/Polearm",
+        "Gelegenheitsangriff wenn eine Kreatur in deine Reichweite eintritt"
+      ]
+    },
+    {
+      "index": "resilient",
+      "name": "Resilient",
+      "prerequisite": null,
+      "desc": "Choose one ability score (2024, unverändert).",
+      "benefits": [
+        "+1 auf ein Attribut deiner Wahl (max 20)",
+        "Profizienz bei Rettungswürfen mit diesem Attribut"
+      ]
+    },
+    {
+      "index": "ritual-caster",
+      "name": "Ritual Caster",
+      "prerequisite": null,
+      "desc": "Cast certain spells as rituals (2024).",
+      "benefits": [
+        "+1 auf INT oder WIS (max 20)",
+        "Erhalte ein Ritualbuch mit 2 Ritualen (Stufe 1) aus einer Klasse",
+        "Du kannst Zauber als Ritual in dein Buch eintragen und wirken"
+      ]
+    },
+    {
+      "index": "savage-attacker",
+      "name": "Savage Attacker",
+      "prerequisite": null,
+      "desc": "Once per turn reroll damage dice (2024, unverändert).",
+      "benefits": [
+        "Einmal pro Zug: Würfle die Schadenswürfel eines Nahkampfangriffs zweimal und nimm das bessere Ergebnis"
+      ]
+    },
+    {
+      "index": "sentinel",
+      "name": "Sentinel",
+      "prerequisite": null,
+      "desc": "Master of opportunity attacks (2024).",
+      "benefits": [
+        "+1 auf STR, DEX oder CON (max 20)",
+        "Gelegenheitsangriff: Bewegung des Ziels sinkt auf 0",
+        "Gelegenheitsangriff auch gegen Kreaturen, die einen anderen Verbündeten angreifen",
+        "Kreaturen, die Disengage nutzen, provozieren trotzdem Gelegenheitsangriffe"
+      ]
+    },
+    {
+      "index": "sharpshooter",
+      "name": "Sharpshooter",
+      "prerequisite": null,
+      "desc": "Mastered ranged weapons (2024 überarbeitet).",
+      "benefits": [
+        "+1 auf DEX (max 20)",
+        "Kein Nachteil bei Langbereichsangriffen",
+        "Ignoriere halbe und Dreiviertel-Deckung",
+        "Bonusaktion nach Fernkampf-Kritischen: weiterer Fernkampfangriff"
+      ]
+    },
+    {
+      "index": "shield-master",
+      "name": "Shield Master",
+      "prerequisite": null,
+      "desc": "Use shields for offense too (2024).",
+      "benefits": [
+        "+1 auf STR (max 20)",
+        "Bonusaktion: Abdrängen nach eigenem Angriff (Schild in der Hand)",
+        "Schildbonus auf DEX-Rettungswürfe gegen Effekte, die nur dich betreffen",
+        "Bei erfolgreichem DEX-Rettungswurf: kein Schaden"
+      ]
+    },
+    {
+      "index": "skilled",
+      "name": "Skilled",
+      "prerequisite": null,
+      "desc": "Gain proficiency in skills or tools (2024, unverändert).",
+      "benefits": [
+        "Profizienz in 3 Fertigkeiten oder Werkzeugen deiner Wahl"
+      ]
+    },
+    {
+      "index": "spell-sniper",
+      "name": "Spell Sniper",
+      "prerequisite": "Fähigkeit, Zauber zu wirken",
+      "desc": "Enhance attacks with spells (2024).",
+      "benefits": [
+        "Voraussetzung: Fähigkeit, Zauber zu wirken",
+        "+1 auf INT, WIS oder CHA (max 20)",
+        "Verdopple die Reichweite von Zaubern mit Angriffswürfen",
+        "Ignoriere halbe und Dreiviertel-Deckung bei Zauberangriffen",
+        "Lerne 1 Angriffs-Zaubertrick"
+      ]
+    },
+    {
+      "index": "tavern-brawler",
+      "name": "Tavern Brawler",
+      "prerequisite": null,
+      "desc": "Rough-and-tumble fighting (2024).",
+      "benefits": [
+        "+1 auf STR oder CON (max 20)",
+        "Profizienz mit improvisierten Waffen",
+        "Unbewaffnete Angriffe: 1W4 + STR Schaden",
+        "Bonusaktion: Greife, Stoße oder Entwaffne nach unbewaffnetem Treffer"
+      ]
+    },
+    {
+      "index": "tough",
+      "name": "Tough",
+      "prerequisite": null,
+      "desc": "Hit point maximum increases (2024, unverändert).",
+      "benefits": [
+        "Dein TP-Maximum erhöht sich um 2 für jedes Level (aktuell und zukünftig)"
+      ]
+    },
+    {
+      "index": "war-caster",
+      "name": "War Caster",
+      "prerequisite": "Fähigkeit, Zauber zu wirken",
+      "desc": "Practiced casting spells in combat (2024).",
+      "benefits": [
+        "Voraussetzung: Fähigkeit, Zauber zu wirken",
+        "+1 auf INT, WIS oder CHA (max 20)",
+        "Vorteil auf Konzentrationsrettungswürfe",
+        "Somatische Komponenten auch mit besetzten Händen",
+        "Gelegenheitsangriff: Statt Angriff einen Zauber (Wirkzeit Aktion) wirken"
+      ]
+    },
+    {
+      "index": "weapon-master",
+      "name": "Weapon Master",
+      "prerequisite": null,
+      "desc": "Practiced with a variety of weapons (2024).",
+      "benefits": [
+        "+1 auf STR oder DEX (max 20)",
+        "Profizienz mit 4 Waffen deiner Wahl",
+        "Einmal pro Zug: Eine Waffe mit einer weiteren Waffeneigenschaft einsetzen (z. B. Wuchtig, Präzise)"
+      ]
+    }
+  ]
+}

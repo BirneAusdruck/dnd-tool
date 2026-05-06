@@ -64,6 +64,7 @@ htmlcov/
 assets/maps/
 assets/tokens/
 assets/uploads/
+assets/icons/
 
 # ── Data Ressources / Game Rules ────────────────────────────────────────────
 data/dnd/5.0e/phb/

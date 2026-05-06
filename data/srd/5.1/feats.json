@@ -1,0 +1,457 @@
+{
+  "feats": [
+    {
+      "index": "alert",
+      "name": "Alert",
+      "prerequisite": null,
+      "desc": "Always on the lookout for danger.",
+      "benefits": [
+        "+5 Bonus auf Initiative",
+        "Du kannst nicht überrascht werden, solange du bei Bewusstsein bist",
+        "Andere Kreaturen erhalten keinen Vorteil bei Angriffswürfen gegen dich, wenn sie verborgen sind"
+      ]
+    },
+    {
+      "index": "athlete",
+      "name": "Athlete",
+      "prerequisite": null,
+      "desc": "You have undergone extensive physical training.",
+      "benefits": [
+        "+1 auf STR oder DEX (max 20)",
+        "Aufstehen kostet nur 5 Fuß Bewegung statt der Hälfte",
+        "Klettern kostet keine zusätzliche Bewegung",
+        "Anlaufsprung möglich nach 5 Fuß Bewegung"
+      ]
+    },
+    {
+      "index": "actor",
+      "name": "Actor",
+      "prerequisite": null,
+      "desc": "Skilled at mimicry and dramatics.",
+      "benefits": [
+        "+1 auf CHA (max 20)",
+        "Vorteil bei Täuschungs- und Auftrittswürfen, wenn du eine andere Person verkörperst",
+        "Du kannst die Stimme einer Kreatur imitieren, wenn du sie mind. 1 Minute gehört hast"
+      ]
+    },
+    {
+      "index": "charger",
+      "name": "Charger",
+      "prerequisite": null,
+      "desc": "You have mastered the art of the charge.",
+      "benefits": [
+        "Wenn du dich Dash-Aktion bewegst und mit Bonusaktion angreifst: +5 Schaden oder schiebe Ziel 10 Fuß",
+        "Bonus-Aktion: Einen Nahkampfangriff oder Abdrängen nach Dash-Aktion"
+      ]
+    },
+    {
+      "index": "crossbow-expert",
+      "name": "Crossbow Expert",
+      "prerequisite": null,
+      "desc": "Thanks to extensive practice with the crossbow.",
+      "benefits": [
+        "Ignoriere die Nachladen-Eigenschaft von Armbrüsten",
+        "Kein Nachteil bei Nahkampf-Fernkampfangriffen",
+        "Bonus-Aktion: Angriff mit einer Handarmbrust, wenn du mit einer einhändigen Waffe angreifst"
+      ]
+    },
+    {
+      "index": "defensive-duelist",
+      "name": "Defensive Duelist",
+      "prerequisite": "DEX 13",
+      "desc": "When you are wielding a finesse weapon.",
+      "benefits": [
+        "Voraussetzung: DEX 13",
+        "Reaktion: Füge deinen Profizienzbonus zu deiner RK hinzu, wenn ein Angriff gegen dich trifft (Finesse-Waffe in der Hand)"
+      ]
+    },
+    {
+      "index": "dual-wielder",
+      "name": "Dual Wielder",
+      "prerequisite": null,
+      "desc": "You master fighting with two weapons.",
+      "benefits": [
+        "+1 auf RK beim Führen von zwei Waffen",
+        "Du kannst zwei Waffen ohne die Leicht-Eigenschaft im Zweiwaffenkampf einsetzen",
+        "Du kannst zwei Waffen gleichzeitig ziehen oder wegstecken"
+      ]
+    },
+    {
+      "index": "dungeon-delver",
+      "name": "Dungeon Delver",
+      "prerequisite": null,
+      "desc": "Alert to the hidden traps and secret doors found in many dungeons.",
+      "benefits": [
+        "Vorteil auf Wahrnehmungs- und Untersuchungswürfe, um verborgene Türen und Fallen zu finden",
+        "Vorteil auf Rettungswürfe gegen Fallenschaden",
+        "Resistenz gegen Fallenschaden",
+        "Du kannst Fallen in normalem Tempo suchen"
+      ]
+    },
+    {
+      "index": "durable",
+      "name": "Durable",
+      "prerequisite": null,
+      "desc": "Hardy and resilient.",
+      "benefits": [
+        "+1 auf CON (max 20)",
+        "Mindestwurf beim Ausgeben von Trefferwürfeln: 2× dein KON-Modifier (mindestens 2)"
+      ]
+    },
+    {
+      "index": "elemental-adept",
+      "name": "Elemental Adept",
+      "prerequisite": "Fähigkeit, Zauber zu wirken",
+      "desc": "Your spells of a certain damage type ignore resistance.",
+      "benefits": [
+        "Voraussetzung: Fähigkeit, Zauber zu wirken",
+        "Wähle einen Schadenstyp: Feuer, Kälte, Blitz, Säure oder Donner",
+        "Deine Zauber dieses Typs ignorieren Resistenz",
+        "Behandle 1en auf Schadenswürfeln als 2en"
+      ]
+    },
+    {
+      "index": "grappler",
+      "name": "Grappler",
+      "prerequisite": "STR 13",
+      "desc": "You've developed the skills necessary to hold your own in close-quarters grappling.",
+      "benefits": [
+        "Voraussetzung: STR 13",
+        "Vorteil auf Angriffswürfe gegen Kreaturen, die du greifst",
+        "Du kannst eine Kreatur, die du greifst, fesseln (beide im Gefesselten-Zustand)"
+      ]
+    },
+    {
+      "index": "great-weapon-master",
+      "name": "Great Weapon Master",
+      "prerequisite": null,
+      "desc": "You've learned to put the weight of a weapon to your advantage.",
+      "benefits": [
+        "Bei einem kritischen Treffer oder wenn du eine Kreatur auf 0 TP reduzierst: Bonusaktion-Nahkampfangriff",
+        "Vor einem Angriff mit einer schweren Waffe: −5 auf Angriffswurf für +10 Schaden"
+      ]
+    },
+    {
+      "index": "healer",
+      "name": "Healer",
+      "prerequisite": null,
+      "desc": "You are an able physician.",
+      "benefits": [
+        "Mit Heilerskit stabilisieren: Kreatur erhält 1 TP",
+        "Bonusaktion mit Heilerskit: Kreatur erhält 1W6 + 4 + ihre max. Trefferwürfelanzahl TP (einmal pro Erholung)"
+      ]
+    },
+    {
+      "index": "heavily-armored",
+      "name": "Heavily Armored",
+      "prerequisite": "Mittlere Rüstungskunde",
+      "desc": "You have trained to master the use of heavy armor.",
+      "benefits": [
+        "Voraussetzung: Mittlere Rüstungskunde",
+        "+1 auf STR (max 20)",
+        "Profizienz mit schwerer Rüstung"
+      ]
+    },
+    {
+      "index": "heavy-armor-master",
+      "name": "Heavy Armor Master",
+      "prerequisite": "Schwere Rüstungskunde",
+      "desc": "You can use your armor to deflect strikes that would kill others.",
+      "benefits": [
+        "Voraussetzung: Schwere Rüstungskunde",
+        "+1 auf STR (max 20)",
+        "Nicht-magischer Waffen-Schaden (B/P/S) wird um 3 reduziert, während du schwere Rüstung trägst"
+      ]
+    },
+    {
+      "index": "inspiring-leader",
+      "name": "Inspiring Leader",
+      "prerequisite": "CHA 13",
+      "desc": "You can spend 10 minutes inspiring your companions.",
+      "benefits": [
+        "Voraussetzung: CHA 13",
+        "10-Minuten-Ansprache: bis zu 6 Kreaturen erhalten temporäre TP = dein Level + CHA-Modifier"
+      ]
+    },
+    {
+      "index": "keen-mind",
+      "name": "Keen Mind",
+      "prerequisite": null,
+      "desc": "You have a mind that can track time, direction, and detail with uncanny precision.",
+      "benefits": [
+        "+1 auf INT (max 20)",
+        "Du weißt immer, wo Norden ist",
+        "Du weißt immer, wie viele Stunden bis Sonnenauf/-untergang verbleiben",
+        "Du kannst dich genau an alles erinnern, was du in den letzten 30 Tagen gesehen oder gehört hast"
+      ]
+    },
+    {
+      "index": "lightly-armored",
+      "name": "Lightly Armored",
+      "prerequisite": null,
+      "desc": "You have trained to master the use of light armor.",
+      "benefits": [
+        "+1 auf STR oder DEX (max 20)",
+        "Profizienz mit leichter Rüstung"
+      ]
+    },
+    {
+      "index": "linguist",
+      "name": "Linguist",
+      "prerequisite": null,
+      "desc": "You have studied languages and codes.",
+      "benefits": [
+        "+1 auf INT (max 20)",
+        "Lerne 3 Sprachen deiner Wahl",
+        "Du kannst Codes und Geheimschriften erstellen"
+      ]
+    },
+    {
+      "index": "lucky",
+      "name": "Lucky",
+      "prerequisite": null,
+      "desc": "You have inexplicable luck that seems to kick in at just the right moment.",
+      "benefits": [
+        "3 Glückspunkte pro Lange Erholung",
+        "Verwende 1 Punkt: Würfle einen weiteren W20 für einen Angriffs-, Attributs- oder Rettungswurf und wähle den besseren",
+        "Verwende 1 Punkt: Zwinge einen Angreifer, seinen Wurf zu wiederholen und den schlechteren zu nehmen"
+      ]
+    },
+    {
+      "index": "mage-slayer",
+      "name": "Mage Slayer",
+      "prerequisite": null,
+      "desc": "You have practiced techniques useful in melee combat against spellcasters.",
+      "benefits": [
+        "Reaktion: Greife eine Kreatur in Reichweite an, wenn sie einen Zauber wirkt",
+        "Wenn du eine Kreatur triffst, die Konzentration hält: Nachteil auf den Rettungswurf",
+        "Vorteil auf Rettungswürfe gegen Zauber von Kreaturen in Nahkampf-Reichweite"
+      ]
+    },
+    {
+      "index": "magic-initiate",
+      "name": "Magic Initiate",
+      "prerequisite": null,
+      "desc": "Choose a class: bard, cleric, druid, sorcerer, warlock, or wizard.",
+      "benefits": [
+        "Lerne 2 Zaubertricks aus der Zauberliste einer Klasse",
+        "Lerne 1 Stufe-1-Zauber aus derselben Klasse",
+        "Wirke den Stufe-1-Zauber einmal pro Lange Erholung ohne Zauberplatz"
+      ]
+    },
+    {
+      "index": "martial-adept",
+      "name": "Martial Adept",
+      "prerequisite": null,
+      "desc": "You have martial training that allows you to perform special combat maneuvers.",
+      "benefits": [
+        "Lerne 2 Manöver aus der Kämpfer-Kampfmeister-Liste",
+        "Erhalte 1 Überlegenheitswürfel (W6); wird bei der Kurzen Erholung aufgefrischt"
+      ]
+    },
+    {
+      "index": "medium-armor-master",
+      "name": "Medium Armor Master",
+      "prerequisite": "Mittlere Rüstungskunde",
+      "desc": "You have practiced moving in medium armor to gain the following benefits.",
+      "benefits": [
+        "Voraussetzung: Mittlere Rüstungskunde",
+        "Mittlere Rüstung verursacht keinen Heimlichkeits-Nachteil",
+        "DEX-Bonus auf RK bei mittlerer Rüstung: max. +3 statt +2"
+      ]
+    },
+    {
+      "index": "mobile",
+      "name": "Mobile",
+      "prerequisite": null,
+      "desc": "You are exceptionally speedy and agile.",
+      "benefits": [
+        "Geschwindigkeit +10 Fuß",
+        "Dash durch schwieriges Gelände ohne Malus",
+        "Kein Gelegenheitsangriff von Kreaturen, die du in diesem Zug angegriffen hast"
+      ]
+    },
+    {
+      "index": "moderately-armored",
+      "name": "Moderately Armored",
+      "prerequisite": "Leichte Rüstungskunde",
+      "desc": "You have trained to master the use of medium armor and shields.",
+      "benefits": [
+        "Voraussetzung: Leichte Rüstungskunde",
+        "+1 auf STR oder DEX (max 20)",
+        "Profizienz mit mittlerer Rüstung und Schilden"
+      ]
+    },
+    {
+      "index": "mounted-combatant",
+      "name": "Mounted Combatant",
+      "prerequisite": null,
+      "desc": "You are a dangerous foe to face while mounted.",
+      "benefits": [
+        "Vorteil auf Angriffe gegen kleinere, nicht berittene Kreaturen",
+        "Du kannst Angriffe gegen dein Reittier auf dich umleiten",
+        "Dein Reittier nimmt bei erfolgreichem DEX-Rettungswurf nur halben, bei Misserfolg keinen Schaden"
+      ]
+    },
+    {
+      "index": "observant",
+      "name": "Observant",
+      "prerequisite": null,
+      "desc": "Quick to notice details of your environment.",
+      "benefits": [
+        "+1 auf INT oder WIS (max 20)",
+        "+5 auf passive Wahrnehmung und passive Untersuchung",
+        "Wenn du Mundbewegungen siehst: du kannst Lippenlesen"
+      ]
+    },
+    {
+      "index": "polearm-master",
+      "name": "Polearm Master",
+      "prerequisite": null,
+      "desc": "You can keep your enemies at bay with reach weapons.",
+      "benefits": [
+        "Bonusaktion: Angriff mit dem Schaft einer Stangen-/Hellebarden-/Quarterstab-Waffe (1W4 + STR-Mod, Wucht)",
+        "Gelegenheitsangriff, wenn eine Kreatur in deine Reichweite eintritt (mit Stangen-/Hellebarden-/Quarterstab)"
+      ]
+    },
+    {
+      "index": "resilient",
+      "name": "Resilient",
+      "prerequisite": null,
+      "desc": "Choose one ability score.",
+      "benefits": [
+        "+1 auf ein Attribut deiner Wahl (max 20)",
+        "Profizienz bei Rettungswürfen mit diesem Attribut"
+      ]
+    },
+    {
+      "index": "ritual-caster",
+      "name": "Ritual Caster",
+      "prerequisite": "INT oder WIS 13",
+      "desc": "You have learned a number of spells that you can cast as rituals.",
+      "benefits": [
+        "Voraussetzung: INT oder WIS 13",
+        "Erhalte ein Ritualbuch mit 2 Ritualen (Stufe 1) von Kleriker, Druide oder Zauberer",
+        "Du kannst diese Zauber als Ritual wirken (ohne Zauberplatz)"
+      ]
+    },
+    {
+      "index": "savage-attacker",
+      "name": "Savage Attacker",
+      "prerequisite": null,
+      "desc": "Once per turn when you roll damage for a melee weapon attack.",
+      "benefits": [
+        "Einmal pro Zug: Würfle die Schadenswürfel eines Nahkampfangriffs zweimal und nimm das bessere Ergebnis"
+      ]
+    },
+    {
+      "index": "sentinel",
+      "name": "Sentinel",
+      "prerequisite": null,
+      "desc": "You have mastered techniques to take advantage of every drop in any enemy's guard.",
+      "benefits": [
+        "Gelegenheitsangriff: Bewegung des Ziels sinkt auf 0 (für diesen Zug)",
+        "Gelegenheitsangriff auch gegen Kreaturen, die einen anderen Verbündeten angreifen",
+        "Kreaturen, die einen Rückzug (Disengage) nutzen, provozieren trotzdem einen Gelegenheitsangriff"
+      ]
+    },
+    {
+      "index": "sharpshooter",
+      "name": "Sharpshooter",
+      "prerequisite": null,
+      "desc": "You have mastered ranged weapons and can make shots that others find impossible.",
+      "benefits": [
+        "Kein Nachteil bei Langbereichsangriffen",
+        "Deine Fernkampfangriffe ignorieren halbe und Dreiviertel-Deckung",
+        "Vor einem Fernkampfangriff: −5 auf Angriffswurf für +10 Schaden"
+      ]
+    },
+    {
+      "index": "shield-master",
+      "name": "Shield Master",
+      "prerequisite": null,
+      "desc": "You use shields not just for protection but also for offense.",
+      "benefits": [
+        "Bonusaktion: Abdrängen eines Ziels nach einem Angriff (wenn du einen Schild trägst)",
+        "Schildbonus auf DEX-Rettungswürfe gegen Effekte, die nur dich betreffen",
+        "Bei erfolgreichem DEX-Rettungswurf kein Schaden statt halber Schaden"
+      ]
+    },
+    {
+      "index": "skilled",
+      "name": "Skilled",
+      "prerequisite": null,
+      "desc": "You gain proficiency in any combination of three skills or tools of your choice.",
+      "benefits": [
+        "Profizienz in 3 Fertigkeiten oder Werkzeugen deiner Wahl"
+      ]
+    },
+    {
+      "index": "skulker",
+      "name": "Skulker",
+      "prerequisite": "DEX 13",
+      "desc": "You are an expert at slinking through shadows.",
+      "benefits": [
+        "Voraussetzung: DEX 13",
+        "Du kannst dich verstecken, wenn du nur leicht verdeckt bist",
+        "Ein verfehlter Fernkampfangriff verrät deine Position nicht",
+        "Kein Nachteil auf Wahrnehmungswürfe in schwachem Licht"
+      ]
+    },
+    {
+      "index": "spell-sniper",
+      "name": "Spell Sniper",
+      "prerequisite": "Fähigkeit, Zauber zu wirken",
+      "desc": "You have learned techniques to enhance your attacks with certain kinds of spells.",
+      "benefits": [
+        "Voraussetzung: Fähigkeit, Zauber zu wirken",
+        "Verdopple die Reichweite von Zaubern, die Angriffswürfe erfordern",
+        "Deine Zauberangriffe ignorieren halbe und Dreiviertel-Deckung",
+        "Lerne 1 Angriffs-Zaubertrick aus einer beliebigen Zauberliste"
+      ]
+    },
+    {
+      "index": "tavern-brawler",
+      "name": "Tavern Brawler",
+      "prerequisite": null,
+      "desc": "Accustomed to rough-and-tumble fighting using whatever weapons happen to be at hand.",
+      "benefits": [
+        "+1 auf STR oder CON (max 20)",
+        "Profizienz mit improvisierten Waffen",
+        "Unbewaffnete Angriffe verursachen 1W4 Schaden",
+        "Bonusaktion: Greife eine Kreatur, die du mit unbewaffnetem Angriff oder improvisierter Waffe getroffen hast"
+      ]
+    },
+    {
+      "index": "tough",
+      "name": "Tough",
+      "prerequisite": null,
+      "desc": "Your hit point maximum increases.",
+      "benefits": [
+        "Dein TP-Maximum erhöht sich um 2 für jedes Level (aktuell und zukünftig)"
+      ]
+    },
+    {
+      "index": "war-caster",
+      "name": "War Caster",
+      "prerequisite": "Fähigkeit, Zauber zu wirken",
+      "desc": "You have practiced casting spells in the midst of combat.",
+      "benefits": [
+        "Voraussetzung: Fähigkeit, Zauber zu wirken",
+        "Vorteil auf Konzentrationsrettungswürfe",
+        "Du kannst somatische Komponenten auch mit besetzten Händen ausführen",
+        "Gelegenheitsangriff: Statt eines Angriffs einen Zauber mit Wirkzeit Aktion wirken"
+      ]
+    },
+    {
+      "index": "weapon-master",
+      "name": "Weapon Master",
+      "prerequisite": null,
+      "desc": "You have practiced extensively with a variety of weapons.",
+      "benefits": [
+        "+1 auf STR oder DEX (max 20)",
+        "Profizienz mit 4 Waffen deiner Wahl (einfach oder kriegerisch)"
+      ]
+    }
+  ]
+}

@@ -9,15 +9,17 @@ from PySide6.QtWidgets import (
     QDialog, QWidget, QVBoxLayout, QHBoxLayout, QGridLayout,
     QLabel, QLineEdit, QSpinBox, QGroupBox, QScrollArea, QFrame,
     QPushButton, QTabWidget, QTextEdit, QCheckBox, QMessageBox,
-    QSizePolicy,
+    QSizePolicy, QSplitter, QSpacerItem
 )
 from PySide6.QtCore import Qt
+from PySide6.QtGui import QIcon
 
 import requests
 
 from src.gui.theme import COLORS
 from src.game.character_builder import derive_sheet_values, proficiency_bonus, calc_ac
 from src.game import srd_loader as srd
+from src.game.level_manager import can_level_up, can_level_down, apply_level_up, apply_level_down
 
 
 def _fmt_mod(val: int) -> str:
@@ -50,11 +52,13 @@ def _box(inner: QWidget, title: str = "") -> QGroupBox:
 # ── Ability Score Block ────────────────────────────────────────────────────
 
 class _AbilityBlock(QWidget):
-    def __init__(self, ability: str, score: int, parent=None):
+    def __init__(self, ability: str, score: int, icon_path : str | None = None, parent=None):
         super().__init__(parent)
         self.ability = ability
-        self.setFixedWidth(80)
-        layout = QVBoxLayout(self)
+        self.setFixedWidth(144)
+        layout = QVBoxLayout()
+        layout_inner = QHBoxLayout(self)
+        layout_inner.addLayout(layout)
         layout.setSpacing(2)
         layout.setContentsMargins(4, 4, 4, 4)
         self.setStyleSheet(
@@ -76,6 +80,13 @@ class _AbilityBlock(QWidget):
         self.score_lbl.setAlignment(Qt.AlignmentFlag.AlignCenter)
         self.score_lbl.setStyleSheet(f"color:{COLORS['subtext']};font-size:13px;border:none;background:transparent;")
 
+        if icon_path:
+            icon_lbl = QLabel()
+            pixmap = QIcon(str(icon_path)).pixmap(64, 64)
+            icon_lbl.setPixmap(pixmap)
+            icon_lbl.setFixedSize(64, 64)
+            icon_lbl.setStyleSheet("background:transparent;")
+            layout_inner.addWidget(icon_lbl)
         layout.addWidget(ab_lbl)
         layout.addWidget(self.mod_lbl)
         layout.addWidget(self.score_lbl)
@@ -84,7 +95,7 @@ class _AbilityBlock(QWidget):
 # ── Skill Row ──────────────────────────────────────────────────────────────
 
 class _SkillRow(QWidget):
-    def __init__(self, skill_name: str, ability: str, bonus: int, proficient: bool, parent=None):
+    def __init__(self, skill_name: str, ability: str, bonus: int, proficient: bool, icon_path: str | None = None, parent=None):
         super().__init__(parent)
         layout = QHBoxLayout(self)
         layout.setContentsMargins(4, 1, 4, 1)
@@ -93,19 +104,27 @@ class _SkillRow(QWidget):
         dot = QLabel("●" if proficient else "○")
         dot.setFixedWidth(14)
         col = COLORS["success"] if proficient else COLORS["muted"]
-        dot.setStyleSheet(f"color:{col};font-size:10px;background:transparent;")
+        dot.setStyleSheet(f"color:{col};font-size:12px;background:transparent;")
 
         bonus_lbl = QLabel(_fmt_mod(bonus))
         bonus_lbl.setFixedWidth(36)
         b_col = COLORS["text"] if proficient else COLORS["subtext"]
-        bonus_lbl.setStyleSheet(f"color:{b_col};font-weight:{'bold' if proficient else 'normal'};background:transparent;")
+        bonus_lbl.setStyleSheet(f"color:{b_col};font-size:12px;font-weight:{'bold' if proficient else 'normal'};background:transparent;")
 
         name_lbl = QLabel(f"{skill_name}")
-        name_lbl.setStyleSheet(f"color:{COLORS['subtext']};font-size:12px;background:transparent;")
+        name_lbl.setStyleSheet(f"color:{COLORS['subtext']};font-size:14px;background:transparent;")
 
         ab_lbl = QLabel(f"({ability})")
         ab_lbl.setStyleSheet(f"color:{COLORS['muted']};font-size:11px;background:transparent;")
         ab_lbl.setAlignment(Qt.AlignmentFlag.AlignRight | Qt.AlignmentFlag.AlignVCenter)
+
+        if icon_path:
+            icon_lbl = QLabel()
+            pixmap = QIcon(str(icon_path)).pixmap(48, 48)
+            icon_lbl.setPixmap(pixmap)
+            icon_lbl.setFixedSize(48, 48)
+            icon_lbl.setStyleSheet("background:transparent;")
+            layout.addWidget(icon_lbl)
 
         layout.addWidget(dot)
         layout.addWidget(bonus_lbl)
@@ -126,7 +145,7 @@ class CharacterSheet(QDialog):
 
         basics = self._data.get("basics", {})
         self.setWindowTitle(f"Charakterbogen – {char.get('name', '?')}")
-        self.setMinimumSize(1050, 720)
+        self.setMinimumSize(1050, 800)
         self._build_ui()
 
     def _build_ui(self):
@@ -146,30 +165,45 @@ class CharacterSheet(QDialog):
 
         name_lbl = QLabel(self.char.get("name", "?"))
         name_lbl.setStyleSheet(f"color:{COLORS['text']};font-size:20px;font-weight:bold;")
-        sub_lbl = QLabel(
+        self._sub_lbl = QLabel(
             f"Level {basics.get('level', 1)}  {race_name}  {cls_name}  •  {bg_name}  •  {basics.get('alignment', '?')}"
         )
-        sub_lbl.setStyleSheet(f"color:{COLORS['subtext']};font-size:13px;")
+        self._sub_lbl.setStyleSheet(f"color:{COLORS['subtext']};font-size:13px;")
 
         info_col = QVBoxLayout()
         info_col.addWidget(name_lbl)
-        info_col.addWidget(sub_lbl)
+        info_col.addWidget(self._sub_lbl)
         h_layout.addLayout(info_col, 1)
 
-        prof_lbl = QLabel(f"Profizienzbonus: {_fmt_mod(self._derived.get('proficiency_bonus', 2))}")
-        prof_lbl.setStyleSheet(f"color:{COLORS['gold']};font-weight:bold;font-size:13px;")
-        h_layout.addWidget(prof_lbl)
+        self._prof_lbl = QLabel(f"Profizienzbonus: {_fmt_mod(self._derived.get('proficiency_bonus', 2))}")
+        self._prof_lbl.setStyleSheet(f"color:{COLORS['gold']};font-weight:bold;font-size:13px;")
+        h_layout.addWidget(self._prof_lbl)
+
+        # Level-Up / Level-Down buttons
+        self._btn_levelup = QPushButton("Level Up ↑")
+        self._btn_levelup.setObjectName("primary-btn")
+        self._btn_levelup.setFixedWidth(110)
+        self._btn_levelup.setEnabled(can_level_up(self._data))
+        self._btn_levelup.clicked.connect(self._do_level_up)
+        h_layout.addWidget(self._btn_levelup)
+
+        self._btn_leveldown = QPushButton("Level ↓")
+        self._btn_leveldown.setObjectName("secondary-btn")
+        self._btn_leveldown.setFixedWidth(90)
+        self._btn_leveldown.setEnabled(can_level_down(self._data))
+        self._btn_leveldown.setStyleSheet(
+            f"QPushButton{{color:{COLORS['error']};background:{COLORS['surface']};"
+            f"border:1px solid {COLORS['error']};border-radius:6px;padding:6px;}}"
+        )
+        self._btn_leveldown.clicked.connect(self._do_level_down)
+        h_layout.addWidget(self._btn_leveldown)
 
         root.addWidget(header)
 
         # ── Tab widget ──
-        tabs = QTabWidget()
-        tabs.addTab(self._build_main_tab(), "Hauptblatt")
-        tabs.addTab(self._build_combat_tab(), "Kampf & HP")
-        tabs.addTab(self._build_spells_tab(), "Zauber")
-        tabs.addTab(self._build_features_tab(), "Merkmale")
-        tabs.addTab(self._build_traits_tab(), "Persönlichkeit")
-        root.addWidget(tabs, 1)
+        self.tabs = QTabWidget()
+        self._rebuild_tabs()
+        root.addWidget(self.tabs, 1)
 
         # ── Footer ──
         footer = QHBoxLayout()
@@ -182,6 +216,78 @@ class CharacterSheet(QDialog):
         footer.addWidget(self.status_lbl, 1)
         footer.addWidget(btn_save)
         root.addLayout(footer)
+
+    # ── Tab helpers ───────────────────────────────────────────────────────
+
+    def _rebuild_tabs(self) -> None:
+        self.tabs.clear()
+        self.tabs.addTab(self._build_main_tab(), "Hauptblatt")
+        self.tabs.addTab(self._build_combat_tab(), "Kampf & HP")
+        self.tabs.addTab(self._build_spells_tab(), "Zauber")
+        self.tabs.addTab(self._build_features_tab(), "Merkmale")
+        self.tabs.addTab(self._build_traits_tab(), "Persönlichkeit")
+
+    def _update_header(self) -> None:
+        basics = self._data.get("basics", {})
+        race_name = (srd.get_race(basics.get("race", "")) or {}).get("name", basics.get("race", "?"))
+        cls_name = (srd.get_class(basics.get("class", "")) or {}).get("name", basics.get("class", "?"))
+        bg_name = (srd.get_background(basics.get("background", "")) or {}).get("name", basics.get("background", "?"))
+        self._sub_lbl.setText(
+            f"Level {basics.get('level', 1)}  {race_name}  {cls_name}  •  {bg_name}  •  {basics.get('alignment', '?')}"
+        )
+        self._prof_lbl.setText(
+            f"Profizienzbonus: {_fmt_mod(self._derived.get('proficiency_bonus', 2))}"
+        )
+        self._btn_levelup.setEnabled(can_level_up(self._data))
+        self._btn_leveldown.setEnabled(can_level_down(self._data))
+
+    # ── Level-Up / Level-Down ─────────────────────────────────────────────
+
+    def _do_level_up(self) -> None:
+        from src.gui.dialogs.levelup_dialog import LevelUpDialog
+        if not can_level_up(self._data):
+            return
+        dlg = LevelUpDialog(self._data, parent=self)
+        if not dlg.exec():
+            return
+        new_data = apply_level_up(
+            self._data, dlg.hp_gain, dlg.asi_changes, dlg.feat_index
+        )
+        self._apply_and_save(new_data, f"Level Up! Jetzt Level {new_data['basics']['level']} ✓")
+
+    def _do_level_down(self) -> None:
+        from src.gui.dialogs.levelup_dialog import LevelDownDialog
+        if not can_level_down(self._data):
+            return
+        dlg = LevelDownDialog(self._data, parent=self)
+        if not dlg.exec():
+            return
+        new_data = apply_level_down(self._data)
+        self._apply_and_save(new_data, f"Level gesenkt auf Level {new_data['basics']['level']} ✓")
+
+    def _apply_and_save(self, new_data: dict, success_msg: str) -> None:
+        try:
+            r = requests.put(
+                f"{self.base_url}/api/characters/{self.char['id']}",
+                json={"name": self.char["name"], "data": new_data},
+                headers={"Authorization": f"Bearer {self.auth_token}"},
+                timeout=5,
+            )
+            if r.status_code == 200:
+                self._data = new_data
+                self.char["data"] = new_data
+                self._derived = derive_sheet_values(self._data)
+                self._update_header()
+                self._rebuild_tabs()
+                self.status_lbl.setText(success_msg)
+                self.status_lbl.setStyleSheet(f"color:{COLORS['success']};font-size:12px;")
+            else:
+                msg = r.json().get("error", "Fehler beim Speichern.")
+                self.status_lbl.setText(msg)
+                self.status_lbl.setStyleSheet(f"color:{COLORS['error']};font-size:12px;")
+        except Exception as e:
+            self.status_lbl.setText(str(e))
+            self.status_lbl.setStyleSheet(f"color:{COLORS['error']};font-size:12px;")
 
     # ── Main tab: Ability scores, Skills, Saves ────────────────────────────
 
@@ -198,10 +304,11 @@ class CharacterSheet(QDialog):
         # Column 1: Ability scores
         ab_col = QVBoxLayout()
         ab_grp = QGroupBox("Attribute")
+        # ab_grp.setMinimumWidth(200)
         ab_inner = QVBoxLayout(ab_grp)
         ab_inner.setSpacing(6)
         for ab in srd.ABILITIES:
-            block = _AbilityBlock(ab, scores.get(ab, 10))
+            block = _AbilityBlock(ab, scores.get(ab, 10), srd.ABILITY_ICONS[ab])
             ab_inner.addWidget(block)
         ab_col.addWidget(ab_grp)
         ab_col.addStretch()
@@ -222,7 +329,7 @@ class CharacterSheet(QDialog):
         for ab in srd.ABILITIES:
             val = derived.get("saving_throws", {}).get(ab, 0)
             proficient = ab in profs.get("saving_throws", [])
-            row = _SkillRow(ab, ab, val, proficient)
+            row = _SkillRow(ab, ab, val, proficient, srd.ABILITY_ICONS[ab])
             save_inner.addWidget(row)
         st_col.addWidget(save_grp)
 
@@ -246,17 +353,43 @@ class CharacterSheet(QDialog):
         skill_layout.setSpacing(2)
         skill_layout.setContentsMargins(4, 4, 4, 4)
 
+        skill_container_left = QWidget()
+        skill_layout_left = QVBoxLayout(skill_container_left)
+        skill_layout_left.setSpacing(2)
+        skill_layout_left.setContentsMargins(4, 4, 4, 4)
+
+        skill_container_right = QWidget()
+        skill_layout_right = QVBoxLayout(skill_container_right)
+        skill_layout_right.setSpacing(2)
+        skill_layout_right.setContentsMargins(4, 4, 4, 4)
+
         skill_hdr = QLabel("Fertigkeiten")
         skill_hdr.setStyleSheet(f"color:{COLORS['subtext']};font-size:13px;font-weight:bold;border:none;")
         skill_layout.addWidget(skill_hdr)
+        
+        counter = 0
+        splitter = QSplitter(Qt.Orientation.Horizontal)
+        splitter.setStyleSheet(
+            f"QSplitter::handle{{background:{COLORS['border']};width:1px;}}"
+        )
 
         for skill in srd.SKILLS:
             val = derived.get("skills", {}).get(skill["name"], 0)
             proficient = skill["name"] in profs.get("skills", [])
-            row = _SkillRow(skill["name"], skill["ability"], val, proficient)
-            skill_layout.addWidget(row)
-        skill_layout.addStretch()
+            row = _SkillRow(skill["name"], skill["ability"], val, proficient, skill["icon"])
+            if counter < len(srd.SKILLS) / 2:
+                skill_layout_left.addWidget(row)
+            else:
+                skill_layout_right.addWidget(row)
+            counter+=1
 
+        splitter.addWidget(skill_container_left)
+        splitter.addWidget(skill_container_right)
+        # skill_layout.addStretch()
+        skill_layout.addWidget(splitter)
+        spacer = QSpacerItem(0, 0, QSizePolicy.Policy.Minimum, QSizePolicy.Policy.Expanding)
+        # spacer.setAlignment(Qt.AlignmentFlag.AlignHCenter)
+        skill_layout.addSpacerItem(spacer)
         skill_scroll.setWidget(skill_container)
         layout.addWidget(skill_scroll, 1)
 
@@ -454,6 +587,26 @@ class CharacterSheet(QDialog):
         else:
             feat_inner.addWidget(QLabel("Keine Einträge."))
         layout.addWidget(feat_grp)
+
+        # Feats
+        feat_indices = basics.get("feats", [])
+        if feat_indices:
+            feats_grp = QGroupBox("Talente (Feats)")
+            feats_inner = QVBoxLayout(feats_grp)
+            for fidx in feat_indices:
+                feat = srd.get_feat(fidx)
+                if feat:
+                    name_lbl = QLabel(f"• {feat['name']}")
+                    name_lbl.setStyleSheet(
+                        f"color:{COLORS['gold']};font-size:13px;font-weight:bold;"
+                    )
+                    feats_inner.addWidget(name_lbl)
+                    for b in feat.get("benefits", []):
+                        b_lbl = QLabel(f"  {b}")
+                        b_lbl.setWordWrap(True)
+                        b_lbl.setStyleSheet(f"color:{COLORS['subtext']};font-size:12px;")
+                        feats_inner.addWidget(b_lbl)
+            layout.addWidget(feats_grp)
 
         # Racial traits
         race_idx = basics.get("race", "")

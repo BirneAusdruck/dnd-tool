@@ -190,6 +190,8 @@ def build_character_data(
 
     skill_profs = list(collect_proficiencies(class_index, background_index, chosen_skills, race_index))
 
+    level1_hp = max_hp_at_level_1(class_index, final_scores.get("CON", 10))
+
     return {
         "meta": {"edition": edition, "version": "0.1"},
         "basics": {
@@ -203,12 +205,21 @@ def build_character_data(
             "level": 1,
             "experience": 0,
             "dragonborn_ancestry": dragonborn_ancestry,
+            # Multiclassing-ready: each entry is {class_index, level, subclass}
+            "classes": [{"class_index": class_index, "level": 1, "subclass": None}],
+            # History of ASI choices: [{total_level, class_index, changes}]
+            "asi_history": [],
+            # Feats currently held and their acquisition history
+            "feats": [],
+            "feat_history": [],
         },
         "ability_scores": final_scores,
         "hp": {
-            "max": max_hp_at_level_1(class_index, final_scores.get("CON", 10)),
-            "current": max_hp_at_level_1(class_index, final_scores.get("CON", 10)),
+            "max": level1_hp,
+            "current": level1_hp,
             "temp": 0,
+            # Per-level HP gains; index 0 = level 1, subsequent = gains per level-up
+            "level_history": [level1_hp],
         },
         "hit_dice": {"total": f"1d{hit_die}", "used": 0},
         "death_saves": {"successes": 0, "failures": 0},

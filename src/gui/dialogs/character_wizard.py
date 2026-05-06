@@ -31,6 +31,7 @@ from src.game.character_builder import (
     build_character_data, STANDARD_ARRAY, POINT_BUY_COSTS,
     POINT_BUY_BUDGET, modifier,
 )
+from src.game.level_manager import apply_level_up, get_level_up_info
 
 
 # ── Helper widgets ─────────────────────────────────────────────────────────
@@ -177,6 +178,25 @@ class _Step0_BasicInfo(QWidget):
         align_inner.addWidget(self.align_combo)
         layout.addWidget(align_grp)
 
+        # Starting level
+        level_grp = QGroupBox("Startlevel")
+        level_inner = QVBoxLayout(level_grp)
+        level_row = QHBoxLayout()
+        self.starting_level_spin = QSpinBox()
+        self.starting_level_spin.setRange(1, 20)
+        self.starting_level_spin.setValue(1)
+        self.starting_level_spin.setFixedWidth(70)
+        level_row.addWidget(QLabel("Level:"))
+        level_row.addWidget(self.starting_level_spin)
+        level_row.addStretch()
+        level_inner.addLayout(level_row)
+        self._level_hint = QLabel("")
+        self._level_hint.setStyleSheet(f"color:{COLORS['muted']};font-size:12px;")
+        self._level_hint.setWordWrap(True)
+        level_inner.addWidget(self._level_hint)
+        self.starting_level_spin.valueChanged.connect(self._on_level_changed)
+        layout.addWidget(level_grp)
+
         layout.addStretch()
 
     def edition(self) -> str:
@@ -192,10 +212,22 @@ class _Step0_BasicInfo(QWidget):
         elif self.rb_52_srd.isChecked():     return "5.2_srd"
         return "5.1_srd"
 
+    def _on_level_changed(self, value: int) -> None:
+        if value > 1:
+            self._level_hint.setText(
+                f"Level {value}: Du wirst nach der Erstellung {value - 1}× durch den "
+                f"Level-Up-Dialog geführt (HP, ASI-Auswahl etc.)."
+            )
+        else:
+            self._level_hint.setText("")
+
     def validate(self) -> str | None:
         if not self.name_edit.text().strip():
             return "Bitte einen Charakter-Namen eingeben."
         return None
+
+    def starting_level(self) -> int:
+        return self.starting_level_spin.value()
     
     def _connect_edition_radio_buttons(self) -> None:
         group = QButtonGroup(self)
@@ -1067,7 +1099,6 @@ class CharacterWizard(QDialog):
     def _finish(self):
         name = self.step0.name_edit.text().strip()
         bg_idx = self.step4.selected_background()
-        bg = srd.get_background(bg_idx) if bg_idx else None
 
         data = build_character_data(
             name=name,
@@ -1089,6 +1120,14 @@ class CharacterWizard(QDialog):
             flaws=self.step4.flaws_edit.text(),
         )
 
+        # Apply starting level (> 1) via sequential level-up dialogs
+        starting_level = self.step0.starting_level()
+        if starting_level > 1:
+            data = self._apply_starting_level(data, starting_level)
+            if data is None:
+                # User cancelled the level-up flow
+                return
+
         try:
             r = requests.post(
                 f"{self.base_url}/api/characters/",
@@ -1102,3 +1141,23 @@ class CharacterWizard(QDialog):
                 self.error_lbl.setText(r.json().get("error", "Fehler beim Speichern."))
         except Exception as e:
             self.error_lbl.setText(f"Verbindungsfehler: {e}")
+
+    def _apply_starting_level(self, data: dict, target_level: int) -> dict | None:
+        """
+        Walk the character from level 1 up to target_level via LevelUpDialog.
+        Returns the final data dict, or None if the user cancelled.
+        """
+        from src.gui.dialogs.levelup_dialog import LevelUpDialog
+
+        for lvl in range(2, target_level + 1):
+            info = get_level_up_info(data)
+            dlg = LevelUpDialog(data, parent=self)
+            dlg.setWindowTitle(
+                f"Startlevel: Level {info['current_level']} → {info['new_level']} "
+                f"({lvl - 1}/{target_level - 1})"
+            )
+            if not dlg.exec():
+                return None
+            data = apply_level_up(data, dlg.hp_gain, dlg.asi_changes, dlg.feat_index)
+
+        return data
