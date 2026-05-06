@@ -1,0 +1,160 @@
+{
+  "backgrounds": [
+    {
+      "index": "acolyte", "name": "Acolyte",
+      "skill_proficiencies": ["Insight", "Religion"],
+      "tool_proficiencies": [],
+      "languages": 2,
+      "equipment": "Holy symbol, prayer book or prayer wheel, 5 sticks of incense, vestments, common clothes, pouch with 15 gp",
+      "feature": {"name": "Shelter of the Faithful", "desc": "You command the respect of those who share your faith. You and your companions can receive free healing and care at a temple of your faith (material components only). Those of your faith may support you (not followers, just support)."},
+      "personality_traits": ["I idolize a particular hero of my faith.", "I can find common ground between the fiercest enemies."],
+      "ideals": ["Tradition. The ancient traditions must be preserved.", "Charity. I always help those in need."],
+      "bonds": ["I would die to recover an ancient relic of my faith.", "I owe my life to the priest who took me in."],
+      "flaws": ["I judge others harshly, and myself even more so.", "I put too much trust in those who wield power within my temple's hierarchy."]
+    },
+    {
+      "index": "charlatan", "name": "Charlatan",
+      "skill_proficiencies": ["Deception", "Sleight of Hand"],
+      "tool_proficiencies": ["Disguise kit", "Forgery kit"],
+      "languages": 0,
+      "equipment": "Fine clothes, disguise kit, tools of the con (ten stoppered bottles, set of weighted dice, deck of marked cards), pouch with 15 gp",
+      "feature": {"name": "False Identity", "desc": "You have created a second identity including documentation, established acquaintances, and disguises that allow you to assume that persona."},
+      "personality_traits": ["I fall in and out of love easily.", "I have a joke for every occasion."],
+      "ideals": ["Independence. I am a free spirit—no one tells me what to do.", "Fairness. I never target people who can't afford to lose a few coins."],
+      "bonds": ["I fleeced the wrong person and must work to avoid their investigators.", "I owe everything to my mentor—a horrible person who taught me to survive."],
+      "flaws": ["I can't resist a pretty face.", "I'm convinced that no one could ever fool me the way I fool others."]
+    },
+    {
+      "index": "criminal", "name": "Criminal",
+      "skill_proficiencies": ["Deception", "Stealth"],
+      "tool_proficiencies": ["One type of gaming set", "Thieves' tools"],
+      "languages": 0,
+      "equipment": "Crowbar, dark common clothes including hood, pouch with 15 gp",
+      "feature": {"name": "Criminal Contact", "desc": "You have a reliable and trustworthy contact who acts as your liaison to a network of criminals. You know how to get messages to and from your contact."},
+      "personality_traits": ["I always have a plan for what to do when things go wrong.", "I am always calm, no matter what the situation."],
+      "ideals": ["Freedom. Chains are meant to be broken.", "Honor. I don't steal from others in the trade."],
+      "bonds": ["I'm trying to pay off an old debt I owe to a generous benefactor.", "My ill-gotten gains go to support my family."],
+      "flaws": ["When I see something valuable, I can't think about anything but how to steal it.", "I turn tail and run when things look bad."]
+    },
+    {
+      "index": "entertainer", "name": "Entertainer",
+      "skill_proficiencies": ["Acrobatics", "Performance"],
+      "tool_proficiencies": ["Disguise kit", "One type of musical instrument"],
+      "languages": 0,
+      "equipment": "Musical instrument, favor of an admirer, costume, pouch with 15 gp",
+      "feature": {"name": "By Popular Demand", "desc": "You can always find a place to perform, and receive free lodging and food in exchange. Your performance also makes you somewhat familiar to locals who can tell you local news."},
+      "personality_traits": ["I know a story relevant to almost every situation.", "I love a good insult, even one directed at me."],
+      "ideals": ["Beauty. When I perform, I make the world better than it was.", "Creativity. The world is in need of new ideas and bold action."],
+      "bonds": ["My instrument is my most treasured possession.", "Someone stole my precious instrument, and someday I'll get it back."],
+      "flaws": ["I'll do anything to win fame and renown.", "I'm a sucker for a pretty face."]
+    },
+    {
+      "index": "folk-hero", "name": "Folk Hero",
+      "skill_proficiencies": ["Animal Handling", "Survival"],
+      "tool_proficiencies": ["One type of artisan's tools", "Vehicles (land)"],
+      "languages": 0,
+      "equipment": "Set of artisan's tools, shovel, iron pot, common clothes, pouch with 10 gp",
+      "feature": {"name": "Rustic Hospitality", "desc": "Since you come from the ranks of the common folk, you fit in among them with ease. Commoners will hide you from the law or those who might harm you, though not at the cost of their lives."},
+      "personality_traits": ["I judge people by their actions, not their words.", "If someone is in trouble, I'm always ready to lend help."],
+      "ideals": ["Respect. People deserve to be treated with dignity.", "Sincerity. There's no good in pretending to be something I'm not."],
+      "bonds": ["I have a family, but I have no idea where they are.", "I protect those who cannot protect themselves."],
+      "flaws": ["The tyrant who rules my land will stop at nothing to see me killed.", "I have trouble trusting in my allies."]
+    },
+    {
+      "index": "guild-artisan", "name": "Guild Artisan",
+      "skill_proficiencies": ["Insight", "Persuasion"],
+      "tool_proficiencies": ["One type of artisan's tools"],
+      "languages": 1,
+      "equipment": "Set of artisan's tools, letter of introduction from guild, traveler's clothes, pouch with 15 gp",
+      "feature": {"name": "Guild Membership", "desc": "Fellow guild members will provide lodging and food if necessary, give information, and back you in legal trouble (dues: 5 gp/month). Guild also provides access to powerful patrons, merchants, and civic leaders."},
+      "personality_traits": ["I believe that anything worth doing is worth doing right.", "I'm rude to people who lack my commitment to hard work."],
+      "ideals": ["Community. It's the duty of all to strengthen our community.", "Aspiration. I work hard to be the best there is at my craft."],
+      "bonds": ["The workshop where I learned my trade is the most important place in the world.", "I owe my guild a great debt for forging me into the person I am."],
+      "flaws": ["I'll do anything to get my hands on something rare.", "I'm quick to assume someone is trying to cheat me."]
+    },
+    {
+      "index": "hermit", "name": "Hermit",
+      "skill_proficiencies": ["Medicine", "Religion"],
+      "tool_proficiencies": ["Herbalism kit"],
+      "languages": 1,
+      "equipment": "Scroll case stuffed with notes from studies, winter blanket, common clothes, herbalism kit, 5 gp",
+      "feature": {"name": "Discovery", "desc": "Your time in isolation granted you a unique and powerful discovery—a great truth, hidden place, fact long forgotten, or wholly unique revelation. Work with your DM on its nature."},
+      "personality_traits": ["I've been isolated for so long that I rarely speak, preferring gestures.", "I am utterly serene, even in the face of disaster."],
+      "ideals": ["Greater Good. My gifts are meant to be shared.", "Logic. Emotions must not cloud logical thinking."],
+      "bonds": ["I entered seclusion to hide from the ones who might still be hunting me.", "My isolation gave me great insight into a great evil that only I can destroy."],
+      "flaws": ["I harbor dark, bloodthirsty thoughts that my isolation and meditation failed to quell.", "I am dogmatic in my thoughts and philosophy."]
+    },
+    {
+      "index": "noble", "name": "Noble",
+      "skill_proficiencies": ["History", "Persuasion"],
+      "tool_proficiencies": ["One type of gaming set"],
+      "languages": 1,
+      "equipment": "Fine clothes, signet ring, scroll of pedigree, purse with 25 gp",
+      "feature": {"name": "Position of Privilege", "desc": "Thanks to your noble birth, people are inclined to think the best of you. You are welcome in high society, and people assume you have the right to be wherever you are. Common folk make way, and nobles treat you as a member of the same social sphere."},
+      "personality_traits": ["My eloquent flattery makes everyone I talk to feel like the most wonderful person in the world.", "I take great pains to look my best and follow the latest fashions."],
+      "ideals": ["Responsibility. It is my duty to respect the authority of those above me.", "Power. If I can attain more power, no one will tell me what to do."],
+      "bonds": ["I will face any challenge to win the approval of my family.", "My loyalty to my sovereign is unwavering."],
+      "flaws": ["I secretly believe that everyone is beneath me.", "I hide a truly scandalous secret."]
+    },
+    {
+      "index": "outlander", "name": "Outlander",
+      "skill_proficiencies": ["Athletics", "Survival"],
+      "tool_proficiencies": ["One type of musical instrument"],
+      "languages": 1,
+      "equipment": "Staff, hunting trap, trophy from an animal you killed, traveler's clothes, pouch with 10 gp",
+      "feature": {"name": "Wanderer", "desc": "You have an excellent memory for maps and geography. You can always recall the general layout of terrain, settlements, and other features around you. You can find food and fresh water for up to 5 people per day in wilderness."},
+      "personality_traits": ["I'm driven by a wanderlust that led me away from home.", "I watch over my friends as if they were a litter of newborn pups."],
+      "ideals": ["Change. Life is like the seasons; always changing.", "Glory. I must earn glory in battle, for myself and my clan."],
+      "bonds": ["My family, clan, or tribe is the most important thing in my life.", "An injury to the unspoiled wilderness is an injury to me."],
+      "flaws": ["I remember every insult I've received and nurse a plan for revenge.", "Don't expect me to save those who can't save themselves."]
+    },
+    {
+      "index": "sage", "name": "Sage",
+      "skill_proficiencies": ["Arcana", "History"],
+      "tool_proficiencies": [],
+      "languages": 2,
+      "equipment": "Bottle of black ink, quill, small knife, letter from a dead colleague with an unsolved question, common clothes, pouch with 10 gp",
+      "feature": {"name": "Researcher", "desc": "When you attempt to learn or recall information, if you don't know it, you often know where and from whom you can obtain it. Usually from a library, scriptorium, university, or a sage. The DM might rule some knowledge is secret or hard to find."},
+      "personality_traits": ["I use polysyllabic words to convey intelligence.", "I've read every book in the world's greatest libraries."],
+      "ideals": ["Knowledge. The path to power is through knowledge.", "Logic. Emotions must not cloud logical thinking."],
+      "bonds": ["I have an ancient text that holds terrible secrets that must not fall into the wrong hands.", "My life's work is a series of tomes related to a specific field."],
+      "flaws": ["I am easily distracted by the promise of information.", "Most people scream and run when they see a demon. I stop and take notes."]
+    },
+    {
+      "index": "sailor", "name": "Sailor",
+      "skill_proficiencies": ["Athletics", "Perception"],
+      "tool_proficiencies": ["Navigator's tools", "Vehicles (water)"],
+      "languages": 0,
+      "equipment": "Belaying pin (club), 50 ft. of silk rope, lucky charm, common clothes, pouch with 10 gp",
+      "feature": {"name": "Ship's Passage", "desc": "You can secure free passage on a sailing ship for yourself and companions in exchange for labor during the voyage. You can't be certain of a schedule, and unsafe routes may be involved."},
+      "personality_traits": ["My friends know they can rely on me, no matter what.", "I work hard so that I can play hard when the work is done."],
+      "ideals": ["Respect. The thing that keeps a ship together is mutual respect.", "Freedom. The sea is freedom—no law, no king."],
+      "bonds": ["I'm loyal to my captain first, everything else second.", "I'll always remember my first ship."],
+      "flaws": ["I follow orders, even if I think they're wrong.", "I can't help but pocket loose coins and other trinkets."]
+    },
+    {
+      "index": "soldier", "name": "Soldier",
+      "skill_proficiencies": ["Athletics", "Intimidation"],
+      "tool_proficiencies": ["One type of gaming set", "Vehicles (land)"],
+      "languages": 0,
+      "equipment": "Insignia of rank, trophy from a fallen enemy, set of bone dice or deck of cards, common clothes, pouch with 10 gp",
+      "feature": {"name": "Military Rank", "desc": "You have a military rank from your career as a soldier. Soldiers loyal to your former military organization recognize your authority and defer to you if of lower rank. You can invoke your rank to exert influence over soldiers and requisition simple equipment."},
+      "personality_traits": ["I'm always polite and respectful.", "I'm haunted by memories of war. I fight these doubts with humor."],
+      "ideals": ["Greater Good. Our lot is to lay down our lives in defense of others.", "Responsibility. I do what I must and face the consequences."],
+      "bonds": ["I would still lay down my life for the people I served with.", "Someone saved my life on the battlefield. To this day, I owe that person."],
+      "flaws": ["The monstrous enemy we faced in battle still leaves me shaken.", "I have little respect for anyone who is not a proven warrior."]
+    },
+    {
+      "index": "urchin", "name": "Urchin",
+      "skill_proficiencies": ["Sleight of Hand", "Stealth"],
+      "tool_proficiencies": ["Disguise kit", "Thieves' tools"],
+      "languages": 0,
+      "equipment": "Small knife, map of the city you grew up in, pet mouse, token to remember your parents by, common clothes, pouch with 10 gp",
+      "feature": {"name": "City Secrets", "desc": "You know the secret patterns and flow of cities. You can find passages through the urban sprawl that others would miss. When not in combat, you and companions can travel between any two locations in a city twice as fast as normal."},
+      "personality_traits": ["I hide scraps of food and trinkets away in my pockets.", "I ask a lot of questions."],
+      "ideals": ["Respect. All people deserve to be treated with dignity.", "Community. We have to take care of each other."],
+      "bonds": ["My town or city is my home, and I'll fight to defend it.", "I sponsor an orphanage to keep others from enduring what I did."],
+      "flaws": ["If I'm outnumbered, I will run away from a fight.", "Gold seems like a lot of money to me, and I'll do just about anything for more."]
+    }
+  ]
+}

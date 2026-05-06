@@ -1,0 +1,66 @@
+# ── Python ────────────────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# ── Virtual environments ──────────────────────────────────────────────────
+.venv/
+venv/
+env/
+ENV/
+
+# ── Environment & secrets ─────────────────────────────────────────────────
+.env
+*.env
+.env.*
+!.env.example
+
+# ── Database ──────────────────────────────────────────────────────────────
+data/*.db
+data/*.db-shm
+data/*.db-wal
+*.sqlite
+*.sqlite3
+
+# ── Logs ─────────────────────────────────────────────────────────────────
+*.log
+logs/
+
+# ── IDE / Editor ─────────────────────────────────────────────────────────
+.vscode/
+.idea/
+*.code-workspace
+*.swp
+*.swo
+*~
+
+# ── OS ────────────────────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ── PySide6 / Qt ──────────────────────────────────────────────────────────
+*.qmlc
+*.jsc
+
+# ── pytest / coverage ─────────────────────────────────────────────────────
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+
+# ── mypy / type checkers ──────────────────────────────────────────────────
+.mypy_cache/
+.dmypy.json
+
+# ── Map uploads / user assets ────────────────────────────────────────────
+assets/maps/
+assets/tokens/
+assets/uploads/
