@@ -233,6 +233,7 @@ class MainWindow(QMainWindow):
         from src.gui.views.character_sheet import CharacterSheet
         dlg = CharacterSheet(char, _BASE_URL, self.auth_token, parent=self)
         dlg.exec()
+        self.characters_view.refresh()
 
     def _logout(self) -> None:
         self.auth_token = None

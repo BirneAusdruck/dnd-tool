@@ -167,6 +167,14 @@ class _Step1_Race(QWidget):
         self.half_elf_group.setVisible(False)
         layout.addWidget(self.half_elf_group)
 
+        # Dragonborn ancestry
+        self.dragonborn_group = QGroupBox("Drakonische Abstammung wählen")
+        db_inner = QVBoxLayout(self.dragonborn_group)
+        self.dragonborn_combo = QComboBox()
+        db_inner.addWidget(self.dragonborn_combo)
+        self.dragonborn_group.setVisible(False)
+        layout.addWidget(self.dragonborn_group)
+
         self.setLayout(QVBoxLayout())
         self.layout().addWidget(_scroll_wrap(outer))
 
@@ -192,6 +200,14 @@ class _Step1_Race(QWidget):
 
         self.detail_area.setPlainText(self._format_race(race))
         self.half_elf_group.setVisible(idx == "half-elf")
+
+        self.dragonborn_combo.clear()
+        if idx == "dragonborn":
+            for anc in race.get("draconic_ancestry", []):
+                self.dragonborn_combo.addItem(
+                    f"{anc['dragon']} ({anc['damage']}, {anc['breath']})", anc["dragon"]
+                )
+        self.dragonborn_group.setVisible(idx == "dragonborn")
 
     def _format_race(self, r: dict) -> str:
         lines = [r["name"], "=" * 40]
@@ -223,6 +239,12 @@ class _Step1_Race(QWidget):
     def half_elf_choices(self) -> list[str]:
         return [cb.currentText() for cb in self.he_combos]
 
+    def dragonborn_ancestry(self) -> str | None:
+        if self.selected_race() != "dragonborn":
+            return None
+        data = self.dragonborn_combo.currentData()
+        return data if data else self.dragonborn_combo.currentText()
+
     def validate(self) -> str | None:
         if not self.selected_race():
             return "Bitte eine Rasse auswählen."
@@ -230,6 +252,8 @@ class _Step1_Race(QWidget):
             choices = self.half_elf_choices()
             if choices[0] == choices[1]:
                 return "Bitte zwei verschiedene Attribute für den Halbelf wählen."
+        if self.selected_race() == "dragonborn" and not self.dragonborn_combo.currentText():
+            return "Bitte eine drakonische Abstammung wählen."
         return None
 
 
@@ -471,7 +495,11 @@ class _Step3_AbilityScores(QWidget):
         return {ab: self._get_score(ab) for ab in self.ABILITIES}
 
     def validate(self) -> str | None:
-        if self._method == "pointbuy":
+        if self._method == "standard":
+            selected = sorted(int(self.std_combos[ab].currentText()) for ab in self.ABILITIES)
+            if selected != sorted(STANDARD_ARRAY):
+                return "Jeder Wert des Standard-Arrays muss genau einmal vergeben werden."
+        elif self._method == "pointbuy":
             total = sum(POINT_BUY_COSTS.get(sp.value(), 0) for sp in self.pb_spins.values())
             if total > POINT_BUY_BUDGET:
                 return f"Point Buy: {total} Punkte verbraucht, Maximum ist {POINT_BUY_BUDGET}."
@@ -573,6 +601,7 @@ class _Step5_Skills(QWidget):
         self._class_index: str | None = None
         self._bg_skills: list[str] = []
         self._checkboxes: dict[str, QCheckBox] = {}
+        self._max_choices = 0
         self._build()
 
     def _build(self):
@@ -913,6 +942,7 @@ class CharacterWizard(QDialog):
             chosen_cantrips=self.step6.chosen_cantrips(),
             chosen_spells=self.step6.chosen_spells(),
             half_elf_score_choices=self.step1.half_elf_choices() if self.step1.selected_race() == "half-elf" else None,
+            dragonborn_ancestry=self.step1.dragonborn_ancestry(),
             personality=self.step4.personality_edit.text(),
             ideals=self.step4.ideals_edit.text(),
             bonds=self.step4.bonds_edit.text(),

@@ -16,7 +16,7 @@ from PySide6.QtCore import Qt
 import requests
 
 from src.gui.theme import COLORS
-from src.game.character_builder import derive_sheet_values, proficiency_bonus
+from src.game.character_builder import derive_sheet_values, proficiency_bonus, calc_ac
 from src.game import srd_loader as srd
 
 
@@ -297,11 +297,23 @@ class CharacterSheet(QDialog):
 
         derived = self._derived
         basics = self._data.get("basics", {})
+        eq = self._data.get("equipment", {})
+        race = srd.get_race(basics.get("race", ""))
+        speed = race["speed"] if race else 30
+        ac = calc_ac(
+            eq.get("armor"),
+            scores.get("DEX", 10),
+            eq.get("shield", False),
+            basics.get("class", ""),
+            scores.get("STR", 10),
+            scores.get("WIS", 10),
+            scores.get("CON", 10),
+        )
 
         stats = [
-            ("RK", "—"),
+            ("RK", str(ac)),
             ("Initiative", _fmt_mod(derived.get("initiative", 0))),
-            ("Geschwindigkeit", "30 ft"),
+            ("Geschwindigkeit", f"{speed} ft"),
             ("Trefferwürfel", self._data.get("hit_dice", {}).get("total", "1d8")),
         ]
         for col, (lbl, val) in enumerate(stats):
