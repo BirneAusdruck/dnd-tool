@@ -1,0 +1,419 @@
+{
+  "races": [
+    {
+      "index": "aasimar",
+      "name": "Aasimar",
+      "speed": 30,
+      "size": "Medium",
+      "ability_bonuses": [],
+      "traits": [
+        {
+          "name": "Celestial Resistance",
+          "desc": "You have resistance to necrotic and radiant damage."
+        },
+        {
+          "name": "Darkvision",
+          "desc": "You can see in dim light within 60 feet as if it were bright light, and in darkness as if it were dim light."
+        },
+        {
+          "name": "Healing Hands",
+          "desc": "As a Magic action, you touch a creature and roll a number of d6s equal to your Proficiency Bonus. The creature regains HP equal to the total. Once you use this trait, you can't use it again until you finish a Long Rest."
+        },
+        {
+          "name": "Light Bearer",
+          "desc": "You know the Light cantrip. Charisma is your spellcasting ability for it."
+        },
+        {
+          "name": "Celestial Revelation",
+          "desc": "When you reach level 3, choose one of the following forms: Heavenly Wings (sprout spectral wings, gain Fly speed equal to your Speed for 1 minute), Inner Radiance (shed 10-foot bright light, deal extra radiant damage equal to Proficiency Bonus on one attack per turn), or Necrotic Shroud (frighten nearby enemies and deal extra necrotic damage). Usable once per Long Rest."
+        }
+      ],
+      "languages": ["Common", "Celestial"],
+      "description": "Aasimar are humans touched by celestial power. They carry a spark of the Upper Planes within them.",
+      "subraces": []
+    },
+    {
+      "index": "dragonborn",
+      "name": "Dragonborn",
+      "speed": 30,
+      "size": "Medium",
+      "ability_bonuses": [],
+      "traits": [
+        {
+          "name": "Draconic Ancestry",
+          "desc": "You have draconic ancestry. Choose a dragon type, which determines your Breath Weapon damage type and Damage Resistance."
+        },
+        {
+          "name": "Breath Weapon",
+          "desc": "When you take the Attack action, you can replace one of your attacks with a Breath Weapon. The area and damage type depend on your Draconic Ancestry. The damage is 1d10 per Proficiency Bonus. Creatures in the area make a DEX or CON saving throw (DC = 8 + CON modifier + Proficiency Bonus). Usable a number of times equal to your Proficiency Bonus per Long Rest."
+        },
+        {
+          "name": "Damage Resistance",
+          "desc": "You have resistance to the damage type associated with your Draconic Ancestry."
+        },
+        {
+          "name": "Darkvision",
+          "desc": "You can see in dim light within 60 feet as if it were bright light, and in darkness as if it were dim light."
+        },
+        {
+          "name": "Draconic Flight",
+          "desc": "When you reach level 5, you sprout draconic wings. As a Bonus Action, you can cause the wings to appear and gain a Fly speed equal to your Speed. The wings last until you dismiss them (no action required). You can't use this trait while wearing armor unless the armor is made to accommodate the wings."
+        }
+      ],
+      "languages": ["Common", "Draconic"],
+      "description": "Born of dragons, dragonborn walk proudly through a world that greets them with fearful incomprehension.",
+      "draconic_ancestry": [
+        { "dragon": "Black",  "damage": "Acid",      "breath": "5x30 ft. line", "save": "DEX" },
+        { "dragon": "Blue",   "damage": "Lightning",  "breath": "5x30 ft. line", "save": "DEX" },
+        { "dragon": "Brass",  "damage": "Fire",       "breath": "5x30 ft. line", "save": "DEX" },
+        { "dragon": "Bronze", "damage": "Lightning",  "breath": "5x30 ft. line", "save": "DEX" },
+        { "dragon": "Copper", "damage": "Acid",       "breath": "5x30 ft. line", "save": "DEX" },
+        { "dragon": "Gold",   "damage": "Fire",       "breath": "15 ft. cone",   "save": "DEX" },
+        { "dragon": "Green",  "damage": "Poison",     "breath": "15 ft. cone",   "save": "CON" },
+        { "dragon": "Red",    "damage": "Fire",       "breath": "15 ft. cone",   "save": "DEX" },
+        { "dragon": "Silver", "damage": "Cold",       "breath": "15 ft. cone",   "save": "CON" },
+        { "dragon": "White",  "damage": "Cold",       "breath": "15 ft. cone",   "save": "CON" }
+      ],
+      "subraces": []
+    },
+    {
+      "index": "dwarf",
+      "name": "Dwarf",
+      "speed": 30,
+      "size": "Medium",
+      "ability_bonuses": [],
+      "traits": [
+        {
+          "name": "Darkvision",
+          "desc": "You can see in dim light within 120 feet as if it were bright light, and in darkness as if it were dim light."
+        },
+        {
+          "name": "Dwarven Resilience",
+          "desc": "You have advantage on saving throws against poison, and resistance against poison damage."
+        },
+        {
+          "name": "Dwarven Toughness",
+          "desc": "Your hit point maximum increases by 1, and it increases by 1 again whenever you gain a level."
+        },
+        {
+          "name": "Stonecunning",
+          "desc": "As a Bonus Action, you gain Tremorsense out to 60 feet for 10 minutes. You must be on a stone surface or touching such a surface to use this trait. Usable a number of times equal to your Proficiency Bonus per Long Rest."
+        }
+      ],
+      "languages": ["Common", "Dwarvish"],
+      "description": "Kingdoms rich in ancient grandeur, mines deep with gold, and an unbreakable commitment to clan.",
+      "subraces": [
+        {
+          "index": "hill-dwarf",
+          "name": "Hill Dwarf",
+          "ability_bonuses": [],
+          "traits": [
+            {
+              "name": "Dwarven Fortitude",
+              "desc": "Whenever you take the Dodge action in combat, you can spend one Hit Die to heal yourself. Roll the die, add your Constitution modifier, and regain that many HP."
+            }
+          ]
+        },
+        {
+          "index": "mountain-dwarf",
+          "name": "Mountain Dwarf",
+          "ability_bonuses": [],
+          "traits": [
+            {
+              "name": "Dwarven Armor Training",
+              "desc": "You have proficiency with light and medium armor."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "index": "elf",
+      "name": "Elf",
+      "speed": 30,
+      "size": "Medium",
+      "ability_bonuses": [],
+      "traits": [
+        {
+          "name": "Darkvision",
+          "desc": "You can see in dim light within 60 feet as if it were bright light, and in darkness as if it were dim light."
+        },
+        {
+          "name": "Fey Ancestry",
+          "desc": "You have advantage on saving throws against the Charmed condition, and magic can't put you to sleep."
+        },
+        {
+          "name": "Keen Senses",
+          "desc": "You gain proficiency in the Perception skill."
+        },
+        {
+          "name": "Trance",
+          "desc": "You don't need to sleep. Instead, you meditate deeply for 4 hours a day (your long rest). After meditating, you gain the same benefit that a human does from 8 hours of sleep. While meditating, you can dream after a fashion; such dreams are actually mental exercises practiced over years."
+        }
+      ],
+      "languages": ["Common", "Elvish"],
+      "description": "Elves are a magical people of otherworldly grace, living in the world but not entirely part of it.",
+      "subraces": [
+        {
+          "index": "high-elf",
+          "name": "High Elf",
+          "ability_bonuses": [],
+          "traits": [
+            {
+              "name": "Cantrip",
+              "desc": "You know one cantrip of your choice from the Wizard spell list. Intelligence is your spellcasting ability for it."
+            },
+            {
+              "name": "Elf Weapon Training",
+              "desc": "You have proficiency with longswords, shortswords, shortbows, and longbows."
+            }
+          ]
+        },
+        {
+          "index": "wood-elf",
+          "name": "Wood Elf",
+          "ability_bonuses": [],
+          "traits": [
+            {
+              "name": "Fleet of Foot",
+              "desc": "Your base walking speed increases to 35 feet."
+            },
+            {
+              "name": "Mask of the Wild",
+              "desc": "You can attempt to hide even when you are only lightly obscured by foliage, heavy rain, falling snow, mist, and other natural phenomena."
+            },
+            {
+              "name": "Elf Weapon Training",
+              "desc": "You have proficiency with longswords, shortswords, shortbows, and longbows."
+            }
+          ]
+        },
+        {
+          "index": "dark-elf",
+          "name": "Dark Elf (Drow)",
+          "ability_bonuses": [],
+          "traits": [
+            {
+              "name": "Superior Darkvision",
+              "desc": "Your darkvision range increases to 120 feet."
+            },
+            {
+              "name": "Sunlight Sensitivity",
+              "desc": "You have disadvantage on attack rolls and on Perception checks relying on sight when you, the target of your attack, or whatever you are trying to perceive is in direct sunlight."
+            },
+            {
+              "name": "Drow Magic",
+              "desc": "You know the Dancing Lights cantrip. At level 3 you can cast Faerie Fire once per Long Rest. At level 5 you can cast Darkness once per Long Rest. Charisma is your spellcasting ability."
+            },
+            {
+              "name": "Drow Weapon Training",
+              "desc": "You have proficiency with rapiers, shortswords, and hand crossbows."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "index": "gnome",
+      "name": "Gnome",
+      "speed": 30,
+      "size": "Small",
+      "ability_bonuses": [],
+      "traits": [
+        {
+          "name": "Darkvision",
+          "desc": "You can see in dim light within 60 feet as if it were bright light, and in darkness as if it were dim light."
+        },
+        {
+          "name": "Gnomish Cunning",
+          "desc": "You have advantage on Intelligence, Wisdom, and Charisma saving throws."
+        }
+      ],
+      "languages": ["Common", "Gnomish"],
+      "description": "A gnome's energy and enthusiasm for living shines through every inch of his or her tiny body.",
+      "subraces": [
+        {
+          "index": "forest-gnome",
+          "name": "Forest Gnome",
+          "ability_bonuses": [],
+          "traits": [
+            {
+              "name": "Natural Illusionist",
+              "desc": "You know the Minor Illusion cantrip. Intelligence is your spellcasting ability for it."
+            },
+            {
+              "name": "Speak with Small Beasts",
+              "desc": "Through sounds and gestures, you can communicate simple ideas with Small or smaller beasts."
+            }
+          ]
+        },
+        {
+          "index": "rock-gnome",
+          "name": "Rock Gnome",
+          "ability_bonuses": [],
+          "traits": [
+            {
+              "name": "Artificer's Lore",
+              "desc": "Whenever you make a History check related to magic items, alchemical objects, or technological devices, you add twice your Proficiency Bonus to the roll."
+            },
+            {
+              "name": "Tinker",
+              "desc": "You have proficiency with Artisan's Tools (Tinker's Tools). Using them you can spend 1 hour and 10 GP to construct a Tiny clockwork device (AC 5, 1 HP). The device can produce one of the following effects: Clockwork Toy, Fire Starter, or Music Box."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "index": "goliath",
+      "name": "Goliath",
+      "speed": 35,
+      "size": "Medium",
+      "ability_bonuses": [],
+      "traits": [
+        {
+          "name": "Giant Ancestry",
+          "desc": "You are descended from giants. Choose one of the following benefits, which you can use once per Long Rest: Cloud's Jaunt (Misty Step as Bonus Action), Fire's Burn (deal extra 1d10 fire damage on hit), Frost's Chill (deal extra 1d6 cold damage and reduce Speed by 10 ft on hit, CON save to negate), Hill's Tumble (knock target prone on hit, STR save to negate), Stone's Endurance (Reaction: reduce damage taken by 1d12 + CON modifier), or Storm's Thunder (deal 1d8 thunder to attacker when hit, CON save to negate)."
+        },
+        {
+          "name": "Large Form",
+          "desc": "Starting at level 5, you can change your size to Large as a Bonus Action. This lasts for 10 minutes or until you end it (no action required). During that time, you have advantage on STR checks, your Speed increases by 10 feet, and you can carry, push, drag, and lift twice as much. Once you use this trait, you can't use it again until you finish a Long Rest."
+        },
+        {
+          "name": "Powerful Build",
+          "desc": "You count as one size larger when determining your carrying capacity and the weight you can push, drag, or lift."
+        }
+      ],
+      "languages": ["Common", "Giant"],
+      "description": "Goliaths are massive beings who dwell at the highest mountain peaks. They see every moment of their lives as a competitive challenge.",
+      "subraces": []
+    },
+    {
+      "index": "halfling",
+      "name": "Halfling",
+      "speed": 30,
+      "size": "Small",
+      "ability_bonuses": [],
+      "traits": [
+        {
+          "name": "Brave",
+          "desc": "You have advantage on saving throws against the Frightened condition."
+        },
+        {
+          "name": "Halfling Nimbleness",
+          "desc": "You can move through the space of any creature of a size larger than yours."
+        },
+        {
+          "name": "Lucky",
+          "desc": "When you roll a 1 on the d20 for an attack roll, ability check, or saving throw, you can reroll the die and must use the new roll."
+        },
+        {
+          "name": "Naturally Stealthy",
+          "desc": "You can attempt to hide even when you are obscured only by a creature that is at least one size larger than you."
+        }
+      ],
+      "languages": ["Common"],
+      "description": "The comforts of home are the goals of most halflings' lives: a place to settle in peace and quiet.",
+      "subraces": [
+        {
+          "index": "lightfoot",
+          "name": "Lightfoot Halfling",
+          "ability_bonuses": [],
+          "traits": [
+            {
+              "name": "Naturally Stealthy",
+              "desc": "You can attempt to hide even when you are obscured only by a creature that is at least one size larger than you."
+            }
+          ]
+        },
+        {
+          "index": "stout",
+          "name": "Stout Halfling",
+          "ability_bonuses": [],
+          "traits": [
+            {
+              "name": "Stout Resilience",
+              "desc": "You have advantage on saving throws against poison, and you have resistance against poison damage."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "index": "human",
+      "name": "Human",
+      "speed": 30,
+      "size": "Medium",
+      "ability_bonuses": [],
+      "traits": [
+        {
+          "name": "Resourceful",
+          "desc": "You gain Heroic Inspiration whenever you finish a Long Rest."
+        },
+        {
+          "name": "Skillful",
+          "desc": "You gain proficiency in one skill of your choice."
+        },
+        {
+          "name": "Versatile",
+          "desc": "You gain an Origin feat of your choice (see chapter 5 for feats with the Origin category)."
+        }
+      ],
+      "languages": ["Common", "One language of your choice"],
+      "description": "Humans are the most adaptable and ambitious people among the common races.",
+      "subraces": []
+    },
+    {
+      "index": "orc",
+      "name": "Orc",
+      "speed": 30,
+      "size": "Medium",
+      "ability_bonuses": [],
+      "traits": [
+        {
+          "name": "Adrenaline Rush",
+          "desc": "You can take the Dash action as a Bonus Action. When you do so, you gain Temporary Hit Points equal to your Proficiency Bonus. You can use this trait a number of times equal to your Proficiency Bonus, and you regain all expended uses when you finish a Short or Long Rest."
+        },
+        {
+          "name": "Darkvision",
+          "desc": "You can see in dim light within 120 feet as if it were bright light, and in darkness as if it were dim light."
+        },
+        {
+          "name": "Powerful Build",
+          "desc": "You count as one size larger when determining your carrying capacity and the weight you can push, drag, or lift."
+        },
+        {
+          "name": "Relentless Endurance",
+          "desc": "When you are reduced to 0 HP but not killed outright, you can drop to 1 HP instead. Once you use this trait, you can't use it again until you finish a Long Rest."
+        }
+      ],
+      "languages": ["Common"],
+      "description": "Orcs are a proud, strong people who combine physical might with a tireless work ethic.",
+      "subraces": []
+    },
+    {
+      "index": "tiefling",
+      "name": "Tiefling",
+      "speed": 30,
+      "size": "Medium",
+      "ability_bonuses": [],
+      "traits": [
+        {
+          "name": "Darkvision",
+          "desc": "You can see in dim light within 60 feet as if it were bright light, and in darkness as if it were dim light."
+        },
+        {
+          "name": "Fiendish Legacy",
+          "desc": "Choose one of the following legacies: Abyssal (Poison Spray cantrip; Hellish Rebuke at 3rd, Darkness at 5th), Chthonic (Chill Touch cantrip; Hex at 3rd, Hold Person at 5th), or Infernal (Fire Bolt cantrip; Hellish Rebuke at 3rd, Darkness at 5th). Charisma is your spellcasting ability."
+        },
+        {
+          "name": "Otherworldly Presence",
+          "desc": "You know the Thaumaturgy cantrip. Charisma is your spellcasting ability for it."
+        }
+      ],
+      "languages": ["Common", "Infernal"],
+      "description": "To be greeted with stares and whispers, to suffer violence and indignity on the street, to see mistrust and fear in every eye: this is the lot of the tiefling.",
+      "subraces": []
+    }
+  ]
+}

@@ -68,12 +68,97 @@ class _Step0_BasicInfo(QWidget):
         # Edition
         ed_grp = QGroupBox("Regelwerk-Edition")
         ed_inner = QVBoxLayout(ed_grp)
-        self.rb_5e = QRadioButton("D&D 5e (2014 PHB)")
-        self.rb_55e = QRadioButton("D&D 5.5e (2024 PHB)")
-        self.rb_5e.setChecked(True)
-        ed_inner.addWidget(self.rb_5e)
-        ed_inner.addWidget(self.rb_55e)
+
+        basic_grp = QGroupBox("Basis Regelwerk")
+        basic_inner = QVBoxLayout(basic_grp)
+        # rule5ebasic_grp = QGroupBox()
+        # rule5ebasic_inner = QVBoxLayout(rule5ebasic_grp)
+        # rule55ebasic_grp = QGroupBox()
+        # rule55ebasic_inner = QVBoxLayout(rule55ebasic_grp)
+        phb_grp = QGroupBox("Offizielles Spielerhandbuch Regelwerk")
+        phb_inner = QVBoxLayout(phb_grp)
+        rule5e_grp = QGroupBox()
+        rule5e_inner = QVBoxLayout(rule5e_grp)
+        rule55e_grp = QGroupBox()
+        rule55e_inner = QVBoxLayout(rule55e_grp)
+        srd_grp = QGroupBox("System Reference Document Regelwerk")
+        srd_inner = QVBoxLayout(srd_grp)
+        rule51srd_grp = QGroupBox()
+        rule51srd_inner = QVBoxLayout(rule51srd_grp)
+        rule52srd_grp = QGroupBox()
+        rule52srd_inner = QVBoxLayout(rule52srd_grp)
+
+        self.rb_5e_basic = QRadioButton("D&D 5e (2014 Basic) (Not Implemented Yet!)")
+        self.rb_55e_basic = QRadioButton("D&D 5.5e (2024 Basic) (Not Implemented Yet!)")
+        self.rb_5e = QRadioButton("D&D 5e (2014 PHB) (Not Implemented Yet!)")
+        self.cb_5e_advanced = QCheckBox("D&D 5e Advanced Rule Set (Not Implemented Yet!)")
+        self.rb_55e = QRadioButton("D&D 5.5e (2024 PHB) (Not Implemented Yet!)")
+        self.cb_55e_advanced = QCheckBox("D&D 5.5e Advanced Rule Set (Not Implemented Yet!)")
+        self.rb_51_srd = QRadioButton("SRD 5.1")
+        self.cb_51_custom = QCheckBox("SRD 5.1 Custom Content (Not Implemented Yet!)")
+        self.rb_52_srd = QRadioButton("SRD 5.2")
+        self.cb_52_custom = QCheckBox("SRD 5.2 Custom Content (Not Implemented Yet!)")
+
+        # self.rb_5e_basic.setChecked(True)
+        self.rb_51_srd.setChecked(True)
+
+        self.cb_5e_advanced.setEnabled(False)
+        self.cb_55e_advanced.setEnabled(False)
+        # self.cb_51_custom.setEnabled(False)
+        self.cb_52_custom.setEnabled(False)
+
+        _cb_style = (
+            f"QCheckBox {{ padding-left: 16px; color: {COLORS['subtext']}; }}"
+            f"QCheckBox:disabled {{ color: {COLORS['muted']}; }}"
+        )
+        self.cb_5e_advanced.setStyleSheet(_cb_style)
+        self.cb_55e_advanced.setStyleSheet(_cb_style)
+        self.cb_51_custom.setStyleSheet(_cb_style)
+        self.cb_52_custom.setStyleSheet(_cb_style)
+
+        basic_inner.addWidget(self.rb_5e_basic)
+        basic_inner.addWidget(self.rb_55e_basic)
+        # rule5ebasic_inner.addWidget(self.rb_5e_basic)
+        # rule55ebasic_inner.addWidget(self.rb_55e_basic)
+        phb_inner.addWidget(rule5e_grp)
+        phb_inner.addWidget(rule55e_grp)
+        rule5e_inner.addWidget(self.rb_5e)
+        rule5e_inner.addWidget(self.cb_5e_advanced)
+        rule55e_inner.addWidget(self.rb_55e)
+        rule55e_inner.addWidget(self.cb_55e_advanced)
+        srd_inner.addWidget(rule51srd_grp)
+        srd_inner.addWidget(rule52srd_grp)
+        rule51srd_inner.addWidget(self.rb_51_srd)
+        rule51srd_inner.addWidget(self.cb_51_custom)
+        rule52srd_inner.addWidget(self.rb_52_srd)
+        rule52srd_inner.addWidget(self.cb_52_custom)
+
+        ed_container = QWidget()
+        ed_container_layout = QVBoxLayout(ed_container)
+        ed_container_layout.setContentsMargins(0, 0, 0, 0)
+        ed_container_layout.addWidget(basic_grp)
+        ed_container_layout.addWidget(phb_grp)
+        ed_container_layout.addWidget(srd_grp)
+        ed_container_layout.addStretch()
+
+        ed_scroll = QScrollArea()
+        ed_scroll.setWidgetResizable(True)
+        ed_scroll.setFrameShape(QFrame.Shape.NoFrame)
+        ed_scroll.setWidget(ed_container)
+        ed_scroll.setMaximumHeight(280)
+
+        ed_inner.addWidget(ed_scroll)
+
         layout.addWidget(ed_grp)
+
+        self._ed_rbs : list[QRadioButton] = []
+        self._ed_rbs.append(self.rb_5e_basic)
+        self._ed_rbs.append(self.rb_55e_basic)
+        self._ed_rbs.append(self.rb_5e)
+        self._ed_rbs.append(self.rb_55e)
+        self._ed_rbs.append(self.rb_51_srd)
+        self._ed_rbs.append(self.rb_52_srd)
+        self._connect_edition_radio_buttons()
 
         # Name
         name_grp = QGroupBox("Charakter-Name")
@@ -95,13 +180,33 @@ class _Step0_BasicInfo(QWidget):
         layout.addStretch()
 
     def edition(self) -> str:
-        return "5.5e" if self.rb_55e.isChecked() else "5e"
+        if self.rb_5e_basic.isChecked():   return "5e_basic"
+        elif self.rb_55e_basic.isChecked():  return "5.5e_basic"
+        elif self.rb_5e.isChecked() and self.cb_5e_advanced.isChecked(): return "5e_adv"
+        elif self.rb_5e.isChecked():         return "5e_phb"
+        elif self.rb_55e.isChecked() and self.cb_55e_advanced.isChecked(): return "5.5e_adv"
+        elif self.rb_55e.isChecked():        return "5.5e_phb"
+        elif self.rb_51_srd.isChecked() and self.cb_51_custom.isChecked(): return "5.1_srd_custom"
+        elif self.rb_51_srd.isChecked():     return "5.1_srd"
+        elif self.rb_52_srd.isChecked() and self.cb_52_custom.isChecked(): return "5.2_srd_custom"
+        elif self.rb_52_srd.isChecked():     return "5.2_srd"
+        return "5.1_srd"
 
     def validate(self) -> str | None:
         if not self.name_edit.text().strip():
             return "Bitte einen Charakter-Namen eingeben."
         return None
+    
+    def _connect_edition_radio_buttons(self) -> None:
+        group = QButtonGroup(self)
+        for rb in self._ed_rbs:
+            group.addButton(rb)   # Qt verwaltet mutual exclusion automatisch
 
+        self.rb_5e.toggled.connect(self.cb_5e_advanced.setEnabled)
+        self.rb_55e.toggled.connect(self.cb_55e_advanced.setEnabled)
+        self.rb_51_srd.toggled.connect(self.cb_51_custom.setEnabled)
+        self.rb_52_srd.toggled.connect(self.cb_52_custom.setEnabled)
+        
 
 class _Step1_Race(QWidget):
     def __init__(self, parent=None):
@@ -245,6 +350,18 @@ class _Step1_Race(QWidget):
         data = self.dragonborn_combo.currentData()
         return data if data else self.dragonborn_combo.currentText()
 
+    def reload(self):
+        self._races = srd.get_races()
+        self.race_list.clear()
+        for r in self._races:
+            item = QListWidgetItem(r["name"])
+            item.setData(Qt.ItemDataRole.UserRole, r["index"])
+            self.race_list.addItem(item)
+        self.subrace_list.clear()
+        self.detail_area.clear()
+        self.half_elf_group.setVisible(False)
+        self.dragonborn_group.setVisible(False)
+
     def validate(self) -> str | None:
         if not self.selected_race():
             return "Bitte eine Rasse auswählen."
@@ -326,6 +443,15 @@ class _Step2_Class(QWidget):
         for f in c["features"].get("1", []):
             lines.append(f"  • {f}")
         return "\n".join(lines)
+
+    def reload(self):
+        self._classes = srd.get_classes()
+        self.class_list.clear()
+        for c in self._classes:
+            item = QListWidgetItem(c["name"])
+            item.setData(Qt.ItemDataRole.UserRole, c["index"])
+            self.class_list.addItem(item)
+        self.detail_area.clear()
 
     def selected_class(self) -> str | None:
         item = self.class_list.currentItem()
@@ -586,6 +712,15 @@ class _Step4_Background(QWidget):
         lines.append(b['feature']['desc'])
         lines.append(f"\nAusrüstung: {b['equipment']}")
         return "\n".join(lines)
+
+    def reload(self):
+        self._backgrounds = srd.get_backgrounds()
+        self.bg_list.clear()
+        for b in self._backgrounds:
+            item = QListWidgetItem(b["name"])
+            item.setData(Qt.ItemDataRole.UserRole, b["index"])
+            self.bg_list.addItem(item)
+        self.detail_area.clear()
 
     def selected_background(self) -> str | None:
         item = self.bg_list.currentItem()
@@ -900,7 +1035,12 @@ class CharacterWizard(QDialog):
             return
         self.error_lbl.setText("")
 
-        if self._current == 1:
+        if self._current == 0:
+            srd.set_edition(self.step0.edition())
+            self.step1.reload()
+            self.step2.reload()
+            self.step4.reload()
+        elif self._current == 1:
             pass  # race selected
         elif self._current == 2:
             # Update skills step when class is chosen
