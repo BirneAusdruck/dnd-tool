@@ -12,14 +12,15 @@ from PySide6.QtWidgets import (
     QFrame, QWidget, QButtonGroup, QListWidget, QListWidgetItem,
     QTextEdit, QStackedWidget, QSplitter,
 )
+from PySide6.QtGui import QIcon
 from PySide6.QtCore import Qt
 
 from src.gui.theme import COLORS
+from src.gui import assets
 from src.game import srd_loader as srd
 from src.game.level_manager import (
     get_level_up_info, get_level_down_info, get_asi_levels, get_new_features,
 )
-
 
 def _section(text: str) -> QLabel:
     lbl = QLabel(text)
@@ -33,7 +34,6 @@ def _muted(text: str) -> QLabel:
     lbl.setWordWrap(True)
     return lbl
 
-
 # ── LevelUpDialog ──────────────────────────────────────────────────────────
 
 class LevelUpDialog(QDialog):
@@ -42,9 +42,9 @@ class LevelUpDialog(QDialog):
     After .exec() returns Accepted, read .hp_gain and .asi_changes.
     """
 
-    def __init__(self, char_data: dict, parent=None):
+    def __init__(self, char_data: dict, class_index: str | None, parent=None):
         super().__init__(parent)
-        self._info = get_level_up_info(char_data)
+        self._info = get_level_up_info(char_data, class_index)
         self._char_data = char_data
         self._roll_value: int | None = None
 
@@ -52,6 +52,7 @@ class LevelUpDialog(QDialog):
         self.hp_gain: int = self._info["hp_average"]
         self.asi_changes: dict[str, int] | None = None
         self.feat_index: str | None = None
+        self.subclass_index: str | None = None
 
         cls_name = (srd.get_class(self._info["class_index"]) or {}).get(
             "name", self._info["class_index"]
@@ -68,13 +69,21 @@ class LevelUpDialog(QDialog):
         root.setSpacing(12)
         root.setContentsMargins(20, 16, 20, 16)
 
+        title_row = QHBoxLayout()
+        title_row.setSpacing(8)
+        cls_icon_p = assets.ICONS_CLASS.get(self._info["class_index"])
+        if cls_icon_p:
+            ic_lbl = QLabel()
+            ic_lbl.setPixmap(QIcon(assets.resolve(cls_icon_p)).pixmap(36, 36))
+            ic_lbl.setStyleSheet("background:transparent;")
+            title_row.addWidget(ic_lbl)
         title = QLabel(
             f"Level {info['current_level']} → Level {info['new_level']}  |  {cls_name}"
         )
-        title.setStyleSheet(
-            f"font-size:18px;font-weight:bold;color:{COLORS['text']};"
-        )
-        root.addWidget(title)
+        title.setStyleSheet(f"font-size:18px;font-weight:bold;color:{COLORS['text']};")
+        title_row.addWidget(title)
+        title_row.addStretch()
+        root.addLayout(title_row)
 
         # Scrollable body
         scroll = QScrollArea()
@@ -86,7 +95,7 @@ class LevelUpDialog(QDialog):
 
         # New features
         if info["new_features"]:
-            feat_grp = QGroupBox(f"Neue Fähigkeiten (Level {info['new_level']})")
+            feat_grp = QGroupBox(f"Neue Fähigkeiten ({cls_name} Level {info['new_class_level']})")
             feat_inner = QVBoxLayout(feat_grp)
             for f in info["new_features"]:
                 lbl = QLabel(f"• {f}")
@@ -98,6 +107,11 @@ class LevelUpDialog(QDialog):
         # HP gain
         layout.addWidget(self._build_hp_section())
 
+        # Subclass selection (if applicable)
+        self._subclass_bg: QButtonGroup | None = None
+        if info["is_subclass"]:
+            layout.addWidget(self._build_subclass_section())
+
         # ASI or Feat (if applicable)
         self._asi_spins: dict[str, QSpinBox] = {}
         self._asi_total_lbl: QLabel | None = None
@@ -107,9 +121,12 @@ class LevelUpDialog(QDialog):
         if info["is_asi"]:
             layout.addWidget(self._build_asi_feat_section())
 
-        # Spell slot changes
+        # Spell slot changes (combined, per-class, or pact)
         sp_info = info.get("spell_info")
-        if sp_info and sp_info["old_slots"] != sp_info["new_slots"]:
+        if sp_info and (
+            sp_info["old_slots"] != sp_info["new_slots"]
+            or sp_info.get("old_pact") != sp_info.get("new_pact")
+        ):
             layout.addWidget(self._build_spell_section(sp_info))
 
         layout.addStretch()
@@ -160,6 +177,9 @@ class LevelUpDialog(QDialog):
         )
         btn_roll = QPushButton("Würfeln")
         btn_roll.setObjectName("secondary-btn")
+        die_icon_p = assets.ICONS_DICE.get(f"d{hit_die}")
+        if die_icon_p:
+            btn_roll.setIcon(QIcon(assets.resolve(die_icon_p)))
         btn_roll.clicked.connect(self._do_hp_roll)
 
         self.manual_spin = QSpinBox()
@@ -172,6 +192,24 @@ class LevelUpDialog(QDialog):
         hp_grid.addWidget(self.roll_result_lbl, 2, 2)
         hp_grid.addWidget(self.rb_manual, 3, 0)
         hp_grid.addWidget(self.manual_spin, 3, 1)
+        return grp
+
+    def _build_subclass_section(self) -> QGroupBox:
+        info = self._info
+        grp = QGroupBox(f"{info['subclass_name']} wählen")
+        layout = QVBoxLayout(grp)
+        layout.addWidget(_muted(
+            f"Du erreichst {info['class_index'].capitalize()} Level {info['new_class_level']} "
+            f"und wählst jetzt eine {info['subclass_name']}."
+        ))
+        self._subclass_bg = QButtonGroup(self)
+        for choice in info["subclass_choices"]:
+            rb = QRadioButton(choice)
+            self._subclass_bg.addButton(rb)
+            layout.addWidget(rb)
+        buttons = self._subclass_bg.buttons()
+        if buttons:
+            buttons[0].setChecked(True)
         return grp
 
     def _build_asi_feat_section(self) -> QGroupBox:
@@ -270,17 +308,34 @@ class LevelUpDialog(QDialog):
         self._feat_detail.setHtml("<br>".join(lines))
 
     def _build_spell_section(self, sp_info: dict) -> QGroupBox:
-        grp = QGroupBox("Zauberplätze")
-        grid = QGridLayout(grp)
+        title = "Kombinierte Zauberplätze" if sp_info.get("is_multiclass") else "Zauberplätze"
+        grp = QGroupBox(title)
+        outer = QVBoxLayout(grp)
+
+        # Combined / per-class slots
         old_s, new_s = sp_info["old_slots"], sp_info["new_slots"]
-        for i in range(max(len(old_s), len(new_s))):
-            old = old_s[i] if i < len(old_s) else 0
-            new = new_s[i] if i < len(new_s) else 0
-            grid.addWidget(QLabel(f"Grad {i+1}:"), 0, i)
-            color = COLORS["success"] if new > old else COLORS["text"]
-            lbl = QLabel(f"{old} → {new}")
-            lbl.setStyleSheet(f"color:{color};font-weight:bold;")
-            grid.addWidget(lbl, 1, i)
+        if old_s or new_s:
+            grid = QGridLayout()
+            for i in range(max(len(old_s), len(new_s))):
+                old = old_s[i] if i < len(old_s) else 0
+                new = new_s[i] if i < len(new_s) else 0
+                grid.addWidget(QLabel(f"Grad {i+1}:"), 0, i)
+                color = COLORS["success"] if new > old else COLORS["text"]
+                lbl = QLabel(f"{old} → {new}")
+                lbl.setStyleSheet(f"color:{color};font-weight:bold;")
+                grid.addWidget(lbl, 1, i)
+            outer.addLayout(grid)
+
+        # Warlock pact slots (separate)
+        old_pact, new_pact = sp_info.get("old_pact", (0, 0)), sp_info.get("new_pact", (0, 0))
+        if old_pact != new_pact and (old_pact[0] or new_pact[0]):
+            pact_lbl = QLabel(
+                f"Pakt-Slots: {old_pact[0]}×Grad {old_pact[1]} → "
+                f"{new_pact[0]}×Grad {new_pact[1]}"
+            )
+            pact_lbl.setStyleSheet(f"color:{COLORS['accent']};font-weight:bold;font-size:12px;")
+            outer.addWidget(pact_lbl)
+
         return grp
 
     # ── Slots ──────────────────────────────────────────────────────────────
@@ -348,6 +403,14 @@ class LevelUpDialog(QDialog):
                     if sp.value() > 0
                 }
 
+        # Subclass
+        if self._info["is_subclass"]:
+            checked = self._subclass_bg.checkedButton() if self._subclass_bg else None
+            if not checked:
+                self.error_lbl.setText("Bitte eine Unterklasse auswählen.")
+                return
+            self.subclass_index = checked.text()
+
         self.accept()
 
 
@@ -369,13 +432,22 @@ class LevelDownDialog(QDialog):
         root.setSpacing(12)
         root.setContentsMargins(20, 16, 20, 16)
 
+        cls_level_info = f" (Stufe {info['class_level']})" if info.get("class_level") else ""
+        title_row = QHBoxLayout()
+        title_row.setSpacing(8)
+        dn_icon_p = assets.ICONS_CLASS.get(info["class_index"])
+        if dn_icon_p:
+            dn_ic = QLabel()
+            dn_ic.setPixmap(QIcon(assets.resolve(dn_icon_p)).pixmap(32, 32))
+            dn_ic.setStyleSheet("background:transparent;")
+            title_row.addWidget(dn_ic)
         title = QLabel(
-            f"Level senken: {info['current_level']} → {info['new_level']}  |  {cls_name}"
+            f"Level senken: {info['current_level']} → {info['new_level']}  |  {cls_name}{cls_level_info}"
         )
-        title.setStyleSheet(
-            f"font-size:16px;font-weight:bold;color:{COLORS['error']};"
-        )
-        root.addWidget(title)
+        title.setStyleSheet(f"font-size:16px;font-weight:bold;color:{COLORS['error']};")
+        title_row.addWidget(title)
+        title_row.addStretch()
+        root.addLayout(title_row)
 
         grp = QGroupBox("Folgende Änderungen werden rückgängig gemacht:")
         grp_inner = QVBoxLayout(grp)
@@ -390,6 +462,9 @@ class LevelDownDialog(QDialog):
                 f"{ab} −{v}" for ab, v in info["asi_undone"].items()
             )
             grp_inner.addWidget(QLabel(f"• ASI wird rückgängig gemacht ({changes_str})"))
+
+        if info.get("subclass_undone"):
+            grp_inner.addWidget(QLabel(f"• Unterklasse wird entfernt: {info['subclass_undone']}"))
 
         if info.get("feat_undone"):
             feat_name = (srd.get_feat(info["feat_undone"]) or {}).get("name", info["feat_undone"])
@@ -421,3 +496,124 @@ class LevelDownDialog(QDialog):
         btn_row.addWidget(btn_cancel)
         btn_row.addWidget(btn_ok)
         root.addLayout(btn_row)
+
+# ── ClassPickerDialog ─────────────────────────────────────────────────────────
+
+class ClassPickerDialog(QDialog):
+    """
+    Lets the user choose which class to level up into.
+    Already-held classes are highlighted; new classes appear as multiclass options.
+    After .exec() returns Accepted, read .selected_class_index.
+    """
+
+    def __init__(self, char_data: dict, parent=None):
+        super().__init__(parent)
+        self.setWindowTitle("Klasse für Level Up wählen")
+        self.setMinimumSize(600, 420)
+        self.selected_class_index: str | None = None
+        self._build_ui(char_data)
+
+    def _build_ui(self, char_data: dict) -> None:
+        held = {
+            c["class_index"]: c["level"]
+            for c in char_data["basics"].get("classes", [])
+        }
+
+        root = QVBoxLayout(self)
+        root.setSpacing(12)
+        root.setContentsMargins(20, 16, 20, 16)
+
+        root.addWidget(_section("Klasse für Level Up wählen"))
+        root.addWidget(_muted(
+            "Bereits gehaltene Klassen sind hervorgehoben. "
+            "Wähle eine neue Klasse für Multiclassing."
+        ))
+
+        spl = QSplitter(Qt.Orientation.Horizontal)
+
+        # Left: class list with icons and held-class indicators
+        left_w = QWidget()
+        left = QVBoxLayout(left_w)
+        left.setContentsMargins(0, 0, 0, 0)
+        left.addWidget(QLabel("Klasse:"))
+        self._class_list = QListWidget()
+        for cls in srd.get_classes():
+            idx = cls["index"]
+            held_lvl = held.get(idx)
+            label = cls["name"] + (f"  (Stufe {held_lvl})" if held_lvl else "  [neu]")
+            item = QListWidgetItem(label)
+            item.setData(Qt.ItemDataRole.UserRole, idx)
+            icon_path = assets.ICONS_CLASS.get(idx)
+            if icon_path:
+                item.setIcon(QIcon(assets.resolve(icon_path)))
+            if held_lvl:
+                item.setForeground(Qt.GlobalColor.cyan)
+            self._class_list.addItem(item)
+        self._class_list.currentItemChanged.connect(self._on_class_changed)
+        left.addWidget(self._class_list)
+        spl.addWidget(left_w)
+
+        # Right: detail area
+        right_w = QWidget()
+        right = QVBoxLayout(right_w)
+        right.setContentsMargins(0, 0, 0, 0)
+        right.addWidget(QLabel("Details:"))
+        self._detail = QTextEdit()
+        self._detail.setReadOnly(True)
+        self._detail.setPlaceholderText("← Klasse auswählen")
+        right.addWidget(self._detail)
+        spl.addWidget(right_w)
+
+        spl.setStretchFactor(0, 1)
+        spl.setStretchFactor(1, 2)
+        root.addWidget(spl, 1)
+
+        # Footer
+        btn_row = QHBoxLayout()
+        self._error_lbl = QLabel("")
+        self._error_lbl.setStyleSheet(f"color:{COLORS['error']};font-size:12px;")
+        btn_cancel = QPushButton("Abbrechen")
+        btn_cancel.setObjectName("secondary-btn")
+        btn_cancel.clicked.connect(self.reject)
+        self._btn_ok = QPushButton("Klasse wählen →")
+        self._btn_ok.setObjectName("primary-btn")
+        self._btn_ok.setEnabled(False)
+        self._btn_ok.clicked.connect(self._on_accept)
+        btn_row.addWidget(self._error_lbl, 1)
+        btn_row.addWidget(btn_cancel)
+        btn_row.addWidget(self._btn_ok)
+        root.addLayout(btn_row)
+
+    def _on_class_changed(self, current: QListWidgetItem, _) -> None:
+        if not current:
+            self._btn_ok.setEnabled(False)
+            return
+        self._btn_ok.setEnabled(True)
+        cls = srd.get_class(current.data(Qt.ItemDataRole.UserRole))
+        if not cls:
+            return
+        lines = [cls["name"], "=" * 40]
+        lines.append(f"Trefferwürfel: d{cls['hit_die']}")
+        lines.append(f"Primärattribute: {', '.join(cls['primary_abilities'])}")
+        lines.append(f"Rettungswürfe: {', '.join(cls['saving_throws'])}")
+        lines.append(f"Rüstungen: {', '.join(cls['armor_proficiencies']) or '–'}")
+        lines.append(f"Waffen: {', '.join(cls['weapon_proficiencies'])}")
+        sc = cls["skill_choices"]
+        from_str = ", ".join(sc["from"]) if sc["from"] != "any" else "beliebig"
+        lines.append(f"Fertigkeiten: {sc['count']} aus ({from_str})")
+        if cls.get("spellcasting"):
+            sp = cls["spellcasting"]
+            lines.append(f"Zauberkunst: {sp['ability']} ({sp['type']})")
+        lines.append("")
+        lines.append("Level-1-Fähigkeiten:")
+        for f in cls["features"].get("1", []):
+            lines.append(f"  • {f}")
+        self._detail.setPlainText("\n".join(lines))
+
+    def _on_accept(self) -> None:
+        item = self._class_list.currentItem()
+        if not item:
+            self._error_lbl.setText("Bitte eine Klasse auswählen.")
+            return
+        self.selected_class_index = item.data(Qt.ItemDataRole.UserRole)
+        self.accept()

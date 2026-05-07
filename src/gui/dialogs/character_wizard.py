@@ -178,24 +178,24 @@ class _Step0_BasicInfo(QWidget):
         align_inner.addWidget(self.align_combo)
         layout.addWidget(align_grp)
 
-        # Starting level
-        level_grp = QGroupBox("Startlevel")
-        level_inner = QVBoxLayout(level_grp)
-        level_row = QHBoxLayout()
-        self.starting_level_spin = QSpinBox()
-        self.starting_level_spin.setRange(1, 20)
-        self.starting_level_spin.setValue(1)
-        self.starting_level_spin.setFixedWidth(70)
-        level_row.addWidget(QLabel("Level:"))
-        level_row.addWidget(self.starting_level_spin)
-        level_row.addStretch()
-        level_inner.addLayout(level_row)
-        self._level_hint = QLabel("")
-        self._level_hint.setStyleSheet(f"color:{COLORS['muted']};font-size:12px;")
-        self._level_hint.setWordWrap(True)
-        level_inner.addWidget(self._level_hint)
-        self.starting_level_spin.valueChanged.connect(self._on_level_changed)
-        layout.addWidget(level_grp)
+        # # Starting level
+        # level_grp = QGroupBox("Startlevel")
+        # level_inner = QVBoxLayout(level_grp)
+        # level_row = QHBoxLayout()
+        # self.starting_level_spin = QSpinBox()
+        # self.starting_level_spin.setRange(1, 20)
+        # self.starting_level_spin.setValue(1)
+        # self.starting_level_spin.setFixedWidth(70)
+        # level_row.addWidget(QLabel("Level:"))
+        # level_row.addWidget(self.starting_level_spin)
+        # level_row.addStretch()
+        # level_inner.addLayout(level_row)
+        # self._level_hint = QLabel("")
+        # self._level_hint.setStyleSheet(f"color:{COLORS['muted']};font-size:12px;")
+        # self._level_hint.setWordWrap(True)
+        # level_inner.addWidget(self._level_hint)
+        # self.starting_level_spin.valueChanged.connect(self._on_level_changed)
+        # layout.addWidget(level_grp)
 
         layout.addStretch()
 
@@ -212,22 +212,22 @@ class _Step0_BasicInfo(QWidget):
         elif self.rb_52_srd.isChecked():     return "5.2_srd"
         return "5.1_srd"
 
-    def _on_level_changed(self, value: int) -> None:
-        if value > 1:
-            self._level_hint.setText(
-                f"Level {value}: Du wirst nach der Erstellung {value - 1}× durch den "
-                f"Level-Up-Dialog geführt (HP, ASI-Auswahl etc.)."
-            )
-        else:
-            self._level_hint.setText("")
+    # def _on_level_changed(self, value: int) -> None:
+    #     if value > 1:
+    #         self._level_hint.setText(
+    #             f"Level {value}: Du wirst nach der Erstellung {value - 1}× durch den "
+    #             f"Level-Up-Dialog geführt (HP, ASI-Auswahl etc.)."
+    #         )
+    #     else:
+    #         self._level_hint.setText("")
 
     def validate(self) -> str | None:
         if not self.name_edit.text().strip():
             return "Bitte einen Charakter-Namen eingeben."
         return None
 
-    def starting_level(self) -> int:
-        return self.starting_level_spin.value()
+    # def starting_level(self) -> int:
+    #     return self.starting_level_spin.value()
     
     def _connect_edition_radio_buttons(self) -> None:
         group = QButtonGroup(self)
@@ -273,6 +273,7 @@ class _Step1_Race(QWidget):
         mid.addWidget(QLabel("Unterrasse:"))
         self.subrace_list = QListWidget()
         self.subrace_list.setMaximumWidth(180)
+        self.subrace_list.currentItemChanged.connect(self._on_subrace_changed)
         mid.addWidget(self.subrace_list)
         row.addLayout(mid)
 
@@ -333,9 +334,9 @@ class _Step1_Race(QWidget):
                 item = QListWidgetItem(sr["name"])
                 item.setData(Qt.ItemDataRole.UserRole, sr["index"])
                 self.subrace_list.addItem(item)
-            self.subrace_list.setCurrentRow(0)
+        # always select first row — fires _on_subrace_changed which updates the detail area
+        self.subrace_list.setCurrentRow(0)
 
-        self.detail_area.setPlainText(self._format_race(race))
         self.half_elf_group.setVisible(idx == "half-elf")
 
         self.dragonborn_combo.clear()
@@ -346,20 +347,51 @@ class _Step1_Race(QWidget):
                 )
         self.dragonborn_group.setVisible(idx == "dragonborn")
 
-    def _format_race(self, r: dict) -> str:
+    def _on_subrace_changed(self, current, _prev):
+        if not current:
+            return
+        race_item = self.race_list.currentItem()
+        if not race_item:
+            return
+        race = srd.get_race(race_item.data(Qt.ItemDataRole.UserRole))
+        if not race:
+            return
+        sr_idx = current.data(Qt.ItemDataRole.UserRole)
+        sr = next((s for s in race.get("subraces", []) if s["index"] == sr_idx), None)
+        self.detail_area.setPlainText(self._format_race(race, sr))
+
+    def _format_race(self, r: dict, sr: dict | None = None) -> str:
         lines = [r["name"], "=" * 40]
         lines.append(f"Geschwindigkeit: {r['speed']} ft | Größe: {r.get('size','?')}")
         lines.append("")
-        if r["ability_bonuses"]:
-            ab_str = ", ".join(f"+{b['bonus']} {b['score']}" for b in r["ability_bonuses"] if b["score"] not in ("choice_1","choice_2"))
+
+        # Ability bonuses: base + subrace combined
+        all_bonuses = list(r.get("ability_bonuses", []))
+        if sr:
+            all_bonuses.extend(sr.get("ability_bonuses", []))
+        if all_bonuses:
+            ab_str = ", ".join(
+                f"+{b['bonus']} {b['score']}"
+                for b in all_bonuses
+                if b["score"] not in ("choice_1", "choice_2")
+            )
             if r["index"] == "half-elf":
                 ab_str += ", +1 auf zwei wählbare Attribute"
             lines.append(f"Attributboni: {ab_str}")
+
         lines.append(f"Sprachen: {', '.join(r.get('languages', []))}")
         lines.append("")
+
         lines.append("Volksmerkmale:")
         for t in r.get("traits", []):
             lines.append(f"  • {t['name']}: {t['desc']}")
+
+        if sr:
+            lines.append("")
+            lines.append(f"── {sr['name']} ──")
+            for t in sr.get("traits", []):
+                lines.append(f"  • {t['name']}: {t['desc']}")
+
         return "\n".join(lines)
 
     def selected_race(self) -> str | None:
@@ -445,6 +477,27 @@ class _Step2_Class(QWidget):
         self.setLayout(QVBoxLayout())
         self.layout().addWidget(_scroll_wrap(outer))
 
+        # Starting level
+        level_grp = QGroupBox("Startlevel")
+        level_inner = QVBoxLayout(level_grp)
+        level_row = QHBoxLayout()
+        self.starting_level_spin = QSpinBox()
+        self.starting_level_spin.setRange(1, 20)
+        self.starting_level_spin.setValue(1)
+        self.starting_level_spin.setFixedWidth(70)
+        level_row.addWidget(QLabel("Level:"))
+        level_row.addWidget(self.starting_level_spin)
+        level_row.addStretch()
+        level_inner.addLayout(level_row)
+        self._level_hint = QLabel("")
+        self._level_hint.setStyleSheet(f"color:{COLORS['muted']};font-size:12px;")
+        self._level_hint.setWordWrap(True)
+        level_inner.addWidget(self._level_hint)
+        self.starting_level_spin.valueChanged.connect(self._on_level_changed)
+        layout.addWidget(level_grp)
+
+        layout.addStretch()
+
     def _on_class_changed(self, current, _prev):
         if not current:
             return
@@ -491,7 +544,18 @@ class _Step2_Class(QWidget):
 
     def validate(self) -> str | None:
         return None if self.selected_class() else "Bitte eine Klasse auswählen."
+    
+    def _on_level_changed(self, value: int) -> None:
+        if value > 1:
+            self._level_hint.setText(
+                f"Level {value}: Du wirst nach der Erstellung {value - 1}× durch den "
+                f"Level-Up-Dialog geführt (HP, ASI-Auswahl etc.)."
+            )
+        else:
+            self._level_hint.setText("")
 
+    def starting_level(self) -> int:
+        return self.starting_level_spin.value()
 
 class _Step3_AbilityScores(QWidget):
     ABILITIES = srd.ABILITIES
@@ -1121,7 +1185,7 @@ class CharacterWizard(QDialog):
         )
 
         # Apply starting level (> 1) via sequential level-up dialogs
-        starting_level = self.step0.starting_level()
+        starting_level = self.step2.starting_level()
         if starting_level > 1:
             data = self._apply_starting_level(data, starting_level)
             if data is None:
@@ -1147,17 +1211,24 @@ class CharacterWizard(QDialog):
         Walk the character from level 1 up to target_level via LevelUpDialog.
         Returns the final data dict, or None if the user cancelled.
         """
-        from src.gui.dialogs.levelup_dialog import LevelUpDialog
+        from src.gui.dialogs.levelup_dialog import ClassPickerDialog, LevelUpDialog
 
         for lvl in range(2, target_level + 1):
-            info = get_level_up_info(data)
-            dlg = LevelUpDialog(data, parent=self)
-            dlg.setWindowTitle(
-                f"Startlevel: Level {info['current_level']} → {info['new_level']} "
+            cls_dlg = ClassPickerDialog(data, parent=self)
+            if not cls_dlg.exec():
+                return None
+            class_index = cls_dlg.selected_class_index
+            info = get_level_up_info(data, class_index)
+            lvl_dlg = LevelUpDialog(data, class_index, parent=self)
+            lvl_dlg.setWindowTitle(
+                f"Startlevel: Level {info['total_level']} → {info['new_total_level']} "
                 f"({lvl - 1}/{target_level - 1})"
             )
-            if not dlg.exec():
+            if not lvl_dlg.exec():
                 return None
-            data = apply_level_up(data, dlg.hp_gain, dlg.asi_changes, dlg.feat_index)
+            data = apply_level_up(
+                data, lvl_dlg.hp_gain, class_index,
+                lvl_dlg.asi_changes, lvl_dlg.feat_index, lvl_dlg.subclass_index,
+            )
 
         return data

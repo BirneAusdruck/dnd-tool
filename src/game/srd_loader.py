@@ -192,43 +192,78 @@ def get_feat(index: str) -> dict | None:
     return next((f for f in get_feats() if f["index"] == index), None)
 
 
+# ── Weapons ────────────────────────────────────────────────────────────────
+
+def get_weapons() -> list[dict]:
+    return _get_list("weapons.json")
+
+
+def get_weapon(index: str) -> dict | None:
+    return next((w for w in get_weapons() if w["index"] == index), None)
+
+
+# ── Armor ──────────────────────────────────────────────────────────────────
+
+def get_armor_list() -> list[dict]:
+    return _get_list("armor.json")
+
+
+def get_armor(index: str) -> dict | None:
+    return next((a for a in get_armor_list() if a["index"] == index), None)
+
+
+# ── Equipment ─────────────────────────────────────────────────────────────
+
+def get_equipment_list(category: str | None = None) -> list[dict]:
+    items = _get_list("equipment.json")
+    if category:
+        items = [i for i in items if i.get("category") == category]
+    return sorted(items, key=lambda i: i["name"])
+
+
+def get_equipment(index: str) -> dict | None:
+    return next((i for i in get_equipment_list() if i["index"] == index), None)
+
+
+# ── Magic Items ───────────────────────────────────────────────────────────
+
+def get_magic_items(category: str | None = None, rarity: str | None = None) -> list[dict]:
+    items = _get_list("magic-items.json")
+    if category:
+        items = [i for i in items if i.get("category") == category]
+    if rarity:
+        items = [i for i in items if i.get("rarity") == rarity]
+    return sorted(items, key=lambda i: i["name"])
+
+
+def get_magic_item(index: str) -> dict | None:
+    return next((i for i in get_magic_items() if i["index"] == index), None)
+
+
 # ── Skills (static) ────────────────────────────────────────────────────────
 
-_ICON_ROOT = Path(__file__).parent.parent.parent / "assets/icons"
-_ICON_ROOT_SKILL = _ICON_ROOT / "skill"
-
 SKILLS: list[dict] = [
-    {"name": "Acrobatics",      "ability": "DEX", "icon":_ICON_ROOT_SKILL / "acrobatics"},
-    {"name": "Animal Handling", "ability": "WIS", "icon":_ICON_ROOT_SKILL / "animal-handling"},
-    {"name": "Arcana",          "ability": "INT", "icon":_ICON_ROOT_SKILL / "arcana"},
-    {"name": "Athletics",       "ability": "STR", "icon":_ICON_ROOT_SKILL / "athletics"},
-    {"name": "Deception",       "ability": "CHA", "icon":_ICON_ROOT_SKILL / "deception"},
-    {"name": "History",         "ability": "INT", "icon":_ICON_ROOT_SKILL / "history"},
-    {"name": "Insight",         "ability": "WIS", "icon":_ICON_ROOT_SKILL / "insight"},
-    {"name": "Intimidation",    "ability": "CHA", "icon":_ICON_ROOT_SKILL / "intimidation"},
-    {"name": "Investigation",   "ability": "INT", "icon":_ICON_ROOT_SKILL / "investigation"},
-    {"name": "Medicine",        "ability": "WIS", "icon":_ICON_ROOT_SKILL / "medicine"},
-    {"name": "Nature",          "ability": "INT", "icon":_ICON_ROOT_SKILL / "nature"},
-    {"name": "Perception",      "ability": "WIS", "icon":_ICON_ROOT_SKILL / "perception"},
-    {"name": "Performance",     "ability": "CHA", "icon":_ICON_ROOT_SKILL / "performance"},
-    {"name": "Persuasion",      "ability": "CHA", "icon":_ICON_ROOT_SKILL / "persuasion"},
-    {"name": "Religion",        "ability": "INT", "icon":_ICON_ROOT_SKILL / "religion"},
-    {"name": "Sleight of Hand", "ability": "DEX", "icon":_ICON_ROOT_SKILL / "sleight-of-hand"},
-    {"name": "Stealth",         "ability": "DEX", "icon":_ICON_ROOT_SKILL / "stealth"},
-    {"name": "Survival",        "ability": "WIS", "icon":_ICON_ROOT_SKILL / "survival"},
+    {"name": "Acrobatics",      "ability": "DEX",},
+    {"name": "Animal Handling", "ability": "WIS",},
+    {"name": "Arcana",          "ability": "INT",},
+    {"name": "Athletics",       "ability": "STR",},
+    {"name": "Deception",       "ability": "CHA",},
+    {"name": "History",         "ability": "INT",},
+    {"name": "Insight",         "ability": "WIS",},
+    {"name": "Intimidation",    "ability": "CHA",},
+    {"name": "Investigation",   "ability": "INT",},
+    {"name": "Medicine",        "ability": "WIS",},
+    {"name": "Nature",          "ability": "INT",},
+    {"name": "Perception",      "ability": "WIS",},
+    {"name": "Performance",     "ability": "CHA",},
+    {"name": "Persuasion",      "ability": "CHA",},
+    {"name": "Religion",        "ability": "INT",},
+    {"name": "Sleight of Hand", "ability": "DEX",},
+    {"name": "Stealth",         "ability": "DEX",},
+    {"name": "Survival",        "ability": "WIS",},
 ]
 
-_ICON_ROOT_ABILITY = _ICON_ROOT / "ability"
-
 ABILITIES = ["STR", "DEX", "CON", "INT", "WIS", "CHA"]
-ABILITY_ICONS = {
-    "STR": _ICON_ROOT_ABILITY / "strength", 
-    "DEX": _ICON_ROOT_ABILITY / "dexterity", 
-    "CON": _ICON_ROOT_ABILITY / "constitution", 
-    "INT": _ICON_ROOT_ABILITY / "intelligence", 
-    "WIS": _ICON_ROOT_ABILITY / "wisdom", 
-    "CHA": _ICON_ROOT_ABILITY / "charisma",
-    }
 
 ALIGNMENTS = [
     "Lawful Good", "Neutral Good", "Chaotic Good",
