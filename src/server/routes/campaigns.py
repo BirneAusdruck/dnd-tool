@@ -11,7 +11,7 @@ from flask import Blueprint, jsonify, request
 from flask_jwt_extended import jwt_required, get_jwt, get_jwt_identity
 
 from src.server.extensions import db
-from src.models.campaign import Campaign
+from src.persistence.models.campaign import Campaign
 
 campaigns_bp = Blueprint("campaigns", __name__)
 

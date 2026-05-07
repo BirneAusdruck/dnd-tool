@@ -1,0 +1,29 @@
+class SRDConstants:
+    ABILITIES: list[str] = ["STR", "DEX", "CON", "INT", "WIS", "CHA"]
+
+    SKILLS: list[dict] = [
+        {"name": "Acrobatics",      "ability": "DEX"},
+        {"name": "Animal Handling", "ability": "WIS"},
+        {"name": "Arcana",          "ability": "INT"},
+        {"name": "Athletics",       "ability": "STR"},
+        {"name": "Deception",       "ability": "CHA"},
+        {"name": "History",         "ability": "INT"},
+        {"name": "Insight",         "ability": "WIS"},
+        {"name": "Intimidation",    "ability": "CHA"},
+        {"name": "Investigation",   "ability": "INT"},
+        {"name": "Medicine",        "ability": "WIS"},
+        {"name": "Nature",          "ability": "INT"},
+        {"name": "Perception",      "ability": "WIS"},
+        {"name": "Performance",     "ability": "CHA"},
+        {"name": "Persuasion",      "ability": "CHA"},
+        {"name": "Religion",        "ability": "INT"},
+        {"name": "Sleight of Hand", "ability": "DEX"},
+        {"name": "Stealth",         "ability": "DEX"},
+        {"name": "Survival",        "ability": "WIS"},
+    ]
+
+    ALIGNMENTS: list[str] = [
+        "Lawful Good", "Neutral Good", "Chaotic Good",
+        "Lawful Neutral", "True Neutral", "Chaotic Neutral",
+        "Lawful Evil", "Neutral Evil", "Chaotic Evil",
+    ]

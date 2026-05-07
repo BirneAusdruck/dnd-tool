@@ -5,9 +5,9 @@ import logging
 import requests
 from PySide6.QtWidgets import QApplication, QMessageBox
 
-from src.gui.server_thread import FlaskServerThread
-from src.gui.main_window import MainWindow
-from src.gui.theme import STYLESHEET
+from src.client.gui.server_thread import FlaskServerThread
+from src.client.gui.main_window import MainWindow
+from src.client.gui.theme import STYLESHEET
 
 logging.basicConfig(
     level=logging.WARNING,

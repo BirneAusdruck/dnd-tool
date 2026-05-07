@@ -12,16 +12,16 @@ def create_app() -> Flask:
     socketio.init_app(app)
 
     # Register models so SQLAlchemy picks them up
-    from src.models import user, character, campaign  # noqa: F401
+    from src.persistence.models import user, character, campaign  # noqa: F401
 
     with app.app_context():
         db.create_all()
 
     from src.server.routes.auth import auth_bp
-    from src.server.routes.session import session_bp
+    from src.server.rooms.routes import session_bp
     from src.server.routes.characters import characters_bp
     from src.server.routes.campaigns import campaigns_bp
-    from src.server.routes.vtt import vtt_bp
+    from src.server.vtt.routes import vtt_bp
     from src.server.routes.discovery import discovery_bp
 
     app.register_blueprint(auth_bp, url_prefix="/api/auth")
@@ -47,9 +47,10 @@ def create_app() -> Flask:
     def _handle_options(path):
         return "", 204
 
-    from src.server import events  # noqa: F401 — registers SocketIO handlers
-    from src.server.events import vtt as _vtt_events   # noqa: F401
-    from src.server.events import chat as _chat_events  # noqa: F401
+    from src.server.rooms import events as _rooms_events  # noqa: F401 — registers SocketIO handlers
+    from src.server.vtt import events as _vtt_events      # noqa: F401
+    from src.server.chat import events as _chat_events    # noqa: F401
+    from src.server.dice import events as _dice_events    # noqa: F401
 
     @app.route("/api/health")
     def health():

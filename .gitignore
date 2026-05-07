@@ -71,3 +71,7 @@ data/dnd/5.0e/phb/
 data/dnd/5.0e/adv/
 data/dnd/5.5e/phb/
 data/dnd/5.5e/adv/
+
+# ── Claude ────────────────────────────────────────────
+CLAUDE.md
+docs/ARCHITECTURE.md

@@ -1,8 +1,8 @@
 from flask import Blueprint, request, jsonify
 from flask_jwt_extended import jwt_required, get_jwt_identity
 from src.server.extensions import db
-from src.models.character import Character
-from src.models.user import User
+from src.persistence.models.character import Character
+from src.persistence.models.user import User
 
 characters_bp = Blueprint("characters", __name__)
 
