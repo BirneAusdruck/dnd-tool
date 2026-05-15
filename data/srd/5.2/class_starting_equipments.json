@@ -1,0 +1,374 @@
+{
+  "class_starting_equipments": [
+    {
+      "index": "barbarian-starting-equipment-a",
+      "class": "barbarian",
+      "option": "a",
+      "items": [
+        {
+          "index": "greataxe"
+        },
+        {
+          "index": "handaxe",
+          "qty": 4
+        },
+        {
+          "choice": "explorers_pack"
+        },
+        {
+          "gold": 15
+        }
+      ]
+    },
+    {
+      "index": "barbarian-starting-equipment-b",
+      "class": "barbarian",
+      "option": "b",
+      "items": []
+    },
+    {
+      "index": "bard-starting-equipment-a",
+      "class": "bard",
+      "option": "a",
+      "items": [
+        {
+          "index": "leather"
+        },
+        {
+          "index": "dagger",
+          "qty": 2
+        },
+        {
+          "choice": "instrument"
+        },
+        {
+          "choice": "entertainers_pack"
+        },
+        {
+          "gold": 19
+        }
+      ]
+    },
+    {
+      "index": "bard-starting-equipment-b",
+      "class": "bard",
+      "option": "b",
+      "items": []
+    },
+    {
+      "index": "cleric-starting-equipment-a",
+      "class": "cleric",
+      "option": "a",
+      "items": [
+        {
+          "index": "chain-mail"
+        },
+        {
+          "index": "shield"
+        },
+        {
+          "index": "mace"
+        },
+        {
+          "choice": "holy_symbol"
+        },
+        {
+          "choice": "priests_pack"
+        },
+        {
+          "gold": 7
+        }
+      ]
+    },
+    {
+      "index": "cleric-starting-equipment-b",
+      "class": "cleric",
+      "option": "b",
+      "items": []
+    },
+    {
+      "index": "druid-starting-equipment-a",
+      "class": "druid",
+      "option": "a",
+      "items": [
+        {
+          "index": "leather"
+        },
+        {
+          "index": "shield"
+        },
+        {
+          "index": "scimitar"
+        },
+        {
+          "choice": "druidic_focus"
+        },
+        {
+          "choice": "explorers_pack"
+        },
+        {
+          "index": "herbalism-kit"
+        },
+        {
+          "gold": 9
+        }
+      ]
+    },
+    {
+      "index": "druid-starting-equipment-b",
+      "class": "druid",
+      "option": "b",
+      "items": []
+    },
+    {
+      "index": "fighter-starting-equipment-a",
+      "class": "fighter",
+      "option": "a",
+      "items": [
+        {
+          "index": "chain-mail"
+        },
+        {
+          "index": "greatsword"
+        },
+        {
+          "index": "flail"
+        },
+        {
+          "index": "javelin",
+          "qty": 8
+        },
+        {
+          "choice": "dungeoneers_pack"
+        },
+        {
+          "gold": 4
+        }
+      ]
+    },
+    {
+      "index": "fighter-starting-equipment-b",
+      "class": "fighter",
+      "option": "b",
+      "items": []
+    },
+    {
+      "index": "monk-starting-equipment-a",
+      "class": "monk",
+      "option": "a",
+      "items": [
+        {
+          "index": "spear"
+        },
+        {
+          "index": "dagger",
+          "qty": 5
+        },
+        {
+          "choice": "artisans_or_instrument_choice"
+        },
+        {
+          "choice": "explorers_pack"
+        },
+        {
+          "gold": 11
+        }
+      ]
+    },
+    {
+      "index": "monk-starting-equipment-b",
+      "class": "monk",
+      "option": "b",
+      "items": []
+    },
+    {
+      "index": "paladin-starting-equipment-a",
+      "class": "paladin",
+      "option": "a",
+      "items": [
+        {
+          "index": "chain-mail"
+        },
+        {
+          "index": "shield"
+        },
+        {
+          "index": "longsword"
+        },
+        {
+          "index": "javelin",
+          "qty": 6
+        },
+        {
+          "choice": "holy_symbol"
+        },
+        {
+          "choice": "priests_pack"
+        },
+        {
+          "gold": 9
+        }
+      ]
+    },
+    {
+      "index": "paladin-starting-equipment-b",
+      "class": "paladin",
+      "option": "b",
+      "items": []
+    },
+    {
+      "index": "ranger-starting-equipment-a",
+      "class": "ranger",
+      "option": "a",
+      "items": [
+        {
+          "index": "scale-mail"
+        },
+        {
+          "index": "shortsword"
+        },
+        {
+          "index": "longbow"
+        },
+        {
+          "index": "arrow",
+          "qty": 20
+        },
+        {
+          "index": "quiver"
+        },
+        {
+          "choice": "druidic_focus"
+        },
+        {
+          "choice": "explorers_pack"
+        },
+        {
+          "gold": 7
+        }
+      ]
+    },
+    {
+      "index": "ranger-starting-equipment-b",
+      "class": "ranger",
+      "option": "b",
+      "items": []
+    },
+    {
+      "index": "rogue-starting-equipment-a",
+      "class": "rogue",
+      "option": "a",
+      "items": [
+        {
+          "index": "leather"
+        },
+        {
+          "index": "dagger",
+          "qty": 2
+        },
+        {
+          "index": "thieves-tools"
+        },
+        {
+          "index": "shortsword"
+        },
+        {
+          "choice": "burglars_pack"
+        },
+        {
+          "gold": 8
+        }
+      ]
+    },
+    {
+      "index": "rogue-starting-equipment-b",
+      "class": "rogue",
+      "option": "b",
+      "items": []
+    },
+    {
+      "index": "sorcerer-starting-equipment-a",
+      "class": "sorcerer",
+      "option": "a",
+      "items": [
+        {
+          "choice": "arcane_focus"
+        },
+        {
+          "index": "dagger",
+          "qty": 2
+        },
+        {
+          "choice": "dungeoneers_pack"
+        },
+        {
+          "gold": 28
+        }
+      ]
+    },
+    {
+      "index": "sorcerer-starting-equipment-b",
+      "class": "sorcerer",
+      "option": "b",
+      "items": []
+    },
+    {
+      "index": "warlock-starting-equipment-a",
+      "class": "warlock",
+      "option": "a",
+      "items": [
+        {
+          "index": "leather"
+        },
+        {
+          "choice": "arcane_focus"
+        },
+        {
+          "index": "dagger",
+          "qty": 2
+        },
+        {
+          "choice": "scholars_pack"
+        },
+        {
+          "gold": 15
+        }
+      ]
+    },
+    {
+      "index": "warlock-starting-equipment-b",
+      "class": "warlock",
+      "option": "b",
+      "items": []
+    },
+    {
+      "index": "wizard-starting-equipment-a",
+      "class": "wizard",
+      "option": "a",
+      "items": [
+        {
+          "choice": "arcane_focus"
+        },
+        {
+          "choice": "spellbook"
+        },
+        {
+          "index": "dagger",
+          "qty": 2
+        },
+        {
+          "choice": "scholars_pack"
+        },
+        {
+          "gold": 5
+        }
+      ]
+    },
+    {
+      "index": "wizard-starting-equipment-b",
+      "class": "wizard",
+      "option": "b",
+      "items": []
+    }
+  ]
+}

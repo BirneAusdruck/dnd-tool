@@ -1,0 +1,108 @@
+{
+  "background_features": [
+    {
+      "index": "shelter-of-the-faithful",
+      "name": "Shelter of the Faithful",
+      "desc": "You command the respect of those who share your faith. You and your companions can receive free healing and care at a temple of your faith (material components only). Those of your faith may support you (not followers, just support).",
+      "effects": [
+        "bg-feature-shelter-of-the-faithful-complex"
+      ]
+    },
+    {
+      "index": "false-identity",
+      "name": "False Identity",
+      "desc": "You have created a second identity including documentation, established acquaintances, and disguises that allow you to assume that persona.",
+      "effects": [
+        "bg-feature-false-identity-complex"
+      ]
+    },
+    {
+      "index": "criminal-contact",
+      "name": "Criminal Contact",
+      "desc": "You have a reliable and trustworthy contact who acts as your liaison to a network of criminals. You know how to get messages to and from your contact.",
+      "effects": [
+        "bg-feature-criminal-contact-complex"
+      ]
+    },
+    {
+      "index": "by-popular-demand",
+      "name": "By Popular Demand",
+      "desc": "You can always find a place to perform, and receive free lodging and food in exchange. Your performance also makes you somewhat familiar to locals who can tell you local news.",
+      "effects": [
+        "bg-feature-by-popular-demand-complex"
+      ]
+    },
+    {
+      "index": "rustic-hospitality",
+      "name": "Rustic Hospitality",
+      "desc": "Since you come from the ranks of the common folk, you fit in among them with ease. Commoners will hide you from the law or those who might harm you, though not at the cost of their lives.",
+      "effects": [
+        "bg-feature-rustic-hospitality-complex"
+      ]
+    },
+    {
+      "index": "guild-membership",
+      "name": "Guild Membership",
+      "desc": "Fellow guild members will provide lodging and food if necessary, give information, and back you in legal trouble (dues: 5 gp/month). Guild also provides access to powerful patrons, merchants, and civic leaders.",
+      "effects": [
+        "bg-feature-guild-membership-complex"
+      ]
+    },
+    {
+      "index": "discovery",
+      "name": "Discovery",
+      "desc": "Your time in isolation granted you a unique and powerful discovery—a great truth, hidden place, fact long forgotten, or wholly unique revelation. Work with your DM on its nature.",
+      "effects": [
+        "bg-feature-discovery-complex"
+      ]
+    },
+    {
+      "index": "position-of-privilege",
+      "name": "Position of Privilege",
+      "desc": "Thanks to your noble birth, people are inclined to think the best of you. You are welcome in high society, and people assume you have the right to be wherever you are. Common folk make way, and nobles treat you as a member of the same social sphere.",
+      "effects": [
+        "bg-feature-position-of-privilege-complex"
+      ]
+    },
+    {
+      "index": "wanderer",
+      "name": "Wanderer",
+      "desc": "You have an excellent memory for maps and geography. You can always recall the general layout of terrain, settlements, and other features around you. You can find food and fresh water for up to 5 people per day in wilderness.",
+      "effects": [
+        "bg-feature-wanderer-complex"
+      ]
+    },
+    {
+      "index": "researcher",
+      "name": "Researcher",
+      "desc": "When you attempt to learn or recall information, if you don't know it, you often know where and from whom you can obtain it. Usually from a library, scriptorium, university, or a sage. The DM might rule some knowledge is secret or hard to find.",
+      "effects": [
+        "bg-feature-researcher-complex"
+      ]
+    },
+    {
+      "index": "ships-passage",
+      "name": "Ship's Passage",
+      "desc": "You can secure free passage on a sailing ship for yourself and companions in exchange for labor during the voyage. You can't be certain of a schedule, and unsafe routes may be involved.",
+      "effects": [
+        "bg-feature-ships-passage-complex"
+      ]
+    },
+    {
+      "index": "military-rank",
+      "name": "Military Rank",
+      "desc": "You have a military rank from your career as a soldier. Soldiers loyal to your former military organization recognize your authority and defer to you if of lower rank. You can invoke your rank to exert influence over soldiers and requisition simple equipment.",
+      "effects": [
+        "bg-feature-military-rank-complex"
+      ]
+    },
+    {
+      "index": "city-secrets",
+      "name": "City Secrets",
+      "desc": "You know the secret patterns and flow of cities. You can find passages through the urban sprawl that others would miss. When not in combat, you and companions can travel between any two locations in a city twice as fast as normal.",
+      "effects": [
+        "bg-feature-city-secrets-complex"
+      ]
+    }
+  ]
+}

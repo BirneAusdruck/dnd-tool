@@ -1,0 +1,93 @@
+{
+  "subraces": [
+    {
+      "index": "hill-dwarf",
+      "name": "Hill Dwarf",
+      "race": "dwarf",
+      "ability_bonuses": [],
+      "traits": [
+        "hill-dwarf-dwarven-fortitude"
+      ]
+    },
+    {
+      "index": "mountain-dwarf",
+      "name": "Mountain Dwarf",
+      "race": "dwarf",
+      "ability_bonuses": [],
+      "traits": [
+        "mountain-dwarf-dwarven-armor-training"
+      ]
+    },
+    {
+      "index": "high-elf",
+      "name": "High Elf",
+      "race": "elf",
+      "ability_bonuses": [],
+      "traits": [
+        "high-elf-cantrip",
+        "high-elf-elf-weapon-training"
+      ]
+    },
+    {
+      "index": "wood-elf",
+      "name": "Wood Elf",
+      "race": "elf",
+      "ability_bonuses": [],
+      "traits": [
+        "wood-elf-fleet-of-foot",
+        "wood-elf-mask-of-the-wild",
+        "wood-elf-elf-weapon-training"
+      ]
+    },
+    {
+      "index": "dark-elf",
+      "name": "Dark Elf (Drow)",
+      "race": "elf",
+      "ability_bonuses": [],
+      "traits": [
+        "dark-elf-superior-darkvision",
+        "dark-elf-sunlight-sensitivity",
+        "dark-elf-drow-magic",
+        "dark-elf-drow-weapon-training"
+      ]
+    },
+    {
+      "index": "forest-gnome",
+      "name": "Forest Gnome",
+      "race": "gnome",
+      "ability_bonuses": [],
+      "traits": [
+        "forest-gnome-natural-illusionist",
+        "forest-gnome-speak-with-small-beasts"
+      ]
+    },
+    {
+      "index": "rock-gnome",
+      "name": "Rock Gnome",
+      "race": "gnome",
+      "ability_bonuses": [],
+      "traits": [
+        "rock-gnome-artificer-s-lore",
+        "rock-gnome-tinker"
+      ]
+    },
+    {
+      "index": "lightfoot",
+      "name": "Lightfoot Halfling",
+      "race": "halfling",
+      "ability_bonuses": [],
+      "traits": [
+        "lightfoot-naturally-stealthy"
+      ]
+    },
+    {
+      "index": "stout",
+      "name": "Stout Halfling",
+      "race": "halfling",
+      "ability_bonuses": [],
+      "traits": [
+        "stout-stout-resilience"
+      ]
+    }
+  ]
+}

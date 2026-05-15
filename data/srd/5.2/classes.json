@@ -3,433 +3,3378 @@
     {
       "index": "barbarian",
       "name": "Barbarian",
-      "hit_die": 12,
-      "primary_abilities": ["STR"],
-      "saving_throws": ["STR", "CON"],
-      "armor_proficiencies": ["Light", "Medium", "Shields"],
-      "weapon_proficiencies": ["Simple", "Martial"],
-      "skill_choices": { "count": 2, "from": ["Animal Handling", "Athletics", "Intimidation", "Nature", "Perception", "Survival"] },
+      "hit_die": "d12",
+      "primary_abilities": [
+        "strength"
+      ],
+      "saving_throws": [
+        "STR_saving_throw",
+        "CON_saving_throw"
+      ],
+      "armor_proficiencies": [
+        "light",
+        "medium",
+        "shield"
+      ],
+      "weapon_proficiencies": [
+        "simple_melee",
+        "simple_ranged",
+        "martial_melee",
+        "martial_ranged"
+      ],
+      "skill_choices": {
+        "count": 2,
+        "from": [
+          "animal_handling",
+          "athletics",
+          "intimidation",
+          "nature",
+          "perception",
+          "survival"
+        ]
+      },
       "spellcasting": null,
       "subclass_level": 3,
       "subclass_name": "Primal Path",
-      "subclasses": ["Path of the Berserker", "Path of the Wild Heart", "Path of the World Tree", "Path of the Zealot"],
-      "starting_equipment_A": "Greataxe, 4 handaxes, Explorer's Pack, 15 GP",
+      "tool_proficiencies": [],
+      "subclass_group_index": "primal-path",
+      "subclasses": [
+        "path-of-the-berserker",
+        "path-of-the-wild-heart",
+        "path-of-the-world-tree",
+        "path-of-the-zealot"
+      ],
+      "starting_equipment_a_index": "barbarian-starting-equipment-a",
+      "starting_equipment_b_index": "barbarian-starting-equipment-b",
       "features": {
-        "1": ["Rage (2/LR, +2 damage, resistance to B/P/S)", "Unarmored Defense (AC = 10 + DEX mod + CON mod)", "Weapon Mastery (2 weapons)"]
+        "1": [
+          "rage",
+          "unarmored_defense_barbarian",
+          "weapon_mastery"
+        ],
+        "2": [
+          "reckless_attack",
+          "danger_sense"
+        ],
+        "3": [
+          "primal_path",
+          "primal_knowledge"
+        ],
+        "4": [
+          "asi"
+        ],
+        "5": [
+          "extra_attack",
+          "fast_movement"
+        ],
+        "6": [
+          "path_feature",
+          "rage_upgrade_3"
+        ],
+        "7": [
+          "feral_instinct",
+          "instinctive_pounce"
+        ],
+        "8": [
+          "asi"
+        ],
+        "9": [
+          "brutal_strike",
+          "rage_damage_plus3"
+        ],
+        "10": [
+          "path_feature"
+        ],
+        "11": [
+          "relentless_rage"
+        ],
+        "12": [
+          "asi",
+          "rage_upgrade_4"
+        ],
+        "13": [
+          "brutal_strike_2"
+        ],
+        "14": [
+          "path_feature"
+        ],
+        "15": [
+          "persistent_rage"
+        ],
+        "16": [
+          "asi",
+          "rage_upgrade_5",
+          "rage_damage_plus4"
+        ],
+        "17": [
+          "brutal_strike_3"
+        ],
+        "18": [
+          "indomitable_might"
+        ],
+        "19": [
+          "epic_boon"
+        ],
+        "20": [
+          "primal_champion",
+          "rage_unlimited"
+        ]
       }
     },
     {
       "index": "bard",
       "name": "Bard",
-      "hit_die": 8,
-      "primary_abilities": ["CHA"],
-      "saving_throws": ["DEX", "CHA"],
-      "armor_proficiencies": ["Light"],
-      "weapon_proficiencies": ["Simple", "Hand Crossbow", "Longsword", "Rapier", "Shortsword"],
-      "skill_choices": { "count": 3, "from": "any" },
+      "hit_die": "d8",
+      "primary_abilities": [
+        "charisma"
+      ],
+      "saving_throws": [
+        "DEX_saving_throw",
+        "CHA_saving_throw"
+      ],
+      "armor_proficiencies": [
+        "light"
+      ],
+      "weapon_proficiencies": [
+        "simple_melee",
+        "simple_ranged",
+        "crossbow_hand",
+        "longsword",
+        "rapier",
+        "shortsword"
+      ],
+      "skill_choices": {
+        "count": 3,
+        "from": []
+      },
       "spellcasting": {
-        "ability": "CHA",
+        "ability": "charisma",
         "type": "known",
-        "cantrips_known": [2, 2, 2, 3, 3, 3, 3, 3, 3, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4],
-        "spells_known": [4, 5, 6, 7, 8, 9, 10, 11, 12, 14, 15, 15, 16, 18, 19, 19, 20, 22, 22, 22],
+        "cantrips_known": [
+          2,
+          2,
+          2,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4
+        ],
+        "spells_known": [
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          14,
+          15,
+          15,
+          16,
+          18,
+          19,
+          19,
+          20,
+          22,
+          22,
+          22
+        ],
         "slots": [
-          [2,0,0,0,0,0,0,0,0],
-          [3,0,0,0,0,0,0,0,0],
-          [4,2,0,0,0,0,0,0,0],
-          [4,3,0,0,0,0,0,0,0],
-          [4,3,2,0,0,0,0,0,0],
-          [4,3,3,0,0,0,0,0,0],
-          [4,3,3,1,0,0,0,0,0],
-          [4,3,3,2,0,0,0,0,0],
-          [4,3,3,3,1,0,0,0,0],
-          [4,3,3,3,2,0,0,0,0],
-          [4,3,3,3,2,1,0,0,0],
-          [4,3,3,3,2,1,0,0,0],
-          [4,3,3,3,2,1,1,0,0],
-          [4,3,3,3,2,1,1,0,0],
-          [4,3,3,3,2,1,1,1,0],
-          [4,3,3,3,2,1,1,1,0],
-          [4,3,3,3,2,1,1,1,1],
-          [4,3,3,3,3,1,1,1,1],
-          [4,3,3,3,3,2,1,1,1],
-          [4,3,3,3,3,2,2,1,1]
+          [
+            2,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            3,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            4,
+            2,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            4,
+            3,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            4,
+            3,
+            2,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            4,
+            3,
+            3,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            4,
+            3,
+            3,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            4,
+            3,
+            3,
+            2,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            4,
+            3,
+            3,
+            3,
+            1,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            4,
+            3,
+            3,
+            3,
+            2,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            4,
+            3,
+            3,
+            3,
+            2,
+            1,
+            0,
+            0,
+            0
+          ],
+          [
+            4,
+            3,
+            3,
+            3,
+            2,
+            1,
+            0,
+            0,
+            0
+          ],
+          [
+            4,
+            3,
+            3,
+            3,
+            2,
+            1,
+            1,
+            0,
+            0
+          ],
+          [
+            4,
+            3,
+            3,
+            3,
+            2,
+            1,
+            1,
+            0,
+            0
+          ],
+          [
+            4,
+            3,
+            3,
+            3,
+            2,
+            1,
+            1,
+            1,
+            0
+          ],
+          [
+            4,
+            3,
+            3,
+            3,
+            2,
+            1,
+            1,
+            1,
+            0
+          ],
+          [
+            4,
+            3,
+            3,
+            3,
+            2,
+            1,
+            1,
+            1,
+            1
+          ],
+          [
+            4,
+            3,
+            3,
+            3,
+            3,
+            1,
+            1,
+            1,
+            1
+          ],
+          [
+            4,
+            3,
+            3,
+            3,
+            3,
+            2,
+            1,
+            1,
+            1
+          ],
+          [
+            4,
+            3,
+            3,
+            3,
+            3,
+            2,
+            2,
+            1,
+            1
+          ]
         ]
       },
       "subclass_level": 3,
       "subclass_name": "Bard College",
-      "subclasses": ["College of Lore", "College of Valor", "College of Dance", "College of Glamour", "College of Swords"],
-      "starting_equipment_A": "Leather Armor, 2 Daggers, Musical Instrument, Entertainer's Pack, 19 GP",
+      "tool_proficiencies": [],
+      "subclass_group_index": "bard-college",
+      "subclasses": [
+        "college-of-lore",
+        "college-of-valor",
+        "college-of-dance",
+        "college-of-glamour",
+        "college-of-swords"
+      ],
+      "starting_equipment_a_index": "bard-starting-equipment-a",
+      "starting_equipment_b_index": "bard-starting-equipment-b",
       "features": {
-        "1": ["Bardic Inspiration (d6, uses = CHA mod, LR recharge)", "Spellcasting (CHA)", "Weapon Mastery (2 weapons)"]
+        "1": [
+          "bardic_inspiration_d6",
+          "spellcasting_cha",
+          "bard-weapon_mastery"
+        ],
+        "2": [
+          "jack_of_all_trades",
+          "song_of_rest_d6"
+        ],
+        "3": [
+          "bard_college",
+          "expertise"
+        ],
+        "4": [
+          "asi"
+        ],
+        "5": [
+          "bardic_inspiration_d8",
+          "font_of_inspiration"
+        ],
+        "6": [
+          "countercharm",
+          "college_feature"
+        ],
+        "8": [
+          "asi"
+        ],
+        "9": [
+          "song_of_rest_d8"
+        ],
+        "10": [
+          "bardic_inspiration_d10",
+          "expertise_upgrade",
+          "magical_secrets"
+        ],
+        "12": [
+          "asi"
+        ],
+        "13": [
+          "song_of_rest_d10"
+        ],
+        "14": [
+          "magical_secrets_2",
+          "college_feature"
+        ],
+        "15": [
+          "bardic_inspiration_d12"
+        ],
+        "16": [
+          "asi"
+        ],
+        "17": [
+          "song_of_rest_d12"
+        ],
+        "18": [
+          "magical_secrets_3"
+        ],
+        "19": [
+          "epic_boon"
+        ],
+        "20": [
+          "superior_inspiration"
+        ]
       }
     },
     {
       "index": "cleric",
       "name": "Cleric",
-      "hit_die": 8,
-      "primary_abilities": ["WIS"],
-      "saving_throws": ["WIS", "CHA"],
-      "armor_proficiencies": ["Light", "Medium", "Shields"],
-      "weapon_proficiencies": ["Simple"],
-      "skill_choices": { "count": 2, "from": ["History", "Insight", "Medicine", "Persuasion", "Religion"] },
+      "hit_die": "d8",
+      "primary_abilities": [
+        "wisdom"
+      ],
+      "saving_throws": [
+        "WIS_saving_throw",
+        "CHA_saving_throw"
+      ],
+      "armor_proficiencies": [
+        "light",
+        "medium",
+        "shield"
+      ],
+      "weapon_proficiencies": [
+        "simple_melee",
+        "simple_ranged"
+      ],
+      "skill_choices": {
+        "count": 2,
+        "from": [
+          "history",
+          "insight",
+          "medicine",
+          "persuasion",
+          "religion"
+        ]
+      },
       "spellcasting": {
-        "ability": "WIS",
+        "ability": "wisdom",
         "type": "prepared",
-        "cantrips_known": [3, 3, 3, 4, 4, 4, 4, 4, 4, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5],
+        "cantrips_known": [
+          3,
+          3,
+          3,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          5,
+          5,
+          5,
+          5,
+          5,
+          5,
+          5,
+          5,
+          5,
+          5,
+          5
+        ],
         "spells_known": [],
         "slots": [
-          [2,0,0,0,0,0,0,0,0],
-          [3,0,0,0,0,0,0,0,0],
-          [4,2,0,0,0,0,0,0,0],
-          [4,3,0,0,0,0,0,0,0],
-          [4,3,2,0,0,0,0,0,0],
-          [4,3,3,0,0,0,0,0,0],
-          [4,3,3,1,0,0,0,0,0],
-          [4,3,3,2,0,0,0,0,0],
-          [4,3,3,3,1,0,0,0,0],
-          [4,3,3,3,2,0,0,0,0],
-          [4,3,3,3,2,1,0,0,0],
-          [4,3,3,3,2,1,0,0,0],
-          [4,3,3,3,2,1,1,0,0],
-          [4,3,3,3,2,1,1,0,0],
-          [4,3,3,3,2,1,1,1,0],
-          [4,3,3,3,2,1,1,1,0],
-          [4,3,3,3,2,1,1,1,1],
-          [4,3,3,3,3,1,1,1,1],
-          [4,3,3,3,3,2,1,1,1],
-          [4,3,3,3,3,2,2,1,1]
+          [
+            2,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            3,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            4,
+            2,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            4,
+            3,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            4,
+            3,
+            2,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            4,
+            3,
+            3,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            4,
+            3,
+            3,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            4,
+            3,
+            3,
+            2,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            4,
+            3,
+            3,
+            3,
+            1,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            4,
+            3,
+            3,
+            3,
+            2,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            4,
+            3,
+            3,
+            3,
+            2,
+            1,
+            0,
+            0,
+            0
+          ],
+          [
+            4,
+            3,
+            3,
+            3,
+            2,
+            1,
+            0,
+            0,
+            0
+          ],
+          [
+            4,
+            3,
+            3,
+            3,
+            2,
+            1,
+            1,
+            0,
+            0
+          ],
+          [
+            4,
+            3,
+            3,
+            3,
+            2,
+            1,
+            1,
+            0,
+            0
+          ],
+          [
+            4,
+            3,
+            3,
+            3,
+            2,
+            1,
+            1,
+            1,
+            0
+          ],
+          [
+            4,
+            3,
+            3,
+            3,
+            2,
+            1,
+            1,
+            1,
+            0
+          ],
+          [
+            4,
+            3,
+            3,
+            3,
+            2,
+            1,
+            1,
+            1,
+            1
+          ],
+          [
+            4,
+            3,
+            3,
+            3,
+            3,
+            1,
+            1,
+            1,
+            1
+          ],
+          [
+            4,
+            3,
+            3,
+            3,
+            3,
+            2,
+            1,
+            1,
+            1
+          ],
+          [
+            4,
+            3,
+            3,
+            3,
+            3,
+            2,
+            2,
+            1,
+            1
+          ]
         ]
       },
       "subclass_level": 3,
       "subclass_name": "Divine Domain",
-      "subclasses": ["Life Domain", "Light Domain", "Trickery Domain", "War Domain", "Arcana Domain", "Death Domain", "Forge Domain", "Grave Domain", "Knowledge Domain", "Nature Domain", "Order Domain", "Peace Domain", "Tempest Domain", "Twilight Domain"],
-      "starting_equipment_A": "Chain Mail, Shield, Mace, Holy Symbol, Priest's Pack, 7 GP",
+      "tool_proficiencies": [],
+      "subclass_group_index": "divine-domain",
+      "subclasses": [
+        "life-domain",
+        "light-domain",
+        "trickery-domain",
+        "war-domain",
+        "arcana-domain",
+        "death-domain",
+        "forge-domain",
+        "grave-domain",
+        "knowledge-domain",
+        "nature-domain",
+        "order-domain",
+        "peace-domain",
+        "tempest-domain",
+        "twilight-domain"
+      ],
+      "starting_equipment_a_index": "cleric-starting-equipment-a",
+      "starting_equipment_b_index": "cleric-starting-equipment-b",
       "features": {
-        "1": ["Divine Order (Protector: martial weapons + medium armor, or Thaumaturge: +1 cantrip + Religion expertise)", "Spellcasting (WIS, prepared)"]
+        "1": [
+          "divine_order",
+          "spellcasting_wis"
+        ],
+        "2": [
+          "channel_divinity",
+          "turn_undead"
+        ],
+        "3": [
+          "divine_domain",
+          "divine_domain_feature"
+        ],
+        "4": [
+          "asi"
+        ],
+        "5": [
+          "destroy_undead_cr12"
+        ],
+        "6": [
+          "channel_divinity_2",
+          "cleric-divine_domain_feature"
+        ],
+        "7": [
+          "cleric-divine_domain_feature"
+        ],
+        "8": [
+          "asi",
+          "destroy_undead_cr1"
+        ],
+        "10": [
+          "divine_intervention"
+        ],
+        "11": [
+          "destroy_undead_cr2"
+        ],
+        "12": [
+          "asi"
+        ],
+        "14": [
+          "destroy_undead_cr3"
+        ],
+        "16": [
+          "asi"
+        ],
+        "17": [
+          "destroy_undead_cr4",
+          "cleric-divine_domain_feature"
+        ],
+        "18": [
+          "channel_divinity_3"
+        ],
+        "19": [
+          "epic_boon"
+        ],
+        "20": [
+          "divine_intervention_auto"
+        ]
       }
     },
     {
       "index": "druid",
       "name": "Druid",
-      "hit_die": 8,
-      "primary_abilities": ["WIS"],
-      "saving_throws": ["INT", "WIS"],
-      "armor_proficiencies": ["Light", "Medium", "Shields (non-metal)"],
-      "weapon_proficiencies": ["Simple"],
-      "skill_choices": { "count": 2, "from": ["Arcana", "Animal Handling", "Insight", "Medicine", "Nature", "Perception", "Religion", "Survival"] },
+      "hit_die": "d8",
+      "primary_abilities": [
+        "wisdom"
+      ],
+      "saving_throws": [
+        "INT_saving_throw",
+        "WIS_saving_throw"
+      ],
+      "armor_proficiencies": [
+        "light",
+        "medium",
+        "shield"
+      ],
+      "weapon_proficiencies": [
+        "simple_melee",
+        "simple_ranged"
+      ],
+      "skill_choices": {
+        "count": 2,
+        "from": [
+          "arcana",
+          "animal_handling",
+          "insight",
+          "medicine",
+          "nature",
+          "perception",
+          "religion",
+          "survival"
+        ]
+      },
       "spellcasting": {
-        "ability": "WIS",
+        "ability": "wisdom",
         "type": "prepared",
-        "cantrips_known": [2, 2, 2, 3, 3, 3, 3, 3, 3, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4],
+        "cantrips_known": [
+          2,
+          2,
+          2,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4
+        ],
         "spells_known": [],
         "slots": [
-          [2,0,0,0,0,0,0,0,0],
-          [3,0,0,0,0,0,0,0,0],
-          [4,2,0,0,0,0,0,0,0],
-          [4,3,0,0,0,0,0,0,0],
-          [4,3,2,0,0,0,0,0,0],
-          [4,3,3,0,0,0,0,0,0],
-          [4,3,3,1,0,0,0,0,0],
-          [4,3,3,2,0,0,0,0,0],
-          [4,3,3,3,1,0,0,0,0],
-          [4,3,3,3,2,0,0,0,0],
-          [4,3,3,3,2,1,0,0,0],
-          [4,3,3,3,2,1,0,0,0],
-          [4,3,3,3,2,1,1,0,0],
-          [4,3,3,3,2,1,1,0,0],
-          [4,3,3,3,2,1,1,1,0],
-          [4,3,3,3,2,1,1,1,0],
-          [4,3,3,3,2,1,1,1,1],
-          [4,3,3,3,3,1,1,1,1],
-          [4,3,3,3,3,2,1,1,1],
-          [4,3,3,3,3,2,2,1,1]
+          [
+            2,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            3,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            4,
+            2,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            4,
+            3,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            4,
+            3,
+            2,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            4,
+            3,
+            3,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            4,
+            3,
+            3,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            4,
+            3,
+            3,
+            2,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            4,
+            3,
+            3,
+            3,
+            1,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            4,
+            3,
+            3,
+            3,
+            2,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            4,
+            3,
+            3,
+            3,
+            2,
+            1,
+            0,
+            0,
+            0
+          ],
+          [
+            4,
+            3,
+            3,
+            3,
+            2,
+            1,
+            0,
+            0,
+            0
+          ],
+          [
+            4,
+            3,
+            3,
+            3,
+            2,
+            1,
+            1,
+            0,
+            0
+          ],
+          [
+            4,
+            3,
+            3,
+            3,
+            2,
+            1,
+            1,
+            0,
+            0
+          ],
+          [
+            4,
+            3,
+            3,
+            3,
+            2,
+            1,
+            1,
+            1,
+            0
+          ],
+          [
+            4,
+            3,
+            3,
+            3,
+            2,
+            1,
+            1,
+            1,
+            0
+          ],
+          [
+            4,
+            3,
+            3,
+            3,
+            2,
+            1,
+            1,
+            1,
+            1
+          ],
+          [
+            4,
+            3,
+            3,
+            3,
+            3,
+            1,
+            1,
+            1,
+            1
+          ],
+          [
+            4,
+            3,
+            3,
+            3,
+            3,
+            2,
+            1,
+            1,
+            1
+          ],
+          [
+            4,
+            3,
+            3,
+            3,
+            3,
+            2,
+            2,
+            1,
+            1
+          ]
         ]
       },
       "subclass_level": 3,
       "subclass_name": "Druid Circle",
-      "subclasses": ["Circle of the Land", "Circle of the Moon", "Circle of the Sea", "Circle of Stars", "Circle of Wildfire"],
-      "starting_equipment_A": "Leather Armor, Shield, Scimitar, Druidic Focus, Explorer's Pack, Herbalism Kit, 9 GP",
+      "tool_proficiencies": [],
+      "subclass_group_index": "druid-circle",
+      "subclasses": [
+        "circle-of-the-land",
+        "circle-of-the-moon",
+        "circle-of-the-sea",
+        "circle-of-stars",
+        "circle-of-wildfire"
+      ],
+      "starting_equipment_a_index": "druid-starting-equipment-a",
+      "starting_equipment_b_index": "druid-starting-equipment-b",
       "features": {
-        "1": ["Druidic (secret language)", "Primal Order (Magician: +1 cantrip + Arcana expertise, or Warden: martial weapons + medium armor)", "Spellcasting (WIS, prepared)", "Wild Shape (available at level 2)"]
+        "1": [
+          "druidic",
+          "primal_order",
+          "druid-spellcasting_wis",
+          "wild_shape_preview"
+        ],
+        "2": [
+          "wild_shape_cr14"
+        ],
+        "3": [
+          "druid_circle"
+        ],
+        "4": [
+          "wild_shape_cr12",
+          "asi"
+        ],
+        "6": [
+          "druid_circle_feature"
+        ],
+        "8": [
+          "wild_shape_cr1",
+          "asi"
+        ],
+        "10": [
+          "druid_circle_feature"
+        ],
+        "12": [
+          "asi"
+        ],
+        "14": [
+          "druid_circle_feature"
+        ],
+        "16": [
+          "asi"
+        ],
+        "18": [
+          "timeless_body_druid",
+          "beast_spells"
+        ],
+        "19": [
+          "epic_boon"
+        ],
+        "20": [
+          "archdruid"
+        ]
       }
     },
     {
       "index": "fighter",
       "name": "Fighter",
-      "hit_die": 10,
-      "primary_abilities": ["STR", "DEX"],
-      "saving_throws": ["STR", "CON"],
-      "armor_proficiencies": ["Light", "Medium", "Heavy", "Shields"],
-      "weapon_proficiencies": ["Simple", "Martial"],
-      "skill_choices": { "count": 2, "from": ["Acrobatics", "Animal Handling", "Athletics", "History", "Insight", "Intimidation", "Perception", "Survival"] },
+      "hit_die": "d10",
+      "primary_abilities": [
+        "strength",
+        "dexterity"
+      ],
+      "saving_throws": [
+        "STR_saving_throw",
+        "CON_saving_throw"
+      ],
+      "armor_proficiencies": [
+        "light",
+        "medium",
+        "heavy",
+        "shield"
+      ],
+      "weapon_proficiencies": [
+        "simple_melee",
+        "simple_ranged",
+        "martial_melee",
+        "martial_ranged"
+      ],
+      "skill_choices": {
+        "count": 2,
+        "from": [
+          "acrobatics",
+          "animal_handling",
+          "athletics",
+          "history",
+          "insight",
+          "intimidation",
+          "perception",
+          "survival"
+        ]
+      },
       "spellcasting": null,
       "subclass_level": 3,
       "subclass_name": "Martial Archetype",
-      "subclasses": ["Battle Master", "Champion", "Eldritch Knight", "Psi Warrior", "Samurai"],
-      "starting_equipment_A": "Chain Mail, Greatsword, Flail, 8 Javelins, Dungeoneer's Pack, 4 GP",
+      "tool_proficiencies": [],
+      "subclass_group_index": "martial-archetype",
+      "subclasses": [
+        "battle-master",
+        "champion",
+        "eldritch-knight",
+        "psi-warrior",
+        "samurai"
+      ],
+      "starting_equipment_a_index": "fighter-starting-equipment-a",
+      "starting_equipment_b_index": "fighter-starting-equipment-b",
       "features": {
-        "1": ["Fighting Style", "Second Wind (1d10 + Fighter level HP, Bonus Action, Short Rest recharge)", "Weapon Mastery (3 weapons)"]
+        "1": [
+          "fighting_style",
+          "second_wind",
+          "weapon_mastery_3"
+        ],
+        "2": [
+          "action_surge",
+          "tactical_mind"
+        ],
+        "3": [
+          "martial_archetype"
+        ],
+        "4": [
+          "asi",
+          "weapon_mastery_4"
+        ],
+        "5": [
+          "extra_attack"
+        ],
+        "6": [
+          "asi",
+          "weapon_mastery_5"
+        ],
+        "7": [
+          "martial_archetype_feature"
+        ],
+        "8": [
+          "asi"
+        ],
+        "9": [
+          "indomitable",
+          "tactical_shift"
+        ],
+        "10": [
+          "martial_archetype_feature"
+        ],
+        "11": [
+          "extra_attack_3"
+        ],
+        "12": [
+          "asi"
+        ],
+        "13": [
+          "indomitable_2"
+        ],
+        "14": [
+          "asi"
+        ],
+        "15": [
+          "martial_archetype_feature"
+        ],
+        "16": [
+          "asi"
+        ],
+        "17": [
+          "action_surge_2",
+          "indomitable_3"
+        ],
+        "18": [
+          "martial_archetype_feature"
+        ],
+        "19": [
+          "epic_boon"
+        ],
+        "20": [
+          "extra_attack_4"
+        ]
       }
     },
     {
       "index": "monk",
       "name": "Monk",
-      "hit_die": 8,
-      "primary_abilities": ["DEX", "WIS"],
-      "saving_throws": ["STR", "DEX"],
+      "hit_die": "d8",
+      "primary_abilities": [
+        "dexterity",
+        "wisdom"
+      ],
+      "saving_throws": [
+        "STR_saving_throw",
+        "DEX_saving_throw"
+      ],
       "armor_proficiencies": [],
-      "weapon_proficiencies": ["Simple", "Shortsword"],
-      "skill_choices": { "count": 2, "from": ["Acrobatics", "Athletics", "History", "Insight", "Religion", "Stealth"] },
+      "weapon_proficiencies": [
+        "simple_melee",
+        "simple_ranged",
+        "shortsword"
+      ],
+      "skill_choices": {
+        "count": 2,
+        "from": [
+          "acrobatics",
+          "athletics",
+          "history",
+          "insight",
+          "religion",
+          "stealth"
+        ]
+      },
       "spellcasting": null,
       "subclass_level": 3,
       "subclass_name": "Monastic Tradition",
-      "subclasses": ["Warrior of the Open Hand", "Warrior of Shadow", "Warrior of the Four Elements", "Warrior of Mercy", "Warrior of the Astral Self"],
-      "starting_equipment_A": "Spear, 5 Daggers, Artisan's Tools or Musical Instrument, Explorer's Pack, 11 GP",
+      "tool_proficiencies": [],
+      "subclass_group_index": "monastic-tradition",
+      "subclasses": [
+        "warrior-of-the-open-hand",
+        "warrior-of-shadow",
+        "warrior-of-the-four-elements",
+        "warrior-of-mercy",
+        "warrior-of-the-astral-self"
+      ],
+      "starting_equipment_a_index": "monk-starting-equipment-a",
+      "starting_equipment_b_index": "monk-starting-equipment-b",
       "features": {
-        "1": ["Martial Arts (1d6 unarmed, DEX for monk weapons, bonus unarmed strike)", "Unarmored Defense (AC = 10 + DEX mod + WIS mod)", "Weapon Mastery (2 weapons)"]
+        "1": [
+          "martial_arts_d6",
+          "unarmored_defense_monk",
+          "monk-weapon_mastery"
+        ],
+        "2": [
+          "discipline_points",
+          "flurry_of_blows",
+          "patient_defense",
+          "step_of_the_wind",
+          "unarmored_movement_10"
+        ],
+        "3": [
+          "monastic_tradition",
+          "deflect_missiles"
+        ],
+        "4": [
+          "asi",
+          "slow_fall"
+        ],
+        "5": [
+          "extra_attack",
+          "stunning_strike",
+          "martial_arts_d8"
+        ],
+        "6": [
+          "disciplined_survivor",
+          "monastic_tradition_feature",
+          "unarmored_movement_15"
+        ],
+        "7": [
+          "evasion",
+          "stillness_of_mind"
+        ],
+        "8": [
+          "asi"
+        ],
+        "9": [
+          "acrobatic_movement"
+        ],
+        "10": [
+          "heightened_discipline",
+          "unarmored_movement_20"
+        ],
+        "11": [
+          "monastic_tradition_feature",
+          "martial_arts_d10"
+        ],
+        "12": [
+          "asi"
+        ],
+        "13": [
+          "tongue_of_sun_moon"
+        ],
+        "14": [
+          "diamond_soul",
+          "unarmored_movement_25"
+        ],
+        "15": [
+          "timeless_body_monk"
+        ],
+        "16": [
+          "asi"
+        ],
+        "17": [
+          "monastic_tradition_feature",
+          "martial_arts_d12"
+        ],
+        "18": [
+          "empty_body",
+          "unarmored_movement_30"
+        ],
+        "19": [
+          "epic_boon"
+        ],
+        "20": [
+          "perfect_self"
+        ]
       }
     },
     {
       "index": "paladin",
       "name": "Paladin",
-      "hit_die": 10,
-      "primary_abilities": ["STR", "CHA"],
-      "saving_throws": ["WIS", "CHA"],
-      "armor_proficiencies": ["Light", "Medium", "Heavy", "Shields"],
-      "weapon_proficiencies": ["Simple", "Martial"],
-      "skill_choices": { "count": 2, "from": ["Athletics", "Insight", "Intimidation", "Medicine", "Persuasion", "Religion"] },
+      "hit_die": "d10",
+      "primary_abilities": [
+        "strength",
+        "charisma"
+      ],
+      "saving_throws": [
+        "WIS_saving_throw",
+        "CHA_saving_throw"
+      ],
+      "armor_proficiencies": [
+        "light",
+        "medium",
+        "heavy",
+        "shield"
+      ],
+      "weapon_proficiencies": [
+        "simple_melee",
+        "simple_ranged",
+        "martial_melee",
+        "martial_ranged"
+      ],
+      "skill_choices": {
+        "count": 2,
+        "from": [
+          "athletics",
+          "insight",
+          "intimidation",
+          "medicine",
+          "persuasion",
+          "religion"
+        ]
+      },
       "spellcasting": {
-        "ability": "CHA",
+        "ability": "charisma",
         "type": "prepared",
         "cantrips_known": [],
         "spells_known": [],
         "slots": [
-          [2,0,0,0,0,0,0,0,0],
-          [2,0,0,0,0,0,0,0,0],
-          [3,0,0,0,0,0,0,0,0],
-          [3,0,0,0,0,0,0,0,0],
-          [4,2,0,0,0,0,0,0,0],
-          [4,2,0,0,0,0,0,0,0],
-          [4,3,0,0,0,0,0,0,0],
-          [4,3,0,0,0,0,0,0,0],
-          [4,3,2,0,0,0,0,0,0],
-          [4,3,2,0,0,0,0,0,0],
-          [4,3,3,0,0,0,0,0,0],
-          [4,3,3,0,0,0,0,0,0],
-          [4,3,3,1,0,0,0,0,0],
-          [4,3,3,1,0,0,0,0,0],
-          [4,3,3,2,0,0,0,0,0],
-          [4,3,3,2,0,0,0,0,0],
-          [4,3,3,3,1,0,0,0,0],
-          [4,3,3,3,1,0,0,0,0],
-          [4,3,3,3,2,0,0,0,0],
-          [4,3,3,3,2,0,0,0,0]
+          [
+            2,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            2,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            3,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            3,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            4,
+            2,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            4,
+            2,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            4,
+            3,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            4,
+            3,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            4,
+            3,
+            2,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            4,
+            3,
+            2,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            4,
+            3,
+            3,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            4,
+            3,
+            3,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            4,
+            3,
+            3,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            4,
+            3,
+            3,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            4,
+            3,
+            3,
+            2,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            4,
+            3,
+            3,
+            2,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            4,
+            3,
+            3,
+            3,
+            1,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            4,
+            3,
+            3,
+            3,
+            1,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            4,
+            3,
+            3,
+            3,
+            2,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            4,
+            3,
+            3,
+            3,
+            2,
+            0,
+            0,
+            0,
+            0
+          ]
         ]
       },
       "subclass_level": 3,
       "subclass_name": "Sacred Oath",
-      "subclasses": ["Oath of Devotion", "Oath of Glory", "Oath of the Ancients", "Oath of Vengeance", "Oath of Conquest", "Oath of Redemption", "Oathbreaker"],
-      "starting_equipment_A": "Chain Mail, Shield, Longsword, 6 Javelins, Holy Symbol, Priest's Pack, 9 GP",
+      "tool_proficiencies": [],
+      "subclass_group_index": "sacred-oath",
+      "subclasses": [
+        "oath-of-devotion",
+        "oath-of-glory",
+        "oath-of-the-ancients",
+        "oath-of-vengeance",
+        "oath-of-conquest",
+        "oath-of-redemption",
+        "oathbreaker"
+      ],
+      "starting_equipment_a_index": "paladin-starting-equipment-a",
+      "starting_equipment_b_index": "paladin-starting-equipment-b",
       "features": {
-        "1": ["Divine Smite (expend spell slot to deal extra radiant damage on melee hit)", "Lay on Hands (HP pool = 5 × Paladin level, LR recharge)", "Spellcasting (CHA, prepared)", "Weapon Mastery (2 weapons)"]
+        "1": [
+          "divine_smite",
+          "lay_on_hands",
+          "paladin-spellcasting_cha",
+          "paladin-weapon_mastery"
+        ],
+        "2": [
+          "divine_sense",
+          "paladin-fighting_style",
+          "paladin-channel_divinity"
+        ],
+        "3": [
+          "divine_health",
+          "sacred_oath"
+        ],
+        "4": [
+          "asi"
+        ],
+        "5": [
+          "paladin-extra_attack",
+          "faithful_steed"
+        ],
+        "6": [
+          "aura_of_protection"
+        ],
+        "7": [
+          "sacred_oath_feature"
+        ],
+        "8": [
+          "asi"
+        ],
+        "9": [
+          "abjure_foes"
+        ],
+        "10": [
+          "aura_of_courage"
+        ],
+        "11": [
+          "radiant_strikes"
+        ],
+        "12": [
+          "asi"
+        ],
+        "14": [
+          "restoring_touch"
+        ],
+        "15": [
+          "sacred_oath_feature"
+        ],
+        "16": [
+          "asi"
+        ],
+        "17": [
+          "aura_extended_30ft"
+        ],
+        "18": [
+          "sacred_oath_feature"
+        ],
+        "19": [
+          "epic_boon"
+        ],
+        "20": [
+          "paladin-sacred_oath_feature"
+        ]
       }
     },
     {
       "index": "ranger",
       "name": "Ranger",
-      "hit_die": 10,
-      "primary_abilities": ["DEX", "WIS"],
-      "saving_throws": ["STR", "DEX"],
-      "armor_proficiencies": ["Light", "Medium", "Shields"],
-      "weapon_proficiencies": ["Simple", "Martial"],
-      "skill_choices": { "count": 3, "from": ["Animal Handling", "Athletics", "Insight", "Investigation", "Nature", "Perception", "Stealth", "Survival"] },
+      "hit_die": "d10",
+      "primary_abilities": [
+        "dexterity",
+        "wisdom"
+      ],
+      "saving_throws": [
+        "STR_saving_throw",
+        "DEX_saving_throw"
+      ],
+      "armor_proficiencies": [
+        "light",
+        "medium",
+        "shield"
+      ],
+      "weapon_proficiencies": [
+        "simple_melee",
+        "simple_ranged",
+        "martial_melee",
+        "martial_ranged"
+      ],
+      "skill_choices": {
+        "count": 3,
+        "from": [
+          "animal_handling",
+          "athletics",
+          "insight",
+          "investigation",
+          "nature",
+          "perception",
+          "stealth",
+          "survival"
+        ]
+      },
       "spellcasting": {
-        "ability": "WIS",
+        "ability": "wisdom",
         "type": "prepared",
-        "cantrips_known": [2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2],
+        "cantrips_known": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2
+        ],
         "spells_known": [],
         "slots": [
-          [2,0,0,0,0,0,0,0,0],
-          [2,0,0,0,0,0,0,0,0],
-          [3,0,0,0,0,0,0,0,0],
-          [3,0,0,0,0,0,0,0,0],
-          [4,2,0,0,0,0,0,0,0],
-          [4,2,0,0,0,0,0,0,0],
-          [4,3,0,0,0,0,0,0,0],
-          [4,3,0,0,0,0,0,0,0],
-          [4,3,2,0,0,0,0,0,0],
-          [4,3,2,0,0,0,0,0,0],
-          [4,3,3,0,0,0,0,0,0],
-          [4,3,3,0,0,0,0,0,0],
-          [4,3,3,1,0,0,0,0,0],
-          [4,3,3,1,0,0,0,0,0],
-          [4,3,3,2,0,0,0,0,0],
-          [4,3,3,2,0,0,0,0,0],
-          [4,3,3,3,1,0,0,0,0],
-          [4,3,3,3,1,0,0,0,0],
-          [4,3,3,3,2,0,0,0,0],
-          [4,3,3,3,2,0,0,0,0]
+          [
+            2,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            2,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            3,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            3,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            4,
+            2,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            4,
+            2,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            4,
+            3,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            4,
+            3,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            4,
+            3,
+            2,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            4,
+            3,
+            2,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            4,
+            3,
+            3,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            4,
+            3,
+            3,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            4,
+            3,
+            3,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            4,
+            3,
+            3,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            4,
+            3,
+            3,
+            2,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            4,
+            3,
+            3,
+            2,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            4,
+            3,
+            3,
+            3,
+            1,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            4,
+            3,
+            3,
+            3,
+            1,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            4,
+            3,
+            3,
+            3,
+            2,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            4,
+            3,
+            3,
+            3,
+            2,
+            0,
+            0,
+            0,
+            0
+          ]
         ]
       },
       "subclass_level": 3,
       "subclass_name": "Ranger Conclave",
-      "subclasses": ["Beast Master", "Fey Wanderer", "Gloom Stalker", "Hunter", "Swarmkeeper"],
-      "starting_equipment_A": "Scale Mail, Shortsword, Longbow, 20 Arrows, Quiver, Druidic Focus, Explorer's Pack, 7 GP",
+      "tool_proficiencies": [],
+      "subclass_group_index": "ranger-conclave",
+      "subclasses": [
+        "beast-master",
+        "fey-wanderer",
+        "gloom-stalker",
+        "hunter",
+        "swarmkeeper"
+      ],
+      "starting_equipment_a_index": "ranger-starting-equipment-a",
+      "starting_equipment_b_index": "ranger-starting-equipment-b",
       "features": {
-        "1": ["Expertise (2 skills)", "Favored Enemy (Advantage on Survival checks to track; always have Hunter's Mark prepared)", "Spellcasting (WIS, prepared)", "Weapon Mastery (2 weapons)"]
+        "1": [
+          "ranger-expertise",
+          "favored_enemy",
+          "ranger-spellcasting_wis",
+          "ranger-weapon_mastery"
+        ],
+        "2": [
+          "deft_explorer",
+          "ranger-fighting_style"
+        ],
+        "3": [
+          "primal_awareness",
+          "ranger_archetype"
+        ],
+        "4": [
+          "asi"
+        ],
+        "5": [
+          "ranger-extra_attack",
+          "roving"
+        ],
+        "6": [
+          "ranger-expertise_upgrade"
+        ],
+        "7": [
+          "ranger_archetype_feature"
+        ],
+        "8": [
+          "asi",
+          "lands_stride"
+        ],
+        "9": [
+          "conjure_barrage"
+        ],
+        "10": [
+          "tireless"
+        ],
+        "11": [
+          "ranger_archetype_feature"
+        ],
+        "12": [
+          "asi"
+        ],
+        "13": [
+          "conjure_volley"
+        ],
+        "14": [
+          "nature_veil"
+        ],
+        "15": [
+          "ranger_archetype_feature"
+        ],
+        "16": [
+          "asi"
+        ],
+        "17": [
+          "precise_hunter"
+        ],
+        "18": [
+          "feral_senses"
+        ],
+        "19": [
+          "epic_boon"
+        ],
+        "20": [
+          "foe_slayer"
+        ]
       }
     },
     {
       "index": "rogue",
       "name": "Rogue",
-      "hit_die": 8,
-      "primary_abilities": ["DEX"],
-      "saving_throws": ["DEX", "INT"],
-      "armor_proficiencies": ["Light"],
-      "weapon_proficiencies": ["Simple", "Hand Crossbow", "Longsword", "Rapier", "Shortsword"],
-      "skill_choices": { "count": 4, "from": ["Acrobatics", "Athletics", "Deception", "Insight", "Intimidation", "Investigation", "Perception", "Performance", "Persuasion", "Sleight of Hand", "Stealth"] },
+      "hit_die": "d8",
+      "primary_abilities": [
+        "dexterity"
+      ],
+      "saving_throws": [
+        "DEX_saving_throw",
+        "INT_saving_throw"
+      ],
+      "armor_proficiencies": [
+        "light"
+      ],
+      "weapon_proficiencies": [
+        "simple_melee",
+        "simple_ranged",
+        "crossbow_hand",
+        "longsword",
+        "rapier",
+        "shortsword"
+      ],
+      "skill_choices": {
+        "count": 4,
+        "from": [
+          "acrobatics",
+          "athletics",
+          "deception",
+          "insight",
+          "intimidation",
+          "investigation",
+          "perception",
+          "performance",
+          "persuasion",
+          "sleight_of_hand",
+          "stealth"
+        ]
+      },
       "spellcasting": null,
       "subclass_level": 3,
       "subclass_name": "Roguish Archetype",
-      "subclasses": ["Arcane Trickster", "Assassin", "Soulknife", "Swashbuckler", "Thief"],
-      "starting_equipment_A": "Leather Armor, 2 Daggers, Thieves' Tools, Shortsword, Burglar's Pack, 8 GP",
+      "tool_proficiencies": [],
+      "subclass_group_index": "roguish-archetype",
+      "subclasses": [
+        "arcane-trickster",
+        "assassin",
+        "soulknife",
+        "swashbuckler",
+        "thief"
+      ],
+      "starting_equipment_a_index": "rogue-starting-equipment-a",
+      "starting_equipment_b_index": "rogue-starting-equipment-b",
       "features": {
-        "1": ["Expertise (2 skills + Thieves' Tools)", "Sneak Attack (1d6)", "Thieves' Cant", "Weapon Mastery (2 weapons)"]
+        "1": [
+          "rogue-expertise",
+          "sneak_attack_1d6",
+          "thieves_cant",
+          "rogue-weapon_mastery"
+        ],
+        "2": [
+          "cunning_action",
+          "steady_aim"
+        ],
+        "3": [
+          "roguish_archetype",
+          "sneak_attack_2d6"
+        ],
+        "4": [
+          "asi"
+        ],
+        "5": [
+          "uncanny_dodge",
+          "sneak_attack_3d6"
+        ],
+        "6": [
+          "rogue-expertise_upgrade"
+        ],
+        "7": [
+          "rogue-evasion",
+          "sneak_attack_4d6"
+        ],
+        "8": [
+          "asi"
+        ],
+        "9": [
+          "roguish_archetype_feature",
+          "sneak_attack_5d6"
+        ],
+        "10": [
+          "asi",
+          "cunning_strike"
+        ],
+        "11": [
+          "reliable_talent",
+          "sneak_attack_6d6"
+        ],
+        "12": [
+          "asi"
+        ],
+        "13": [
+          "roguish_archetype_feature",
+          "sneak_attack_7d6"
+        ],
+        "14": [
+          "devious_strikes"
+        ],
+        "15": [
+          "slippery_mind",
+          "sneak_attack_8d6"
+        ],
+        "16": [
+          "asi"
+        ],
+        "17": [
+          "roguish_archetype_feature",
+          "sneak_attack_9d6"
+        ],
+        "18": [
+          "elusive"
+        ],
+        "19": [
+          "epic_boon",
+          "sneak_attack_10d6"
+        ],
+        "20": [
+          "stroke_of_luck"
+        ]
       }
     },
     {
       "index": "sorcerer",
       "name": "Sorcerer",
-      "hit_die": 6,
-      "primary_abilities": ["CHA"],
-      "saving_throws": ["CON", "CHA"],
+      "hit_die": "d6",
+      "primary_abilities": [
+        "charisma"
+      ],
+      "saving_throws": [
+        "CON_saving_throw",
+        "CHA_saving_throw"
+      ],
       "armor_proficiencies": [],
-      "weapon_proficiencies": ["Dagger", "Dart", "Sling", "Quarterstaff", "Light Crossbow"],
-      "skill_choices": { "count": 2, "from": ["Arcana", "Deception", "Insight", "Intimidation", "Persuasion", "Religion"] },
+      "weapon_proficiencies": [
+        "dagger",
+        "dart",
+        "sling",
+        "quarterstaff",
+        "crossbow_light"
+      ],
+      "skill_choices": {
+        "count": 2,
+        "from": [
+          "arcana",
+          "deception",
+          "insight",
+          "intimidation",
+          "persuasion",
+          "religion"
+        ]
+      },
       "spellcasting": {
-        "ability": "CHA",
+        "ability": "charisma",
         "type": "known",
-        "cantrips_known": [4, 4, 4, 5, 5, 5, 5, 5, 5, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6],
-        "spells_known": [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 12, 13, 13, 14, 14, 15, 15, 15, 15],
+        "cantrips_known": [
+          4,
+          4,
+          4,
+          5,
+          5,
+          5,
+          5,
+          5,
+          5,
+          6,
+          6,
+          6,
+          6,
+          6,
+          6,
+          6,
+          6,
+          6,
+          6,
+          6
+        ],
+        "spells_known": [
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          12,
+          13,
+          13,
+          14,
+          14,
+          15,
+          15,
+          15,
+          15
+        ],
         "slots": [
-          [2,0,0,0,0,0,0,0,0],
-          [3,0,0,0,0,0,0,0,0],
-          [4,2,0,0,0,0,0,0,0],
-          [4,3,0,0,0,0,0,0,0],
-          [4,3,2,0,0,0,0,0,0],
-          [4,3,3,0,0,0,0,0,0],
-          [4,3,3,1,0,0,0,0,0],
-          [4,3,3,2,0,0,0,0,0],
-          [4,3,3,3,1,0,0,0,0],
-          [4,3,3,3,2,0,0,0,0],
-          [4,3,3,3,2,1,0,0,0],
-          [4,3,3,3,2,1,0,0,0],
-          [4,3,3,3,2,1,1,0,0],
-          [4,3,3,3,2,1,1,0,0],
-          [4,3,3,3,2,1,1,1,0],
-          [4,3,3,3,2,1,1,1,0],
-          [4,3,3,3,2,1,1,1,1],
-          [4,3,3,3,3,1,1,1,1],
-          [4,3,3,3,3,2,1,1,1],
-          [4,3,3,3,3,2,2,1,1]
+          [
+            2,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            3,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            4,
+            2,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            4,
+            3,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            4,
+            3,
+            2,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            4,
+            3,
+            3,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            4,
+            3,
+            3,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            4,
+            3,
+            3,
+            2,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            4,
+            3,
+            3,
+            3,
+            1,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            4,
+            3,
+            3,
+            3,
+            2,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            4,
+            3,
+            3,
+            3,
+            2,
+            1,
+            0,
+            0,
+            0
+          ],
+          [
+            4,
+            3,
+            3,
+            3,
+            2,
+            1,
+            0,
+            0,
+            0
+          ],
+          [
+            4,
+            3,
+            3,
+            3,
+            2,
+            1,
+            1,
+            0,
+            0
+          ],
+          [
+            4,
+            3,
+            3,
+            3,
+            2,
+            1,
+            1,
+            0,
+            0
+          ],
+          [
+            4,
+            3,
+            3,
+            3,
+            2,
+            1,
+            1,
+            1,
+            0
+          ],
+          [
+            4,
+            3,
+            3,
+            3,
+            2,
+            1,
+            1,
+            1,
+            0
+          ],
+          [
+            4,
+            3,
+            3,
+            3,
+            2,
+            1,
+            1,
+            1,
+            1
+          ],
+          [
+            4,
+            3,
+            3,
+            3,
+            3,
+            1,
+            1,
+            1,
+            1
+          ],
+          [
+            4,
+            3,
+            3,
+            3,
+            3,
+            2,
+            1,
+            1,
+            1
+          ],
+          [
+            4,
+            3,
+            3,
+            3,
+            3,
+            2,
+            2,
+            1,
+            1
+          ]
         ]
       },
       "subclass_level": 3,
       "subclass_name": "Sorcerous Origin",
-      "subclasses": ["Aberrant Mind", "Clockwork Soul", "Draconic Sorcery", "Wild Magic Sorcery"],
-      "starting_equipment_A": "Arcane Focus, 2 Daggers, Dungeoneer's Pack, 28 GP",
+      "tool_proficiencies": [],
+      "subclass_group_index": "sorcerous-origin",
+      "subclasses": [
+        "aberrant-mind",
+        "clockwork-soul",
+        "draconic-sorcery",
+        "wild-magic-sorcery"
+      ],
+      "starting_equipment_a_index": "sorcerer-starting-equipment-a",
+      "starting_equipment_b_index": "sorcerer-starting-equipment-b",
       "features": {
-        "1": ["Innate Sorcery (Bonus Action: advantage on spell attack rolls, +1 save DC for 1 minute, 2 uses/LR)", "Spellcasting (CHA)"]
+        "1": [
+          "innate_sorcery",
+          "sorcerer-spellcasting_cha"
+        ],
+        "2": [
+          "font_of_magic",
+          "flexible_casting"
+        ],
+        "3": [
+          "metamagic",
+          "sorcerous_origin"
+        ],
+        "4": [
+          "asi"
+        ],
+        "5": [
+          "sorcerous_vitality"
+        ],
+        "6": [
+          "sorcerous_origin_feature"
+        ],
+        "7": [
+          "sorcery_incarnate"
+        ],
+        "8": [
+          "asi"
+        ],
+        "10": [
+          "metamagic_3"
+        ],
+        "12": [
+          "asi"
+        ],
+        "14": [
+          "sorcerous_origin_feature"
+        ],
+        "16": [
+          "asi"
+        ],
+        "17": [
+          "metamagic_4"
+        ],
+        "18": [
+          "sorcerous_origin_feature"
+        ],
+        "19": [
+          "epic_boon"
+        ],
+        "20": [
+          "arcane_apotheosis"
+        ]
       }
     },
     {
       "index": "warlock",
       "name": "Warlock",
-      "hit_die": 8,
-      "primary_abilities": ["CHA"],
-      "saving_throws": ["WIS", "CHA"],
-      "armor_proficiencies": ["Light"],
-      "weapon_proficiencies": ["Simple"],
-      "skill_choices": { "count": 2, "from": ["Arcana", "Deception", "History", "Intimidation", "Investigation", "Nature", "Religion"] },
+      "hit_die": "d8",
+      "primary_abilities": [
+        "charisma"
+      ],
+      "saving_throws": [
+        "WIS_saving_throw",
+        "CHA_saving_throw"
+      ],
+      "armor_proficiencies": [
+        "light"
+      ],
+      "weapon_proficiencies": [
+        "simple_melee",
+        "simple_ranged"
+      ],
+      "skill_choices": {
+        "count": 2,
+        "from": [
+          "arcana",
+          "deception",
+          "history",
+          "intimidation",
+          "investigation",
+          "nature",
+          "religion"
+        ]
+      },
       "spellcasting": {
-        "ability": "CHA",
+        "ability": "charisma",
         "type": "pact",
-        "cantrips_known": [2, 2, 2, 3, 3, 3, 3, 3, 3, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4],
-        "spells_known": [2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 11, 11, 12, 12, 13, 13, 14, 14, 15, 15],
+        "cantrips_known": [
+          2,
+          2,
+          2,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4
+        ],
+        "spells_known": [
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          10,
+          11,
+          11,
+          12,
+          12,
+          13,
+          13,
+          14,
+          14,
+          15,
+          15
+        ],
         "slots": [
-          [1,0,0,0,0,0,0,0,0],
-          [2,0,0,0,0,0,0,0,0],
-          [0,2,0,0,0,0,0,0,0],
-          [0,2,0,0,0,0,0,0,0],
-          [0,0,2,0,0,0,0,0,0],
-          [0,0,2,0,0,0,0,0,0],
-          [0,0,0,2,0,0,0,0,0],
-          [0,0,0,2,0,0,0,0,0],
-          [0,0,0,0,2,0,0,0,0],
-          [0,0,0,0,2,0,0,0,0],
-          [0,0,0,0,3,0,0,0,0],
-          [0,0,0,0,3,0,0,0,0],
-          [0,0,0,0,3,0,0,0,0],
-          [0,0,0,0,3,0,0,0,0],
-          [0,0,0,0,3,0,0,0,0],
-          [0,0,0,0,3,0,0,0,0],
-          [0,0,0,0,4,0,0,0,0],
-          [0,0,0,0,4,0,0,0,0],
-          [0,0,0,0,4,0,0,0,0],
-          [0,0,0,0,4,0,0,0,0]
+          [
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            2,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            2,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            2,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            2,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            2,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            2,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            2,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            2,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            2,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            3,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            3,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            3,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            3,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            3,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            3,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            4,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            4,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            4,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            4,
+            0,
+            0,
+            0,
+            0
+          ]
         ]
       },
       "subclass_level": 3,
       "subclass_name": "Otherworldly Patron",
-      "subclasses": ["The Archfey", "The Celestial", "The Fathomless", "The Fiend", "The Great Old One", "The Undead"],
-      "starting_equipment_A": "Leather Armor, Arcane Focus, 2 Daggers, Scholar's Pack, 15 GP",
+      "tool_proficiencies": [],
+      "subclass_group_index": "otherworldly-patron",
+      "subclasses": [
+        "the-archfey",
+        "the-celestial",
+        "the-fathomless",
+        "the-fiend",
+        "the-great-old-one",
+        "the-undead"
+      ],
+      "starting_equipment_a_index": "warlock-starting-equipment-a",
+      "starting_equipment_b_index": "warlock-starting-equipment-b",
       "features": {
-        "1": ["Eldritch Invocations (1 invocation at level 1)", "Pact Magic (CHA, short rest recharge)", "Weapon Mastery (2 weapons)"]
+        "1": [
+          "eldritch_invocations_1",
+          "pact_magic",
+          "warlock-weapon_mastery"
+        ],
+        "2": [
+          "magical_cunning",
+          "eldritch_invocations_3"
+        ],
+        "3": [
+          "pact_boon",
+          "otherworldly_patron"
+        ],
+        "4": [
+          "asi"
+        ],
+        "5": [
+          "eldritch_invocations_upgrade"
+        ],
+        "6": [
+          "patron_feature"
+        ],
+        "7": [
+          "eldritch_invocations_5"
+        ],
+        "8": [
+          "asi"
+        ],
+        "9": [
+          "eldritch_invocations_6",
+          "contact_patron"
+        ],
+        "10": [
+          "patron_feature"
+        ],
+        "11": [
+          "mystic_arcanum_6"
+        ],
+        "12": [
+          "asi",
+          "eldritch_invocations_7"
+        ],
+        "13": [
+          "mystic_arcanum_7"
+        ],
+        "14": [
+          "patron_feature"
+        ],
+        "15": [
+          "mystic_arcanum_8",
+          "eldritch_invocations_8"
+        ],
+        "16": [
+          "asi"
+        ],
+        "17": [
+          "mystic_arcanum_9"
+        ],
+        "18": [
+          "eldritch_invocations_9"
+        ],
+        "19": [
+          "epic_boon"
+        ],
+        "20": [
+          "eldritch_master"
+        ]
       }
     },
     {
       "index": "wizard",
       "name": "Wizard",
-      "hit_die": 6,
-      "primary_abilities": ["INT"],
-      "saving_throws": ["INT", "WIS"],
+      "hit_die": "d6",
+      "primary_abilities": [
+        "intelligence"
+      ],
+      "saving_throws": [
+        "INT_saving_throw",
+        "WIS_saving_throw"
+      ],
       "armor_proficiencies": [],
-      "weapon_proficiencies": ["Dagger", "Dart", "Sling", "Quarterstaff", "Light Crossbow"],
-      "skill_choices": { "count": 2, "from": ["Arcana", "History", "Insight", "Investigation", "Medicine", "Religion"] },
+      "weapon_proficiencies": [
+        "dagger",
+        "dart",
+        "sling",
+        "quarterstaff",
+        "crossbow_light"
+      ],
+      "skill_choices": {
+        "count": 2,
+        "from": [
+          "arcana",
+          "history",
+          "insight",
+          "investigation",
+          "medicine",
+          "religion"
+        ]
+      },
       "spellcasting": {
-        "ability": "INT",
+        "ability": "intelligence",
         "type": "spellbook",
-        "cantrips_known": [3, 3, 3, 4, 4, 4, 4, 4, 4, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5],
+        "cantrips_known": [
+          3,
+          3,
+          3,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          5,
+          5,
+          5,
+          5,
+          5,
+          5,
+          5,
+          5,
+          5,
+          5,
+          5
+        ],
         "spells_known": [],
         "slots": [
-          [2,0,0,0,0,0,0,0,0],
-          [3,0,0,0,0,0,0,0,0],
-          [4,2,0,0,0,0,0,0,0],
-          [4,3,0,0,0,0,0,0,0],
-          [4,3,2,0,0,0,0,0,0],
-          [4,3,3,0,0,0,0,0,0],
-          [4,3,3,1,0,0,0,0,0],
-          [4,3,3,2,0,0,0,0,0],
-          [4,3,3,3,1,0,0,0,0],
-          [4,3,3,3,2,0,0,0,0],
-          [4,3,3,3,2,1,0,0,0],
-          [4,3,3,3,2,1,0,0,0],
-          [4,3,3,3,2,1,1,0,0],
-          [4,3,3,3,2,1,1,0,0],
-          [4,3,3,3,2,1,1,1,0],
-          [4,3,3,3,2,1,1,1,0],
-          [4,3,3,3,2,1,1,1,1],
-          [4,3,3,3,3,1,1,1,1],
-          [4,3,3,3,3,2,1,1,1],
-          [4,3,3,3,3,2,2,1,1]
+          [
+            2,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            3,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            4,
+            2,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            4,
+            3,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            4,
+            3,
+            2,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            4,
+            3,
+            3,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            4,
+            3,
+            3,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            4,
+            3,
+            3,
+            2,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            4,
+            3,
+            3,
+            3,
+            1,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            4,
+            3,
+            3,
+            3,
+            2,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            4,
+            3,
+            3,
+            3,
+            2,
+            1,
+            0,
+            0,
+            0
+          ],
+          [
+            4,
+            3,
+            3,
+            3,
+            2,
+            1,
+            0,
+            0,
+            0
+          ],
+          [
+            4,
+            3,
+            3,
+            3,
+            2,
+            1,
+            1,
+            0,
+            0
+          ],
+          [
+            4,
+            3,
+            3,
+            3,
+            2,
+            1,
+            1,
+            0,
+            0
+          ],
+          [
+            4,
+            3,
+            3,
+            3,
+            2,
+            1,
+            1,
+            1,
+            0
+          ],
+          [
+            4,
+            3,
+            3,
+            3,
+            2,
+            1,
+            1,
+            1,
+            0
+          ],
+          [
+            4,
+            3,
+            3,
+            3,
+            2,
+            1,
+            1,
+            1,
+            1
+          ],
+          [
+            4,
+            3,
+            3,
+            3,
+            3,
+            1,
+            1,
+            1,
+            1
+          ],
+          [
+            4,
+            3,
+            3,
+            3,
+            3,
+            2,
+            1,
+            1,
+            1
+          ],
+          [
+            4,
+            3,
+            3,
+            3,
+            3,
+            2,
+            2,
+            1,
+            1
+          ]
         ]
       },
       "subclass_level": 3,
       "subclass_name": "Arcane Tradition",
-      "subclasses": ["Abjurer", "Bladesinger", "Conjurer", "Diviner", "Evoker", "Illusionist", "Necromancer", "Transmuter", "War Mage"],
-      "starting_equipment_A": "Arcane Focus, Spellbook, 2 Daggers, Scholar's Pack, 5 GP",
+      "tool_proficiencies": [],
+      "subclass_group_index": "arcane-tradition",
+      "subclasses": [
+        "abjurer",
+        "bladesinger",
+        "conjurer",
+        "diviner",
+        "evoker",
+        "illusionist",
+        "necromancer",
+        "transmuter",
+        "war-mage"
+      ],
+      "starting_equipment_a_index": "wizard-starting-equipment-a",
+      "starting_equipment_b_index": "wizard-starting-equipment-b",
       "features": {
-        "1": ["Arcane Recovery (1/LR regain spell slots up to half Wizard level total)", "Spellcasting (INT, spellbook: 3 cantrips + 6 level-1 spells)"]
+        "1": [
+          "arcane_recovery",
+          "spellcasting_int"
+        ],
+        "2": [
+          "arcane_tradition",
+          "scholar"
+        ],
+        "3": [
+          "cantrip_formulas"
+        ],
+        "4": [
+          "asi"
+        ],
+        "6": [
+          "arcane_tradition_feature"
+        ],
+        "8": [
+          "asi"
+        ],
+        "10": [
+          "arcane_tradition_feature"
+        ],
+        "12": [
+          "asi"
+        ],
+        "14": [
+          "arcane_tradition_feature"
+        ],
+        "16": [
+          "asi"
+        ],
+        "18": [
+          "spell_mastery"
+        ],
+        "19": [
+          "epic_boon"
+        ],
+        "20": [
+          "signature_spells"
+        ]
       }
     }
   ]

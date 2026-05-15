@@ -3,339 +3,290 @@
     {
       "index": "acolyte",
       "name": "Acolyte",
-      "ability_bonuses": [{"score": "INT", "bonus": 2}, {"score": "WIS", "bonus": 1}],
-      "origin_feat": "Magic Initiate (Cleric)",
-      "skill_proficiencies": ["Insight", "Religion"],
+      "ability_bonuses": [
+        {"score": "INT", "bonus": 2},
+        {"score": "WIS", "bonus": 1}
+      ],
+      "skill_proficiencies": ["insight", "religion"],
       "tool_proficiencies": [],
       "languages": 2,
-      "equipment": "Holy Symbol, Prayer Book, 5 Sticks of Incense, Vestments, Common Clothes, Pouch with 15 GP",
-      "feature": {
-        "name": "Shelter of the Faithful",
-        "desc": "As an acolyte, you command the respect of those who share your faith, and you can perform the religious ceremonies of your deity. You and your companions can receive free healing and care at a temple, shrine, or other established presence of your faith."
-      },
-      "personality_traits": [
-        "I idolize a particular hero of my faith, and constantly refer to that person's deeds and example.",
-        "I can find common ground between the fiercest enemies, empathizing with them and always working toward peace.",
-        "I see omens in every event and action. The gods try to speak to us, we just need to listen."
-      ],
-      "ideals": ["Tradition", "Charity", "Change", "Power", "Faith", "Aspiration"],
-      "bonds": ["I would die to recover an ancient relic of my faith that was lost long ago.", "I will someday get revenge on the corrupt temple hierarchy who branded me a heretic."],
-      "flaws": ["I judge others harshly, and myself even more severely.", "I put too much trust in those in power in my temple."]
+      "equipment_index": "acolyte-equipment",
+      "feature_index": "shelter-of-the-faithful",
+      "personality_traits": ["acolyte"],
+      "ideals": ["acolyte"],
+      "bonds": ["acolyte"],
+      "flaws": ["acolyte"],
+      "origin_feat_index": "magic-initiate-cleric"
     },
     {
       "index": "artisan",
       "name": "Artisan",
-      "ability_bonuses": [{"score": "STR", "bonus": 2}, {"score": "INT", "bonus": 1}],
-      "origin_feat": "Crafter",
-      "skill_proficiencies": ["Investigation", "Persuasion"],
-      "tool_proficiencies": ["Artisan's Tools (one type)"],
-      "languages": 1,
-      "equipment": "Artisan's Tools (one type), Traveler's Clothes, Pouch with 32 GP",
-      "feature": {
-        "name": "Guild Membership",
-        "desc": "As an established artisan who is a recognized member of a guild, you can rely on certain benefits that membership provides. Other members of your guild will provide you with lodging and food if necessary. Guild connections also allow you access to powerful political contacts."
-      },
-      "personality_traits": [
-        "I believe that anything worth doing is worth doing right. I can't help it—I'm a perfectionist.",
-        "I'm rude to people who lack my commitment to hard work and fair play."
+      "ability_bonuses": [
+        {"score": "STR", "bonus": 2},
+        {"score": "INT", "bonus": 1}
       ],
-      "ideals": ["Community", "Generosity", "Freedom", "Greed", "People", "Aspiration"],
-      "bonds": ["The workshop where I learned my trade is the most important place in the world to me.", "I owe my guild a great debt for forging me into the person I am today."],
-      "flaws": ["I'll do anything to get my hands on something rare or priceless.", "I'm quick to assume that someone is trying to cheat me."]
+      "skill_proficiencies": ["investigation", "persuasion"],
+      "tool_proficiencies": ["artisans_tools_choice"],
+      "languages": 1,
+      "equipment_index": "artisan-equipment",
+      "feature_index": "guild-membership",
+      "personality_traits": ["artisan"],
+      "ideals": ["artisan"],
+      "bonds": ["artisan"],
+      "flaws": ["artisan"],
+      "origin_feat_index": "crafter"
     },
     {
       "index": "charlatan",
       "name": "Charlatan",
-      "ability_bonuses": [{"score": "DEX", "bonus": 2}, {"score": "CHA", "bonus": 1}],
-      "origin_feat": "Skilled",
-      "skill_proficiencies": ["Deception", "Sleight of Hand"],
-      "tool_proficiencies": ["Disguise Kit", "Forgery Kit"],
-      "languages": 0,
-      "equipment": "Fine Clothes, Disguise Kit, Tools of the Con (e.g., Loaded Dice or Marked Cards), Pouch with 15 GP",
-      "feature": {
-        "name": "False Identity",
-        "desc": "You have created a second identity that includes documentation, established acquaintances, and disguises that allow you to assume that persona. You can forge documents including official papers and personal letters, as long as you have seen an example of the kind of document or the handwriting you are trying to copy."
-      },
-      "personality_traits": [
-        "I fall in and out of love easily, and am always pursuing someone.",
-        "I have a joke for every occasion, especially occasions where humor is inappropriate."
+      "ability_bonuses": [
+        {"score": "DEX", "bonus": 2},
+        {"score": "CHA", "bonus": 1}
       ],
-      "ideals": ["Independence", "Fairness", "Charity", "Creativity", "Friendship", "Aspiration"],
-      "bonds": ["I fleeced the wrong person and must work to ensure that this individual never crosses paths with me or those I care about.", "I owe everything to my mentor—a horrible person who's probably rotting in jail somewhere."],
-      "flaws": ["I can't resist a pretty face.", "I'm always in debt. I spend my ill-gotten gains on decadent luxuries faster than I bring them in."]
+      "skill_proficiencies": ["deception", "sleight_of_hand"],
+      "tool_proficiencies": ["disguise_kit", "forgery_kit"],
+      "languages": 0,
+      "equipment_index": "charlatan-equipment",
+      "feature_index": "false-identity",
+      "personality_traits": ["charlatan"],
+      "ideals": ["charlatan"],
+      "bonds": ["charlatan"],
+      "flaws": ["charlatan"],
+      "origin_feat_index": "skilled"
     },
     {
       "index": "criminal",
       "name": "Criminal",
-      "ability_bonuses": [{"score": "DEX", "bonus": 2}, {"score": "INT", "bonus": 1}],
-      "origin_feat": "Alert",
-      "skill_proficiencies": ["Deception", "Stealth"],
-      "tool_proficiencies": ["Thieves' Tools"],
-      "languages": 0,
-      "equipment": "Crowbar, Dark Common Clothes with Hood, Thieves' Tools, Pouch with 15 GP",
-      "feature": {
-        "name": "Criminal Contact",
-        "desc": "You have a reliable and trustworthy contact who acts as your liaison to a network of other criminals. You know how to get messages to and from your contact, even over great distances; specifically, you know the local messengers, corrupt caravan masters, and seedy sailors who can deliver messages for you."
-      },
-      "personality_traits": [
-        "I always have a plan for what to do when things go wrong.",
-        "I am always calm, no matter what the situation. I never raise my voice or let my emotions control me."
+      "ability_bonuses": [
+        {"score": "DEX", "bonus": 2},
+        {"score": "INT", "bonus": 1}
       ],
-      "ideals": ["Honor", "Freedom", "Charity", "Greed", "People", "Redemption"],
-      "bonds": ["I'm trying to pay off an old debt I owe to a generous benefactor.", "My ill-gotten gains go to support my family."],
-      "flaws": ["When I see something valuable, I can't think about anything but how to steal it.", "When faced with a choice between money and my friends, I usually choose the money."]
+      "skill_proficiencies": ["deception", "stealth"],
+      "tool_proficiencies": ["thieves_tools"],
+      "languages": 0,
+      "equipment_index": "criminal-equipment",
+      "feature_index": "criminal-contact",
+      "personality_traits": ["criminal"],
+      "ideals": ["criminal"],
+      "bonds": ["criminal"],
+      "flaws": ["criminal"],
+      "origin_feat_index": "alert"
     },
     {
       "index": "entertainer",
       "name": "Entertainer",
-      "ability_bonuses": [{"score": "STR", "bonus": 2}, {"score": "CHA", "bonus": 1}],
-      "origin_feat": "Musician",
-      "skill_proficiencies": ["Acrobatics", "Performance"],
-      "tool_proficiencies": ["Musical Instrument (one type)", "Disguise Kit"],
-      "languages": 0,
-      "equipment": "Musical Instrument (one type), Costume, Favor of an Admirer, Entertainer's Pack, 15 GP",
-      "feature": {
-        "name": "By Popular Demand",
-        "desc": "You can always find a place to perform, usually in an inn or tavern but possibly with a circus, at a theater, or even in a noble's court. Your performance makes you something of a local figure. When strangers recognize you in a town where you have performed, they typically take a liking to you."
-      },
-      "personality_traits": [
-        "I know a story relevant to almost every situation.",
-        "Whenever I come to a new place, I collect local rumors and spread gossip."
+      "ability_bonuses": [
+        {"score": "STR", "bonus": 2},
+        {"score": "CHA", "bonus": 1}
       ],
-      "ideals": ["Beauty", "Tradition", "Creativity", "Greed", "People", "Honesty"],
-      "bonds": ["My instrument is my most treasured possession, and it reminds me of someone I love.", "I want to be famous, whatever it takes."],
-      "flaws": ["I'll do anything to win fame and renown.", "I'm a sucker for a pretty face."]
+      "skill_proficiencies": ["acrobatics", "performance"],
+      "tool_proficiencies": ["instrument_choice", "disguise_kit"],
+      "languages": 0,
+      "equipment_index": "entertainer-equipment",
+      "feature_index": "by-popular-demand",
+      "personality_traits": ["entertainer"],
+      "ideals": ["entertainer"],
+      "bonds": ["entertainer"],
+      "flaws": ["entertainer"],
+      "origin_feat_index": "musician"
     },
     {
       "index": "farmer",
       "name": "Farmer",
-      "ability_bonuses": [{"score": "CON", "bonus": 2}, {"score": "WIS", "bonus": 1}],
-      "origin_feat": "Tough",
-      "skill_proficiencies": ["Animal Handling", "Nature"],
-      "tool_proficiencies": ["Carpenter's Tools"],
-      "languages": 0,
-      "equipment": "Sickle, Traveler's Clothes, Pouch with 23 GP",
-      "feature": {
-        "name": "Harvest Know-How",
-        "desc": "You are familiar with the land and how to survive in the wilderness. When foraging for food, you find twice as much food as you normally would."
-      },
-      "personality_traits": [
-        "I judge people by their actions, not their words.",
-        "If someone is in trouble, I'm always ready to lend help."
+      "ability_bonuses": [
+        {"score": "CON", "bonus": 2},
+        {"score": "WIS", "bonus": 1}
       ],
-      "ideals": ["Respect", "Fairness", "Community", "Charity", "Tradition", "Destiny"],
-      "bonds": ["My family, clan, or tribe is the most important thing in my life.", "I worked the land for years, and defending that land is the most sacred duty I know."],
-      "flaws": ["I'm convinced of the significance of my destiny, and blind to my shortcomings.", "I am slow to trust members of other races."]
+      "skill_proficiencies": ["animal_handling", "nature"],
+      "tool_proficiencies": ["carpenters_tools"],
+      "languages": 0,
+      "equipment_index": "farmer-equipment",
+      "feature_index": "harvest-know-how",
+      "personality_traits": ["farmer"],
+      "ideals": ["farmer"],
+      "bonds": ["farmer"],
+      "flaws": ["farmer"],
+      "origin_feat_index": "tough"
     },
     {
       "index": "guard",
       "name": "Guard",
-      "ability_bonuses": [{"score": "STR", "bonus": 2}, {"score": "INT", "bonus": 1}],
-      "origin_feat": "Alert",
-      "skill_proficiencies": ["Athletics", "Perception"],
-      "tool_proficiencies": ["Gaming Set (one type)"],
-      "languages": 1,
-      "equipment": "Spear, Light Crossbow, 20 Bolts, Uniform, Pouch with 10 GP",
-      "feature": {
-        "name": "Watcher's Eye",
-        "desc": "Your experience in enforcing the law, and dealing with lawbreakers, gives you a feel for local laws and criminals. You can easily find the local outpost of the city guard or a similar organization, and those officials will cooperate with you if at all reasonable."
-      },
-      "personality_traits": [
-        "I'm always polite and respectful.",
-        "I'm haunted by memories of violence in my past."
+      "ability_bonuses": [
+        {"score": "STR", "bonus": 2},
+        {"score": "INT", "bonus": 1}
       ],
-      "ideals": ["Greater Good", "Responsibility", "Independence", "Might", "Idealism", "Nation"],
-      "bonds": ["I would still lay down my life for the people I once served with.", "Someone saved my life on the battlefield. To this day, I will never leave a friend behind."],
-      "flaws": ["The monstrous enemy we faced in battle still leaves me quivering with fear.", "I have little respect for anyone who is not a proven warrior."]
+      "skill_proficiencies": ["athletics", "perception"],
+      "tool_proficiencies": ["gaming_set_choice"],
+      "languages": 1,
+      "equipment_index": "guard-equipment",
+      "feature_index": "watchers-eye",
+      "personality_traits": ["guard"],
+      "ideals": ["guard"],
+      "bonds": ["guard"],
+      "flaws": ["guard"],
+      "origin_feat_index": "alert"
     },
     {
       "index": "guide",
       "name": "Guide",
-      "ability_bonuses": [{"score": "DEX", "bonus": 2}, {"score": "WIS", "bonus": 1}],
-      "origin_feat": "Magic Initiate (Druid)",
-      "skill_proficiencies": ["Stealth", "Survival"],
-      "tool_proficiencies": ["Cartographer's Tools"],
-      "languages": 1,
-      "equipment": "Cartographer's Tools, Traveler's Clothes, Pouch with 10 GP",
-      "feature": {
-        "name": "Wanderer",
-        "desc": "You have an excellent memory for maps and geography, and you can always recall the general layout of terrain, settlements, and other features around you. In addition, you can find food and fresh water for yourself and up to five other people each day, as long as the land offers berries, small game, water, and so forth."
-      },
-      "personality_traits": [
-        "I'm driven by a wanderlust that led me away from home.",
-        "I watch over my friends as if they were a litter of newborn pups."
+      "ability_bonuses": [
+        {"score": "DEX", "bonus": 2},
+        {"score": "WIS", "bonus": 1}
       ],
-      "ideals": ["Change", "Greater Good", "Freedom", "Nature", "Glory", "Living in the Moment"],
-      "bonds": ["My family, clan, or tribe is the most important thing in my life.", "I will bring terrible wrath down on the evildoers who destroyed my homeland."],
-      "flaws": ["I am slow to trust members of other races, tribes, and societies.", "Violence is my answer to almost any challenge."]
+      "skill_proficiencies": ["stealth", "survival"],
+      "tool_proficiencies": ["cartographers_tools"],
+      "languages": 1,
+      "equipment_index": "guide-equipment",
+      "feature_index": "wanderer",
+      "personality_traits": ["guide"],
+      "ideals": ["guide"],
+      "bonds": ["guide"],
+      "flaws": ["guide"],
+      "origin_feat_index": "magic-initiate-druid"
     },
     {
       "index": "hermit",
       "name": "Hermit",
-      "ability_bonuses": [{"score": "CON", "bonus": 2}, {"score": "WIS", "bonus": 1}],
-      "origin_feat": "Magic Initiate (Druid)",
-      "skill_proficiencies": ["Medicine", "Religion"],
-      "tool_proficiencies": ["Herbalism Kit"],
-      "languages": 1,
-      "equipment": "Scroll Case with Notes, Winter Blanket, Common Clothes, Herbalism Kit, Pouch with 5 GP",
-      "feature": {
-        "name": "Discovery",
-        "desc": "The quiet seclusion of your extended hermitage gave you access to a unique and powerful discovery. The exact nature of this revelation depends on the nature of your seclusion. It might be a great truth about the cosmos, the deities, the powerful beings of the outer planes, or the forces of nature."
-      },
-      "personality_traits": [
-        "I've been isolated for so long that I rarely speak, preferring gestures and the occasional grunt.",
-        "I am utterly serene, even in the face of disaster."
+      "ability_bonuses": [
+        {"score": "CON", "bonus": 2},
+        {"score": "WIS", "bonus": 1}
       ],
-      "ideals": ["Greater Good", "Logic", "Free Thinking", "Power", "Live and Let Live", "Self-Knowledge"],
-      "bonds": ["Nothing is more important than the other members of my hermitage, order, or association.", "I entered seclusion to hide from the ones who might still be hunting me. I must someday confront them."],
-      "flaws": ["Now that I've returned to the world, I enjoy its delights a little too much.", "I like keeping secrets and won't share them with anyone."]
+      "skill_proficiencies": ["medicine", "religion"],
+      "tool_proficiencies": ["herbalism_kit"],
+      "languages": 1,
+      "equipment_index": "hermit-equipment",
+      "feature_index": "discovery",
+      "personality_traits": ["hermit"],
+      "ideals": ["hermit"],
+      "bonds": ["hermit"],
+      "flaws": ["hermit"],
+      "origin_feat_index": "magic-initiate-druid"
     },
     {
       "index": "merchant",
       "name": "Merchant",
-      "ability_bonuses": [{"score": "INT", "bonus": 2}, {"score": "CHA", "bonus": 1}],
-      "origin_feat": "Lucky",
-      "skill_proficiencies": ["Insight", "Persuasion"],
-      "tool_proficiencies": ["Navigator's Tools"],
-      "languages": 1,
-      "equipment": "Merchant's Scale, Traveler's Clothes, Pouch with 25 GP",
-      "feature": {
-        "name": "Merchant's Eye",
-        "desc": "You can make a living for yourself and your companions by running a trading business or doing small jobs, earning 1 GP per day. You also have knowledge of trade routes and can estimate the value of goods at a glance."
-      },
-      "personality_traits": [
-        "I'm always looking for the next opportunity to make a profit.",
-        "I believe that with enough gold, anything is possible."
+      "ability_bonuses": [
+        {"score": "INT", "bonus": 2},
+        {"score": "CHA", "bonus": 1}
       ],
-      "ideals": ["Profit", "Fairness", "Greed", "Aspiration", "Community", "Freedom"],
-      "bonds": ["My business partners are my most important allies.", "I once cheated a customer out of a great sum, and I feel terrible about it."],
-      "flaws": ["I'll do anything to close a good deal, even if it means bending the truth.", "I'm always watching for a way to take advantage of a situation."]
+      "skill_proficiencies": ["insight", "persuasion"],
+      "tool_proficiencies": ["navigators_tools"],
+      "languages": 1,
+      "equipment_index": "merchant-equipment",
+      "feature_index": "merchants-eye",
+      "personality_traits": ["merchant"],
+      "ideals": ["merchant"],
+      "bonds": ["merchant"],
+      "flaws": ["merchant"],
+      "origin_feat_index": "lucky"
     },
     {
       "index": "noble",
       "name": "Noble",
-      "ability_bonuses": [{"score": "STR", "bonus": 2}, {"score": "CHA", "bonus": 1}],
-      "origin_feat": "Skilled",
-      "skill_proficiencies": ["History", "Persuasion"],
-      "tool_proficiencies": ["Gaming Set (one type)"],
-      "languages": 1,
-      "equipment": "Fine Clothes, Signet Ring, Scroll of Pedigree, Pouch with 25 GP",
-      "feature": {
-        "name": "Position of Privilege",
-        "desc": "Thanks to your noble birth, people are inclined to think the best of you. You are welcome in high society, and people assume you have the right to be wherever you are. The common folk make every effort to accommodate you and avoid your displeasure."
-      },
-      "personality_traits": [
-        "My eloquent flattery makes everyone I talk to feel like the most wonderful and important person in the world.",
-        "The common folk love me for my kindness and generosity."
+      "ability_bonuses": [
+        {"score": "STR", "bonus": 2},
+        {"score": "CHA", "bonus": 1}
       ],
-      "ideals": ["Respect", "Responsibility", "Independence", "Power", "Family", "Noble Obligation"],
-      "bonds": ["I will face any challenge to win the approval of my family.", "My loyalty to my sovereign is unwavering."],
-      "flaws": ["I secretly believe that everyone is beneath me.", "I hide a truly scandalous secret that could ruin my family forever."]
+      "skill_proficiencies": ["history", "persuasion"],
+      "tool_proficiencies": ["gaming_set_choice"],
+      "languages": 1,
+      "equipment_index": "noble-equipment",
+      "feature_index": "position-of-privilege",
+      "personality_traits": ["noble"],
+      "ideals": ["noble"],
+      "bonds": ["noble"],
+      "flaws": ["noble"],
+      "origin_feat_index": "skilled"
     },
     {
       "index": "sage",
       "name": "Sage",
-      "ability_bonuses": [{"score": "CON", "bonus": 2}, {"score": "INT", "bonus": 1}],
-      "origin_feat": "Magic Initiate (Wizard)",
-      "skill_proficiencies": ["Arcana", "History"],
+      "ability_bonuses": [
+        {"score": "CON", "bonus": 2},
+        {"score": "INT", "bonus": 1}
+      ],
+      "skill_proficiencies": ["arcana", "history"],
       "tool_proficiencies": [],
       "languages": 2,
-      "equipment": "Ink Bottle, Quill, Small Knife, Letter from Dead Colleague, Common Clothes, Pouch with 10 GP",
-      "feature": {
-        "name": "Researcher",
-        "desc": "When you attempt to learn or recall a piece of lore, if you do not know that information, you often know where and from whom you can obtain it. Usually, this information comes from a library, scriptorium, university, or a sage or other learned person or creature."
-      },
-      "personality_traits": [
-        "I use polysyllabic words that convey the impression of great erudition.",
-        "I've read every book in the world's greatest libraries—or I like to boast that I have."
-      ],
-      "ideals": ["Knowledge", "Beauty", "Logic", "No Limits", "Power", "Self-Improvement"],
-      "bonds": ["It is my duty to protect my students.", "I have an ancient text that holds terrible secrets that must not fall into the wrong hands."],
-      "flaws": ["I am easily distracted by the promise of information.", "Most people scream and run when they see a demon. I stop and take notes on its anatomy."]
+      "equipment_index": "sage-equipment",
+      "feature_index": "researcher",
+      "personality_traits": ["sage"],
+      "ideals": ["sage"],
+      "bonds": ["sage"],
+      "flaws": ["sage"],
+      "origin_feat_index": "magic-initiate-wizard"
     },
     {
       "index": "sailor",
       "name": "Sailor",
-      "ability_bonuses": [{"score": "STR", "bonus": 2}, {"score": "DEX", "bonus": 1}],
-      "origin_feat": "Tavern Brawler",
-      "skill_proficiencies": ["Athletics", "Perception"],
-      "tool_proficiencies": ["Navigator's Tools", "Vehicles (Water)"],
-      "languages": 0,
-      "equipment": "Belaying Pin (Club), 50 ft. Silk Rope, Lucky Charm, Common Clothes, Pouch with 10 GP",
-      "feature": {
-        "name": "Ship's Passage",
-        "desc": "When you need to, you can secure free passage on a sailing ship for yourself and your companions. You might sail on the ship you served on, or another ship you have good relations with. In return, you and your companions are expected to assist the crew during the voyage."
-      },
-      "personality_traits": [
-        "My friends know they can rely on me, no matter what.",
-        "I work hard so that I can play hard when the work is done."
+      "ability_bonuses": [
+        {"score": "STR", "bonus": 2},
+        {"score": "DEX", "bonus": 1}
       ],
-      "ideals": ["Respect", "Fairness", "Freedom", "Mastery", "People", "Aspiration"],
-      "bonds": ["I'm loyal to my captain first, everything else second.", "The sea is freedom—the freedom to go anywhere and do anything."],
-      "flaws": ["I follow orders, even if I think they're wrong.", "I'll say anything to avoid having to do extra work."]
+      "skill_proficiencies": ["athletics", "perception"],
+      "tool_proficiencies": ["navigators_tools", "vehicle_water"],
+      "languages": 0,
+      "equipment_index": "sailor-equipment",
+      "feature_index": "ships-passage",
+      "personality_traits": ["sailor"],
+      "ideals": ["sailor"],
+      "bonds": ["sailor"],
+      "flaws": ["sailor"],
+      "origin_feat_index": "tavern-brawler"
     },
     {
       "index": "scribe",
       "name": "Scribe",
-      "ability_bonuses": [{"score": "DEX", "bonus": 2}, {"score": "INT", "bonus": 1}],
-      "origin_feat": "Skilled",
-      "skill_proficiencies": ["Investigation", "Perception"],
-      "tool_proficiencies": ["Calligrapher's Supplies"],
-      "languages": 1,
-      "equipment": "Calligrapher's Supplies, Fine Ink, Common Clothes, Pouch with 10 GP",
-      "feature": {
-        "name": "Scrivener's Talent",
-        "desc": "You have spent years copying documents and scrolls. You can quickly and accurately copy any written text, and you can recognize forgeries of documents you have seen before. You have connections with scholars and officials who can provide you access to libraries and archives."
-      },
-      "personality_traits": [
-        "I'm used to helping out those who aren't as smart as I am, and I patiently explain anything and everything to others.",
-        "I've read so many adventure stories that I often lose myself in romanticized notions of heroism."
+      "ability_bonuses": [
+        {"score": "DEX", "bonus": 2},
+        {"score": "INT", "bonus": 1}
       ],
-      "ideals": ["Knowledge", "Logic", "No Limits", "Power", "Tradition", "Aspiration"],
-      "bonds": ["I must have a particular manuscript, and will do nearly anything to acquire it.", "I work to preserve a library that is under threat."],
-      "flaws": ["I am easily distracted by the promise of information.", "Unlocking an ancient mystery is worth the price of civilization."]
+      "skill_proficiencies": ["investigation", "perception"],
+      "tool_proficiencies": ["calligraphers_supplies"],
+      "languages": 1,
+      "equipment_index": "scribe-equipment",
+      "feature_index": "scriveners-talent",
+      "personality_traits": ["scribe"],
+      "ideals": ["scribe"],
+      "bonds": ["scribe"],
+      "flaws": ["scribe"],
+      "origin_feat_index": "skilled"
     },
     {
       "index": "soldier",
       "name": "Soldier",
-      "ability_bonuses": [{"score": "STR", "bonus": 2}, {"score": "CON", "bonus": 1}],
-      "origin_feat": "Savage Attacker",
-      "skill_proficiencies": ["Athletics", "Intimidation"],
-      "tool_proficiencies": ["Gaming Set (one type)", "Vehicles (Land)"],
-      "languages": 0,
-      "equipment": "Rank Insignia, Trophy from Fallen Enemy, Deck of Cards or Dice, Common Clothes, Pouch with 10 GP",
-      "feature": {
-        "name": "Military Rank",
-        "desc": "You have a military rank from your career as a soldier. Soldiers loyal to your former military organization still recognize your authority and influence, and they defer to you if they are of a lower rank. You can invoke your rank to exert influence over soldiers and requisition simple equipment or horses for temporary use."
-      },
-      "personality_traits": [
-        "I'm always polite and respectful.",
-        "I'm haunted by memories of war. I fight to forget."
+      "ability_bonuses": [
+        {"score": "STR", "bonus": 2},
+        {"score": "CON", "bonus": 1}
       ],
-      "ideals": ["Greater Good", "Responsibility", "Independence", "Might", "Live and Let Live", "Nation"],
-      "bonds": ["I would still lay down my life for the people I served with.", "Someone saved my life on the battlefield. To this day, I will never leave a friend behind."],
-      "flaws": ["The monstrous enemy we faced in battle still leaves me quivering with fear.", "I have little respect for anyone who is not a proven warrior."]
+      "skill_proficiencies": ["athletics", "intimidation"],
+      "tool_proficiencies": ["gaming_set_choice", "vehicle_land"],
+      "languages": 0,
+      "equipment_index": "soldier-equipment",
+      "feature_index": "military-rank",
+      "personality_traits": ["soldier"],
+      "ideals": ["soldier"],
+      "bonds": ["soldier"],
+      "flaws": ["soldier"],
+      "origin_feat_index": "savage-attacker"
     },
     {
       "index": "wayfarer",
       "name": "Wayfarer",
-      "ability_bonuses": [{"score": "DEX", "bonus": 2}, {"score": "WIS", "bonus": 1}],
-      "origin_feat": "Lucky",
-      "skill_proficiencies": ["Insight", "Stealth"],
-      "tool_proficiencies": ["Thieves' Tools"],
-      "languages": 1,
-      "equipment": "Traveler's Clothes, Thieves' Tools, Pouch with 16 GP",
-      "feature": {
-        "name": "Drifter",
-        "desc": "You're experienced at moving through the world without leaving a trace. You can move through crowds without drawing attention, and you know how to find short-term shelter, even in a city, without spending money."
-      },
-      "personality_traits": [
-        "I always keep my options open and never tie myself down.",
-        "The best way to solve a problem is to get someone else to do it."
+      "ability_bonuses": [
+        {"score": "DEX", "bonus": 2},
+        {"score": "WIS", "bonus": 1}
       ],
-      "ideals": ["Freedom", "No Limits", "People", "Wanderlust", "Greed", "Aspiration"],
-      "bonds": ["I will do anything to protect the streets I grew up on.", "I have a family, but I have no idea where they are. I hope to see them again someday."],
-      "flaws": ["Gold seems like a lot of money to me, and I'll do just about anything for more of it.", "I will never fully trust anyone other than myself."]
+      "skill_proficiencies": ["insight", "stealth"],
+      "tool_proficiencies": ["thieves_tools"],
+      "languages": 1,
+      "equipment_index": "wayfarer-equipment",
+      "feature_index": "drifter",
+      "personality_traits": ["wayfarer"],
+      "ideals": ["wayfarer"],
+      "bonds": ["wayfarer"],
+      "flaws": ["wayfarer"],
+      "origin_feat_index": "lucky"
     }
   ]
 }

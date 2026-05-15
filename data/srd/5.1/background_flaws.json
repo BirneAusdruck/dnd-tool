@@ -1,0 +1,95 @@
+{
+  "background_flaws": [
+    {
+      "index": "acolyte",
+      "desc": [
+        "I judge others harshly, and myself even more so.",
+        "I put too much trust in those who wield power within my temple's hierarchy."
+      ]
+    },
+    {
+      "index": "charlatan",
+      "desc": [
+        "I can't resist a pretty face.",
+        "I'm convinced that no one could ever fool me the way I fool others."
+      ]
+    },
+    {
+      "index": "criminal",
+      "desc": [
+        "When I see something valuable, I can't think about anything but how to steal it.",
+        "I turn tail and run when things look bad."
+      ]
+    },
+    {
+      "index": "entertainer",
+      "desc": [
+        "I'll do anything to win fame and renown.",
+        "I'm a sucker for a pretty face."
+      ]
+    },
+    {
+      "index": "folk-hero",
+      "desc": [
+        "The tyrant who rules my land will stop at nothing to see me killed.",
+        "I have trouble trusting in my allies."
+      ]
+    },
+    {
+      "index": "guild-artisan",
+      "desc": [
+        "I'll do anything to get my hands on something rare.",
+        "I'm quick to assume someone is trying to cheat me."
+      ]
+    },
+    {
+      "index": "hermit",
+      "desc": [
+        "I harbor dark, bloodthirsty thoughts that my isolation and meditation failed to quell.",
+        "I am dogmatic in my thoughts and philosophy."
+      ]
+    },
+    {
+      "index": "noble",
+      "desc": [
+        "I secretly believe that everyone is beneath me.",
+        "I hide a truly scandalous secret."
+      ]
+    },
+    {
+      "index": "outlander",
+      "desc": [
+        "I remember every insult I've received and nurse a plan for revenge.",
+        "Don't expect me to save those who can't save themselves."
+      ]
+    },
+    {
+      "index": "sage",
+      "desc": [
+        "I am easily distracted by the promise of information.",
+        "Most people scream and run when they see a demon. I stop and take notes."
+      ]
+    },
+    {
+      "index": "sailor",
+      "desc": [
+        "I follow orders, even if I think they're wrong.",
+        "I can't help but pocket loose coins and other trinkets."
+      ]
+    },
+    {
+      "index": "soldier",
+      "desc": [
+        "The monstrous enemy we faced in battle still leaves me shaken.",
+        "I have little respect for anyone who is not a proven warrior."
+      ]
+    },
+    {
+      "index": "urchin",
+      "desc": [
+        "If I'm outnumbered, I will run away from a fight.",
+        "Gold seems like a lot of money to me, and I'll do just about anything for more."
+      ]
+    }
+  ]
+}

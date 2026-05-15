@@ -1,477 +1,2575 @@
 {
   "classes": [
     {
-      "index": "barbarian", "name": "Barbarian", "hit_die": 12,
-      "primary_abilities": ["STR"],
-      "saving_throws": ["STR", "CON"],
-      "armor_proficiencies": ["Light", "Medium", "Shields"],
-      "weapon_proficiencies": ["Simple", "Martial"],
+      "index": "barbarian",
+      "name": "Barbarian",
+      "hit_die": "d12",
+      "primary_abilities": [
+        "strength"
+      ],
+      "saving_throws": [
+        "STR_saving_throw",
+        "CON_saving_throw"
+      ],
+      "armor_proficiencies": [
+        "light",
+        "medium",
+        "shield"
+      ],
+      "weapon_proficiencies": [
+        "simple_melee",
+        "simple_ranged",
+        "martial_melee",
+        "martial_ranged"
+      ],
       "tool_proficiencies": [],
-      "skill_choices": {"count": 2, "from": ["Animal Handling","Athletics","Intimidation","Nature","Perception","Survival"]},
+      "skill_choices": {
+        "count": 2,
+        "from": [
+          "animal_handling",
+          "athletics",
+          "intimidation",
+          "nature",
+          "perception",
+          "survival"
+        ]
+      },
       "spellcasting": null,
-      "subclass_name": "Primal Path", "subclass_level": 3,
-      "subclasses": ["Path of the Berserker", "Path of the Totem Warrior"],
-      "starting_equipment_A": "Greataxe, 2 handaxes, 4 javelins, explorer's pack, 10 gp",
-      "starting_equipment_B": "Any martial melee weapon, any simple weapon, explorer's pack, 10 gp",
+      "subclass_name": "Primal Path",
+      "subclass_level": 3,
+      "subclass_group_index": "primal-path",
+      "subclasses": [
+        "path-of-the-berserker",
+        "path-of-the-totem-warrior"
+      ],
+      "starting_equipment_a_index": "barbarian-starting-equipment-a",
+      "starting_equipment_b_index": "barbarian-starting-equipment-b",
       "features": {
-        "1":  ["Rage (2/rest, +2 dmg)", "Unarmored Defense (AC = 10 + DEX + CON)"],
-        "2":  ["Reckless Attack", "Danger Sense"],
-        "3":  ["Primal Path (subclass)"],
-        "4":  ["Ability Score Improvement"],
-        "5":  ["Extra Attack", "Fast Movement (+10 ft. speed, no heavy armor)"],
-        "6":  ["Path Feature", "Rage (3/rest)"],
-        "7":  ["Feral Instinct (advantage on initiative, act while surprised)"],
-        "8":  ["Ability Score Improvement"],
-        "9":  ["Brutal Critical (1 extra die)"],
-        "10": ["Path Feature"],
-        "11": ["Relentless Rage (drop to 1 HP on failed Con save when at 0)"],
-        "12": ["Ability Score Improvement", "Rage (4/rest)"],
-        "13": ["Brutal Critical (2 extra dice)"],
-        "14": ["Path Feature"],
-        "15": ["Persistent Rage (only ends voluntarily or unconscious)"],
-        "16": ["Ability Score Improvement", "Rage (5/rest)"],
-        "17": ["Brutal Critical (3 extra dice)"],
-        "18": ["Indomitable Might (STR check minimum = STR score)"],
-        "19": ["Ability Score Improvement"],
-        "20": ["Primal Champion (+4 STR, +4 CON)", "Rage (unlimited)"]
+        "1": [
+          "rage",
+          "unarmored_defense_barbarian"
+        ],
+        "2": [
+          "reckless_attack",
+          "danger_sense"
+        ],
+        "3": [
+          "primal_path"
+        ],
+        "4": [
+          "asi"
+        ],
+        "5": [
+          "extra_attack",
+          "fast_movement"
+        ],
+        "6": [
+          "path_feature",
+          "rage_upgrade_3"
+        ],
+        "7": [
+          "feral_instinct"
+        ],
+        "8": [
+          "asi"
+        ],
+        "9": [
+          "brutal_critical"
+        ],
+        "10": [
+          "path_feature"
+        ],
+        "11": [
+          "relentless_rage"
+        ],
+        "12": [
+          "asi",
+          "rage_upgrade_4"
+        ],
+        "13": [
+          "brutal_critical_2"
+        ],
+        "14": [
+          "path_feature"
+        ],
+        "15": [
+          "persistent_rage"
+        ],
+        "16": [
+          "asi",
+          "rage_upgrade_5"
+        ],
+        "17": [
+          "brutal_critical_3"
+        ],
+        "18": [
+          "indomitable_might"
+        ],
+        "19": [
+          "asi"
+        ],
+        "20": [
+          "primal_champion",
+          "rage_unlimited"
+        ]
       }
     },
     {
-      "index": "bard", "name": "Bard", "hit_die": 8,
-      "primary_abilities": ["CHA"],
-      "saving_throws": ["DEX", "CHA"],
-      "armor_proficiencies": ["Light"],
-      "weapon_proficiencies": ["Simple", "Hand Crossbow", "Longsword", "Rapier", "Shortsword"],
-      "tool_proficiencies": ["Three musical instruments of your choice"],
-      "skill_choices": {"count": 3, "from": "any"},
-      "spellcasting": {
-        "ability": "CHA", "type": "known",
-        "cantrips_known": [2,2,2,3,3,3,3,3,3,4,4,4,4,4,4,4,4,4,4,4],
-        "spells_known":   [4,5,6,7,8,9,10,11,12,14,15,15,16,18,19,19,20,22,22,22],
-        "slots": [[2],[3],[4,2],[4,3],[4,3,2],[4,3,3],[4,3,3,1],[4,3,3,2],[4,3,3,3,1],[4,3,3,3,2],[4,3,3,3,2,1],[4,3,3,3,2,1],[4,3,3,3,2,1,1],[4,3,3,3,2,1,1],[4,3,3,3,2,1,1,1],[4,3,3,3,2,1,1,1],[4,3,3,3,2,1,1,1,1],[4,3,3,3,3,1,1,1,1],[4,3,3,3,3,2,1,1,1],[4,3,3,3,3,2,2,1,1]]
+      "index": "bard",
+      "name": "Bard",
+      "hit_die": "d8",
+      "primary_abilities": [
+        "charisma"
+      ],
+      "saving_throws": [
+        "DEX_saving_throw",
+        "CHA_saving_throw"
+      ],
+      "armor_proficiencies": [
+        "light"
+      ],
+      "weapon_proficiencies": [
+        "simple_melee",
+        "simple_ranged",
+        "crossbow_hand",
+        "longsword",
+        "rapier",
+        "shortsword"
+      ],
+      "tool_proficiencies": [
+        "instrument_choice_3"
+      ],
+      "skill_choices": {
+        "count": 3,
+        "from": []
       },
-      "subclass_name": "Bard College", "subclass_level": 3,
-      "subclasses": ["College of Lore", "College of Valor"],
-      "starting_equipment_A": "Rapier, diplomat's pack, lute, leather armor, dagger",
-      "starting_equipment_B": "Longsword or any simple weapon, entertainer's pack, any instrument, leather armor, dagger",
+      "spellcasting": {
+        "ability": "charisma",
+        "type": "known",
+        "cantrips_known": [
+          2,
+          2,
+          2,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4
+        ],
+        "spells_known": [
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          14,
+          15,
+          15,
+          16,
+          18,
+          19,
+          19,
+          20,
+          22,
+          22,
+          22
+        ],
+        "slots": [
+          [
+            2
+          ],
+          [
+            3
+          ],
+          [
+            4,
+            2
+          ],
+          [
+            4,
+            3
+          ],
+          [
+            4,
+            3,
+            2
+          ],
+          [
+            4,
+            3,
+            3
+          ],
+          [
+            4,
+            3,
+            3,
+            1
+          ],
+          [
+            4,
+            3,
+            3,
+            2
+          ],
+          [
+            4,
+            3,
+            3,
+            3,
+            1
+          ],
+          [
+            4,
+            3,
+            3,
+            3,
+            2
+          ],
+          [
+            4,
+            3,
+            3,
+            3,
+            2,
+            1
+          ],
+          [
+            4,
+            3,
+            3,
+            3,
+            2,
+            1
+          ],
+          [
+            4,
+            3,
+            3,
+            3,
+            2,
+            1,
+            1
+          ],
+          [
+            4,
+            3,
+            3,
+            3,
+            2,
+            1,
+            1
+          ],
+          [
+            4,
+            3,
+            3,
+            3,
+            2,
+            1,
+            1,
+            1
+          ],
+          [
+            4,
+            3,
+            3,
+            3,
+            2,
+            1,
+            1,
+            1
+          ],
+          [
+            4,
+            3,
+            3,
+            3,
+            2,
+            1,
+            1,
+            1,
+            1
+          ],
+          [
+            4,
+            3,
+            3,
+            3,
+            3,
+            1,
+            1,
+            1,
+            1
+          ],
+          [
+            4,
+            3,
+            3,
+            3,
+            3,
+            2,
+            1,
+            1,
+            1
+          ],
+          [
+            4,
+            3,
+            3,
+            3,
+            3,
+            2,
+            2,
+            1,
+            1
+          ]
+        ]
+      },
+      "subclass_name": "Bard College",
+      "subclass_level": 3,
+      "subclass_group_index": "bard-college",
+      "subclasses": [
+        "college-of-lore",
+        "college-of-valor"
+      ],
+      "starting_equipment_a_index": "bard-starting-equipment-a",
+      "starting_equipment_b_index": "bard-starting-equipment-b",
       "features": {
-        "1":  ["Spellcasting (CHA)", "Bardic Inspiration (d6, CHA mod/long rest)"],
-        "2":  ["Jack of All Trades (+half proficiency to non-proficient checks)", "Song of Rest (d6)"],
-        "3":  ["Bard College (subclass)", "Expertise (double proficiency on 2 skills)"],
-        "4":  ["Ability Score Improvement"],
-        "5":  ["Bardic Inspiration (d8)", "Font of Inspiration (regain on short rest)"],
-        "6":  ["Countercharm", "College Feature"],
-        "7":  [],
-        "8":  ["Ability Score Improvement"],
-        "9":  ["Song of Rest (d8)"],
-        "10": ["Bardic Inspiration (d10)", "Expertise (2 more skills)", "Magical Secrets (2 spells from any list)"],
-        "11": [],
-        "12": ["Ability Score Improvement"],
-        "13": ["Song of Rest (d10)"],
-        "14": ["Magical Secrets (2 more)", "College Feature"],
-        "15": ["Bardic Inspiration (d12)"],
-        "16": ["Ability Score Improvement"],
-        "17": ["Song of Rest (d12)"],
-        "18": ["Magical Secrets (2 more)"],
-        "19": ["Ability Score Improvement"],
-        "20": ["Superior Inspiration (min 1 Bardic Inspiration on initiative)"]
+        "1": [
+          "spellcasting_cha",
+          "bardic_inspiration_d6"
+        ],
+        "2": [
+          "jack_of_all_trades",
+          "song_of_rest_d6"
+        ],
+        "3": [
+          "bard_college",
+          "expertise"
+        ],
+        "4": [
+          "asi"
+        ],
+        "5": [
+          "bardic_inspiration_d8",
+          "font_of_inspiration"
+        ],
+        "6": [
+          "countercharm",
+          "college_feature"
+        ],
+        "8": [
+          "asi"
+        ],
+        "9": [
+          "song_of_rest_d8"
+        ],
+        "10": [
+          "bardic_inspiration_d10",
+          "expertise_upgrade",
+          "magical_secrets"
+        ],
+        "12": [
+          "asi"
+        ],
+        "13": [
+          "song_of_rest_d10"
+        ],
+        "14": [
+          "magical_secrets_2",
+          "college_feature"
+        ],
+        "15": [
+          "bardic_inspiration_d12"
+        ],
+        "16": [
+          "asi"
+        ],
+        "17": [
+          "song_of_rest_d12"
+        ],
+        "18": [
+          "magical_secrets_3"
+        ],
+        "19": [
+          "asi"
+        ],
+        "20": [
+          "superior_inspiration"
+        ]
       }
     },
     {
-      "index": "cleric", "name": "Cleric", "hit_die": 8,
-      "primary_abilities": ["WIS"],
-      "saving_throws": ["WIS", "CHA"],
-      "armor_proficiencies": ["Light", "Medium", "Shields"],
-      "weapon_proficiencies": ["Simple"],
+      "index": "cleric",
+      "name": "Cleric",
+      "hit_die": "d8",
+      "primary_abilities": [
+        "wisdom"
+      ],
+      "saving_throws": [
+        "WIS_saving_throw",
+        "CHA_saving_throw"
+      ],
+      "armor_proficiencies": [
+        "light",
+        "medium",
+        "shield"
+      ],
+      "weapon_proficiencies": [
+        "simple_melee",
+        "simple_ranged"
+      ],
       "tool_proficiencies": [],
-      "skill_choices": {"count": 2, "from": ["History","Insight","Medicine","Persuasion","Religion"]},
-      "spellcasting": {
-        "ability": "WIS", "type": "prepared",
-        "cantrips_known": [3,3,3,4,4,4,4,4,4,5,5,5,5,5,5,5,5,5,5,5],
-        "spells_known": "prepared: WIS mod + level",
-        "slots": [[2],[3],[4,2],[4,3],[4,3,2],[4,3,3],[4,3,3,1],[4,3,3,2],[4,3,3,3,1],[4,3,3,3,2],[4,3,3,3,2,1],[4,3,3,3,2,1],[4,3,3,3,2,1,1],[4,3,3,3,2,1,1],[4,3,3,3,2,1,1,1],[4,3,3,3,2,1,1,1],[4,3,3,3,2,1,1,1,1],[4,3,3,3,3,1,1,1,1],[4,3,3,3,3,2,1,1,1],[4,3,3,3,3,2,2,1,1]]
+      "skill_choices": {
+        "count": 2,
+        "from": [
+          "history",
+          "insight",
+          "medicine",
+          "persuasion",
+          "religion"
+        ]
       },
-      "subclass_name": "Divine Domain", "subclass_level": 1,
-      "subclasses": ["Life Domain", "Light Domain", "Trickery Domain", "Knowledge Domain", "Nature Domain", "Tempest Domain", "War Domain"],
-      "starting_equipment_A": "Mace, scale mail, light crossbow + 20 bolts, priest's pack, shield, holy symbol",
-      "starting_equipment_B": "Warhammer (if proficient), leather armor, any simple weapon, priest's pack, shield, holy symbol",
+      "spellcasting": {
+        "ability": "wisdom",
+        "type": "prepared",
+        "cantrips_known": [
+          3,
+          3,
+          3,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          5,
+          5,
+          5,
+          5,
+          5,
+          5,
+          5,
+          5,
+          5,
+          5,
+          5
+        ],
+        "spells_known": [],
+        "slots": [
+          [
+            2
+          ],
+          [
+            3
+          ],
+          [
+            4,
+            2
+          ],
+          [
+            4,
+            3
+          ],
+          [
+            4,
+            3,
+            2
+          ],
+          [
+            4,
+            3,
+            3
+          ],
+          [
+            4,
+            3,
+            3,
+            1
+          ],
+          [
+            4,
+            3,
+            3,
+            2
+          ],
+          [
+            4,
+            3,
+            3,
+            3,
+            1
+          ],
+          [
+            4,
+            3,
+            3,
+            3,
+            2
+          ],
+          [
+            4,
+            3,
+            3,
+            3,
+            2,
+            1
+          ],
+          [
+            4,
+            3,
+            3,
+            3,
+            2,
+            1
+          ],
+          [
+            4,
+            3,
+            3,
+            3,
+            2,
+            1,
+            1
+          ],
+          [
+            4,
+            3,
+            3,
+            3,
+            2,
+            1,
+            1
+          ],
+          [
+            4,
+            3,
+            3,
+            3,
+            2,
+            1,
+            1,
+            1
+          ],
+          [
+            4,
+            3,
+            3,
+            3,
+            2,
+            1,
+            1,
+            1
+          ],
+          [
+            4,
+            3,
+            3,
+            3,
+            2,
+            1,
+            1,
+            1,
+            1
+          ],
+          [
+            4,
+            3,
+            3,
+            3,
+            3,
+            1,
+            1,
+            1,
+            1
+          ],
+          [
+            4,
+            3,
+            3,
+            3,
+            3,
+            2,
+            1,
+            1,
+            1
+          ],
+          [
+            4,
+            3,
+            3,
+            3,
+            3,
+            2,
+            2,
+            1,
+            1
+          ]
+        ]
+      },
+      "subclass_name": "Divine Domain",
+      "subclass_level": 1,
+      "subclass_group_index": "divine-domain",
+      "subclasses": [
+        "life-domain",
+        "light-domain",
+        "trickery-domain",
+        "knowledge-domain",
+        "nature-domain",
+        "tempest-domain",
+        "war-domain"
+      ],
+      "starting_equipment_a_index": "cleric-starting-equipment-a",
+      "starting_equipment_b_index": "cleric-starting-equipment-b",
       "features": {
-        "1":  ["Spellcasting (WIS)", "Divine Domain (subclass at 1st level)"],
-        "2":  ["Channel Divinity (1/rest)", "Divine Domain Feature", "Turn Undead"],
-        "3":  ["Divine Domain Feature"],
-        "4":  ["Ability Score Improvement"],
-        "5":  ["Destroy Undead (CR 1/2)"],
-        "6":  ["Channel Divinity (2/rest)", "Divine Domain Feature"],
-        "7":  ["Divine Domain Feature"],
-        "8":  ["Ability Score Improvement", "Destroy Undead (CR 1)", "Divine Domain Feature"],
-        "9":  [],
-        "10": ["Divine Intervention (call upon deity for aid)"],
-        "11": ["Destroy Undead (CR 2)"],
-        "12": ["Ability Score Improvement"],
-        "13": [],
-        "14": ["Destroy Undead (CR 3)"],
-        "15": [],
-        "16": ["Ability Score Improvement"],
-        "17": ["Destroy Undead (CR 4)", "Divine Domain Feature"],
-        "18": ["Channel Divinity (3/rest)"],
-        "19": ["Ability Score Improvement"],
-        "20": ["Divine Intervention (auto success)"]
+        "1": [
+          "spellcasting_wis",
+          "divine_domain"
+        ],
+        "2": [
+          "channel_divinity",
+          "divine_domain_feature",
+          "turn_undead"
+        ],
+        "3": [
+          "cleric-divine_domain_feature"
+        ],
+        "4": [
+          "asi"
+        ],
+        "5": [
+          "destroy_undead_cr12"
+        ],
+        "6": [
+          "channel_divinity_2",
+          "cleric-divine_domain_feature"
+        ],
+        "7": [
+          "cleric-divine_domain_feature"
+        ],
+        "8": [
+          "asi",
+          "destroy_undead_cr1",
+          "cleric-divine_domain_feature"
+        ],
+        "10": [
+          "divine_intervention"
+        ],
+        "11": [
+          "destroy_undead_cr2"
+        ],
+        "12": [
+          "asi"
+        ],
+        "14": [
+          "destroy_undead_cr3"
+        ],
+        "16": [
+          "asi"
+        ],
+        "17": [
+          "destroy_undead_cr4",
+          "cleric-divine_domain_feature"
+        ],
+        "18": [
+          "channel_divinity_3"
+        ],
+        "19": [
+          "asi"
+        ],
+        "20": [
+          "divine_intervention_auto"
+        ]
       }
     },
     {
-      "index": "druid", "name": "Druid", "hit_die": 8,
-      "primary_abilities": ["WIS"],
-      "saving_throws": ["INT", "WIS"],
-      "armor_proficiencies": ["Light", "Medium", "Shields (non-metal)"],
-      "weapon_proficiencies": ["Clubs","Daggers","Darts","Javelins","Maces","Quarterstaffs","Scimitars","Sickles","Slings","Spears"],
-      "tool_proficiencies": ["Herbalism kit"],
-      "skill_choices": {"count": 2, "from": ["Arcana","Animal Handling","Insight","Medicine","Nature","Perception","Religion","Survival"]},
-      "spellcasting": {
-        "ability": "WIS", "type": "prepared",
-        "cantrips_known": [2,2,2,3,3,3,3,3,3,4,4,4,4,4,4,4,4,4,4,4],
-        "spells_known": "prepared: WIS mod + level",
-        "slots": [[2],[3],[4,2],[4,3],[4,3,2],[4,3,3],[4,3,3,1],[4,3,3,2],[4,3,3,3,1],[4,3,3,3,2],[4,3,3,3,2,1],[4,3,3,3,2,1],[4,3,3,3,2,1,1],[4,3,3,3,2,1,1],[4,3,3,3,2,1,1,1],[4,3,3,3,2,1,1,1],[4,3,3,3,2,1,1,1,1],[4,3,3,3,3,1,1,1,1],[4,3,3,3,3,2,1,1,1],[4,3,3,3,3,2,2,1,1]]
+      "index": "druid",
+      "name": "Druid",
+      "hit_die": "d8",
+      "primary_abilities": [
+        "wisdom"
+      ],
+      "saving_throws": [
+        "INT_saving_throw",
+        "WIS_saving_throw"
+      ],
+      "armor_proficiencies": [
+        "light",
+        "medium",
+        "shield"
+      ],
+      "weapon_proficiencies": [
+        "club",
+        "dagger",
+        "dart",
+        "javelin",
+        "mace",
+        "quarterstaff",
+        "scimitar",
+        "sickle",
+        "sling",
+        "spear"
+      ],
+      "tool_proficiencies": [
+        "herbalism_kit"
+      ],
+      "skill_choices": {
+        "count": 2,
+        "from": [
+          "arcana",
+          "animal_handling",
+          "insight",
+          "medicine",
+          "nature",
+          "perception",
+          "religion",
+          "survival"
+        ]
       },
-      "subclass_name": "Druid Circle", "subclass_level": 2,
-      "subclasses": ["Circle of the Land", "Circle of the Moon"],
-      "starting_equipment_A": "Wooden shield, scimitar, leather armor, explorer's pack, druidic focus",
-      "starting_equipment_B": "Any simple weapon, leather armor, explorer's pack, druidic focus",
+      "spellcasting": {
+        "ability": "wisdom",
+        "type": "prepared",
+        "cantrips_known": [
+          2,
+          2,
+          2,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4
+        ],
+        "spells_known": [],
+        "slots": [
+          [
+            2
+          ],
+          [
+            3
+          ],
+          [
+            4,
+            2
+          ],
+          [
+            4,
+            3
+          ],
+          [
+            4,
+            3,
+            2
+          ],
+          [
+            4,
+            3,
+            3
+          ],
+          [
+            4,
+            3,
+            3,
+            1
+          ],
+          [
+            4,
+            3,
+            3,
+            2
+          ],
+          [
+            4,
+            3,
+            3,
+            3,
+            1
+          ],
+          [
+            4,
+            3,
+            3,
+            3,
+            2
+          ],
+          [
+            4,
+            3,
+            3,
+            3,
+            2,
+            1
+          ],
+          [
+            4,
+            3,
+            3,
+            3,
+            2,
+            1
+          ],
+          [
+            4,
+            3,
+            3,
+            3,
+            2,
+            1,
+            1
+          ],
+          [
+            4,
+            3,
+            3,
+            3,
+            2,
+            1,
+            1
+          ],
+          [
+            4,
+            3,
+            3,
+            3,
+            2,
+            1,
+            1,
+            1
+          ],
+          [
+            4,
+            3,
+            3,
+            3,
+            2,
+            1,
+            1,
+            1
+          ],
+          [
+            4,
+            3,
+            3,
+            3,
+            2,
+            1,
+            1,
+            1,
+            1
+          ],
+          [
+            4,
+            3,
+            3,
+            3,
+            3,
+            1,
+            1,
+            1,
+            1
+          ],
+          [
+            4,
+            3,
+            3,
+            3,
+            3,
+            2,
+            1,
+            1,
+            1
+          ],
+          [
+            4,
+            3,
+            3,
+            3,
+            3,
+            2,
+            2,
+            1,
+            1
+          ]
+        ]
+      },
+      "subclass_name": "Druid Circle",
+      "subclass_level": 2,
+      "subclass_group_index": "druid-circle",
+      "subclasses": [
+        "circle-of-the-land",
+        "circle-of-the-moon"
+      ],
+      "starting_equipment_a_index": "druid-starting-equipment-a",
+      "starting_equipment_b_index": "druid-starting-equipment-b",
       "features": {
-        "1":  ["Druidic (secret language)", "Spellcasting (WIS)"],
-        "2":  ["Wild Shape (CR 1/4, no fly/swim)", "Druid Circle (subclass)"],
-        "3":  [],
-        "4":  ["Wild Shape (CR 1/2, no fly)", "Ability Score Improvement"],
-        "5":  [],
-        "6":  ["Druid Circle Feature"],
-        "7":  [],
-        "8":  ["Wild Shape (CR 1)", "Ability Score Improvement"],
-        "9":  [],
-        "10": ["Druid Circle Feature"],
-        "11": [],
-        "12": ["Ability Score Improvement"],
-        "13": [],
-        "14": ["Druid Circle Feature"],
-        "15": [],
-        "16": ["Ability Score Improvement"],
-        "17": [],
-        "18": ["Timeless Body (age 10x slower)", "Beast Spells (cast while Wild Shape)"],
-        "19": ["Ability Score Improvement"],
-        "20": ["Archdruid (unlimited Wild Shape)"]
+        "1": [
+          "druidic",
+          "druid-spellcasting_wis"
+        ],
+        "2": [
+          "wild_shape_cr14",
+          "druid_circle"
+        ],
+        "4": [
+          "wild_shape_cr12",
+          "asi"
+        ],
+        "6": [
+          "druid_circle_feature"
+        ],
+        "8": [
+          "wild_shape_cr1",
+          "asi"
+        ],
+        "10": [
+          "druid_circle_feature"
+        ],
+        "12": [
+          "asi"
+        ],
+        "14": [
+          "druid_circle_feature"
+        ],
+        "16": [
+          "asi"
+        ],
+        "18": [
+          "timeless_body_druid",
+          "beast_spells"
+        ],
+        "19": [
+          "asi"
+        ],
+        "20": [
+          "archdruid"
+        ]
       }
     },
     {
-      "index": "fighter", "name": "Fighter", "hit_die": 10,
-      "primary_abilities": ["STR", "DEX"],
-      "saving_throws": ["STR", "CON"],
-      "armor_proficiencies": ["Light", "Medium", "Heavy", "Shields"],
-      "weapon_proficiencies": ["Simple", "Martial"],
+      "index": "fighter",
+      "name": "Fighter",
+      "hit_die": "d10",
+      "primary_abilities": [
+        "strength",
+        "dexterity"
+      ],
+      "saving_throws": [
+        "STR_saving_throw",
+        "CON_saving_throw"
+      ],
+      "armor_proficiencies": [
+        "light",
+        "medium",
+        "heavy",
+        "shield"
+      ],
+      "weapon_proficiencies": [
+        "simple_melee",
+        "simple_ranged",
+        "martial_melee",
+        "martial_ranged"
+      ],
       "tool_proficiencies": [],
-      "skill_choices": {"count": 2, "from": ["Acrobatics","Animal Handling","Athletics","History","Insight","Intimidation","Perception","Survival"]},
+      "skill_choices": {
+        "count": 2,
+        "from": [
+          "acrobatics",
+          "animal_handling",
+          "athletics",
+          "history",
+          "insight",
+          "intimidation",
+          "perception",
+          "survival"
+        ]
+      },
       "spellcasting": null,
-      "subclass_name": "Martial Archetype", "subclass_level": 3,
-      "subclasses": ["Champion", "Battle Master", "Eldritch Knight"],
-      "starting_equipment_A": "Chain mail, martial weapon + shield, light crossbow + 20 bolts, dungeoneer's pack",
-      "starting_equipment_B": "Leather armor, two martial weapons, light crossbow + 20 bolts, dungeoneer's pack",
+      "subclass_name": "Martial Archetype",
+      "subclass_level": 3,
+      "subclass_group_index": "martial-archetype",
+      "subclasses": [
+        "champion",
+        "battle-master",
+        "eldritch-knight"
+      ],
+      "starting_equipment_a_index": "fighter-starting-equipment-a",
+      "starting_equipment_b_index": "fighter-starting-equipment-b",
       "features": {
-        "1":  ["Fighting Style (choose one)", "Second Wind (bonus action, 1d10+level HP, 1/short rest)"],
-        "2":  ["Action Surge (1/short rest, take one additional action)"],
-        "3":  ["Martial Archetype (subclass)"],
-        "4":  ["Ability Score Improvement"],
-        "5":  ["Extra Attack (attack twice)"],
-        "6":  ["Ability Score Improvement"],
-        "7":  ["Martial Archetype Feature"],
-        "8":  ["Ability Score Improvement"],
-        "9":  ["Indomitable (reroll a failed saving throw, 1/long rest)"],
-        "10": ["Martial Archetype Feature"],
-        "11": ["Extra Attack (attack three times)"],
-        "12": ["Ability Score Improvement"],
-        "13": ["Indomitable (2/long rest)"],
-        "14": ["Ability Score Improvement"],
-        "15": ["Martial Archetype Feature"],
-        "16": ["Ability Score Improvement"],
-        "17": ["Action Surge (2/short rest)", "Indomitable (3/long rest)"],
-        "18": ["Martial Archetype Feature"],
-        "19": ["Ability Score Improvement"],
-        "20": ["Extra Attack (attack four times)"]
+        "1": [
+          "fighting_style",
+          "second_wind"
+        ],
+        "2": [
+          "action_surge"
+        ],
+        "3": [
+          "martial_archetype"
+        ],
+        "4": [
+          "asi"
+        ],
+        "5": [
+          "extra_attack"
+        ],
+        "6": [
+          "asi"
+        ],
+        "7": [
+          "martial_archetype_feature"
+        ],
+        "8": [
+          "asi"
+        ],
+        "9": [
+          "indomitable"
+        ],
+        "10": [
+          "martial_archetype_feature"
+        ],
+        "11": [
+          "extra_attack_3"
+        ],
+        "12": [
+          "asi"
+        ],
+        "13": [
+          "indomitable_2"
+        ],
+        "14": [
+          "asi"
+        ],
+        "15": [
+          "martial_archetype_feature"
+        ],
+        "16": [
+          "asi"
+        ],
+        "17": [
+          "action_surge_2",
+          "indomitable_3"
+        ],
+        "18": [
+          "martial_archetype_feature"
+        ],
+        "19": [
+          "asi"
+        ],
+        "20": [
+          "extra_attack_4"
+        ]
       }
     },
     {
-      "index": "monk", "name": "Monk", "hit_die": 8,
-      "primary_abilities": ["DEX", "WIS"],
-      "saving_throws": ["STR", "DEX"],
+      "index": "monk",
+      "name": "Monk",
+      "hit_die": "d8",
+      "primary_abilities": [
+        "dexterity",
+        "wisdom"
+      ],
+      "saving_throws": [
+        "STR_saving_throw",
+        "DEX_saving_throw"
+      ],
       "armor_proficiencies": [],
-      "weapon_proficiencies": ["Simple", "Shortswords"],
-      "tool_proficiencies": ["One artisan's tool or musical instrument"],
-      "skill_choices": {"count": 2, "from": ["Acrobatics","Athletics","History","Insight","Religion","Stealth"]},
+      "weapon_proficiencies": [
+        "simple_melee",
+        "simple_ranged",
+        "shortsword"
+      ],
+      "tool_proficiencies": [
+        "artisans_or_instrument_choice"
+      ],
+      "skill_choices": {
+        "count": 2,
+        "from": [
+          "acrobatics",
+          "athletics",
+          "history",
+          "insight",
+          "religion",
+          "stealth"
+        ]
+      },
       "spellcasting": null,
-      "subclass_name": "Monastic Tradition", "subclass_level": 3,
-      "subclasses": ["Way of the Open Hand", "Way of Shadow", "Way of the Four Elements"],
-      "starting_equipment_A": "Shortsword, dungeoneer's pack, 10 darts",
-      "starting_equipment_B": "Any simple weapon, dungeoneer's pack, 10 darts",
+      "subclass_name": "Monastic Tradition",
+      "subclass_level": 3,
+      "subclass_group_index": "monastic-tradition",
+      "subclasses": [
+        "way-of-the-open-hand",
+        "way-of-shadow",
+        "way-of-the-four-elements"
+      ],
+      "starting_equipment_a_index": "monk-starting-equipment-a",
+      "starting_equipment_b_index": "monk-starting-equipment-b",
       "features": {
-        "1":  ["Unarmored Defense (AC = 10 + DEX + WIS)", "Martial Arts (d4 unarmed, DEX for attacks)"],
-        "2":  ["Ki (ki points = level)", "Flurry of Blows", "Patient Defense", "Step of the Wind", "Unarmored Movement (+10 ft.)"],
-        "3":  ["Monastic Tradition (subclass)", "Deflect Missiles"],
-        "4":  ["Ability Score Improvement", "Slow Fall (reduce fall damage by 5 × monk level)"],
-        "5":  ["Extra Attack", "Stunning Strike (ki point, CON save or stunned)"],
-        "6":  ["Ki-Empowered Strikes (unarmed = magical)", "Monastic Tradition Feature", "Unarmored Movement (+15 ft.)"],
-        "7":  ["Evasion", "Stillness of Mind (remove charm/fright as action)"],
-        "8":  ["Ability Score Improvement"],
-        "9":  ["Unarmored Movement (+15 ft., run up walls/water briefly)"],
-        "10": ["Purity of Body (immune to disease and poison)", "Unarmored Movement (+20 ft.)"],
-        "11": ["Monastic Tradition Feature"],
-        "12": ["Ability Score Improvement"],
-        "13": ["Tongue of the Sun and Moon (understand all languages)"],
-        "14": ["Diamond Soul (proficiency in all saves)", "Unarmored Movement (+25 ft.)"],
-        "15": ["Timeless Body (no aging)", "Martial Arts (d8)"],
-        "16": ["Ability Score Improvement"],
-        "17": ["Monastic Tradition Feature", "Martial Arts (d10)"],
-        "18": ["Empty Body (invisible + astral projection 1/long rest)", "Unarmored Movement (+30 ft.)"],
-        "19": ["Ability Score Improvement"],
-        "20": ["Perfect Self (regain 4 ki on initiative if 0 left)", "Martial Arts (d10)"]
+        "1": [
+          "unarmored_defense_monk",
+          "martial_arts_d4"
+        ],
+        "2": [
+          "ki",
+          "flurry_of_blows",
+          "patient_defense",
+          "step_of_the_wind",
+          "unarmored_movement_10"
+        ],
+        "3": [
+          "monastic_tradition",
+          "deflect_missiles"
+        ],
+        "4": [
+          "asi",
+          "slow_fall"
+        ],
+        "5": [
+          "extra_attack",
+          "stunning_strike"
+        ],
+        "6": [
+          "ki_empowered_strikes",
+          "monastic_tradition_feature",
+          "unarmored_movement_15"
+        ],
+        "7": [
+          "evasion",
+          "stillness_of_mind"
+        ],
+        "8": [
+          "asi"
+        ],
+        "9": [
+          "unarmored_movement_15_walls"
+        ],
+        "10": [
+          "purity_of_body",
+          "unarmored_movement_20"
+        ],
+        "11": [
+          "monastic_tradition_feature"
+        ],
+        "12": [
+          "asi"
+        ],
+        "13": [
+          "tongue_of_sun_moon"
+        ],
+        "14": [
+          "diamond_soul",
+          "unarmored_movement_25"
+        ],
+        "15": [
+          "timeless_body_monk",
+          "martial_arts_d8"
+        ],
+        "16": [
+          "asi"
+        ],
+        "17": [
+          "monastic_tradition_feature",
+          "martial_arts_d10"
+        ],
+        "18": [
+          "empty_body",
+          "unarmored_movement_30"
+        ],
+        "19": [
+          "asi"
+        ],
+        "20": [
+          "perfect_self"
+        ]
       }
     },
     {
-      "index": "paladin", "name": "Paladin", "hit_die": 10,
-      "primary_abilities": ["STR", "CHA"],
-      "saving_throws": ["WIS", "CHA"],
-      "armor_proficiencies": ["Light", "Medium", "Heavy", "Shields"],
-      "weapon_proficiencies": ["Simple", "Martial"],
+      "index": "paladin",
+      "name": "Paladin",
+      "hit_die": "d10",
+      "primary_abilities": [
+        "strength",
+        "charisma"
+      ],
+      "saving_throws": [
+        "WIS_saving_throw",
+        "CHA_saving_throw"
+      ],
+      "armor_proficiencies": [
+        "light",
+        "medium",
+        "heavy",
+        "shield"
+      ],
+      "weapon_proficiencies": [
+        "simple_melee",
+        "simple_ranged",
+        "martial_melee",
+        "martial_ranged"
+      ],
       "tool_proficiencies": [],
-      "skill_choices": {"count": 2, "from": ["Athletics","Insight","Intimidation","Medicine","Persuasion","Religion"]},
+      "skill_choices": {
+        "count": 2,
+        "from": [
+          "athletics",
+          "insight",
+          "intimidation",
+          "medicine",
+          "persuasion",
+          "religion"
+        ]
+      },
       "spellcasting": {
-        "ability": "CHA", "type": "prepared",
+        "ability": "charisma",
+        "type": "prepared",
         "cantrips_known": [],
-        "spells_known": "prepared: CHA mod + half paladin level (min 1)",
-        "slots": [[0],[2],[3],[3,0],[4,2],[4,2],[4,3],[4,3],[4,3,2],[4,3,2],[4,3,3],[4,3,3],[4,3,3,1],[4,3,3,1],[4,3,3,2],[4,3,3,2],[4,3,3,3,1],[4,3,3,3,1],[4,3,3,3,2],[4,3,3,3,2]]
+        "spells_known": [],
+        "slots": [
+          [
+            0
+          ],
+          [
+            2
+          ],
+          [
+            3
+          ],
+          [
+            3,
+            0
+          ],
+          [
+            4,
+            2
+          ],
+          [
+            4,
+            2
+          ],
+          [
+            4,
+            3
+          ],
+          [
+            4,
+            3
+          ],
+          [
+            4,
+            3,
+            2
+          ],
+          [
+            4,
+            3,
+            2
+          ],
+          [
+            4,
+            3,
+            3
+          ],
+          [
+            4,
+            3,
+            3
+          ],
+          [
+            4,
+            3,
+            3,
+            1
+          ],
+          [
+            4,
+            3,
+            3,
+            1
+          ],
+          [
+            4,
+            3,
+            3,
+            2
+          ],
+          [
+            4,
+            3,
+            3,
+            2
+          ],
+          [
+            4,
+            3,
+            3,
+            3,
+            1
+          ],
+          [
+            4,
+            3,
+            3,
+            3,
+            1
+          ],
+          [
+            4,
+            3,
+            3,
+            3,
+            2
+          ],
+          [
+            4,
+            3,
+            3,
+            3,
+            2
+          ]
+        ]
       },
-      "subclass_name": "Sacred Oath", "subclass_level": 3,
-      "subclasses": ["Oath of Devotion", "Oath of the Ancients", "Oath of Vengeance", "Oathbreaker"],
-      "starting_equipment_A": "Martial weapon + shield, 5 javelins, priest's pack, chain mail, holy symbol",
-      "starting_equipment_B": "Two martial weapons, priest's pack, chain mail, holy symbol",
+      "subclass_name": "Sacred Oath",
+      "subclass_level": 3,
+      "subclass_group_index": "sacred-oath",
+      "subclasses": [
+        "oath-of-devotion",
+        "oath-of-the-ancients",
+        "oath-of-vengeance",
+        "oathbreaker"
+      ],
+      "starting_equipment_a_index": "paladin-starting-equipment-a",
+      "starting_equipment_b_index": "paladin-starting-equipment-b",
       "features": {
-        "1":  ["Divine Sense (detect celestials/fiends/undead, 1+CHA/long rest)", "Lay on Hands (pool = 5 × level HP)"],
-        "2":  ["Fighting Style", "Spellcasting (CHA)", "Divine Smite (expend spell slot for radiant damage on hit)"],
-        "3":  ["Divine Health (immune to disease)", "Sacred Oath (subclass)"],
-        "4":  ["Ability Score Improvement"],
-        "5":  ["Extra Attack"],
-        "6":  ["Aura of Protection (CHA mod to saves for self + allies within 10 ft.)"],
-        "7":  ["Sacred Oath Feature"],
-        "8":  ["Ability Score Improvement"],
-        "9":  [],
-        "10": ["Aura of Courage (immune to fright, allies within 10 ft. immune while conscious)"],
-        "11": ["Improved Divine Smite (extra 1d8 radiant on all melee hits)"],
-        "12": ["Ability Score Improvement"],
-        "13": [],
-        "14": ["Cleansing Touch (end one spell on yourself or willing creature, CHA/long rest)"],
-        "15": ["Sacred Oath Feature"],
-        "16": ["Ability Score Improvement"],
-        "17": ["Aura of Protection/Courage extends to 30 ft."],
-        "18": ["Sacred Oath Feature"],
-        "19": ["Ability Score Improvement"],
-        "20": ["Sacred Oath Feature"]
+        "1": [
+          "divine_sense",
+          "lay_on_hands"
+        ],
+        "2": [
+          "paladin-fighting_style",
+          "paladin-spellcasting_cha",
+          "divine_smite"
+        ],
+        "3": [
+          "divine_health",
+          "sacred_oath"
+        ],
+        "4": [
+          "asi"
+        ],
+        "5": [
+          "extra_attack"
+        ],
+        "6": [
+          "aura_of_protection"
+        ],
+        "7": [
+          "sacred_oath_feature"
+        ],
+        "8": [
+          "asi"
+        ],
+        "10": [
+          "aura_of_courage"
+        ],
+        "11": [
+          "improved_divine_smite"
+        ],
+        "12": [
+          "asi"
+        ],
+        "14": [
+          "cleansing_touch"
+        ],
+        "15": [
+          "sacred_oath_feature"
+        ],
+        "16": [
+          "asi"
+        ],
+        "17": [
+          "aura_extended_30ft"
+        ],
+        "18": [
+          "sacred_oath_feature"
+        ],
+        "19": [
+          "asi"
+        ],
+        "20": [
+          "paladin-sacred_oath_feature"
+        ]
       }
     },
     {
-      "index": "ranger", "name": "Ranger", "hit_die": 10,
-      "primary_abilities": ["DEX", "WIS"],
-      "saving_throws": ["STR", "DEX"],
-      "armor_proficiencies": ["Light", "Medium", "Shields"],
-      "weapon_proficiencies": ["Simple", "Martial"],
+      "index": "ranger",
+      "name": "Ranger",
+      "hit_die": "d10",
+      "primary_abilities": [
+        "dexterity",
+        "wisdom"
+      ],
+      "saving_throws": [
+        "STR_saving_throw",
+        "DEX_saving_throw"
+      ],
+      "armor_proficiencies": [
+        "light",
+        "medium",
+        "shield"
+      ],
+      "weapon_proficiencies": [
+        "simple_melee",
+        "simple_ranged",
+        "martial_melee",
+        "martial_ranged"
+      ],
       "tool_proficiencies": [],
-      "skill_choices": {"count": 3, "from": ["Animal Handling","Athletics","Insight","Investigation","Nature","Perception","Stealth","Survival"]},
+      "skill_choices": {
+        "count": 3,
+        "from": [
+          "animal_handling",
+          "athletics",
+          "insight",
+          "investigation",
+          "nature",
+          "perception",
+          "stealth",
+          "survival"
+        ]
+      },
       "spellcasting": {
-        "ability": "WIS", "type": "known",
+        "ability": "wisdom",
+        "type": "known",
         "cantrips_known": [],
-        "spells_known": [0,2,3,3,4,4,5,5,6,6,7,7,8,8,9,9,10,10,11,11],
-        "slots": [[0],[2],[3],[3,0],[4,2],[4,2],[4,3],[4,3],[4,3,2],[4,3,2],[4,3,3],[4,3,3],[4,3,3,1],[4,3,3,1],[4,3,3,2],[4,3,3,2],[4,3,3,3,1],[4,3,3,3,1],[4,3,3,3,2],[4,3,3,3,2]]
+        "spells_known": [
+          0,
+          2,
+          3,
+          3,
+          4,
+          4,
+          5,
+          5,
+          6,
+          6,
+          7,
+          7,
+          8,
+          8,
+          9,
+          9,
+          10,
+          10,
+          11,
+          11
+        ],
+        "slots": [
+          [
+            0
+          ],
+          [
+            2
+          ],
+          [
+            3
+          ],
+          [
+            3,
+            0
+          ],
+          [
+            4,
+            2
+          ],
+          [
+            4,
+            2
+          ],
+          [
+            4,
+            3
+          ],
+          [
+            4,
+            3
+          ],
+          [
+            4,
+            3,
+            2
+          ],
+          [
+            4,
+            3,
+            2
+          ],
+          [
+            4,
+            3,
+            3
+          ],
+          [
+            4,
+            3,
+            3
+          ],
+          [
+            4,
+            3,
+            3,
+            1
+          ],
+          [
+            4,
+            3,
+            3,
+            1
+          ],
+          [
+            4,
+            3,
+            3,
+            2
+          ],
+          [
+            4,
+            3,
+            3,
+            2
+          ],
+          [
+            4,
+            3,
+            3,
+            3,
+            1
+          ],
+          [
+            4,
+            3,
+            3,
+            3,
+            1
+          ],
+          [
+            4,
+            3,
+            3,
+            3,
+            2
+          ],
+          [
+            4,
+            3,
+            3,
+            3,
+            2
+          ]
+        ]
       },
-      "subclass_name": "Ranger Archetype", "subclass_level": 3,
-      "subclasses": ["Hunter", "Beast Master"],
-      "starting_equipment_A": "Scale mail, two shortswords, dungeoneer's pack, longbow + 20 arrows",
-      "starting_equipment_B": "Leather armor, two shortswords, dungeoneer's pack, longbow + 20 arrows",
+      "subclass_name": "Ranger Archetype",
+      "subclass_level": 3,
+      "subclass_group_index": "ranger-archetype",
+      "subclasses": [
+        "hunter",
+        "beast-master"
+      ],
+      "starting_equipment_a_index": "ranger-starting-equipment-a",
+      "starting_equipment_b_index": "ranger-starting-equipment-b",
       "features": {
-        "1":  ["Favored Enemy (two creature types, advantage on Survival + recall info)", "Natural Explorer (favored terrain, difficult terrain doesn't slow, can't get lost, etc.)"],
-        "2":  ["Fighting Style", "Spellcasting (WIS)"],
-        "3":  ["Primeval Awareness (sense favored enemies, 1 min/spell slot)", "Ranger Archetype (subclass)"],
-        "4":  ["Ability Score Improvement"],
-        "5":  ["Extra Attack"],
-        "6":  ["Favored Enemy (third type) + Natural Explorer (third terrain)"],
-        "7":  ["Ranger Archetype Feature"],
-        "8":  ["Ability Score Improvement", "Land's Stride (ignore difficult non-magical terrain, advantage vs plants)"],
-        "9":  [],
-        "10": ["Hide in Plain Sight (camouflage, +10 to Stealth, 1 min prep)"],
-        "11": ["Ranger Archetype Feature"],
-        "12": ["Ability Score Improvement"],
-        "13": [],
-        "14": ["Vanish (Hide as bonus action, can't be tracked non-magically)"],
-        "15": ["Ranger Archetype Feature"],
-        "16": ["Ability Score Improvement"],
-        "17": [],
-        "18": ["Feral Senses (no disadvantage attacking invisible, detect invisible within 30 ft.)"],
-        "19": ["Ability Score Improvement"],
-        "20": ["Foe Slayer (add WIS mod to attack or damage vs favored enemy, 1/turn)"]
+        "1": [
+          "favored_enemy",
+          "natural_explorer"
+        ],
+        "2": [
+          "ranger-fighting_style",
+          "ranger-spellcasting_wis"
+        ],
+        "3": [
+          "primeval_awareness",
+          "ranger_archetype"
+        ],
+        "4": [
+          "asi"
+        ],
+        "5": [
+          "extra_attack"
+        ],
+        "6": [
+          "favored_enemy_upgrade"
+        ],
+        "7": [
+          "ranger_archetype_feature"
+        ],
+        "8": [
+          "asi",
+          "lands_stride"
+        ],
+        "10": [
+          "hide_in_plain_sight"
+        ],
+        "11": [
+          "ranger_archetype_feature"
+        ],
+        "12": [
+          "asi"
+        ],
+        "14": [
+          "vanish"
+        ],
+        "15": [
+          "ranger_archetype_feature"
+        ],
+        "16": [
+          "asi"
+        ],
+        "18": [
+          "feral_senses"
+        ],
+        "19": [
+          "asi"
+        ],
+        "20": [
+          "foe_slayer"
+        ]
       }
     },
     {
-      "index": "rogue", "name": "Rogue", "hit_die": 8,
-      "primary_abilities": ["DEX"],
-      "saving_throws": ["DEX", "INT"],
-      "armor_proficiencies": ["Light"],
-      "weapon_proficiencies": ["Simple", "Hand Crossbow", "Longsword", "Rapier", "Shortsword"],
-      "tool_proficiencies": ["Thieves' tools"],
-      "skill_choices": {"count": 4, "from": ["Acrobatics","Athletics","Deception","Insight","Intimidation","Investigation","Perception","Performance","Persuasion","Sleight of Hand","Stealth"]},
+      "index": "rogue",
+      "name": "Rogue",
+      "hit_die": "d8",
+      "primary_abilities": [
+        "dexterity"
+      ],
+      "saving_throws": [
+        "DEX_saving_throw",
+        "INT_saving_throw"
+      ],
+      "armor_proficiencies": [
+        "light"
+      ],
+      "weapon_proficiencies": [
+        "simple_melee",
+        "simple_ranged",
+        "crossbow_hand",
+        "longsword",
+        "rapier",
+        "shortsword"
+      ],
+      "tool_proficiencies": [
+        "thieves_tools"
+      ],
+      "skill_choices": {
+        "count": 4,
+        "from": [
+          "acrobatics",
+          "athletics",
+          "deception",
+          "insight",
+          "intimidation",
+          "investigation",
+          "perception",
+          "performance",
+          "persuasion",
+          "sleight_of_hand",
+          "stealth"
+        ]
+      },
       "spellcasting": null,
-      "subclass_name": "Roguish Archetype", "subclass_level": 3,
-      "subclasses": ["Thief", "Assassin", "Arcane Trickster"],
-      "starting_equipment_A": "Rapier, shortbow + 20 arrows, burglar's pack, leather armor, two daggers, thieves' tools",
-      "starting_equipment_B": "Shortsword, burglar's pack, leather armor, two daggers, thieves' tools",
+      "subclass_name": "Roguish Archetype",
+      "subclass_level": 3,
+      "subclass_group_index": "roguish-archetype",
+      "subclasses": [
+        "thief",
+        "assassin",
+        "arcane-trickster"
+      ],
+      "starting_equipment_a_index": "rogue-starting-equipment-a",
+      "starting_equipment_b_index": "rogue-starting-equipment-b",
       "features": {
-        "1":  ["Expertise (double proficiency on 2 skills or thieves' tools)", "Sneak Attack (1d6)", "Thieves' Cant"],
-        "2":  ["Cunning Action (bonus action: Dash, Disengage, or Hide)"],
-        "3":  ["Roguish Archetype (subclass)", "Sneak Attack (2d6)"],
-        "4":  ["Ability Score Improvement"],
-        "5":  ["Uncanny Dodge (reaction: halve damage from one attack)", "Sneak Attack (3d6)"],
-        "6":  ["Expertise (2 more)"],
-        "7":  ["Evasion (DEX save: no damage on success, half on fail)", "Sneak Attack (4d6)"],
-        "8":  ["Ability Score Improvement"],
-        "9":  ["Roguish Archetype Feature", "Sneak Attack (5d6)"],
-        "10": ["Ability Score Improvement"],
-        "11": ["Reliable Talent (min 10 on proficient ability checks)", "Sneak Attack (6d6)"],
-        "12": ["Ability Score Improvement"],
-        "13": ["Roguish Archetype Feature", "Sneak Attack (7d6)"],
-        "14": ["Blindsense (aware of invisible creatures within 10 ft.)"],
-        "15": ["Slippery Mind (proficiency in WIS saves)", "Sneak Attack (8d6)"],
-        "16": ["Ability Score Improvement"],
-        "17": ["Roguish Archetype Feature", "Sneak Attack (9d6)"],
-        "18": ["Elusive (attackers never have advantage against you)"],
-        "19": ["Ability Score Improvement", "Sneak Attack (10d6)"],
-        "20": ["Stroke of Luck (turn miss into hit or failed check into 20, 1/short rest)"]
+        "1": [
+          "rogue-expertise",
+          "sneak_attack_1d6",
+          "thieves_cant"
+        ],
+        "2": [
+          "cunning_action"
+        ],
+        "3": [
+          "roguish_archetype",
+          "sneak_attack_2d6"
+        ],
+        "4": [
+          "asi"
+        ],
+        "5": [
+          "uncanny_dodge",
+          "sneak_attack_3d6"
+        ],
+        "6": [
+          "rogue-expertise_upgrade"
+        ],
+        "7": [
+          "rogue-evasion",
+          "sneak_attack_4d6"
+        ],
+        "8": [
+          "asi"
+        ],
+        "9": [
+          "roguish_archetype_feature",
+          "sneak_attack_5d6"
+        ],
+        "10": [
+          "asi"
+        ],
+        "11": [
+          "reliable_talent",
+          "sneak_attack_6d6"
+        ],
+        "12": [
+          "asi"
+        ],
+        "13": [
+          "roguish_archetype_feature",
+          "sneak_attack_7d6"
+        ],
+        "14": [
+          "blindsense"
+        ],
+        "15": [
+          "slippery_mind",
+          "sneak_attack_8d6"
+        ],
+        "16": [
+          "asi"
+        ],
+        "17": [
+          "roguish_archetype_feature",
+          "sneak_attack_9d6"
+        ],
+        "18": [
+          "elusive"
+        ],
+        "19": [
+          "asi",
+          "sneak_attack_10d6"
+        ],
+        "20": [
+          "stroke_of_luck"
+        ]
       }
     },
     {
-      "index": "sorcerer", "name": "Sorcerer", "hit_die": 6,
-      "primary_abilities": ["CHA"],
-      "saving_throws": ["CON", "CHA"],
+      "index": "sorcerer",
+      "name": "Sorcerer",
+      "hit_die": "d6",
+      "primary_abilities": [
+        "charisma"
+      ],
+      "saving_throws": [
+        "CON_saving_throw",
+        "CHA_saving_throw"
+      ],
       "armor_proficiencies": [],
-      "weapon_proficiencies": ["Daggers","Darts","Slings","Quarterstaffs","Light Crossbows"],
+      "weapon_proficiencies": [
+        "dagger",
+        "dart",
+        "sling",
+        "quarterstaff",
+        "crossbow_light"
+      ],
       "tool_proficiencies": [],
-      "skill_choices": {"count": 2, "from": ["Arcana","Deception","Insight","Intimidation","Persuasion","Religion"]},
-      "spellcasting": {
-        "ability": "CHA", "type": "known",
-        "cantrips_known": [4,4,4,5,5,5,5,5,5,6,6,6,6,6,6,6,6,6,6,6],
-        "spells_known": [2,3,4,5,6,7,8,9,10,11,12,12,13,13,14,14,15,15,15,15],
-        "slots": [[2],[3],[4,2],[4,3],[4,3,2],[4,3,3],[4,3,3,1],[4,3,3,2],[4,3,3,3,1],[4,3,3,3,2],[4,3,3,3,2,1],[4,3,3,3,2,1],[4,3,3,3,2,1,1],[4,3,3,3,2,1,1],[4,3,3,3,2,1,1,1],[4,3,3,3,2,1,1,1],[4,3,3,3,2,1,1,1,1],[4,3,3,3,3,1,1,1,1],[4,3,3,3,3,2,1,1,1],[4,3,3,3,3,2,2,1,1]]
+      "skill_choices": {
+        "count": 2,
+        "from": [
+          "arcana",
+          "deception",
+          "insight",
+          "intimidation",
+          "persuasion",
+          "religion"
+        ]
       },
-      "subclass_name": "Sorcerous Origin", "subclass_level": 1,
-      "subclasses": ["Draconic Bloodline", "Wild Magic"],
-      "starting_equipment_A": "Light crossbow + 20 bolts, component pouch, dungeoneer's pack, two daggers",
-      "starting_equipment_B": "Any simple weapon, component pouch, explorer's pack, two daggers",
+      "spellcasting": {
+        "ability": "charisma",
+        "type": "known",
+        "cantrips_known": [
+          4,
+          4,
+          4,
+          5,
+          5,
+          5,
+          5,
+          5,
+          5,
+          6,
+          6,
+          6,
+          6,
+          6,
+          6,
+          6,
+          6,
+          6,
+          6,
+          6
+        ],
+        "spells_known": [
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          12,
+          13,
+          13,
+          14,
+          14,
+          15,
+          15,
+          15,
+          15
+        ],
+        "slots": [
+          [
+            2
+          ],
+          [
+            3
+          ],
+          [
+            4,
+            2
+          ],
+          [
+            4,
+            3
+          ],
+          [
+            4,
+            3,
+            2
+          ],
+          [
+            4,
+            3,
+            3
+          ],
+          [
+            4,
+            3,
+            3,
+            1
+          ],
+          [
+            4,
+            3,
+            3,
+            2
+          ],
+          [
+            4,
+            3,
+            3,
+            3,
+            1
+          ],
+          [
+            4,
+            3,
+            3,
+            3,
+            2
+          ],
+          [
+            4,
+            3,
+            3,
+            3,
+            2,
+            1
+          ],
+          [
+            4,
+            3,
+            3,
+            3,
+            2,
+            1
+          ],
+          [
+            4,
+            3,
+            3,
+            3,
+            2,
+            1,
+            1
+          ],
+          [
+            4,
+            3,
+            3,
+            3,
+            2,
+            1,
+            1
+          ],
+          [
+            4,
+            3,
+            3,
+            3,
+            2,
+            1,
+            1,
+            1
+          ],
+          [
+            4,
+            3,
+            3,
+            3,
+            2,
+            1,
+            1,
+            1
+          ],
+          [
+            4,
+            3,
+            3,
+            3,
+            2,
+            1,
+            1,
+            1,
+            1
+          ],
+          [
+            4,
+            3,
+            3,
+            3,
+            3,
+            1,
+            1,
+            1,
+            1
+          ],
+          [
+            4,
+            3,
+            3,
+            3,
+            3,
+            2,
+            1,
+            1,
+            1
+          ],
+          [
+            4,
+            3,
+            3,
+            3,
+            3,
+            2,
+            2,
+            1,
+            1
+          ]
+        ]
+      },
+      "subclass_name": "Sorcerous Origin",
+      "subclass_level": 1,
+      "subclass_group_index": "sorcerous-origin",
+      "subclasses": [
+        "draconic-bloodline",
+        "wild-magic"
+      ],
+      "starting_equipment_a_index": "sorcerer-starting-equipment-a",
+      "starting_equipment_b_index": "sorcerer-starting-equipment-b",
       "features": {
-        "1":  ["Spellcasting (CHA)", "Sorcerous Origin (subclass at 1st level)"],
-        "2":  ["Font of Magic (sorcery points = level)", "Flexible Casting (convert between sorcery points and spell slots)"],
-        "3":  ["Metamagic (choose 2: Careful, Distant, Empowered, Extended, Heightened, Quickened, Subtle, Twinned)"],
-        "4":  ["Ability Score Improvement"],
-        "5":  [],
-        "6":  ["Sorcerous Origin Feature"],
-        "7":  [],
-        "8":  ["Ability Score Improvement"],
-        "9":  [],
-        "10": ["Metamagic (3 total)"],
-        "11": [],
-        "12": ["Ability Score Improvement"],
-        "13": [],
-        "14": ["Sorcerous Origin Feature"],
-        "15": [],
-        "16": ["Ability Score Improvement"],
-        "17": ["Metamagic (4 total)"],
-        "18": ["Sorcerous Origin Feature"],
-        "19": ["Ability Score Improvement"],
-        "20": ["Sorcerous Restoration (regain 4 sorcery points on short rest)"]
+        "1": [
+          "sorcerer-spellcasting_cha",
+          "sorcerous_origin"
+        ],
+        "2": [
+          "font_of_magic",
+          "flexible_casting"
+        ],
+        "3": [
+          "metamagic"
+        ],
+        "4": [
+          "asi"
+        ],
+        "6": [
+          "sorcerous_origin_feature"
+        ],
+        "8": [
+          "asi"
+        ],
+        "10": [
+          "metamagic_3"
+        ],
+        "12": [
+          "asi"
+        ],
+        "14": [
+          "sorcerous_origin_feature"
+        ],
+        "16": [
+          "asi"
+        ],
+        "17": [
+          "metamagic_4"
+        ],
+        "18": [
+          "sorcerous_origin_feature"
+        ],
+        "19": [
+          "asi"
+        ],
+        "20": [
+          "sorcerous_restoration"
+        ]
       }
     },
     {
-      "index": "warlock", "name": "Warlock", "hit_die": 8,
-      "primary_abilities": ["CHA"],
-      "saving_throws": ["WIS", "CHA"],
-      "armor_proficiencies": ["Light"],
-      "weapon_proficiencies": ["Simple"],
+      "index": "warlock",
+      "name": "Warlock",
+      "hit_die": "d8",
+      "primary_abilities": [
+        "charisma"
+      ],
+      "saving_throws": [
+        "WIS_saving_throw",
+        "CHA_saving_throw"
+      ],
+      "armor_proficiencies": [
+        "light"
+      ],
+      "weapon_proficiencies": [
+        "simple_melee",
+        "simple_ranged"
+      ],
       "tool_proficiencies": [],
-      "skill_choices": {"count": 2, "from": ["Arcana","Deception","History","Intimidation","Investigation","Nature","Religion"]},
-      "spellcasting": {
-        "ability": "CHA", "type": "pact",
-        "note": "Warlock slots: all one level (1st→5th), fully restored on short rest",
-        "cantrips_known": [2,2,2,3,3,3,3,3,3,4,4,4,4,4,4,4,4,4,4,4],
-        "spells_known": [2,3,4,5,6,7,8,9,10,10,11,11,12,12,13,13,14,14,15,15],
-        "slots": [[1],[2],[2],[2],[2],[2],[2],[2],[2],[2],[3],[3],[3],[3],[3],[3],[4],[4],[4],[4]],
-        "slot_level": [1,1,2,2,3,3,4,4,5,5,5,5,5,5,5,5,5,5,5,5]
+      "skill_choices": {
+        "count": 2,
+        "from": [
+          "arcana",
+          "deception",
+          "history",
+          "intimidation",
+          "investigation",
+          "nature",
+          "religion"
+        ]
       },
-      "subclass_name": "Otherworldly Patron", "subclass_level": 1,
-      "subclasses": ["The Archfey", "The Fiend", "The Great Old One"],
-      "starting_equipment_A": "Light crossbow + 20 bolts, component pouch, scholar's pack, leather armor, any simple weapon, two daggers",
-      "starting_equipment_B": "Any simple weapon, component pouch, dungeoneer's pack, leather armor, any simple weapon, two daggers",
+      "spellcasting": {
+        "ability": "charisma",
+        "type": "pact",
+        "cantrips_known": [
+          2,
+          2,
+          2,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4
+        ],
+        "spells_known": [
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          10,
+          11,
+          11,
+          12,
+          12,
+          13,
+          13,
+          14,
+          14,
+          15,
+          15
+        ],
+        "slots": [
+          [
+            1
+          ],
+          [
+            2
+          ],
+          [
+            2
+          ],
+          [
+            2
+          ],
+          [
+            2
+          ],
+          [
+            2
+          ],
+          [
+            2
+          ],
+          [
+            2
+          ],
+          [
+            2
+          ],
+          [
+            2
+          ],
+          [
+            3
+          ],
+          [
+            3
+          ],
+          [
+            3
+          ],
+          [
+            3
+          ],
+          [
+            3
+          ],
+          [
+            3
+          ],
+          [
+            4
+          ],
+          [
+            4
+          ],
+          [
+            4
+          ],
+          [
+            4
+          ]
+        ],
+        "slot_level": [
+          1,
+          1,
+          2,
+          2,
+          3,
+          3,
+          4,
+          4,
+          5,
+          5,
+          5,
+          5,
+          5,
+          5,
+          5,
+          5,
+          5,
+          5,
+          5,
+          5
+        ]
+      },
+      "subclass_name": "Otherworldly Patron",
+      "subclass_level": 1,
+      "subclass_group_index": "otherworldly-patron",
+      "subclasses": [
+        "the-archfey",
+        "the-fiend",
+        "the-great-old-one"
+      ],
+      "starting_equipment_a_index": "warlock-starting-equipment-a",
+      "starting_equipment_b_index": "warlock-starting-equipment-b",
       "features": {
-        "1":  ["Otherworldly Patron (subclass at 1st level)", "Pact Magic (CHA)"],
-        "2":  ["Eldritch Invocations (choose 2 from list)"],
-        "3":  ["Pact Boon (Pact of the Chain, Blade, or Tome)"],
-        "4":  ["Ability Score Improvement"],
-        "5":  ["Eldritch Invocations (3 total)"],
-        "6":  ["Otherworldly Patron Feature"],
-        "7":  ["Eldritch Invocations (4 total)"],
-        "8":  ["Ability Score Improvement"],
-        "9":  ["Eldritch Invocations (5 total)"],
-        "10": ["Otherworldly Patron Feature"],
-        "11": ["Mystic Arcanum (one 6th-level spell, 1/long rest)"],
-        "12": ["Ability Score Improvement", "Eldritch Invocations (6 total)"],
-        "13": ["Mystic Arcanum (7th-level)"],
-        "14": ["Otherworldly Patron Feature"],
-        "15": ["Mystic Arcanum (8th-level)", "Eldritch Invocations (7 total)"],
-        "16": ["Ability Score Improvement"],
-        "17": ["Mystic Arcanum (9th-level)"],
-        "18": ["Eldritch Invocations (8 total)"],
-        "19": ["Ability Score Improvement"],
-        "20": ["Eldritch Master (1 min ritual to regain all pact slots, 1/long rest)"]
+        "1": [
+          "otherworldly_patron",
+          "pact_magic"
+        ],
+        "2": [
+          "eldritch_invocations_2"
+        ],
+        "3": [
+          "pact_boon"
+        ],
+        "4": [
+          "asi"
+        ],
+        "5": [
+          "eldritch_invocations_3"
+        ],
+        "6": [
+          "patron_feature"
+        ],
+        "7": [
+          "eldritch_invocations_4"
+        ],
+        "8": [
+          "asi"
+        ],
+        "9": [
+          "eldritch_invocations_5"
+        ],
+        "10": [
+          "patron_feature"
+        ],
+        "11": [
+          "mystic_arcanum_6"
+        ],
+        "12": [
+          "asi",
+          "eldritch_invocations_6"
+        ],
+        "13": [
+          "mystic_arcanum_7"
+        ],
+        "14": [
+          "patron_feature"
+        ],
+        "15": [
+          "mystic_arcanum_8",
+          "eldritch_invocations_7"
+        ],
+        "16": [
+          "asi"
+        ],
+        "17": [
+          "mystic_arcanum_9"
+        ],
+        "18": [
+          "eldritch_invocations_8"
+        ],
+        "19": [
+          "asi"
+        ],
+        "20": [
+          "eldritch_master"
+        ]
       }
     },
     {
-      "index": "wizard", "name": "Wizard", "hit_die": 6,
-      "primary_abilities": ["INT"],
-      "saving_throws": ["INT", "WIS"],
+      "index": "wizard",
+      "name": "Wizard",
+      "hit_die": "d6",
+      "primary_abilities": [
+        "intelligence"
+      ],
+      "saving_throws": [
+        "INT_saving_throw",
+        "WIS_saving_throw"
+      ],
       "armor_proficiencies": [],
-      "weapon_proficiencies": ["Daggers","Darts","Slings","Quarterstaffs","Light Crossbows"],
+      "weapon_proficiencies": [
+        "dagger",
+        "dart",
+        "sling",
+        "quarterstaff",
+        "crossbow_light"
+      ],
       "tool_proficiencies": [],
-      "skill_choices": {"count": 2, "from": ["Arcana","History","Insight","Investigation","Medicine","Religion"]},
-      "spellcasting": {
-        "ability": "INT", "type": "spellbook",
-        "cantrips_known": [3,3,3,4,4,4,4,4,4,5,5,5,5,5,5,5,5,5,5,5],
-        "spells_known": "spellbook: start with 6; add 2 per level; can copy found spells",
-        "slots": [[2],[3],[4,2],[4,3],[4,3,2],[4,3,3],[4,3,3,1],[4,3,3,2],[4,3,3,3,1],[4,3,3,3,2],[4,3,3,3,2,1],[4,3,3,3,2,1],[4,3,3,3,2,1,1],[4,3,3,3,2,1,1],[4,3,3,3,2,1,1,1],[4,3,3,3,2,1,1,1],[4,3,3,3,2,1,1,1,1],[4,3,3,3,3,1,1,1,1],[4,3,3,3,3,2,1,1,1],[4,3,3,3,3,2,2,1,1]]
+      "skill_choices": {
+        "count": 2,
+        "from": [
+          "arcana",
+          "history",
+          "insight",
+          "investigation",
+          "medicine",
+          "religion"
+        ]
       },
-      "subclass_name": "Arcane Tradition", "subclass_level": 2,
-      "subclasses": ["School of Abjuration", "School of Conjuration", "School of Divination", "School of Enchantment", "School of Evocation", "School of Illusion", "School of Necromancy", "School of Transmutation"],
-      "starting_equipment_A": "Quarterstaff, component pouch, scholar's pack, spellbook",
-      "starting_equipment_B": "Dagger, component pouch, explorer's pack, spellbook",
+      "spellcasting": {
+        "ability": "intelligence",
+        "type": "spellbook",
+        "cantrips_known": [
+          3,
+          3,
+          3,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          5,
+          5,
+          5,
+          5,
+          5,
+          5,
+          5,
+          5,
+          5,
+          5,
+          5
+        ],
+        "spells_known": [],
+        "slots": [
+          [
+            2
+          ],
+          [
+            3
+          ],
+          [
+            4,
+            2
+          ],
+          [
+            4,
+            3
+          ],
+          [
+            4,
+            3,
+            2
+          ],
+          [
+            4,
+            3,
+            3
+          ],
+          [
+            4,
+            3,
+            3,
+            1
+          ],
+          [
+            4,
+            3,
+            3,
+            2
+          ],
+          [
+            4,
+            3,
+            3,
+            3,
+            1
+          ],
+          [
+            4,
+            3,
+            3,
+            3,
+            2
+          ],
+          [
+            4,
+            3,
+            3,
+            3,
+            2,
+            1
+          ],
+          [
+            4,
+            3,
+            3,
+            3,
+            2,
+            1
+          ],
+          [
+            4,
+            3,
+            3,
+            3,
+            2,
+            1,
+            1
+          ],
+          [
+            4,
+            3,
+            3,
+            3,
+            2,
+            1,
+            1
+          ],
+          [
+            4,
+            3,
+            3,
+            3,
+            2,
+            1,
+            1,
+            1
+          ],
+          [
+            4,
+            3,
+            3,
+            3,
+            2,
+            1,
+            1,
+            1
+          ],
+          [
+            4,
+            3,
+            3,
+            3,
+            2,
+            1,
+            1,
+            1,
+            1
+          ],
+          [
+            4,
+            3,
+            3,
+            3,
+            3,
+            1,
+            1,
+            1,
+            1
+          ],
+          [
+            4,
+            3,
+            3,
+            3,
+            3,
+            2,
+            1,
+            1,
+            1
+          ],
+          [
+            4,
+            3,
+            3,
+            3,
+            3,
+            2,
+            2,
+            1,
+            1
+          ]
+        ]
+      },
+      "subclass_name": "Arcane Tradition",
+      "subclass_level": 2,
+      "subclass_group_index": "arcane-tradition",
+      "subclasses": [
+        "school-of-abjuration",
+        "school-of-conjuration",
+        "school-of-divination",
+        "school-of-enchantment",
+        "school-of-evocation",
+        "school-of-illusion",
+        "school-of-necromancy",
+        "school-of-transmutation"
+      ],
+      "starting_equipment_a_index": "wizard-starting-equipment-a",
+      "starting_equipment_b_index": "wizard-starting-equipment-b",
       "features": {
-        "1":  ["Spellcasting (INT, spellbook)", "Arcane Recovery (recover spell slots ≤ half level on short rest)"],
-        "2":  ["Arcane Tradition (subclass)"],
-        "3":  [],
-        "4":  ["Ability Score Improvement"],
-        "5":  [],
-        "6":  ["Arcane Tradition Feature"],
-        "7":  [],
-        "8":  ["Ability Score Improvement"],
-        "9":  [],
-        "10": ["Arcane Tradition Feature"],
-        "11": [],
-        "12": ["Ability Score Improvement"],
-        "13": [],
-        "14": ["Arcane Tradition Feature"],
-        "15": [],
-        "16": ["Ability Score Improvement"],
-        "17": [],
-        "18": ["Spell Mastery (cast chosen 1st and 2nd level spells at will)"],
-        "19": ["Ability Score Improvement"],
-        "20": ["Signature Spells (two 3rd-level spells always prepared, cast without slot 1/short rest each)"]
+        "1": [
+          "spellcasting_int",
+          "arcane_recovery"
+        ],
+        "2": [
+          "arcane_tradition"
+        ],
+        "4": [
+          "asi"
+        ],
+        "6": [
+          "arcane_tradition_feature"
+        ],
+        "8": [
+          "asi"
+        ],
+        "10": [
+          "arcane_tradition_feature"
+        ],
+        "12": [
+          "asi"
+        ],
+        "14": [
+          "arcane_tradition_feature"
+        ],
+        "16": [
+          "asi"
+        ],
+        "18": [
+          "spell_mastery"
+        ],
+        "19": [
+          "asi"
+        ],
+        "20": [
+          "signature_spells"
+        ]
       }
     }
   ]

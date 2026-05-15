@@ -1,0 +1,116 @@
+{
+  "background_flaws": [
+    {
+      "index": "acolyte",
+      "desc": [
+        "I judge others harshly, and myself even more severely.",
+        "I put too much trust in those in power in my temple."
+      ]
+    },
+    {
+      "index": "artisan",
+      "desc": [
+        "I'll do anything to get my hands on something rare or priceless.",
+        "I'm quick to assume that someone is trying to cheat me."
+      ]
+    },
+    {
+      "index": "charlatan",
+      "desc": [
+        "I can't resist a pretty face.",
+        "I'm always in debt. I spend my ill-gotten gains on decadent luxuries faster than I bring them in."
+      ]
+    },
+    {
+      "index": "criminal",
+      "desc": [
+        "When I see something valuable, I can't think about anything but how to steal it.",
+        "When faced with a choice between money and my friends, I usually choose the money."
+      ]
+    },
+    {
+      "index": "entertainer",
+      "desc": [
+        "I'll do anything to win fame and renown.",
+        "I'm a sucker for a pretty face."
+      ]
+    },
+    {
+      "index": "farmer",
+      "desc": [
+        "I'm convinced of the significance of my destiny, and blind to my shortcomings.",
+        "I am slow to trust members of other races."
+      ]
+    },
+    {
+      "index": "guard",
+      "desc": [
+        "The monstrous enemy we faced in battle still leaves me quivering with fear.",
+        "I have little respect for anyone who is not a proven warrior."
+      ]
+    },
+    {
+      "index": "guide",
+      "desc": [
+        "I am slow to trust members of other races, tribes, and societies.",
+        "Violence is my answer to almost any challenge."
+      ]
+    },
+    {
+      "index": "hermit",
+      "desc": [
+        "Now that I've returned to the world, I enjoy its delights a little too much.",
+        "I like keeping secrets and won't share them with anyone."
+      ]
+    },
+    {
+      "index": "merchant",
+      "desc": [
+        "I'll do anything to close a good deal, even if it means bending the truth.",
+        "I'm always watching for a way to take advantage of a situation."
+      ]
+    },
+    {
+      "index": "noble",
+      "desc": [
+        "I secretly believe that everyone is beneath me.",
+        "I hide a truly scandalous secret that could ruin my family forever."
+      ]
+    },
+    {
+      "index": "sage",
+      "desc": [
+        "I am easily distracted by the promise of information.",
+        "Most people scream and run when they see a demon. I stop and take notes on its anatomy."
+      ]
+    },
+    {
+      "index": "sailor",
+      "desc": [
+        "I follow orders, even if I think they're wrong.",
+        "I'll say anything to avoid having to do extra work."
+      ]
+    },
+    {
+      "index": "scribe",
+      "desc": [
+        "I am easily distracted by the promise of information.",
+        "Unlocking an ancient mystery is worth the price of civilization."
+      ]
+    },
+    {
+      "index": "soldier",
+      "desc": [
+        "The monstrous enemy we faced in battle still leaves me quivering with fear.",
+        "I have little respect for anyone who is not a proven warrior."
+      ]
+    },
+    {
+      "index": "wayfarer",
+      "desc": [
+        "Gold seems like a lot of money to me, and I'll do just about anything for more of it.",
+        "I will never fully trust anyone other than myself."
+      ]
+    }
+  ]
+}

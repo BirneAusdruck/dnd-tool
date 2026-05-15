@@ -1,0 +1,252 @@
+{
+  "subclasses": [
+    {
+      "index": "primal-path",
+      "name": "Primal Path",
+      "class": "barbarian",
+      "subclasses": [
+        {
+          "index": "path-of-the-berserker",
+          "name": "Path of the Berserker"
+        },
+        {
+          "index": "path-of-the-totem-warrior",
+          "name": "Path of the Totem Warrior"
+        }
+      ]
+    },
+    {
+      "index": "bard-college",
+      "name": "Bard College",
+      "class": "bard",
+      "subclasses": [
+        {
+          "index": "college-of-lore",
+          "name": "College of Lore"
+        },
+        {
+          "index": "college-of-valor",
+          "name": "College of Valor"
+        }
+      ]
+    },
+    {
+      "index": "divine-domain",
+      "name": "Divine Domain",
+      "class": "cleric",
+      "subclasses": [
+        {
+          "index": "life-domain",
+          "name": "Life Domain"
+        },
+        {
+          "index": "light-domain",
+          "name": "Light Domain"
+        },
+        {
+          "index": "trickery-domain",
+          "name": "Trickery Domain"
+        },
+        {
+          "index": "knowledge-domain",
+          "name": "Knowledge Domain"
+        },
+        {
+          "index": "nature-domain",
+          "name": "Nature Domain"
+        },
+        {
+          "index": "tempest-domain",
+          "name": "Tempest Domain"
+        },
+        {
+          "index": "war-domain",
+          "name": "War Domain"
+        }
+      ]
+    },
+    {
+      "index": "druid-circle",
+      "name": "Druid Circle",
+      "class": "druid",
+      "subclasses": [
+        {
+          "index": "circle-of-the-land",
+          "name": "Circle of the Land"
+        },
+        {
+          "index": "circle-of-the-moon",
+          "name": "Circle of the Moon"
+        }
+      ]
+    },
+    {
+      "index": "martial-archetype",
+      "name": "Martial Archetype",
+      "class": "fighter",
+      "subclasses": [
+        {
+          "index": "champion",
+          "name": "Champion"
+        },
+        {
+          "index": "battle-master",
+          "name": "Battle Master"
+        },
+        {
+          "index": "eldritch-knight",
+          "name": "Eldritch Knight"
+        }
+      ]
+    },
+    {
+      "index": "monastic-tradition",
+      "name": "Monastic Tradition",
+      "class": "monk",
+      "subclasses": [
+        {
+          "index": "way-of-the-open-hand",
+          "name": "Way of the Open Hand"
+        },
+        {
+          "index": "way-of-shadow",
+          "name": "Way of Shadow"
+        },
+        {
+          "index": "way-of-the-four-elements",
+          "name": "Way of the Four Elements"
+        }
+      ]
+    },
+    {
+      "index": "sacred-oath",
+      "name": "Sacred Oath",
+      "class": "paladin",
+      "subclasses": [
+        {
+          "index": "oath-of-devotion",
+          "name": "Oath of Devotion"
+        },
+        {
+          "index": "oath-of-the-ancients",
+          "name": "Oath of the Ancients"
+        },
+        {
+          "index": "oath-of-vengeance",
+          "name": "Oath of Vengeance"
+        },
+        {
+          "index": "oathbreaker",
+          "name": "Oathbreaker"
+        }
+      ]
+    },
+    {
+      "index": "ranger-archetype",
+      "name": "Ranger Archetype",
+      "class": "ranger",
+      "subclasses": [
+        {
+          "index": "hunter",
+          "name": "Hunter"
+        },
+        {
+          "index": "beast-master",
+          "name": "Beast Master"
+        }
+      ]
+    },
+    {
+      "index": "roguish-archetype",
+      "name": "Roguish Archetype",
+      "class": "rogue",
+      "subclasses": [
+        {
+          "index": "thief",
+          "name": "Thief"
+        },
+        {
+          "index": "assassin",
+          "name": "Assassin"
+        },
+        {
+          "index": "arcane-trickster",
+          "name": "Arcane Trickster"
+        }
+      ]
+    },
+    {
+      "index": "sorcerous-origin",
+      "name": "Sorcerous Origin",
+      "class": "sorcerer",
+      "subclasses": [
+        {
+          "index": "draconic-bloodline",
+          "name": "Draconic Bloodline"
+        },
+        {
+          "index": "wild-magic",
+          "name": "Wild Magic"
+        }
+      ]
+    },
+    {
+      "index": "otherworldly-patron",
+      "name": "Otherworldly Patron",
+      "class": "warlock",
+      "subclasses": [
+        {
+          "index": "the-archfey",
+          "name": "The Archfey"
+        },
+        {
+          "index": "the-fiend",
+          "name": "The Fiend"
+        },
+        {
+          "index": "the-great-old-one",
+          "name": "The Great Old One"
+        }
+      ]
+    },
+    {
+      "index": "arcane-tradition",
+      "name": "Arcane Tradition",
+      "class": "wizard",
+      "subclasses": [
+        {
+          "index": "school-of-abjuration",
+          "name": "School of Abjuration"
+        },
+        {
+          "index": "school-of-conjuration",
+          "name": "School of Conjuration"
+        },
+        {
+          "index": "school-of-divination",
+          "name": "School of Divination"
+        },
+        {
+          "index": "school-of-enchantment",
+          "name": "School of Enchantment"
+        },
+        {
+          "index": "school-of-evocation",
+          "name": "School of Evocation"
+        },
+        {
+          "index": "school-of-illusion",
+          "name": "School of Illusion"
+        },
+        {
+          "index": "school-of-necromancy",
+          "name": "School of Necromancy"
+        },
+        {
+          "index": "school-of-transmutation",
+          "name": "School of Transmutation"
+        }
+      ]
+    }
+  ]
+}

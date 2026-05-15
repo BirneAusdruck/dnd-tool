@@ -1,0 +1,132 @@
+{
+  "background_features": [
+    {
+      "index": "shelter-of-the-faithful",
+      "name": "Shelter of the Faithful",
+      "desc": "As an acolyte, you command the respect of those who share your faith, and you can perform the religious ceremonies of your deity. You and your companions can receive free healing and care at a temple, shrine, or other established presence of your faith.",
+      "effects": [
+        "bg-feature-shelter-of-the-faithful-complex"
+      ]
+    },
+    {
+      "index": "guild-membership",
+      "name": "Guild Membership",
+      "desc": "As an established artisan who is a recognized member of a guild, you can rely on certain benefits that membership provides. Other members of your guild will provide you with lodging and food if necessary. Guild connections also allow you access to powerful political contacts.",
+      "effects": [
+        "bg-feature-guild-membership-complex"
+      ]
+    },
+    {
+      "index": "false-identity",
+      "name": "False Identity",
+      "desc": "You have created a second identity that includes documentation, established acquaintances, and disguises that allow you to assume that persona. You can forge documents including official papers and personal letters, as long as you have seen an example of the kind of document or the handwriting you are trying to copy.",
+      "effects": [
+        "bg-feature-false-identity-complex"
+      ]
+    },
+    {
+      "index": "criminal-contact",
+      "name": "Criminal Contact",
+      "desc": "You have a reliable and trustworthy contact who acts as your liaison to a network of other criminals. You know how to get messages to and from your contact, even over great distances; specifically, you know the local messengers, corrupt caravan masters, and seedy sailors who can deliver messages for you.",
+      "effects": [
+        "bg-feature-criminal-contact-complex"
+      ]
+    },
+    {
+      "index": "by-popular-demand",
+      "name": "By Popular Demand",
+      "desc": "You can always find a place to perform, usually in an inn or tavern but possibly with a circus, at a theater, or even in a noble's court. Your performance makes you something of a local figure. When strangers recognize you in a town where you have performed, they typically take a liking to you.",
+      "effects": [
+        "bg-feature-by-popular-demand-complex"
+      ]
+    },
+    {
+      "index": "harvest-know-how",
+      "name": "Harvest Know-How",
+      "desc": "You are familiar with the land and how to survive in the wilderness. When foraging for food, you find twice as much food as you normally would.",
+      "effects": [
+        "bg-feature-harvest-know-how-complex"
+      ]
+    },
+    {
+      "index": "watchers-eye",
+      "name": "Watcher's Eye",
+      "desc": "Your experience in enforcing the law, and dealing with lawbreakers, gives you a feel for local laws and criminals. You can easily find the local outpost of the city guard or a similar organization, and those officials will cooperate with you if at all reasonable.",
+      "effects": [
+        "bg-feature-watchers-eye-complex"
+      ]
+    },
+    {
+      "index": "wanderer",
+      "name": "Wanderer",
+      "desc": "You have an excellent memory for maps and geography, and you can always recall the general layout of terrain, settlements, and other features around you. In addition, you can find food and fresh water for yourself and up to five other people each day, as long as the land offers berries, small game, water, and so forth.",
+      "effects": [
+        "bg-feature-wanderer-complex"
+      ]
+    },
+    {
+      "index": "discovery",
+      "name": "Discovery",
+      "desc": "The quiet seclusion of your extended hermitage gave you access to a unique and powerful discovery. The exact nature of this revelation depends on the nature of your seclusion. It might be a great truth about the cosmos, the deities, the powerful beings of the outer planes, or the forces of nature.",
+      "effects": [
+        "bg-feature-discovery-complex"
+      ]
+    },
+    {
+      "index": "merchants-eye",
+      "name": "Merchant's Eye",
+      "desc": "You can make a living for yourself and your companions by running a trading business or doing small jobs, earning 1 GP per day. You also have knowledge of trade routes and can estimate the value of goods at a glance.",
+      "effects": [
+        "bg-feature-merchants-eye-complex"
+      ]
+    },
+    {
+      "index": "position-of-privilege",
+      "name": "Position of Privilege",
+      "desc": "Thanks to your noble birth, people are inclined to think the best of you. You are welcome in high society, and people assume you have the right to be wherever you are. The common folk make every effort to accommodate you and avoid your displeasure.",
+      "effects": [
+        "bg-feature-position-of-privilege-complex"
+      ]
+    },
+    {
+      "index": "researcher",
+      "name": "Researcher",
+      "desc": "When you attempt to learn or recall a piece of lore, if you do not know that information, you often know where and from whom you can obtain it. Usually, this information comes from a library, scriptorium, university, or a sage or other learned person or creature.",
+      "effects": [
+        "bg-feature-researcher-complex"
+      ]
+    },
+    {
+      "index": "ships-passage",
+      "name": "Ship's Passage",
+      "desc": "When you need to, you can secure free passage on a sailing ship for yourself and your companions. You might sail on the ship you served on, or another ship you have good relations with. In return, you and your companions are expected to assist the crew during the voyage.",
+      "effects": [
+        "bg-feature-ships-passage-complex"
+      ]
+    },
+    {
+      "index": "scriveners-talent",
+      "name": "Scrivener's Talent",
+      "desc": "You have spent years copying documents and scrolls. You can quickly and accurately copy any written text, and you can recognize forgeries of documents you have seen before. You have connections with scholars and officials who can provide you access to libraries and archives.",
+      "effects": [
+        "bg-feature-scriveners-talent-complex"
+      ]
+    },
+    {
+      "index": "military-rank",
+      "name": "Military Rank",
+      "desc": "You have a military rank from your career as a soldier. Soldiers loyal to your former military organization still recognize your authority and influence, and they defer to you if they are of a lower rank. You can invoke your rank to exert influence over soldiers and requisition simple equipment or horses for temporary use.",
+      "effects": [
+        "bg-feature-military-rank-complex"
+      ]
+    },
+    {
+      "index": "drifter",
+      "name": "Drifter",
+      "desc": "You're experienced at moving through the world without leaving a trace. You can move through crowds without drawing attention, and you know how to find short-term shelter, even in a city, without spending money.",
+      "effects": [
+        "bg-feature-drifter-complex"
+      ]
+    }
+  ]
+}

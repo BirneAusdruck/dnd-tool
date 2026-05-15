@@ -1,0 +1,117 @@
+{
+  "background_personality_traits": [
+    {
+      "index": "acolyte",
+      "desc": [
+        "I idolize a particular hero of my faith, and constantly refer to that person's deeds and example.",
+        "I can find common ground between the fiercest enemies, empathizing with them and always working toward peace.",
+        "I see omens in every event and action. The gods try to speak to us, we just need to listen."
+      ]
+    },
+    {
+      "index": "artisan",
+      "desc": [
+        "I believe that anything worth doing is worth doing right. I can't help it—I'm a perfectionist.",
+        "I'm rude to people who lack my commitment to hard work and fair play."
+      ]
+    },
+    {
+      "index": "charlatan",
+      "desc": [
+        "I fall in and out of love easily, and am always pursuing someone.",
+        "I have a joke for every occasion, especially occasions where humor is inappropriate."
+      ]
+    },
+    {
+      "index": "criminal",
+      "desc": [
+        "I always have a plan for what to do when things go wrong.",
+        "I am always calm, no matter what the situation. I never raise my voice or let my emotions control me."
+      ]
+    },
+    {
+      "index": "entertainer",
+      "desc": [
+        "I know a story relevant to almost every situation.",
+        "Whenever I come to a new place, I collect local rumors and spread gossip."
+      ]
+    },
+    {
+      "index": "farmer",
+      "desc": [
+        "I judge people by their actions, not their words.",
+        "If someone is in trouble, I'm always ready to lend help."
+      ]
+    },
+    {
+      "index": "guard",
+      "desc": [
+        "I'm always polite and respectful.",
+        "I'm haunted by memories of violence in my past."
+      ]
+    },
+    {
+      "index": "guide",
+      "desc": [
+        "I'm driven by a wanderlust that led me away from home.",
+        "I watch over my friends as if they were a litter of newborn pups."
+      ]
+    },
+    {
+      "index": "hermit",
+      "desc": [
+        "I've been isolated for so long that I rarely speak, preferring gestures and the occasional grunt.",
+        "I am utterly serene, even in the face of disaster."
+      ]
+    },
+    {
+      "index": "merchant",
+      "desc": [
+        "I'm always looking for the next opportunity to make a profit.",
+        "I believe that with enough gold, anything is possible."
+      ]
+    },
+    {
+      "index": "noble",
+      "desc": [
+        "My eloquent flattery makes everyone I talk to feel like the most wonderful and important person in the world.",
+        "The common folk love me for my kindness and generosity."
+      ]
+    },
+    {
+      "index": "sage",
+      "desc": [
+        "I use polysyllabic words that convey the impression of great erudition.",
+        "I've read every book in the world's greatest libraries—or I like to boast that I have."
+      ]
+    },
+    {
+      "index": "sailor",
+      "desc": [
+        "My friends know they can rely on me, no matter what.",
+        "I work hard so that I can play hard when the work is done."
+      ]
+    },
+    {
+      "index": "scribe",
+      "desc": [
+        "I'm used to helping out those who aren't as smart as I am, and I patiently explain anything and everything to others.",
+        "I've read so many adventure stories that I often lose myself in romanticized notions of heroism."
+      ]
+    },
+    {
+      "index": "soldier",
+      "desc": [
+        "I'm always polite and respectful.",
+        "I'm haunted by memories of war. I fight to forget."
+      ]
+    },
+    {
+      "index": "wayfarer",
+      "desc": [
+        "I always keep my options open and never tie myself down.",
+        "The best way to solve a problem is to get someone else to do it."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,139 @@
+{
+  "subraces": [
+    {
+      "index": "hill-dwarf",
+      "name": "Hill Dwarf",
+      "race": "dwarf",
+      "ability_bonuses": [
+        {
+          "score": "WIS",
+          "bonus": 1
+        }
+      ],
+      "traits": [
+        "hill-dwarf-dwarven-toughness"
+      ]
+    },
+    {
+      "index": "mountain-dwarf",
+      "name": "Mountain Dwarf",
+      "race": "dwarf",
+      "ability_bonuses": [
+        {
+          "score": "STR",
+          "bonus": 2
+        }
+      ],
+      "traits": [
+        "mountain-dwarf-dwarven-armor-training"
+      ]
+    },
+    {
+      "index": "high-elf",
+      "name": "High Elf",
+      "race": "elf",
+      "ability_bonuses": [
+        {
+          "score": "INT",
+          "bonus": 1
+        }
+      ],
+      "traits": [
+        "high-elf-elf-weapon-training",
+        "high-elf-cantrip",
+        "high-elf-extra-language"
+      ]
+    },
+    {
+      "index": "wood-elf",
+      "name": "Wood Elf",
+      "race": "elf",
+      "ability_bonuses": [
+        {
+          "score": "WIS",
+          "bonus": 1
+        }
+      ],
+      "traits": [
+        "wood-elf-elf-weapon-training",
+        "wood-elf-fleet-of-foot",
+        "wood-elf-mask-of-the-wild"
+      ]
+    },
+    {
+      "index": "dark-elf",
+      "name": "Dark Elf (Drow)",
+      "race": "elf",
+      "ability_bonuses": [
+        {
+          "score": "CHA",
+          "bonus": 1
+        }
+      ],
+      "traits": [
+        "dark-elf-superior-darkvision",
+        "dark-elf-sunlight-sensitivity",
+        "dark-elf-drow-magic",
+        "dark-elf-drow-weapon-training"
+      ]
+    },
+    {
+      "index": "lightfoot",
+      "name": "Lightfoot Halfling",
+      "race": "halfling",
+      "ability_bonuses": [
+        {
+          "score": "CHA",
+          "bonus": 1
+        }
+      ],
+      "traits": [
+        "lightfoot-naturally-stealthy"
+      ]
+    },
+    {
+      "index": "stout",
+      "name": "Stout Halfling",
+      "race": "halfling",
+      "ability_bonuses": [
+        {
+          "score": "CON",
+          "bonus": 1
+        }
+      ],
+      "traits": [
+        "stout-stout-resilience"
+      ]
+    },
+    {
+      "index": "forest-gnome",
+      "name": "Forest Gnome",
+      "race": "gnome",
+      "ability_bonuses": [
+        {
+          "score": "DEX",
+          "bonus": 1
+        }
+      ],
+      "traits": [
+        "forest-gnome-natural-illusionist",
+        "forest-gnome-speak-with-small-beasts"
+      ]
+    },
+    {
+      "index": "rock-gnome",
+      "name": "Rock Gnome",
+      "race": "gnome",
+      "ability_bonuses": [
+        {
+          "score": "CON",
+          "bonus": 1
+        }
+      ],
+      "traits": [
+        "rock-gnome-artificer-s-lore",
+        "rock-gnome-tinker"
+      ]
+    }
+  ]
+}

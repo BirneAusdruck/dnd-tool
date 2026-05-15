@@ -1,0 +1,131 @@
+{
+  "background_equipment_entries": [
+    {
+      "index": "acolyte-equipment",
+      "items": [
+        {"choice": "holy_symbol"},
+        {"desc": "Prayer Book"},
+        {"desc": "Stick of Incense", "qty": 5},
+        {"desc": "Vestments"},
+        {"desc": "Common Clothes"},
+        {"gold": 15}
+      ]
+    },
+    {
+      "index": "charlatan-equipment",
+      "items": [
+        {"desc": "Fine Clothes"},
+        {"index": "disguise-kit"},
+        {"desc": "Tools of the Con"},
+        {"gold": 15}
+      ]
+    },
+    {
+      "index": "criminal-equipment",
+      "items": [
+        {"index": "crowbar"},
+        {"desc": "Dark Common Clothes with Hood"},
+        {"gold": 15}
+      ]
+    },
+    {
+      "index": "entertainer-equipment",
+      "items": [
+        {"choice": "instrument"},
+        {"desc": "Favor of an Admirer"},
+        {"desc": "Costume"},
+        {"gold": 15}
+      ]
+    },
+    {
+      "index": "folk-hero-equipment",
+      "items": [
+        {"choice": "artisans_tools"},
+        {"index": "shovel"},
+        {"desc": "Iron Pot"},
+        {"desc": "Common Clothes"},
+        {"gold": 10}
+      ]
+    },
+    {
+      "index": "guild-artisan-equipment",
+      "items": [
+        {"choice": "artisans_tools"},
+        {"desc": "Letter of Introduction from Guild"},
+        {"desc": "Traveler's Clothes"},
+        {"gold": 15}
+      ]
+    },
+    {
+      "index": "hermit-equipment",
+      "items": [
+        {"desc": "Scroll Case with Notes"},
+        {"index": "blanket"},
+        {"desc": "Common Clothes"},
+        {"index": "herbalism-kit"},
+        {"gold": 5}
+      ]
+    },
+    {
+      "index": "noble-equipment",
+      "items": [
+        {"desc": "Fine Clothes"},
+        {"desc": "Signet Ring"},
+        {"desc": "Scroll of Pedigree"},
+        {"gold": 25}
+      ]
+    },
+    {
+      "index": "outlander-equipment",
+      "items": [
+        {"index": "quarterstaff"},
+        {"index": "hunting-trap"},
+        {"desc": "Trophy from Animal Kill"},
+        {"desc": "Traveler's Clothes"},
+        {"gold": 10}
+      ]
+    },
+    {
+      "index": "sage-equipment",
+      "items": [
+        {"index": "ink-bottle"},
+        {"index": "ink-pen"},
+        {"desc": "Small Knife"},
+        {"desc": "Letter from Dead Colleague"},
+        {"desc": "Common Clothes"},
+        {"gold": 10}
+      ]
+    },
+    {
+      "index": "sailor-equipment",
+      "items": [
+        {"desc": "Belaying Pin (Club)"},
+        {"index": "rope-silk"},
+        {"desc": "Lucky Charm"},
+        {"desc": "Common Clothes"},
+        {"gold": 10}
+      ]
+    },
+    {
+      "index": "soldier-equipment",
+      "items": [
+        {"desc": "Rank Insignia"},
+        {"desc": "Trophy from Fallen Enemy"},
+        {"choice": "gaming_set"},
+        {"desc": "Common Clothes"},
+        {"gold": 10}
+      ]
+    },
+    {
+      "index": "urchin-equipment",
+      "items": [
+        {"desc": "Small Knife"},
+        {"desc": "City Map"},
+        {"desc": "Pet Mouse"},
+        {"desc": "Parent's Token"},
+        {"desc": "Common Clothes"},
+        {"gold": 10}
+      ]
+    }
+  ]
+}

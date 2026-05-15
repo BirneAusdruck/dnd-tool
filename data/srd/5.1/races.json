@@ -4,163 +4,220 @@
       "index": "human",
       "name": "Human",
       "speed": 30,
-      "size": "Medium",
+      "size": "medium",
       "ability_bonuses": [
-        {"score": "STR", "bonus": 1}, {"score": "DEX", "bonus": 1},
-        {"score": "CON", "bonus": 1}, {"score": "INT", "bonus": 1},
-        {"score": "WIS", "bonus": 1}, {"score": "CHA", "bonus": 1}
+        {
+          "score": "STR",
+          "bonus": 1
+        },
+        {
+          "score": "DEX",
+          "bonus": 1
+        },
+        {
+          "score": "CON",
+          "bonus": 1
+        },
+        {
+          "score": "INT",
+          "bonus": 1
+        },
+        {
+          "score": "WIS",
+          "bonus": 1
+        },
+        {
+          "score": "CHA",
+          "bonus": 1
+        }
       ],
       "traits": [
-        {"name": "Extra Language", "desc": "You can speak, read, and write one extra language of your choice."}
+        "human-extra-language"
       ],
-      "languages": ["Common", "One extra language of your choice"],
+      "languages": [
+        "Common",
+        "One extra language of your choice"
+      ],
       "description": "Humans are the most adaptable and ambitious people among the common races.",
       "subraces": [],
       "variant": {
         "name": "Variant Human",
         "desc": "If using the optional variant, +1 to two different ability scores, one skill proficiency, and one feat.",
         "ability_bonuses": "Pick 2 different scores, each gets +1",
-        "extras": ["One skill proficiency of your choice", "One feat of your choice"]
+        "extras": [
+          "One skill proficiency of your choice",
+          "One feat of your choice"
+        ]
       }
     },
     {
       "index": "dwarf",
       "name": "Dwarf",
       "speed": 25,
-      "size": "Medium",
-      "ability_bonuses": [{"score": "CON", "bonus": 2}],
-      "traits": [
-        {"name": "Darkvision", "desc": "Accustomed to underground life, you have superior vision in dark and dim conditions. You can see in dim light within 60 ft. as if it were bright light, and in darkness as if it were dim light."},
-        {"name": "Dwarven Resilience", "desc": "Advantage on saving throws against poison, resistance against poison damage."},
-        {"name": "Dwarven Combat Training", "desc": "Proficiency with battleaxe, handaxe, light hammer, and warhammer."},
-        {"name": "Tool Proficiency", "desc": "Proficiency with smith's tools, brewer's supplies, or mason's tools (your choice)."},
-        {"name": "Stonecunning", "desc": "Double proficiency bonus on History checks related to the origin of stonework."}
+      "size": "medium",
+      "ability_bonuses": [
+        {
+          "score": "CON",
+          "bonus": 2
+        }
       ],
-      "languages": ["Common", "Dwarvish"],
+      "traits": [
+        "dwarf-darkvision",
+        "dwarf-dwarven-resilience",
+        "dwarf-dwarven-combat-training",
+        "dwarf-tool-proficiency",
+        "dwarf-stonecunning"
+      ],
+      "languages": [
+        "Common",
+        "Dwarvish"
+      ],
       "description": "Bold and hardy, dwarves are known as skilled warriors, miners, and workers of stone and metal.",
       "subraces": [
-        {
-          "index": "hill-dwarf",
-          "name": "Hill Dwarf",
-          "ability_bonuses": [{"score": "WIS", "bonus": 1}],
-          "traits": [
-            {"name": "Dwarven Toughness", "desc": "Your hit point maximum increases by 1, and it increases by 1 every time you gain a level."}
-          ]
-        },
-        {
-          "index": "mountain-dwarf",
-          "name": "Mountain Dwarf",
-          "ability_bonuses": [{"score": "STR", "bonus": 2}],
-          "traits": [
-            {"name": "Dwarven Armor Training", "desc": "You have proficiency with light and medium armor."}
-          ]
-        }
+        "hill-dwarf",
+        "mountain-dwarf"
       ]
     },
     {
       "index": "elf",
       "name": "Elf",
       "speed": 30,
-      "size": "Medium",
-      "ability_bonuses": [{"score": "DEX", "bonus": 2}],
-      "traits": [
-        {"name": "Darkvision", "desc": "Superior vision in dark and dim conditions. 60 ft. darkvision."},
-        {"name": "Keen Senses", "desc": "Proficiency in the Perception skill."},
-        {"name": "Fey Ancestry", "desc": "Advantage on saving throws against being charmed, and magic can't put you to sleep."},
-        {"name": "Trance", "desc": "You don't need to sleep. Instead, you meditate deeply for 4 hours a day, gaining the same benefit as a human from 8 hours of sleep."}
+      "size": "medium",
+      "ability_bonuses": [
+        {
+          "score": "DEX",
+          "bonus": 2
+        }
       ],
-      "languages": ["Common", "Elvish"],
+      "traits": [
+        "elf-darkvision",
+        "elf-keen-senses",
+        "elf-fey-ancestry",
+        "elf-trance"
+      ],
+      "languages": [
+        "Common",
+        "Elvish"
+      ],
       "description": "Elves are a magical people of otherworldly grace, living in places of ethereal beauty.",
       "subraces": [
-        {
-          "index": "high-elf",
-          "name": "High Elf",
-          "ability_bonuses": [{"score": "INT", "bonus": 1}],
-          "traits": [
-            {"name": "Elf Weapon Training", "desc": "Proficiency with longsword, shortsword, shortbow, and longbow."},
-            {"name": "Cantrip", "desc": "You know one cantrip of your choice from the wizard spell list (INT is your spellcasting ability)."},
-            {"name": "Extra Language", "desc": "You can speak, read, and write one extra language of your choice."}
-          ]
-        },
-        {
-          "index": "wood-elf",
-          "name": "Wood Elf",
-          "ability_bonuses": [{"score": "WIS", "bonus": 1}],
-          "traits": [
-            {"name": "Elf Weapon Training", "desc": "Proficiency with longsword, shortsword, shortbow, and longbow."},
-            {"name": "Fleet of Foot", "desc": "Your base walking speed increases to 35 ft."},
-            {"name": "Mask of the Wild", "desc": "You can attempt to hide even when only lightly obscured by natural phenomena."}
-          ]
-        },
-        {
-          "index": "dark-elf",
-          "name": "Dark Elf (Drow)",
-          "ability_bonuses": [{"score": "CHA", "bonus": 1}],
-          "traits": [
-            {"name": "Superior Darkvision", "desc": "Your darkvision extends to 120 ft."},
-            {"name": "Sunlight Sensitivity", "desc": "Disadvantage on attack rolls and Perception checks that rely on sight when in direct sunlight."},
-            {"name": "Drow Magic", "desc": "You know the Dancing Lights cantrip. At 3rd level, Faerie Fire once per day. At 5th, Darkness once per day (CHA)."},
-            {"name": "Drow Weapon Training", "desc": "Proficiency with rapiers, shortswords, and hand crossbows."}
-          ]
-        }
+        "high-elf",
+        "wood-elf",
+        "dark-elf"
       ]
     },
     {
       "index": "halfling",
       "name": "Halfling",
       "speed": 25,
-      "size": "Small",
-      "ability_bonuses": [{"score": "DEX", "bonus": 2}],
-      "traits": [
-        {"name": "Lucky", "desc": "When you roll a 1 on the d20 for an attack roll, ability check, or saving throw, you can reroll and must use the new roll."},
-        {"name": "Brave", "desc": "Advantage on saving throws against being frightened."},
-        {"name": "Halfling Nimbleness", "desc": "You can move through the space of any creature that is of a size larger than yours."}
+      "size": "small",
+      "ability_bonuses": [
+        {
+          "score": "DEX",
+          "bonus": 2
+        }
       ],
-      "languages": ["Common", "Halfling"],
+      "traits": [
+        "halfling-lucky",
+        "halfling-brave",
+        "halfling-halfling-nimbleness"
+      ],
+      "languages": [
+        "Common",
+        "Halfling"
+      ],
       "description": "The comforts of home are the goals of most halflings' lives.",
       "subraces": [
-        {
-          "index": "lightfoot",
-          "name": "Lightfoot Halfling",
-          "ability_bonuses": [{"score": "CHA", "bonus": 1}],
-          "traits": [
-            {"name": "Naturally Stealthy", "desc": "You can attempt to hide even when only obscured by a creature that is at least one size larger than you."}
-          ]
-        },
-        {
-          "index": "stout",
-          "name": "Stout Halfling",
-          "ability_bonuses": [{"score": "CON", "bonus": 1}],
-          "traits": [
-            {"name": "Stout Resilience", "desc": "Advantage on saving throws against poison, resistance against poison damage."}
-          ]
-        }
+        "lightfoot",
+        "stout"
       ]
     },
     {
       "index": "dragonborn",
       "name": "Dragonborn",
       "speed": 30,
-      "size": "Medium",
-      "ability_bonuses": [{"score": "STR", "bonus": 2}, {"score": "CHA", "bonus": 1}],
-      "traits": [
-        {"name": "Draconic Ancestry", "desc": "You have draconic ancestry. Choose a dragon type, which determines your breath weapon and damage resistance."},
-        {"name": "Breath Weapon", "desc": "Use your action to exhale destructive energy (2d6 damage, Dex or Con save DC 8 + CON mod + proficiency). Usable once per short or long rest."},
-        {"name": "Damage Resistance", "desc": "Resistance to the damage type associated with your draconic ancestry."}
+      "size": "medium",
+      "ability_bonuses": [
+        {
+          "score": "STR",
+          "bonus": 2
+        },
+        {
+          "score": "CHA",
+          "bonus": 1
+        }
       ],
-      "languages": ["Common", "Draconic"],
+      "traits": [
+        "dragonborn-draconic-ancestry",
+        "dragonborn-breath-weapon",
+        "dragonborn-damage-resistance"
+      ],
+      "languages": [
+        "Common",
+        "Draconic"
+      ],
       "description": "Born of dragons, dragonborn walk proudly through a world that greets them with fearful incomprehension.",
       "draconic_ancestry": [
-        {"dragon": "Black", "damage": "Acid", "breath": "5x30 ft. line", "save": "DEX"},
-        {"dragon": "Blue", "damage": "Lightning", "breath": "5x30 ft. line", "save": "DEX"},
-        {"dragon": "Brass", "damage": "Fire", "breath": "5x30 ft. line", "save": "DEX"},
-        {"dragon": "Bronze", "damage": "Lightning", "breath": "5x30 ft. line", "save": "DEX"},
-        {"dragon": "Copper", "damage": "Acid", "breath": "5x30 ft. line", "save": "DEX"},
-        {"dragon": "Gold", "damage": "Fire", "breath": "15 ft. cone", "save": "DEX"},
-        {"dragon": "Green", "damage": "Poison", "breath": "15 ft. cone", "save": "CON"},
-        {"dragon": "Red", "damage": "Fire", "breath": "15 ft. cone", "save": "DEX"},
-        {"dragon": "Silver", "damage": "Cold", "breath": "15 ft. cone", "save": "CON"},
-        {"dragon": "White", "damage": "Cold", "breath": "15 ft. cone", "save": "CON"}
+        {
+          "dragon": "black",
+          "damage_type": "acid",
+          "breath_shape": "5x30 ft. line",
+          "saving_throw": "DEX"
+        },
+        {
+          "dragon": "blue",
+          "damage_type": "lightning",
+          "breath_shape": "5x30 ft. line",
+          "saving_throw": "DEX"
+        },
+        {
+          "dragon": "brass",
+          "damage_type": "fire",
+          "breath_shape": "5x30 ft. line",
+          "saving_throw": "DEX"
+        },
+        {
+          "dragon": "bronze",
+          "damage_type": "lightning",
+          "breath_shape": "5x30 ft. line",
+          "saving_throw": "DEX"
+        },
+        {
+          "dragon": "copper",
+          "damage_type": "acid",
+          "breath_shape": "5x30 ft. line",
+          "saving_throw": "DEX"
+        },
+        {
+          "dragon": "gold",
+          "damage_type": "fire",
+          "breath_shape": "15 ft. cone",
+          "saving_throw": "DEX"
+        },
+        {
+          "dragon": "green",
+          "damage_type": "poison",
+          "breath_shape": "15 ft. cone",
+          "saving_throw": "CON"
+        },
+        {
+          "dragon": "red",
+          "damage_type": "fire",
+          "breath_shape": "15 ft. cone",
+          "saving_throw": "DEX"
+        },
+        {
+          "dragon": "silver",
+          "damage_type": "cold",
+          "breath_shape": "15 ft. cone",
+          "saving_throw": "CON"
+        },
+        {
+          "dragon": "white",
+          "damage_type": "cold",
+          "breath_shape": "15 ft. cone",
+          "saving_throw": "CON"
+        }
       ],
       "subraces": []
     },
@@ -168,52 +225,53 @@
       "index": "gnome",
       "name": "Gnome",
       "speed": 25,
-      "size": "Small",
-      "ability_bonuses": [{"score": "INT", "bonus": 2}],
-      "traits": [
-        {"name": "Darkvision", "desc": "Accustomed to life underground, you have darkvision to 60 ft."},
-        {"name": "Gnome Cunning", "desc": "Advantage on all INT, WIS, and CHA saving throws against magic."}
+      "size": "small",
+      "ability_bonuses": [
+        {
+          "score": "INT",
+          "bonus": 2
+        }
       ],
-      "languages": ["Common", "Gnomish"],
+      "traits": [
+        "gnome-darkvision",
+        "gnome-gnome-cunning"
+      ],
+      "languages": [
+        "Common",
+        "Gnomish"
+      ],
       "description": "A gnome's energy and enthusiasm for living shines through every inch of their tiny bodies.",
       "subraces": [
-        {
-          "index": "forest-gnome",
-          "name": "Forest Gnome",
-          "ability_bonuses": [{"score": "DEX", "bonus": 1}],
-          "traits": [
-            {"name": "Natural Illusionist", "desc": "You know the Minor Illusion cantrip (INT is your spellcasting ability)."},
-            {"name": "Speak with Small Beasts", "desc": "You can communicate simple ideas with Small or smaller beasts."}
-          ]
-        },
-        {
-          "index": "rock-gnome",
-          "name": "Rock Gnome",
-          "ability_bonuses": [{"score": "CON", "bonus": 1}],
-          "traits": [
-            {"name": "Artificer's Lore", "desc": "Double proficiency bonus on History checks related to magic items, alchemical objects, or technological devices."},
-            {"name": "Tinker", "desc": "Proficiency with artisan's tools (tinker's tools). You can spend 1 hour and 10 gp to construct a tiny clockwork device."}
-          ]
-        }
+        "forest-gnome",
+        "rock-gnome"
       ]
     },
     {
       "index": "half-elf",
       "name": "Half-Elf",
       "speed": 30,
-      "size": "Medium",
+      "size": "medium",
       "ability_bonuses": [
-        {"score": "CHA", "bonus": 2},
-        {"score": "choice_1", "bonus": 1},
-        {"score": "choice_2", "bonus": 1}
+        {
+          "score": "CHA",
+          "bonus": 2
+        }
       ],
-      "ability_bonus_choices": {"count": 2, "bonus": 1, "note": "Choose 2 different ability scores (not CHA)"},
+      "ability_bonus_choices": {
+        "count": 2,
+        "bonus": 1,
+        "note": "Choose 2 different ability scores (not CHA)"
+      },
       "traits": [
-        {"name": "Darkvision", "desc": "60 ft. darkvision."},
-        {"name": "Fey Ancestry", "desc": "Advantage on saving throws against being charmed, and magic can't put you to sleep."},
-        {"name": "Skill Versatility", "desc": "You gain proficiency in two skills of your choice."}
+        "half-elf-darkvision",
+        "half-elf-fey-ancestry",
+        "half-elf-skill-versatility"
       ],
-      "languages": ["Common", "Elvish", "One extra language of your choice"],
+      "languages": [
+        "Common",
+        "Elvish",
+        "One extra language of your choice"
+      ],
       "description": "Half-elves combine what some say are the best qualities of their elf and human parents.",
       "subraces": []
     },
@@ -221,15 +279,27 @@
       "index": "half-orc",
       "name": "Half-Orc",
       "speed": 30,
-      "size": "Medium",
-      "ability_bonuses": [{"score": "STR", "bonus": 2}, {"score": "CON", "bonus": 1}],
-      "traits": [
-        {"name": "Darkvision", "desc": "60 ft. darkvision."},
-        {"name": "Menacing", "desc": "You gain proficiency in the Intimidation skill."},
-        {"name": "Relentless Endurance", "desc": "When you are reduced to 0 hit points but not killed outright, you can drop to 1 hit point instead. Once per long rest."},
-        {"name": "Savage Attacks", "desc": "When you score a critical hit with a melee weapon attack, you can roll one of the weapon's damage dice one additional time."}
+      "size": "medium",
+      "ability_bonuses": [
+        {
+          "score": "STR",
+          "bonus": 2
+        },
+        {
+          "score": "CON",
+          "bonus": 1
+        }
       ],
-      "languages": ["Common", "Orc"],
+      "traits": [
+        "half-orc-darkvision",
+        "half-orc-menacing",
+        "half-orc-relentless-endurance",
+        "half-orc-savage-attacks"
+      ],
+      "languages": [
+        "Common",
+        "Orc"
+      ],
       "description": "Whether united under the leadership of a mighty warlock or rallying to the common cause of a great chief, orcs and their progeny have always been a threat to the civilized races.",
       "subraces": []
     },
@@ -237,14 +307,26 @@
       "index": "tiefling",
       "name": "Tiefling",
       "speed": 30,
-      "size": "Medium",
-      "ability_bonuses": [{"score": "INT", "bonus": 1}, {"score": "CHA", "bonus": 2}],
-      "traits": [
-        {"name": "Darkvision", "desc": "60 ft. darkvision."},
-        {"name": "Hellish Resistance", "desc": "Resistance to fire damage."},
-        {"name": "Infernal Legacy", "desc": "You know the Thaumaturgy cantrip. At 3rd level, Hellish Rebuke (1/day). At 5th level, Darkness (1/day). CHA is your spellcasting ability."}
+      "size": "medium",
+      "ability_bonuses": [
+        {
+          "score": "INT",
+          "bonus": 1
+        },
+        {
+          "score": "CHA",
+          "bonus": 2
+        }
       ],
-      "languages": ["Common", "Infernal"],
+      "traits": [
+        "tiefling-darkvision",
+        "tiefling-hellish-resistance",
+        "tiefling-infernal-legacy"
+      ],
+      "languages": [
+        "Common",
+        "Infernal"
+      ],
       "description": "To be greeted with stares and whispers, to suffer violence and insult on the street, to see mistrust and fear in every eye: this is the lot of the tiefling.",
       "subraces": []
     }

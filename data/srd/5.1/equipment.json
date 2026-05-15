@@ -1,89 +1,1379 @@
 {
   "equipment": [
-    {"index": "backpack",           "name": "Backpack",                "category": "adventuring-gear",  "weight": 5,    "cost": "2 gp",    "desc": "A leather pack carried on the back. Holds up to 30 lb in 1 cubic foot."},
-    {"index": "bedroll",            "name": "Bedroll",                 "category": "adventuring-gear",  "weight": 7,    "cost": "1 gp",    "desc": "A portable sleeping mat made of cloth and padding."},
-    {"index": "blanket",            "name": "Blanket",                 "category": "adventuring-gear",  "weight": 3,    "cost": "5 sp",    "desc": "A thick wool blanket for warmth."},
-    {"index": "caltrops-bag",       "name": "Caltrops (bag of 20)",    "category": "adventuring-gear",  "weight": 2,    "cost": "1 gp",    "desc": "As an action, scatter caltrops in a 5-foot-square area. Creatures entering the area must succeed on DC 15 DEX save or stop and take 1 piercing damage. Speed is reduced by 10 ft until healed."},
-    {"index": "candle",             "name": "Candle",                  "category": "adventuring-gear",  "weight": 0,    "cost": "1 cp",    "desc": "For 1 hour, sheds bright light in a 5-foot radius and dim light for an additional 5 feet."},
-    {"index": "chain-10-feet",      "name": "Chain (10 feet)",         "category": "adventuring-gear",  "weight": 10,   "cost": "5 gp",    "desc": "A 10-foot length of chain with 10 hit points. Can be burst with a DC 20 STR check."},
-    {"index": "crowbar",            "name": "Crowbar",                 "category": "adventuring-gear",  "weight": 5,    "cost": "2 gp",    "desc": "Using a crowbar grants advantage on STR checks where leverage can be applied."},
-    {"index": "fishing-tackle",     "name": "Fishing Tackle",          "category": "adventuring-gear",  "weight": 4,    "cost": "1 gp",    "desc": "A hook, line, sinkers, floats, and a short fishing rod."},
-    {"index": "grappling-hook",     "name": "Grappling Hook",          "category": "adventuring-gear",  "weight": 4,    "cost": "2 gp",    "desc": "A hook attached to a rope that can be thrown and used to anchor the rope."},
-    {"index": "hammer",             "name": "Hammer",                  "category": "adventuring-gear",  "weight": 3,    "cost": "1 gp",    "desc": "A small hammer used for driving pitons and similar tasks."},
-    {"index": "healers-kit",        "name": "Healer's Kit",            "category": "adventuring-gear",  "weight": 3,    "cost": "5 gp",    "desc": "A pouch of bandages, salves, and splints (10 uses). As an action, stabilize a dying creature without a medicine check."},
-    {"index": "holywater-flask",    "name": "Holy Water (flask)",      "category": "adventuring-gear",  "weight": 1,    "cost": "25 gp",   "desc": "As an action, splash a creature within 5 feet or throw it up to 20 feet. Fiends and undead take 2d6 radiant damage on a hit."},
-    {"index": "hunting-trap",       "name": "Hunting Trap",            "category": "adventuring-gear",  "weight": 25,   "cost": "5 gp",    "desc": "Snaps shut when triggered. Creatures stepping on the trap take 1d4 piercing damage and stop moving. DC 13 STR to escape."},
-    {"index": "ink-bottle",         "name": "Ink (1 ounce bottle)",    "category": "adventuring-gear",  "weight": 0,    "cost": "10 gp",   "desc": "A small bottle of ink for writing."},
-    {"index": "ink-pen",            "name": "Ink Pen",                 "category": "adventuring-gear",  "weight": 0,    "cost": "2 cp",    "desc": "A quill or reed pen for writing with ink."},
-    {"index": "lamp",               "name": "Lamp",                    "category": "adventuring-gear",  "weight": 1,    "cost": "5 sp",    "desc": "A lamp casts bright light in a 15-foot radius and dim light for an additional 30 feet when fueled with oil."},
-    {"index": "lantern-bullseye",   "name": "Lantern, Bullseye",       "category": "adventuring-gear",  "weight": 2,    "cost": "10 gp",   "desc": "Casts bright light in a 60-foot cone and dim light for an additional 60 feet when fueled with oil."},
-    {"index": "lantern-hooded",     "name": "Lantern, Hooded",         "category": "adventuring-gear",  "weight": 2,    "cost": "5 gp",    "desc": "Casts bright light in a 30-foot radius and dim light for an additional 30 feet. Hood can be closed to reduce to dim light in a 5-foot radius."},
-    {"index": "lock",               "name": "Lock",                    "category": "adventuring-gear",  "weight": 1,    "cost": "10 gp",   "desc": "A padlock with a key. DC 15 Dexterity (Thieves' Tools) check to pick without the key."},
-    {"index": "magnifying-glass",   "name": "Magnifying Glass",        "category": "adventuring-gear",  "weight": 0,    "cost": "100 gp",  "desc": "Grants advantage on ability checks to identify the nature of a fine-crafted item. Ignites dry tinder when focused sunlight on it."},
-    {"index": "manacles",           "name": "Manacles",                "category": "adventuring-gear",  "weight": 6,    "cost": "2 gp",    "desc": "Can bind a Small or Medium creature. Escape DC 20 DEX (thieves' tools) or DC 20 STR. Each set comes with one key."},
-    {"index": "mirror-steel",       "name": "Mirror, Steel",           "category": "adventuring-gear",  "weight": 0.5,  "cost": "5 gp",    "desc": "A small polished steel mirror, useful for signaling, checking around corners, or looking at a medusa."},
-    {"index": "oil-flask",          "name": "Oil (flask)",             "category": "adventuring-gear",  "weight": 1,    "cost": "1 sp",    "desc": "Splash as action in 5 ft or throw up to 20 ft. Hit creature takes 5 fire damage. Area of oil burns for 2 rounds dealing 5 fire damage."},
-    {"index": "parchment",          "name": "Parchment (one sheet)",   "category": "adventuring-gear",  "weight": 0,    "cost": "1 sp",    "desc": "A sheet of prepared animal skin for writing."},
-    {"index": "piton",              "name": "Piton",                   "category": "adventuring-gear",  "weight": 0.25, "cost": "5 cp",    "desc": "A metal spike hammered into stone or ice to serve as an anchor."},
-    {"index": "poison-basic",       "name": "Poison, Basic (vial)",    "category": "adventuring-gear",  "weight": 0,    "cost": "100 gp",  "desc": "Apply to a weapon or piece of ammunition. Creature hit must make DC 10 CON save or take 1d4+2 poison damage. Effective for 1 minute."},
-    {"index": "pole-10-feet",       "name": "Pole (10-foot)",          "category": "adventuring-gear",  "weight": 7,    "cost": "5 cp",    "desc": "A 10-foot wooden pole useful for probing ahead or creating a makeshift stretcher."},
-    {"index": "pouch",              "name": "Pouch",                   "category": "adventuring-gear",  "weight": 1,    "cost": "5 sp",    "desc": "A cloth or leather pouch that can hold up to 6 pounds / 1/5 cubic foot in components or coins."},
-    {"index": "rations-1-day",      "name": "Rations (1 day)",         "category": "adventuring-gear",  "weight": 2,    "cost": "5 sp",    "desc": "Compact, dry foods suitable for extended travel, including jerky, dried fruit, hardtack, and nuts."},
-    {"index": "rope-hempen",        "name": "Rope, Hempen (50 feet)",  "category": "adventuring-gear",  "weight": 10,   "cost": "1 gp",    "desc": "50 ft of hemp rope. Has 2 HP and can be burst with a DC 17 STR check."},
-    {"index": "rope-silk",          "name": "Rope, Silk (50 feet)",    "category": "adventuring-gear",  "weight": 5,    "cost": "10 gp",   "desc": "50 ft of lighter, stronger silk rope. Can be burst with a DC 20 STR check."},
-    {"index": "sack",               "name": "Sack",                    "category": "adventuring-gear",  "weight": 0.5,  "cost": "1 cp",    "desc": "A cloth sack that can hold up to 30 pounds / 1 cubic foot."},
-    {"index": "shovel",             "name": "Shovel",                  "category": "adventuring-gear",  "weight": 5,    "cost": "2 gp",    "desc": "A standard digging implement."},
-    {"index": "signal-whistle",     "name": "Signal Whistle",          "category": "adventuring-gear",  "weight": 0,    "cost": "5 cp",    "desc": "A small whistle that produces a shrill signal sound."},
-    {"index": "spellbook",          "name": "Spellbook",               "category": "adventuring-gear",  "weight": 3,    "cost": "50 gp",   "desc": "Essential for wizards, this leather-bound tome holds up to 100 spells. Includes blank vellum pages for copying new spells."},
-    {"index": "spyglass",           "name": "Spyglass",                "category": "adventuring-gear",  "weight": 1,    "cost": "1000 gp", "desc": "Objects viewed through the spyglass are magnified to twice their size."},
-    {"index": "tent-two-person",    "name": "Tent, Two-Person",        "category": "adventuring-gear",  "weight": 20,   "cost": "2 gp",    "desc": "A simple and portable canvas shelter that sleeps two."},
-    {"index": "tinderbox",          "name": "Tinderbox",               "category": "adventuring-gear",  "weight": 1,    "cost": "5 sp",    "desc": "Contains a flint, fire steel, and tinder (usually charred cloth). Light a torch or tinder as an action, or a fire in 1 minute."},
-    {"index": "torch",              "name": "Torch",                   "category": "adventuring-gear",  "weight": 1,    "cost": "1 cp",    "desc": "Burns for 1 hour, providing bright light in a 20-foot radius and dim light for an additional 20 feet. On hit, deals 1 fire damage."},
-    {"index": "vial",               "name": "Vial",                    "category": "adventuring-gear",  "weight": 0,    "cost": "1 gp",    "desc": "A small glass container with a stopper. Holds 4 ounces of liquid."},
-    {"index": "waterskin",          "name": "Waterskin",               "category": "adventuring-gear",  "weight": 5,    "cost": "2 sp",    "desc": "A leather pouch for holding water or other beverages. Holds 4 pints of liquid (weighs 5 lb when full, 0.5 lb when empty)."},
-    {"index": "whetstone",          "name": "Whetstone",               "category": "adventuring-gear",  "weight": 1,    "cost": "1 cp",    "desc": "A flat stone used for sharpening bladed weapons."},
-    {"index": "arrows-20",          "name": "Arrows (20)",             "category": "ammunition",         "weight": 1,    "cost": "1 gp",    "desc": "20 arrows for use with a bow. Each arrow weighs 0.05 lb."},
-    {"index": "bolts-20",           "name": "Crossbow Bolts (20)",     "category": "ammunition",         "weight": 1.5,  "cost": "1 gp",    "desc": "20 bolts for use with crossbows."},
-    {"index": "needles-50",         "name": "Blowgun Needles (50)",    "category": "ammunition",         "weight": 1,    "cost": "1 gp",    "desc": "50 needles for use with a blowgun."},
-    {"index": "bullets-20",         "name": "Sling Bullets (20)",      "category": "ammunition",         "weight": 1.5,  "cost": "4 cp",    "desc": "20 lead bullets for use with a sling."},
-    {"index": "crystal",            "name": "Crystal",                 "category": "arcane-focus",       "weight": 1,    "cost": "10 gp",   "desc": "An arcane focus in the form of a crystal. Can be used as a spellcasting focus for wizard and sorcerer spells."},
-    {"index": "orb",                "name": "Orb",                     "category": "arcane-focus",       "weight": 3,    "cost": "20 gp",   "desc": "A glass or crystal sphere that serves as an arcane spellcasting focus."},
-    {"index": "rod",                "name": "Rod",                     "category": "arcane-focus",       "weight": 2,    "cost": "10 gp",   "desc": "A metal rod that serves as an arcane spellcasting focus."},
-    {"index": "staff-focus",        "name": "Staff (Arcane Focus)",    "category": "arcane-focus",       "weight": 4,    "cost": "5 gp",    "desc": "A wooden staff that serves as an arcane spellcasting focus. Can also be used as a quarterstaff."},
-    {"index": "wand-focus",         "name": "Wand",                    "category": "arcane-focus",       "weight": 1,    "cost": "10 gp",   "desc": "A short wooden wand that serves as an arcane spellcasting focus."},
-    {"index": "mistletoe",          "name": "Mistletoe",               "category": "druidic-focus",      "weight": 0,    "cost": "1 gp",    "desc": "Sprigs of mistletoe that serve as a druidic spellcasting focus."},
-    {"index": "totem",              "name": "Totem",                   "category": "druidic-focus",      "weight": 0,    "cost": "1 gp",    "desc": "A carved animal figure that serves as a druidic spellcasting focus."},
-    {"index": "wooden-staff",       "name": "Wooden Staff",            "category": "druidic-focus",      "weight": 4,    "cost": "5 gp",    "desc": "A staff of wood carved with natural motifs, used as a druidic spellcasting focus."},
-    {"index": "yew-wand",           "name": "Yew Wand",                "category": "druidic-focus",      "weight": 1,    "cost": "10 gp",   "desc": "A wand carved from yew wood, used as a druidic spellcasting focus."},
-    {"index": "amulet",             "name": "Amulet",                  "category": "holy-symbol",        "weight": 1,    "cost": "5 gp",    "desc": "A holy symbol worn as a necklace. Can be used as a spellcasting focus for cleric and paladin spells."},
-    {"index": "emblem",             "name": "Emblem",                  "category": "holy-symbol",        "weight": 0,    "cost": "5 gp",    "desc": "A holy symbol worn as a badge or pin, embossed on a shield, or emblazoned on clothing."},
-    {"index": "reliquary",          "name": "Reliquary",               "category": "holy-symbol",        "weight": 2,    "cost": "5 gp",    "desc": "A small container that holds a relic of significance to a deity, used as a holy symbol."},
-    {"index": "alchemists-supplies","name": "Alchemist's Supplies",    "category": "tool",               "weight": 8,    "cost": "50 gp",   "desc": "Includes vials, burners, flasks, and other equipment. Proficiency allows creating alchemical substances and identifying chemicals."},
-    {"index": "brewers-supplies",   "name": "Brewer's Supplies",       "category": "tool",               "weight": 9,    "cost": "20 gp",   "desc": "Includes a large glass jug, hops, a siphon, and several feet of tubing. Used to create ales and other beverages."},
-    {"index": "calligraphers-supplies","name":"Calligrapher's Supplies","category": "tool",              "weight": 5,    "cost": "10 gp",   "desc": "Includes ink, a dozen sheets of parchment, and three quills. Used to create written works."},
-    {"index": "carpenters-tools",   "name": "Carpenter's Tools",       "category": "tool",               "weight": 6,    "cost": "8 gp",    "desc": "Includes a saw, hammer, nails, a hatchet, a square, a ruler, an adze, a plane, and a chisel."},
-    {"index": "cartographers-tools","name": "Cartographer's Tools",    "category": "tool",               "weight": 6,    "cost": "15 gp",   "desc": "Includes a quill, ink, parchment, a compass, calipers, and rulers for mapmaking."},
-    {"index": "cobblers-tools",     "name": "Cobbler's Tools",         "category": "tool",               "weight": 5,    "cost": "5 gp",    "desc": "Includes a hammer, awl, knife, shoe stand, and supplies for making or repairing footwear."},
-    {"index": "cooks-utensils",     "name": "Cook's Utensils",         "category": "tool",               "weight": 8,    "cost": "1 gp",    "desc": "Includes metal pots, pans, ladles, tongs, and other cooking equipment."},
-    {"index": "disguise-kit",       "name": "Disguise Kit",            "category": "tool",               "weight": 3,    "cost": "25 gp",   "desc": "This pouch of cosmetics, hair dye, and small props allows disguises. Proficiency adds bonus to Charisma (Deception) checks."},
-    {"index": "forgery-kit",        "name": "Forgery Kit",             "category": "tool",               "weight": 5,    "cost": "15 gp",   "desc": "A small box with papers, parchments, inks, seals, and wax for forging documents."},
-    {"index": "gaming-set-dice",    "name": "Gaming Set (Dice)",       "category": "tool",               "weight": 0,    "cost": "1 sp",    "desc": "A set of polyhedral dice and a pouch. Proficiency allows advantage on related games of chance."},
-    {"index": "herbalism-kit",      "name": "Herbalism Kit",           "category": "tool",               "weight": 3,    "cost": "5 gp",    "desc": "Includes clippers, mortar and pestle, pouches, and vials. Used to identify and prepare herbal remedies, including antitoxin and healer's kit components."},
-    {"index": "jewelers-tools",     "name": "Jeweler's Tools",         "category": "tool",               "weight": 2,    "cost": "25 gp",   "desc": "Includes pliers, files, and a jeweler's loupe. Used to identify gems and create jewelry."},
-    {"index": "leatherworkers-tools","name":"Leatherworker's Tools",   "category": "tool",               "weight": 5,    "cost": "5 gp",    "desc": "Includes a knife, awl, needles, thread, and a wooden form for working leather."},
-    {"index": "masons-tools",       "name": "Mason's Tools",           "category": "tool",               "weight": 8,    "cost": "10 gp",   "desc": "Includes a trowel, hammer, chisel, brushes, and a square for stonework."},
-    {"index": "navigators-tools",   "name": "Navigator's Tools",       "category": "tool",               "weight": 2,    "cost": "25 gp",   "desc": "Includes charts, a compass, calipers, a ruler, sextant, and telescope for maritime navigation."},
-    {"index": "painters-supplies",  "name": "Painter's Supplies",      "category": "tool",               "weight": 5,    "cost": "10 gp",   "desc": "Includes an easel, canvas, paints, brushes, charcoal, and palette for creating works of art."},
-    {"index": "poisoners-kit",      "name": "Poisoner's Kit",          "category": "tool",               "weight": 2,    "cost": "50 gp",   "desc": "Includes vials, chemicals, and a mortar and pestle. Proficiency allows creating and harvesting poisons."},
-    {"index": "smiths-tools",       "name": "Smith's Tools",           "category": "tool",               "weight": 8,    "cost": "20 gp",   "desc": "Includes hammers, tongs, a file, a whetstone, and a punch for blacksmithing."},
-    {"index": "thieves-tools",      "name": "Thieves' Tools",          "category": "tool",               "weight": 1,    "cost": "25 gp",   "desc": "Includes small files, a set of lockpicks, a small mirror, scissors, and pliers. Proficiency required to use effectively for picking locks and disarming traps."},
-    {"index": "tinkers-tools",      "name": "Tinker's Tools",          "category": "tool",               "weight": 10,   "cost": "50 gp",   "desc": "Includes a variety of hand tools, thread, needles, a whetstone, scraps of cloth and leather, and a small pot of glue."},
-    {"index": "burglar-pack",       "name": "Burglar's Pack",          "category": "pack",               "weight": 0,    "cost": "16 gp",   "desc": "Includes a backpack, ball bearings (bag of 1000), string (10 feet), a bell, candles (5), a crowbar, a hammer, pitons (10), a hooded lantern, flasks of oil (2), 5-day rations, a tinderbox, and a waterskin. The pack also has 50 feet of hempen rope strapped to the side of it."},
-    {"index": "diplomat-pack",      "name": "Diplomat's Pack",         "category": "pack",               "weight": 0,    "cost": "39 gp",   "desc": "Includes a chest, 2 cases for maps and scrolls, a set of fine clothes, a bottle of ink, an ink pen, a lamp, 2 flasks of oil, 5 sheets of paper, a vial of perfume, sealing wax, and soap."},
-    {"index": "dungeoneer-pack",    "name": "Dungeoneer's Pack",       "category": "pack",               "weight": 0,    "cost": "12 gp",   "desc": "Includes a backpack, a crowbar, a hammer, 10 pitons, 10 torches, a tinderbox, 10 days of rations, and a waterskin. The pack also has 50 feet of hempen rope strapped to the side of it."},
-    {"index": "entertainer-pack",   "name": "Entertainer's Pack",      "category": "pack",               "weight": 0,    "cost": "40 gp",   "desc": "Includes a backpack, a bedroll, 2 costumes, 5 candles, 5 days of rations, a waterskin, and a disguise kit."},
-    {"index": "explorer-pack",      "name": "Explorer's Pack",         "category": "pack",               "weight": 0,    "cost": "10 gp",   "desc": "Includes a backpack, a bedroll, a mess kit, a tinderbox, 10 torches, 10 days of rations, and a waterskin. The pack also has 50 feet of hempen rope strapped to the side of it."},
-    {"index": "priest-pack",        "name": "Priest's Pack",           "category": "pack",               "weight": 0,    "cost": "19 gp",   "desc": "Includes a backpack, a blanket, 10 candles, a tinderbox, an alms box, 2 blocks of incense, a censer, vestments, 2 days of rations, and a waterskin."},
-    {"index": "scholar-pack",       "name": "Scholar's Pack",          "category": "pack",               "weight": 0,    "cost": "40 gp",   "desc": "Includes a backpack, a book of lore, a bottle of ink, an ink pen, 10 sheets of parchment, a little bag of sand, and a small knife."}
+    {
+      "index": "backpack",
+      "name": "Backpack",
+      "category": "adventuring_gear",
+      "weight": 5,
+      "cost": 200,
+      "desc": "A leather pack carried on the back. Holds up to 30 lb in 1 cubic foot.",
+      "effects": [],
+      "container": {
+        "max_capacity": 100,
+        "contents": []
+      }
+    },
+    {
+      "index": "bedroll",
+      "name": "Bedroll",
+      "category": "adventuring_gear",
+      "weight": 7,
+      "cost": 100,
+      "desc": "A portable sleeping mat made of cloth and padding.",
+      "effects": [],
+      "container": {
+        "max_capacity": 0,
+        "contents": []
+      }
+    },
+    {
+      "index": "blanket",
+      "name": "Blanket",
+      "category": "adventuring_gear",
+      "weight": 3,
+      "cost": 50,
+      "desc": "A thick wool blanket for warmth.",
+      "effects": [],
+      "container": {
+        "max_capacity": 0,
+        "contents": []
+      }
+    },
+    {
+      "index": "caltrops-bag",
+      "name": "Caltrops (bag of 20)",
+      "category": "adventuring_gear",
+      "weight": 2,
+      "cost": 100,
+      "desc": "As an action, scatter caltrops in a 5-foot-square area. Creatures entering the area must succeed on DC 15 DEX save or stop and take 1 piercing damage. Speed is reduced by 10 ft until healed.",
+      "effects": [
+        "caltrops-bag-area-hazard",
+        "caltrops-bag-damage-piercing"
+      ],
+      "container": {
+        "max_capacity": 0,
+        "contents": []
+      }
+    },
+    {
+      "index": "candle",
+      "name": "Candle",
+      "category": "adventuring_gear",
+      "weight": 0,
+      "cost": 1,
+      "desc": "For 1 hour, sheds bright light in a 5-foot radius and dim light for an additional 5 feet.",
+      "effects": [
+        "candle-light-bright",
+        "candle-light-dim"
+      ],
+      "container": {
+        "max_capacity": 0,
+        "contents": []
+      }
+    },
+    {
+      "index": "chain-10-feet",
+      "name": "Chain (10 feet)",
+      "category": "adventuring_gear",
+      "weight": 10,
+      "cost": 500,
+      "desc": "A 10-foot length of chain with 10 hit points. Can be burst with a DC 20 STR check.",
+      "effects": [],
+      "container": {
+        "max_capacity": 0,
+        "contents": []
+      }
+    },
+    {
+      "index": "crowbar",
+      "name": "Crowbar",
+      "category": "adventuring_gear",
+      "weight": 5,
+      "cost": 200,
+      "desc": "Using a crowbar grants advantage on STR checks where leverage can be applied.",
+      "effects": [],
+      "container": {
+        "max_capacity": 0,
+        "contents": []
+      }
+    },
+    {
+      "index": "fishing-tackle",
+      "name": "Fishing Tackle",
+      "category": "adventuring_gear",
+      "weight": 4,
+      "cost": 100,
+      "desc": "A hook, line, sinkers, floats, and a short fishing rod.",
+      "effects": [],
+      "container": {
+        "max_capacity": 0,
+        "contents": []
+      }
+    },
+    {
+      "index": "grappling-hook",
+      "name": "Grappling Hook",
+      "category": "adventuring_gear",
+      "weight": 4,
+      "cost": 200,
+      "desc": "A hook attached to a rope that can be thrown and used to anchor the rope.",
+      "effects": [],
+      "container": {
+        "max_capacity": 0,
+        "contents": []
+      }
+    },
+    {
+      "index": "hammer",
+      "name": "Hammer",
+      "category": "adventuring_gear",
+      "weight": 3,
+      "cost": 100,
+      "desc": "A small hammer used for driving pitons and similar tasks.",
+      "effects": [],
+      "container": {
+        "max_capacity": 0,
+        "contents": []
+      }
+    },
+    {
+      "index": "healers-kit",
+      "name": "Healer's Kit",
+      "category": "adventuring_gear",
+      "weight": 3,
+      "cost": 500,
+      "desc": "A pouch of bandages, salves, and splints (10 uses). As an action, stabilize a dying creature without a medicine check.",
+      "effects": [
+        "healers-kit-stabilize"
+      ],
+      "container": {
+        "max_capacity": 0,
+        "contents": []
+      }
+    },
+    {
+      "index": "holywater-flask",
+      "name": "Holy Water (flask)",
+      "category": "adventuring_gear",
+      "weight": 1,
+      "cost": 2500,
+      "desc": "As an action, splash a creature within 5 feet or throw it up to 20 feet. Fiends and undead take 2d6 radiant damage on a hit.",
+      "effects": [
+        "holywater-flask-damage-radiant"
+      ],
+      "container": {
+        "max_capacity": 0,
+        "contents": []
+      }
+    },
+    {
+      "index": "hunting-trap",
+      "name": "Hunting Trap",
+      "category": "adventuring_gear",
+      "weight": 25,
+      "cost": 500,
+      "desc": "Snaps shut when triggered. Creatures stepping on the trap take 1d4 piercing damage and stop moving. DC 13 STR to escape.",
+      "effects": [
+        "hunting-trap-area-hazard"
+      ],
+      "container": {
+        "max_capacity": 0,
+        "contents": []
+      }
+    },
+    {
+      "index": "ink-bottle",
+      "name": "Ink (1 ounce bottle)",
+      "category": "adventuring_gear",
+      "weight": 0,
+      "cost": 1000,
+      "desc": "A small bottle of ink for writing.",
+      "effects": [],
+      "container": {
+        "max_capacity": 0,
+        "contents": []
+      }
+    },
+    {
+      "index": "ink-pen",
+      "name": "Ink Pen",
+      "category": "adventuring_gear",
+      "weight": 0,
+      "cost": 2,
+      "desc": "A quill or reed pen for writing with ink.",
+      "effects": [],
+      "container": {
+        "max_capacity": 0,
+        "contents": []
+      }
+    },
+    {
+      "index": "lamp",
+      "name": "Lamp",
+      "category": "adventuring_gear",
+      "weight": 1,
+      "cost": 50,
+      "desc": "A lamp casts bright light in a 15-foot radius and dim light for an additional 30 feet when fueled with oil.",
+      "effects": [
+        "lamp-light-bright",
+        "lamp-light-dim"
+      ],
+      "container": {
+        "max_capacity": 0,
+        "contents": []
+      }
+    },
+    {
+      "index": "lantern-bullseye",
+      "name": "Lantern, Bullseye",
+      "category": "adventuring_gear",
+      "weight": 2,
+      "cost": 1000,
+      "desc": "Casts bright light in a 60-foot cone and dim light for an additional 60 feet when fueled with oil.",
+      "effects": [
+        "lantern-bullseye-light-bright",
+        "lantern-bullseye-light-dim"
+      ],
+      "container": {
+        "max_capacity": 0,
+        "contents": []
+      }
+    },
+    {
+      "index": "lantern-hooded",
+      "name": "Lantern, Hooded",
+      "category": "adventuring_gear",
+      "weight": 2,
+      "cost": 500,
+      "desc": "Casts bright light in a 30-foot radius and dim light for an additional 30 feet. Hood can be closed to reduce to dim light in a 5-foot radius.",
+      "effects": [
+        "lantern-hooded-light-bright",
+        "lantern-hooded-light-dim"
+      ],
+      "container": {
+        "max_capacity": 0,
+        "contents": []
+      }
+    },
+    {
+      "index": "lock",
+      "name": "Lock",
+      "category": "adventuring_gear",
+      "weight": 1,
+      "cost": 1000,
+      "desc": "A padlock with a key. DC 15 Dexterity (Thieves' Tools) check to pick without the key.",
+      "effects": [],
+      "container": {
+        "max_capacity": 0,
+        "contents": []
+      }
+    },
+    {
+      "index": "magnifying-glass",
+      "name": "Magnifying Glass",
+      "category": "adventuring_gear",
+      "weight": 0,
+      "cost": 10000,
+      "desc": "Grants advantage on ability checks to identify the nature of a fine-crafted item. Ignites dry tinder when focused sunlight on it.",
+      "effects": [],
+      "container": {
+        "max_capacity": 0,
+        "contents": []
+      }
+    },
+    {
+      "index": "manacles",
+      "name": "Manacles",
+      "category": "adventuring_gear",
+      "weight": 6,
+      "cost": 200,
+      "desc": "Can bind a Small or Medium creature. Escape DC 20 DEX (thieves' tools) or DC 20 STR. Each set comes with one key.",
+      "effects": [],
+      "container": {
+        "max_capacity": 0,
+        "contents": []
+      }
+    },
+    {
+      "index": "mirror-steel",
+      "name": "Mirror, Steel",
+      "category": "adventuring_gear",
+      "weight": 0.5,
+      "cost": 500,
+      "desc": "A small polished steel mirror, useful for signaling, checking around corners, or looking at a medusa.",
+      "effects": [],
+      "container": {
+        "max_capacity": 0,
+        "contents": []
+      }
+    },
+    {
+      "index": "oil-flask",
+      "name": "Oil (flask)",
+      "category": "adventuring_gear",
+      "weight": 1,
+      "cost": 10,
+      "desc": "Splash as action in 5 ft or throw up to 20 ft. Hit creature takes 5 fire damage. Area of oil burns for 2 rounds dealing 5 fire damage.",
+      "effects": [],
+      "container": {
+        "max_capacity": 0,
+        "contents": []
+      }
+    },
+    {
+      "index": "parchment",
+      "name": "Parchment (one sheet)",
+      "category": "adventuring_gear",
+      "weight": 0,
+      "cost": 10,
+      "desc": "A sheet of prepared animal skin for writing.",
+      "effects": [],
+      "container": {
+        "max_capacity": 0,
+        "contents": []
+      }
+    },
+    {
+      "index": "piton",
+      "name": "Piton",
+      "category": "adventuring_gear",
+      "weight": 0.25,
+      "cost": 5,
+      "desc": "A metal spike hammered into stone or ice to serve as an anchor.",
+      "effects": [],
+      "container": {
+        "max_capacity": 0,
+        "contents": []
+      }
+    },
+    {
+      "index": "poison-basic",
+      "name": "Poison, Basic (vial)",
+      "category": "adventuring_gear",
+      "weight": 0,
+      "cost": 10000,
+      "desc": "Apply to a weapon or piece of ammunition. Creature hit must make DC 10 CON save or take 1d4+2 poison damage. Effective for 1 minute.",
+      "effects": [
+        "poison-basic-damage-poison"
+      ],
+      "container": {
+        "max_capacity": 0,
+        "contents": []
+      }
+    },
+    {
+      "index": "pole-10-feet",
+      "name": "Pole (10-foot)",
+      "category": "adventuring_gear",
+      "weight": 7,
+      "cost": 5,
+      "desc": "A 10-foot wooden pole useful for probing ahead or creating a makeshift stretcher.",
+      "effects": [],
+      "container": {
+        "max_capacity": 0,
+        "contents": []
+      }
+    },
+    {
+      "index": "pouch",
+      "name": "Pouch",
+      "category": "adventuring_gear",
+      "weight": 1,
+      "cost": 50,
+      "desc": "A cloth or leather pouch that can hold up to 6 pounds / 1/5 cubic foot in components or coins.",
+      "effects": [],
+      "container": {
+        "max_capacity": 20,
+        "contents": []
+      }
+    },
+    {
+      "index": "rations-1-day",
+      "name": "Rations (1 day)",
+      "category": "adventuring_gear",
+      "weight": 2,
+      "cost": 50,
+      "desc": "Compact, dry foods suitable for extended travel, including jerky, dried fruit, hardtack, and nuts.",
+      "effects": [],
+      "container": {
+        "max_capacity": 0,
+        "contents": []
+      }
+    },
+    {
+      "index": "rope-hempen",
+      "name": "Rope, Hempen (50 feet)",
+      "category": "adventuring_gear",
+      "weight": 10,
+      "cost": 100,
+      "desc": "50 ft of hemp rope. Has 2 HP and can be burst with a DC 17 STR check.",
+      "effects": [],
+      "container": {
+        "max_capacity": 0,
+        "contents": []
+      }
+    },
+    {
+      "index": "rope-silk",
+      "name": "Rope, Silk (50 feet)",
+      "category": "adventuring_gear",
+      "weight": 5,
+      "cost": 1000,
+      "desc": "50 ft of lighter, stronger silk rope. Can be burst with a DC 20 STR check.",
+      "effects": [],
+      "container": {
+        "max_capacity": 0,
+        "contents": []
+      }
+    },
+    {
+      "index": "sack",
+      "name": "Sack",
+      "category": "adventuring_gear",
+      "weight": 0.5,
+      "cost": 1,
+      "desc": "A cloth sack that can hold up to 30 pounds / 1 cubic foot.",
+      "effects": [],
+      "container": {
+        "max_capacity": 50,
+        "contents": []
+      }
+    },
+    {
+      "index": "shovel",
+      "name": "Shovel",
+      "category": "adventuring_gear",
+      "weight": 5,
+      "cost": 200,
+      "desc": "A standard digging implement.",
+      "effects": [],
+      "container": {
+        "max_capacity": 0,
+        "contents": []
+      }
+    },
+    {
+      "index": "signal-whistle",
+      "name": "Signal Whistle",
+      "category": "adventuring_gear",
+      "weight": 0,
+      "cost": 5,
+      "desc": "A small whistle that produces a shrill signal sound.",
+      "effects": [],
+      "container": {
+        "max_capacity": 0,
+        "contents": []
+      }
+    },
+    {
+      "index": "spellbook",
+      "name": "Spellbook",
+      "category": "adventuring_gear",
+      "weight": 3,
+      "cost": 5000,
+      "desc": "Essential for wizards, this leather-bound tome holds up to 100 spells. Includes blank vellum pages for copying new spells.",
+      "effects": [],
+      "container": {
+        "max_capacity": 0,
+        "contents": []
+      }
+    },
+    {
+      "index": "spyglass",
+      "name": "Spyglass",
+      "category": "adventuring_gear",
+      "weight": 1,
+      "cost": 100000,
+      "desc": "Objects viewed through the spyglass are magnified to twice their size.",
+      "effects": [
+        "spyglass-advantage"
+      ],
+      "container": {
+        "max_capacity": 0,
+        "contents": []
+      }
+    },
+    {
+      "index": "tent-two-person",
+      "name": "Tent, Two-Person",
+      "category": "adventuring_gear",
+      "weight": 20,
+      "cost": 200,
+      "desc": "A simple and portable canvas shelter that sleeps two.",
+      "effects": [],
+      "container": {
+        "max_capacity": 0,
+        "contents": []
+      }
+    },
+    {
+      "index": "tinderbox",
+      "name": "Tinderbox",
+      "category": "adventuring_gear",
+      "weight": 1,
+      "cost": 50,
+      "desc": "Contains a flint, fire steel, and tinder (usually charred cloth). Light a torch or tinder as an action, or a fire in 1 minute.",
+      "effects": [],
+      "container": {
+        "max_capacity": 0,
+        "contents": []
+      }
+    },
+    {
+      "index": "torch",
+      "name": "Torch",
+      "category": "adventuring_gear",
+      "weight": 1,
+      "cost": 1,
+      "desc": "Burns for 1 hour, providing bright light in a 20-foot radius and dim light for an additional 20 feet. On hit, deals 1 fire damage.",
+      "effects": [
+        "torch-light-bright",
+        "torch-light-dim",
+        "torch-damage-fire"
+      ],
+      "container": {
+        "max_capacity": 0,
+        "contents": []
+      }
+    },
+    {
+      "index": "vial",
+      "name": "Vial",
+      "category": "adventuring_gear",
+      "weight": 0,
+      "cost": 100,
+      "desc": "A small glass container with a stopper. Holds 4 ounces of liquid.",
+      "effects": [],
+      "container": {
+        "max_capacity": 1,
+        "contents": []
+      }
+    },
+    {
+      "index": "waterskin",
+      "name": "Waterskin",
+      "category": "adventuring_gear",
+      "weight": 5,
+      "cost": 20,
+      "desc": "A leather pouch for holding water or other beverages. Holds 4 pints of liquid (weighs 5 lb when full, 0.5 lb when empty).",
+      "effects": [],
+      "container": {
+        "max_capacity": 0,
+        "contents": []
+      }
+    },
+    {
+      "index": "whetstone",
+      "name": "Whetstone",
+      "category": "adventuring_gear",
+      "weight": 1,
+      "cost": 1,
+      "desc": "A flat stone used for sharpening bladed weapons.",
+      "effects": [],
+      "container": {
+        "max_capacity": 0,
+        "contents": []
+      }
+    },
+    {
+      "index": "arrows-20",
+      "name": "Arrows (20)",
+      "category": "ammunition",
+      "weight": 1,
+      "cost": 100,
+      "desc": "20 arrows for use with a bow. Each arrow weighs 0.05 lb.",
+      "effects": [],
+      "container": {
+        "max_capacity": 20,
+        "contents": [
+          {
+            "index": "arrow",
+            "qty": 20
+          }
+        ]
+      }
+    },
+    {
+      "index": "bolts-20",
+      "name": "Crossbow Bolts (20)",
+      "category": "ammunition",
+      "weight": 1.5,
+      "cost": 100,
+      "desc": "20 bolts for use with crossbows.",
+      "effects": [],
+      "container": {
+        "max_capacity": 20,
+        "contents": [
+          {
+            "index": "bolt",
+            "qty": 20
+          }
+        ]
+      }
+    },
+    {
+      "index": "needles-50",
+      "name": "Blowgun Needles (50)",
+      "category": "ammunition",
+      "weight": 1,
+      "cost": 100,
+      "desc": "50 needles for use with a blowgun.",
+      "effects": [],
+      "container": {
+        "max_capacity": 50,
+        "contents": [
+          {
+            "index": "needle",
+            "qty": 50
+          }
+        ]
+      }
+    },
+    {
+      "index": "bullets-20",
+      "name": "Sling Bullets (20)",
+      "category": "ammunition",
+      "weight": 1.5,
+      "cost": 4,
+      "desc": "20 lead bullets for use with a sling.",
+      "effects": [],
+      "container": {
+        "max_capacity": 20,
+        "contents": [
+          {
+            "index": "bullet",
+            "qty": 20
+          }
+        ]
+      }
+    },
+    {
+      "index": "crystal",
+      "name": "Crystal",
+      "category": "arcane_focus",
+      "weight": 1,
+      "cost": 1000,
+      "desc": "An arcane focus in the form of a crystal. Can be used as a spellcasting focus for wizard and sorcerer spells.",
+      "effects": [],
+      "container": {
+        "max_capacity": 0,
+        "contents": []
+      }
+    },
+    {
+      "index": "orb",
+      "name": "Orb",
+      "category": "arcane_focus",
+      "weight": 3,
+      "cost": 2000,
+      "desc": "A glass or crystal sphere that serves as an arcane spellcasting focus.",
+      "effects": [],
+      "container": {
+        "max_capacity": 0,
+        "contents": []
+      }
+    },
+    {
+      "index": "rod",
+      "name": "Rod",
+      "category": "arcane_focus",
+      "weight": 2,
+      "cost": 1000,
+      "desc": "A metal rod that serves as an arcane spellcasting focus.",
+      "effects": [],
+      "container": {
+        "max_capacity": 0,
+        "contents": []
+      }
+    },
+    {
+      "index": "staff-focus",
+      "name": "Staff (Arcane Focus)",
+      "category": "arcane_focus",
+      "weight": 4,
+      "cost": 500,
+      "desc": "A wooden staff that serves as an arcane spellcasting focus. Can also be used as a quarterstaff.",
+      "effects": [],
+      "container": {
+        "max_capacity": 0,
+        "contents": []
+      }
+    },
+    {
+      "index": "wand-focus",
+      "name": "Wand",
+      "category": "arcane_focus",
+      "weight": 1,
+      "cost": 1000,
+      "desc": "A short wooden wand that serves as an arcane spellcasting focus.",
+      "effects": [],
+      "container": {
+        "max_capacity": 0,
+        "contents": []
+      }
+    },
+    {
+      "index": "mistletoe",
+      "name": "Mistletoe",
+      "category": "druidic_focus",
+      "weight": 0,
+      "cost": 100,
+      "desc": "Sprigs of mistletoe that serve as a druidic spellcasting focus.",
+      "effects": [],
+      "container": {
+        "max_capacity": 0,
+        "contents": []
+      }
+    },
+    {
+      "index": "totem",
+      "name": "Totem",
+      "category": "druidic_focus",
+      "weight": 0,
+      "cost": 100,
+      "desc": "A carved animal figure that serves as a druidic spellcasting focus.",
+      "effects": [],
+      "container": {
+        "max_capacity": 0,
+        "contents": []
+      }
+    },
+    {
+      "index": "wooden-staff",
+      "name": "Wooden Staff",
+      "category": "druidic_focus",
+      "weight": 4,
+      "cost": 500,
+      "desc": "A staff of wood carved with natural motifs, used as a druidic spellcasting focus.",
+      "effects": [],
+      "container": {
+        "max_capacity": 0,
+        "contents": []
+      }
+    },
+    {
+      "index": "yew-wand",
+      "name": "Yew Wand",
+      "category": "druidic_focus",
+      "weight": 1,
+      "cost": 1000,
+      "desc": "A wand carved from yew wood, used as a druidic spellcasting focus.",
+      "effects": [],
+      "container": {
+        "max_capacity": 0,
+        "contents": []
+      }
+    },
+    {
+      "index": "amulet",
+      "name": "Amulet",
+      "category": "holy_symbol",
+      "weight": 1,
+      "cost": 500,
+      "desc": "A holy symbol worn as a necklace. Can be used as a spellcasting focus for cleric and paladin spells.",
+      "effects": [],
+      "container": {
+        "max_capacity": 0,
+        "contents": []
+      }
+    },
+    {
+      "index": "emblem",
+      "name": "Emblem",
+      "category": "holy_symbol",
+      "weight": 0,
+      "cost": 500,
+      "desc": "A holy symbol worn as a badge or pin, embossed on a shield, or emblazoned on clothing.",
+      "effects": [],
+      "container": {
+        "max_capacity": 0,
+        "contents": []
+      }
+    },
+    {
+      "index": "reliquary",
+      "name": "Reliquary",
+      "category": "holy_symbol",
+      "weight": 2,
+      "cost": 500,
+      "desc": "A small container that holds a relic of significance to a deity, used as a holy symbol.",
+      "effects": [],
+      "container": {
+        "max_capacity": 0,
+        "contents": []
+      }
+    },
+    {
+      "index": "alchemists-supplies",
+      "name": "Alchemist's Supplies",
+      "category": "tool",
+      "weight": 8,
+      "cost": 5000,
+      "desc": "Includes vials, burners, flasks, and other equipment. Proficiency allows creating alchemical substances and identifying chemicals.",
+      "effects": [],
+      "container": {
+        "max_capacity": 0,
+        "contents": []
+      }
+    },
+    {
+      "index": "brewers-supplies",
+      "name": "Brewer's Supplies",
+      "category": "tool",
+      "weight": 9,
+      "cost": 2000,
+      "desc": "Includes a large glass jug, hops, a siphon, and several feet of tubing. Used to create ales and other beverages.",
+      "effects": [],
+      "container": {
+        "max_capacity": 0,
+        "contents": []
+      }
+    },
+    {
+      "index": "calligraphers-supplies",
+      "name": "Calligrapher's Supplies",
+      "category": "tool",
+      "weight": 5,
+      "cost": 1000,
+      "desc": "Includes ink, a dozen sheets of parchment, and three quills. Used to create written works.",
+      "effects": [],
+      "container": {
+        "max_capacity": 0,
+        "contents": []
+      }
+    },
+    {
+      "index": "carpenters-tools",
+      "name": "Carpenter's Tools",
+      "category": "tool",
+      "weight": 6,
+      "cost": 800,
+      "desc": "Includes a saw, hammer, nails, a hatchet, a square, a ruler, an adze, a plane, and a chisel.",
+      "effects": [],
+      "container": {
+        "max_capacity": 0,
+        "contents": []
+      }
+    },
+    {
+      "index": "cartographers-tools",
+      "name": "Cartographer's Tools",
+      "category": "tool",
+      "weight": 6,
+      "cost": 1500,
+      "desc": "Includes a quill, ink, parchment, a compass, calipers, and rulers for mapmaking.",
+      "effects": [],
+      "container": {
+        "max_capacity": 0,
+        "contents": []
+      }
+    },
+    {
+      "index": "cobblers-tools",
+      "name": "Cobbler's Tools",
+      "category": "tool",
+      "weight": 5,
+      "cost": 500,
+      "desc": "Includes a hammer, awl, knife, shoe stand, and supplies for making or repairing footwear.",
+      "effects": [],
+      "container": {
+        "max_capacity": 0,
+        "contents": []
+      }
+    },
+    {
+      "index": "cooks-utensils",
+      "name": "Cook's Utensils",
+      "category": "tool",
+      "weight": 8,
+      "cost": 100,
+      "desc": "Includes metal pots, pans, ladles, tongs, and other cooking equipment.",
+      "effects": [],
+      "container": {
+        "max_capacity": 0,
+        "contents": []
+      }
+    },
+    {
+      "index": "disguise-kit",
+      "name": "Disguise Kit",
+      "category": "tool",
+      "weight": 3,
+      "cost": 2500,
+      "desc": "This pouch of cosmetics, hair dye, and small props allows disguises. Proficiency adds bonus to Charisma (Deception) checks.",
+      "effects": [],
+      "container": {
+        "max_capacity": 0,
+        "contents": []
+      }
+    },
+    {
+      "index": "forgery-kit",
+      "name": "Forgery Kit",
+      "category": "tool",
+      "weight": 5,
+      "cost": 1500,
+      "desc": "A small box with papers, parchments, inks, seals, and wax for forging documents.",
+      "effects": [],
+      "container": {
+        "max_capacity": 0,
+        "contents": []
+      }
+    },
+    {
+      "index": "gaming-set-dice",
+      "name": "Gaming Set (Dice)",
+      "category": "tool",
+      "weight": 0,
+      "cost": 10,
+      "desc": "A set of polyhedral dice and a pouch. Proficiency allows advantage on related games of chance.",
+      "effects": [],
+      "container": {
+        "max_capacity": 0,
+        "contents": []
+      }
+    },
+    {
+      "index": "herbalism-kit",
+      "name": "Herbalism Kit",
+      "category": "tool",
+      "weight": 3,
+      "cost": 500,
+      "desc": "Includes clippers, mortar and pestle, pouches, and vials. Used to identify and prepare herbal remedies, including antitoxin and healer's kit components.",
+      "effects": [],
+      "container": {
+        "max_capacity": 0,
+        "contents": []
+      }
+    },
+    {
+      "index": "jewelers-tools",
+      "name": "Jeweler's Tools",
+      "category": "tool",
+      "weight": 2,
+      "cost": 2500,
+      "desc": "Includes pliers, files, and a jeweler's loupe. Used to identify gems and create jewelry.",
+      "effects": [],
+      "container": {
+        "max_capacity": 0,
+        "contents": []
+      }
+    },
+    {
+      "index": "leatherworkers-tools",
+      "name": "Leatherworker's Tools",
+      "category": "tool",
+      "weight": 5,
+      "cost": 500,
+      "desc": "Includes a knife, awl, needles, thread, and a wooden form for working leather.",
+      "effects": [],
+      "container": {
+        "max_capacity": 0,
+        "contents": []
+      }
+    },
+    {
+      "index": "masons-tools",
+      "name": "Mason's Tools",
+      "category": "tool",
+      "weight": 8,
+      "cost": 1000,
+      "desc": "Includes a trowel, hammer, chisel, brushes, and a square for stonework.",
+      "effects": [],
+      "container": {
+        "max_capacity": 0,
+        "contents": []
+      }
+    },
+    {
+      "index": "navigators-tools",
+      "name": "Navigator's Tools",
+      "category": "tool",
+      "weight": 2,
+      "cost": 2500,
+      "desc": "Includes charts, a compass, calipers, a ruler, sextant, and telescope for maritime navigation.",
+      "effects": [],
+      "container": {
+        "max_capacity": 0,
+        "contents": []
+      }
+    },
+    {
+      "index": "painters-supplies",
+      "name": "Painter's Supplies",
+      "category": "tool",
+      "weight": 5,
+      "cost": 1000,
+      "desc": "Includes an easel, canvas, paints, brushes, charcoal, and palette for creating works of art.",
+      "effects": [],
+      "container": {
+        "max_capacity": 0,
+        "contents": []
+      }
+    },
+    {
+      "index": "poisoners-kit",
+      "name": "Poisoner's Kit",
+      "category": "tool",
+      "weight": 2,
+      "cost": 5000,
+      "desc": "Includes vials, chemicals, and a mortar and pestle. Proficiency allows creating and harvesting poisons.",
+      "effects": [],
+      "container": {
+        "max_capacity": 0,
+        "contents": []
+      }
+    },
+    {
+      "index": "smiths-tools",
+      "name": "Smith's Tools",
+      "category": "tool",
+      "weight": 8,
+      "cost": 2000,
+      "desc": "Includes hammers, tongs, a file, a whetstone, and a punch for blacksmithing.",
+      "effects": [],
+      "container": {
+        "max_capacity": 0,
+        "contents": []
+      }
+    },
+    {
+      "index": "thieves-tools",
+      "name": "Thieves' Tools",
+      "category": "tool",
+      "weight": 1,
+      "cost": 2500,
+      "desc": "Includes small files, a set of lockpicks, a small mirror, scissors, and pliers. Proficiency required to use effectively for picking locks and disarming traps.",
+      "effects": [],
+      "container": {
+        "max_capacity": 0,
+        "contents": []
+      }
+    },
+    {
+      "index": "tinkers-tools",
+      "name": "Tinker's Tools",
+      "category": "tool",
+      "weight": 10,
+      "cost": 5000,
+      "desc": "Includes a variety of hand tools, thread, needles, a whetstone, scraps of cloth and leather, and a small pot of glue.",
+      "effects": [],
+      "container": {
+        "max_capacity": 0,
+        "contents": []
+      }
+    },
+    {
+      "index": "burglar-pack",
+      "name": "Burglar's Pack",
+      "category": "pack",
+      "weight": 0,
+      "cost": 1600,
+      "desc": "Includes a backpack, ball bearings (bag of 1000), string (10 feet), a bell, candles (5), a crowbar, a hammer, pitons (10), a hooded lantern, flasks of oil (2), 5-day rations, a tinderbox, and a waterskin. The pack also has 50 feet of hempen rope strapped to the side of it.",
+      "effects": [],
+      "container": {
+        "max_capacity": 19,
+        "contents": [
+          {
+            "index": "backpack"
+          },
+          {
+            "desc": "Bag of 1000 Ball Bearings"
+          },
+          {
+            "desc": "10 Feet of String"
+          },
+          {
+            "desc": "Bell"
+          },
+          {
+            "index": "candle",
+            "qty": 5
+          },
+          {
+            "index": "crowbar"
+          },
+          {
+            "index": "hammer"
+          },
+          {
+            "index": "piton",
+            "qty": 10
+          },
+          {
+            "index": "lantern-hooded"
+          },
+          {
+            "index": "oil-flask",
+            "qty": 2
+          },
+          {
+            "index": "rations-1-day",
+            "qty": 5
+          },
+          {
+            "index": "tinderbox"
+          },
+          {
+            "index": "waterskin"
+          },
+          {
+            "index": "rope-hempen"
+          }
+        ]
+      }
+    },
+    {
+      "index": "diplomat-pack",
+      "name": "Diplomat's Pack",
+      "category": "pack",
+      "weight": 0,
+      "cost": 3900,
+      "desc": "Includes a chest, 2 cases for maps and scrolls, a set of fine clothes, a bottle of ink, an ink pen, a lamp, 2 flasks of oil, 5 sheets of paper, a vial of perfume, sealing wax, and soap.",
+      "effects": [],
+      "container": {
+        "max_capacity": 14,
+        "contents": [
+          {
+            "desc": "Chest"
+          },
+          {
+            "desc": "Map/Scroll Case",
+            "qty": 2
+          },
+          {
+            "desc": "Fine Clothes"
+          },
+          {
+            "index": "ink-bottle"
+          },
+          {
+            "index": "ink-pen"
+          },
+          {
+            "index": "lamp"
+          },
+          {
+            "index": "oil-flask",
+            "qty": 2
+          },
+          {
+            "index": "parchment",
+            "qty": 5
+          },
+          {
+            "desc": "Perfume Vial"
+          },
+          {
+            "desc": "Sealing Wax"
+          },
+          {
+            "desc": "Soap"
+          }
+        ]
+      }
+    },
+    {
+      "index": "dungeoneer-pack",
+      "name": "Dungeoneer's Pack",
+      "category": "pack",
+      "weight": 0,
+      "cost": 1200,
+      "desc": "Includes a backpack, a crowbar, a hammer, 10 pitons, 10 torches, a tinderbox, 10 days of rations, and a waterskin. The pack also has 50 feet of hempen rope strapped to the side of it.",
+      "effects": [],
+      "container": {
+        "max_capacity": 10,
+        "contents": [
+          {
+            "index": "backpack"
+          },
+          {
+            "index": "crowbar"
+          },
+          {
+            "index": "hammer"
+          },
+          {
+            "index": "piton",
+            "qty": 10
+          },
+          {
+            "index": "torch",
+            "qty": 10
+          },
+          {
+            "index": "tinderbox"
+          },
+          {
+            "index": "rations-1-day",
+            "qty": 10
+          },
+          {
+            "index": "waterskin"
+          },
+          {
+            "index": "rope-hempen"
+          }
+        ]
+      }
+    },
+    {
+      "index": "entertainer-pack",
+      "name": "Entertainer's Pack",
+      "category": "pack",
+      "weight": 0,
+      "cost": 4000,
+      "desc": "Includes a backpack, a bedroll, 2 costumes, 5 candles, 5 days of rations, a waterskin, and a disguise kit.",
+      "effects": [],
+      "container": {
+        "max_capacity": 9,
+        "contents": [
+          {
+            "index": "backpack"
+          },
+          {
+            "index": "bedroll"
+          },
+          {
+            "desc": "Costume",
+            "qty": 2
+          },
+          {
+            "index": "candle",
+            "qty": 5
+          },
+          {
+            "index": "rations-1-day",
+            "qty": 5
+          },
+          {
+            "index": "waterskin"
+          },
+          {
+            "index": "disguise-kit"
+          }
+        ]
+      }
+    },
+    {
+      "index": "explorer-pack",
+      "name": "Explorer's Pack",
+      "category": "pack",
+      "weight": 0,
+      "cost": 1000,
+      "desc": "Includes a backpack, a bedroll, a mess kit, a tinderbox, 10 torches, 10 days of rations, and a waterskin. The pack also has 50 feet of hempen rope strapped to the side of it.",
+      "effects": [],
+      "container": {
+        "max_capacity": 9,
+        "contents": [
+          {
+            "index": "backpack"
+          },
+          {
+            "index": "bedroll"
+          },
+          {
+            "desc": "Mess Kit"
+          },
+          {
+            "index": "tinderbox"
+          },
+          {
+            "index": "torch",
+            "qty": 10
+          },
+          {
+            "index": "rations-1-day",
+            "qty": 10
+          },
+          {
+            "index": "waterskin"
+          },
+          {
+            "index": "rope-hempen"
+          }
+        ]
+      }
+    },
+    {
+      "index": "priest-pack",
+      "name": "Priest's Pack",
+      "category": "pack",
+      "weight": 0,
+      "cost": 1900,
+      "desc": "Includes a backpack, a blanket, 10 candles, a tinderbox, an alms box, 2 blocks of incense, a censer, vestments, 2 days of rations, and a waterskin.",
+      "effects": [],
+      "container": {
+        "max_capacity": 11,
+        "contents": [
+          {
+            "index": "backpack"
+          },
+          {
+            "index": "blanket"
+          },
+          {
+            "index": "candle",
+            "qty": 10
+          },
+          {
+            "index": "tinderbox"
+          },
+          {
+            "desc": "Alms Box"
+          },
+          {
+            "desc": "Block of Incense",
+            "qty": 2
+          },
+          {
+            "desc": "Censer"
+          },
+          {
+            "desc": "Vestments"
+          },
+          {
+            "index": "rations-1-day",
+            "qty": 2
+          },
+          {
+            "index": "waterskin"
+          }
+        ]
+      }
+    },
+    {
+      "index": "scholar-pack",
+      "name": "Scholar's Pack",
+      "category": "pack",
+      "weight": 0,
+      "cost": 4000,
+      "desc": "Includes a backpack, a book of lore, a bottle of ink, an ink pen, 10 sheets of parchment, a little bag of sand, and a small knife.",
+      "effects": [],
+      "container": {
+        "max_capacity": 8,
+        "contents": [
+          {
+            "index": "backpack"
+          },
+          {
+            "desc": "Book of Lore"
+          },
+          {
+            "index": "ink-bottle"
+          },
+          {
+            "index": "ink-pen"
+          },
+          {
+            "index": "parchment",
+            "qty": 10
+          },
+          {
+            "desc": "Small Knife"
+          }
+        ]
+      }
+    }
   ]
 }

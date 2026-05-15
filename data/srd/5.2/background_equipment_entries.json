@@ -1,0 +1,152 @@
+{
+  "background_equipment_entries": [
+    {
+      "index": "acolyte-equipment",
+      "items": [
+        {"choice": "holy_symbol"},
+        {"desc": "Prayer Book"},
+        {"desc": "Stick of Incense", "qty": 5},
+        {"desc": "Vestments"},
+        {"desc": "Common Clothes"},
+        {"gold": 15}
+      ]
+    },
+    {
+      "index": "artisan-equipment",
+      "items": [
+        {"choice": "artisans_tools"},
+        {"desc": "Traveler's Clothes"},
+        {"gold": 32}
+      ]
+    },
+    {
+      "index": "charlatan-equipment",
+      "items": [
+        {"desc": "Fine Clothes"},
+        {"index": "disguise-kit"},
+        {"desc": "Tools of the Con"},
+        {"gold": 15}
+      ]
+    },
+    {
+      "index": "criminal-equipment",
+      "items": [
+        {"index": "crowbar"},
+        {"desc": "Dark Common Clothes with Hood"},
+        {"index": "thieves-tools"},
+        {"gold": 15}
+      ]
+    },
+    {
+      "index": "entertainer-equipment",
+      "items": [
+        {"choice": "instrument"},
+        {"desc": "Costume"},
+        {"desc": "Favor of an Admirer"},
+        {"index": "entertainer-pack"},
+        {"gold": 15}
+      ]
+    },
+    {
+      "index": "farmer-equipment",
+      "items": [
+        {"index": "sickle"},
+        {"desc": "Traveler's Clothes"},
+        {"gold": 23}
+      ]
+    },
+    {
+      "index": "guard-equipment",
+      "items": [
+        {"index": "spear"},
+        {"index": "crossbow-light"},
+        {"index": "bolts-20"},
+        {"desc": "Uniform"},
+        {"gold": 10}
+      ]
+    },
+    {
+      "index": "guide-equipment",
+      "items": [
+        {"index": "cartographers-tools"},
+        {"desc": "Traveler's Clothes"},
+        {"gold": 10}
+      ]
+    },
+    {
+      "index": "hermit-equipment",
+      "items": [
+        {"desc": "Scroll Case with Notes"},
+        {"index": "blanket"},
+        {"desc": "Common Clothes"},
+        {"index": "herbalism-kit"},
+        {"gold": 5}
+      ]
+    },
+    {
+      "index": "merchant-equipment",
+      "items": [
+        {"desc": "Merchant's Scale"},
+        {"desc": "Traveler's Clothes"},
+        {"gold": 25}
+      ]
+    },
+    {
+      "index": "noble-equipment",
+      "items": [
+        {"desc": "Fine Clothes"},
+        {"desc": "Signet Ring"},
+        {"desc": "Scroll of Pedigree"},
+        {"gold": 25}
+      ]
+    },
+    {
+      "index": "sage-equipment",
+      "items": [
+        {"index": "ink-bottle"},
+        {"index": "ink-pen"},
+        {"desc": "Small Knife"},
+        {"desc": "Letter from Dead Colleague"},
+        {"desc": "Common Clothes"},
+        {"gold": 10}
+      ]
+    },
+    {
+      "index": "sailor-equipment",
+      "items": [
+        {"desc": "Belaying Pin (Club)"},
+        {"index": "rope-silk"},
+        {"desc": "Lucky Charm"},
+        {"desc": "Common Clothes"},
+        {"gold": 10}
+      ]
+    },
+    {
+      "index": "scribe-equipment",
+      "items": [
+        {"index": "calligraphers-supplies"},
+        {"desc": "Fine Ink"},
+        {"desc": "Common Clothes"},
+        {"gold": 10}
+      ]
+    },
+    {
+      "index": "soldier-equipment",
+      "items": [
+        {"desc": "Rank Insignia"},
+        {"desc": "Trophy from Fallen Enemy"},
+        {"choice": "gaming_set"},
+        {"desc": "Common Clothes"},
+        {"gold": 10}
+      ]
+    },
+    {
+      "index": "wayfarer-equipment",
+      "items": [
+        {"desc": "Traveler's Clothes"},
+        {"index": "thieves-tools"},
+        {"gold": 16}
+      ]
+    }
+  ]
+}

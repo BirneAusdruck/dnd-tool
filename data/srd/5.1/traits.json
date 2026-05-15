@@ -1,0 +1,329 @@
+{
+  "traits": [
+    {
+      "index": "human-extra-language",
+      "name": "Extra Language",
+      "desc": "You can speak, read, and write one extra language of your choice.",
+      "effects": []
+    },
+    {
+      "index": "dwarf-darkvision",
+      "name": "Darkvision",
+      "desc": "Accustomed to underground life, you have superior vision in dark and dim conditions. You can see in dim light within 60 ft. as if it were bright light, and in darkness as if it were dim light.",
+      "effects": []
+    },
+    {
+      "index": "dwarf-dwarven-resilience",
+      "name": "Dwarven Resilience",
+      "desc": "Advantage on saving throws against poison, resistance against poison damage.",
+      "effects": [
+        "dwarven-resilience-poison-advantage",
+        "dwarven-resilience-poison-resistance"
+      ]
+    },
+    {
+      "index": "dwarf-dwarven-combat-training",
+      "name": "Dwarven Combat Training",
+      "desc": "Proficiency with battleaxe, handaxe, light hammer, and warhammer.",
+      "effects": [
+        "dwarven-combat-training-battleaxe",
+        "dwarven-combat-training-handaxe",
+        "dwarven-combat-training-light-hammer",
+        "dwarven-combat-training-warhammer"
+      ]
+    },
+    {
+      "index": "dwarf-tool-proficiency",
+      "name": "Tool Proficiency",
+      "desc": "Proficiency with smith's tools, brewer's supplies, or mason's tools (your choice).",
+      "effects": []
+    },
+    {
+      "index": "dwarf-stonecunning",
+      "name": "Stonecunning",
+      "desc": "Double proficiency bonus on History checks related to the origin of stonework.",
+      "effects": []
+    },
+    {
+      "index": "hill-dwarf-dwarven-toughness",
+      "name": "Dwarven Toughness",
+      "desc": "Your hit point maximum increases by 1, and it increases by 1 every time you gain a level.",
+      "effects": []
+    },
+    {
+      "index": "mountain-dwarf-dwarven-armor-training",
+      "name": "Dwarven Armor Training",
+      "desc": "You have proficiency with light and medium armor.",
+      "effects": [
+        "dwarven-armor-training-light-proficiency",
+        "dwarven-armor-training-medium-proficiency"
+      ]
+    },
+    {
+      "index": "elf-darkvision",
+      "name": "Darkvision",
+      "desc": "Superior vision in dark and dim conditions. 60 ft. darkvision.",
+      "effects": []
+    },
+    {
+      "index": "elf-keen-senses",
+      "name": "Keen Senses",
+      "desc": "Proficiency in the Perception skill.",
+      "effects": [
+        "keen-senses-perception-proficiency"
+      ]
+    },
+    {
+      "index": "elf-fey-ancestry",
+      "name": "Fey Ancestry",
+      "desc": "Advantage on saving throws against being charmed, and magic can't put you to sleep.",
+      "effects": [
+        "fey-ancestry-charmed-advantage"
+      ]
+    },
+    {
+      "index": "elf-trance",
+      "name": "Trance",
+      "desc": "You don't need to sleep. Instead, you meditate deeply for 4 hours a day, gaining the same benefit as a human from 8 hours of sleep.",
+      "effects": []
+    },
+    {
+      "index": "high-elf-elf-weapon-training",
+      "name": "Elf Weapon Training",
+      "desc": "Proficiency with longsword, shortsword, shortbow, and longbow.",
+      "effects": [
+        "elf-weapon-training-longsword",
+        "elf-weapon-training-shortsword",
+        "elf-weapon-training-shortbow",
+        "elf-weapon-training-longbow"
+      ]
+    },
+    {
+      "index": "high-elf-cantrip",
+      "name": "Cantrip",
+      "desc": "You know one cantrip of your choice from the wizard spell list (INT is your spellcasting ability).",
+      "effects": []
+    },
+    {
+      "index": "high-elf-extra-language",
+      "name": "Extra Language",
+      "desc": "You can speak, read, and write one extra language of your choice.",
+      "effects": []
+    },
+    {
+      "index": "wood-elf-elf-weapon-training",
+      "name": "Elf Weapon Training",
+      "desc": "Proficiency with longsword, shortsword, shortbow, and longbow.",
+      "effects": [
+        "elf-weapon-training-longsword",
+        "elf-weapon-training-shortsword",
+        "elf-weapon-training-shortbow",
+        "elf-weapon-training-longbow"
+      ]
+    },
+    {
+      "index": "wood-elf-fleet-of-foot",
+      "name": "Fleet of Foot",
+      "desc": "Your base walking speed increases to 35 ft.",
+      "effects": [
+        "fleet-of-foot-speed-bonus"
+      ]
+    },
+    {
+      "index": "wood-elf-mask-of-the-wild",
+      "name": "Mask of the Wild",
+      "desc": "You can attempt to hide even when only lightly obscured by natural phenomena.",
+      "effects": []
+    },
+    {
+      "index": "dark-elf-superior-darkvision",
+      "name": "Superior Darkvision",
+      "desc": "Your darkvision extends to 120 ft.",
+      "effects": []
+    },
+    {
+      "index": "dark-elf-sunlight-sensitivity",
+      "name": "Sunlight Sensitivity",
+      "desc": "Disadvantage on attack rolls and Perception checks that rely on sight when in direct sunlight.",
+      "effects": [
+        "sunlight-sensitivity-attack-disadvantage",
+        "sunlight-sensitivity-perception-disadvantage"
+      ]
+    },
+    {
+      "index": "dark-elf-drow-magic",
+      "name": "Drow Magic",
+      "desc": "You know the Dancing Lights cantrip. At 3rd level, Faerie Fire once per day. At 5th, Darkness once per day (CHA).",
+      "effects": []
+    },
+    {
+      "index": "dark-elf-drow-weapon-training",
+      "name": "Drow Weapon Training",
+      "desc": "Proficiency with rapiers, shortswords, and hand crossbows.",
+      "effects": [
+        "drow-weapon-training-rapier",
+        "drow-weapon-training-shortsword",
+        "drow-weapon-training-hand-crossbow"
+      ]
+    },
+    {
+      "index": "halfling-lucky",
+      "name": "Lucky",
+      "desc": "When you roll a 1 on the d20 for an attack roll, ability check, or saving throw, you can reroll and must use the new roll.",
+      "effects": []
+    },
+    {
+      "index": "halfling-brave",
+      "name": "Brave",
+      "desc": "Advantage on saving throws against being frightened.",
+      "effects": [
+        "brave-frightened-advantage"
+      ]
+    },
+    {
+      "index": "halfling-halfling-nimbleness",
+      "name": "Halfling Nimbleness",
+      "desc": "You can move through the space of any creature that is of a size larger than yours.",
+      "effects": []
+    },
+    {
+      "index": "lightfoot-naturally-stealthy",
+      "name": "Naturally Stealthy",
+      "desc": "You can attempt to hide even when only obscured by a creature that is at least one size larger than you.",
+      "effects": []
+    },
+    {
+      "index": "stout-stout-resilience",
+      "name": "Stout Resilience",
+      "desc": "Advantage on saving throws against poison, resistance against poison damage.",
+      "effects": [
+        "stout-resilience-poison-advantage",
+        "stout-resilience-poison-resistance"
+      ]
+    },
+    {
+      "index": "dragonborn-draconic-ancestry",
+      "name": "Draconic Ancestry",
+      "desc": "You have draconic ancestry. Choose a dragon type, which determines your breath weapon and damage resistance.",
+      "effects": []
+    },
+    {
+      "index": "dragonborn-breath-weapon",
+      "name": "Breath Weapon",
+      "desc": "Use your action to exhale destructive energy (2d6 damage, Dex or Con save DC 8 + CON mod + proficiency). Usable once per short or long rest.",
+      "effects": []
+    },
+    {
+      "index": "dragonborn-damage-resistance",
+      "name": "Damage Resistance",
+      "desc": "Resistance to the damage type associated with your draconic ancestry.",
+      "effects": [
+        "draconic-damage-resistance"
+      ]
+    },
+    {
+      "index": "gnome-darkvision",
+      "name": "Darkvision",
+      "desc": "Accustomed to life underground, you have darkvision to 60 ft.",
+      "effects": []
+    },
+    {
+      "index": "gnome-gnome-cunning",
+      "name": "Gnome Cunning",
+      "desc": "Advantage on all INT, WIS, and CHA saving throws against magic.",
+      "effects": [
+        "gnome-cunning-saves-advantage"
+      ]
+    },
+    {
+      "index": "forest-gnome-natural-illusionist",
+      "name": "Natural Illusionist",
+      "desc": "You know the Minor Illusion cantrip (INT is your spellcasting ability).",
+      "effects": []
+    },
+    {
+      "index": "forest-gnome-speak-with-small-beasts",
+      "name": "Speak with Small Beasts",
+      "desc": "You can communicate simple ideas with Small or smaller beasts.",
+      "effects": []
+    },
+    {
+      "index": "rock-gnome-artificer-s-lore",
+      "name": "Artificer's Lore",
+      "desc": "Double proficiency bonus on History checks related to magic items, alchemical objects, or technological devices.",
+      "effects": []
+    },
+    {
+      "index": "rock-gnome-tinker",
+      "name": "Tinker",
+      "desc": "Proficiency with artisan's tools (tinker's tools). You can spend 1 hour and 10 gp to construct a tiny clockwork device.",
+      "effects": []
+    },
+    {
+      "index": "half-elf-darkvision",
+      "name": "Darkvision",
+      "desc": "60 ft. darkvision.",
+      "effects": []
+    },
+    {
+      "index": "half-elf-fey-ancestry",
+      "name": "Fey Ancestry",
+      "desc": "Advantage on saving throws against being charmed, and magic can't put you to sleep.",
+      "effects": [
+        "fey-ancestry-charmed-advantage"
+      ]
+    },
+    {
+      "index": "half-elf-skill-versatility",
+      "name": "Skill Versatility",
+      "desc": "You gain proficiency in two skills of your choice.",
+      "effects": []
+    },
+    {
+      "index": "half-orc-darkvision",
+      "name": "Darkvision",
+      "desc": "60 ft. darkvision.",
+      "effects": []
+    },
+    {
+      "index": "half-orc-menacing",
+      "name": "Menacing",
+      "desc": "You gain proficiency in the Intimidation skill.",
+      "effects": [
+        "menacing-intimidation-proficiency"
+      ]
+    },
+    {
+      "index": "half-orc-relentless-endurance",
+      "name": "Relentless Endurance",
+      "desc": "When you are reduced to 0 hit points but not killed outright, you can drop to 1 hit point instead. Once per long rest.",
+      "effects": []
+    },
+    {
+      "index": "half-orc-savage-attacks",
+      "name": "Savage Attacks",
+      "desc": "When you score a critical hit with a melee weapon attack, you can roll one of the weapon's damage dice one additional time.",
+      "effects": []
+    },
+    {
+      "index": "tiefling-darkvision",
+      "name": "Darkvision",
+      "desc": "60 ft. darkvision.",
+      "effects": []
+    },
+    {
+      "index": "tiefling-hellish-resistance",
+      "name": "Hellish Resistance",
+      "desc": "Resistance to fire damage.",
+      "effects": [
+        "hellish-resistance-fire"
+      ]
+    },
+    {
+      "index": "tiefling-infernal-legacy",
+      "name": "Infernal Legacy",
+      "desc": "You know the Thaumaturgy cantrip. At 3rd level, Hellish Rebuke (1/day). At 5th level, Darkness (1/day). CHA is your spellcasting ability.",
+      "effects": []
+    }
+  ]
+}

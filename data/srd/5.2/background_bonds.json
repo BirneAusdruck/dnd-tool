@@ -1,0 +1,116 @@
+{
+  "background_bonds": [
+    {
+      "index": "acolyte",
+      "desc": [
+        "I would die to recover an ancient relic of my faith that was lost long ago.",
+        "I will someday get revenge on the corrupt temple hierarchy who branded me a heretic."
+      ]
+    },
+    {
+      "index": "artisan",
+      "desc": [
+        "The workshop where I learned my trade is the most important place in the world to me.",
+        "I owe my guild a great debt for forging me into the person I am today."
+      ]
+    },
+    {
+      "index": "charlatan",
+      "desc": [
+        "I fleeced the wrong person and must work to ensure that this individual never crosses paths with me or those I care about.",
+        "I owe everything to my mentor—a horrible person who's probably rotting in jail somewhere."
+      ]
+    },
+    {
+      "index": "criminal",
+      "desc": [
+        "I'm trying to pay off an old debt I owe to a generous benefactor.",
+        "My ill-gotten gains go to support my family."
+      ]
+    },
+    {
+      "index": "entertainer",
+      "desc": [
+        "My instrument is my most treasured possession, and it reminds me of someone I love.",
+        "I want to be famous, whatever it takes."
+      ]
+    },
+    {
+      "index": "farmer",
+      "desc": [
+        "My family, clan, or tribe is the most important thing in my life.",
+        "I worked the land for years, and defending that land is the most sacred duty I know."
+      ]
+    },
+    {
+      "index": "guard",
+      "desc": [
+        "I would still lay down my life for the people I once served with.",
+        "Someone saved my life on the battlefield. To this day, I will never leave a friend behind."
+      ]
+    },
+    {
+      "index": "guide",
+      "desc": [
+        "My family, clan, or tribe is the most important thing in my life.",
+        "I will bring terrible wrath down on the evildoers who destroyed my homeland."
+      ]
+    },
+    {
+      "index": "hermit",
+      "desc": [
+        "Nothing is more important than the other members of my hermitage, order, or association.",
+        "I entered seclusion to hide from the ones who might still be hunting me. I must someday confront them."
+      ]
+    },
+    {
+      "index": "merchant",
+      "desc": [
+        "My business partners are my most important allies.",
+        "I once cheated a customer out of a great sum, and I feel terrible about it."
+      ]
+    },
+    {
+      "index": "noble",
+      "desc": [
+        "I will face any challenge to win the approval of my family.",
+        "My loyalty to my sovereign is unwavering."
+      ]
+    },
+    {
+      "index": "sage",
+      "desc": [
+        "It is my duty to protect my students.",
+        "I have an ancient text that holds terrible secrets that must not fall into the wrong hands."
+      ]
+    },
+    {
+      "index": "sailor",
+      "desc": [
+        "I'm loyal to my captain first, everything else second.",
+        "The sea is freedom—the freedom to go anywhere and do anything."
+      ]
+    },
+    {
+      "index": "scribe",
+      "desc": [
+        "I must have a particular manuscript, and will do nearly anything to acquire it.",
+        "I work to preserve a library that is under threat."
+      ]
+    },
+    {
+      "index": "soldier",
+      "desc": [
+        "I would still lay down my life for the people I served with.",
+        "Someone saved my life on the battlefield. To this day, I will never leave a friend behind."
+      ]
+    },
+    {
+      "index": "wayfarer",
+      "desc": [
+        "I will do anything to protect the streets I grew up on.",
+        "I have a family, but I have no idea where they are. I hope to see them again someday."
+      ]
+    }
+  ]
+}

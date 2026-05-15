@@ -1,0 +1,180 @@
+{
+  "background_ideals": [
+    {
+      "index": "acolyte",
+      "desc": [
+        "Tradition",
+        "Charity",
+        "Change",
+        "Power",
+        "Faith",
+        "Aspiration"
+      ]
+    },
+    {
+      "index": "artisan",
+      "desc": [
+        "Community",
+        "Generosity",
+        "Freedom",
+        "Greed",
+        "People",
+        "Aspiration"
+      ]
+    },
+    {
+      "index": "charlatan",
+      "desc": [
+        "Independence",
+        "Fairness",
+        "Charity",
+        "Creativity",
+        "Friendship",
+        "Aspiration"
+      ]
+    },
+    {
+      "index": "criminal",
+      "desc": [
+        "Honor",
+        "Freedom",
+        "Charity",
+        "Greed",
+        "People",
+        "Redemption"
+      ]
+    },
+    {
+      "index": "entertainer",
+      "desc": [
+        "Beauty",
+        "Tradition",
+        "Creativity",
+        "Greed",
+        "People",
+        "Honesty"
+      ]
+    },
+    {
+      "index": "farmer",
+      "desc": [
+        "Respect",
+        "Fairness",
+        "Community",
+        "Charity",
+        "Tradition",
+        "Destiny"
+      ]
+    },
+    {
+      "index": "guard",
+      "desc": [
+        "Greater Good",
+        "Responsibility",
+        "Independence",
+        "Might",
+        "Idealism",
+        "Nation"
+      ]
+    },
+    {
+      "index": "guide",
+      "desc": [
+        "Change",
+        "Greater Good",
+        "Freedom",
+        "Nature",
+        "Glory",
+        "Living in the Moment"
+      ]
+    },
+    {
+      "index": "hermit",
+      "desc": [
+        "Greater Good",
+        "Logic",
+        "Free Thinking",
+        "Power",
+        "Live and Let Live",
+        "Self-Knowledge"
+      ]
+    },
+    {
+      "index": "merchant",
+      "desc": [
+        "Profit",
+        "Fairness",
+        "Greed",
+        "Aspiration",
+        "Community",
+        "Freedom"
+      ]
+    },
+    {
+      "index": "noble",
+      "desc": [
+        "Respect",
+        "Responsibility",
+        "Independence",
+        "Power",
+        "Family",
+        "Noble Obligation"
+      ]
+    },
+    {
+      "index": "sage",
+      "desc": [
+        "Knowledge",
+        "Beauty",
+        "Logic",
+        "No Limits",
+        "Power",
+        "Self-Improvement"
+      ]
+    },
+    {
+      "index": "sailor",
+      "desc": [
+        "Respect",
+        "Fairness",
+        "Freedom",
+        "Mastery",
+        "People",
+        "Aspiration"
+      ]
+    },
+    {
+      "index": "scribe",
+      "desc": [
+        "Knowledge",
+        "Logic",
+        "No Limits",
+        "Power",
+        "Tradition",
+        "Aspiration"
+      ]
+    },
+    {
+      "index": "soldier",
+      "desc": [
+        "Greater Good",
+        "Responsibility",
+        "Independence",
+        "Might",
+        "Live and Let Live",
+        "Nation"
+      ]
+    },
+    {
+      "index": "wayfarer",
+      "desc": [
+        "Freedom",
+        "No Limits",
+        "People",
+        "Wanderlust",
+        "Greed",
+        "Aspiration"
+      ]
+    }
+  ]
+}

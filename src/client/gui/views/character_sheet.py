@@ -25,7 +25,7 @@ from src.shared.services.background_service import BackgroundService
 from src.shared.services.class_service import ClassService
 from src.shared.services.feat_service import FeatService
 from src.shared.services.item_service import ItemService
-from src.shared.services.srd_constants import SRDConstants
+from src.shared.domain.srd_constants import SRDConstants
 
 
 def _fmt_mod(val: int) -> str:

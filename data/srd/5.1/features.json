@@ -1,0 +1,2532 @@
+{
+  "features": [
+    {
+      "index": "rage",
+      "name": "Rage",
+      "class": "barbarian",
+      "level": 1,
+      "feature_type": "bonus_action",
+      "desc": "Enter a rage as a bonus action. While raging you gain +2 damage on STR-based melee attacks, resistance to bludgeoning, piercing, and slashing damage. Lasts 1 minute. 2 uses per long rest.",
+      "tags": [
+        "rage",
+        "resource",
+        "damage_bonus",
+        "resistance_physical"
+      ],
+      "effects": [
+        "rage-stat-bonus",
+        "rage-resistance",
+        "rage-resistance-2",
+        "rage-resistance-3",
+        "rage-resource"
+      ]
+    },
+    {
+      "index": "unarmored_defense_barbarian",
+      "name": "Unarmored Defense",
+      "class": "barbarian",
+      "level": 1,
+      "feature_type": "passive",
+      "desc": "While not wearing armor, your AC equals 10 + your DEX modifier + your CON modifier. You can still use a shield.",
+      "tags": [
+        "unarmored_defense",
+        "ac_bonus"
+      ],
+      "effects": [
+        "unarmored_defense_barbarian-ac-formula"
+      ]
+    },
+    {
+      "index": "reckless_attack",
+      "name": "Reckless Attack",
+      "class": "barbarian",
+      "level": 2,
+      "feature_type": "action",
+      "desc": "When making your first attack on your turn, you can choose to attack recklessly. Doing so gives you advantage on melee weapon attack rolls using STR, but attack rolls against you have advantage until your next turn.",
+      "tags": [
+        "reckless_attack",
+        "combat"
+      ],
+      "effects": []
+    },
+    {
+      "index": "danger_sense",
+      "name": "Danger Sense",
+      "class": "barbarian",
+      "level": 2,
+      "feature_type": "passive",
+      "desc": "You have advantage on DEX saving throws against effects you can see, such as traps and spells. You can't use this if you are blinded, deafened, or incapacitated.",
+      "tags": [
+        "danger_sense",
+        "defensive"
+      ],
+      "effects": [
+        "danger_sense-advantage"
+      ]
+    },
+    {
+      "index": "primal_path",
+      "name": "Primal Path",
+      "class": "barbarian",
+      "level": 3,
+      "feature_type": "passive",
+      "desc": "You choose a Primal Path that shapes the nature of your rage. Your choice grants you features at 3rd level and again at 6th, 10th, and 14th levels.",
+      "tags": [
+        "subclass_choice",
+        "subclass_feature"
+      ],
+      "effects": []
+    },
+    {
+      "index": "asi",
+      "name": "Ability Score Improvement",
+      "class": "barbarian",
+      "level": 4,
+      "feature_type": "passive",
+      "desc": "Increase one ability score by 2, or two ability scores by 1 each. Cannot exceed 20.",
+      "tags": [
+        "asi"
+      ],
+      "effects": []
+    },
+    {
+      "index": "extra_attack",
+      "name": "Extra Attack",
+      "class": "barbarian",
+      "level": 5,
+      "feature_type": "passive",
+      "desc": "You can attack twice, instead of once, whenever you take the Attack action on your turn.",
+      "tags": [
+        "extra_attack",
+        "combat"
+      ],
+      "effects": []
+    },
+    {
+      "index": "fast_movement",
+      "name": "Fast Movement",
+      "class": "barbarian",
+      "level": 5,
+      "feature_type": "passive",
+      "desc": "Your speed increases by 10 feet while you aren't wearing heavy armor.",
+      "tags": [
+        "speed_bonus"
+      ],
+      "effects": [
+        "fast_movement-speed-bonus"
+      ]
+    },
+    {
+      "index": "path_feature",
+      "name": "Path Feature",
+      "class": "barbarian",
+      "level": 6,
+      "feature_type": "passive",
+      "desc": "You gain a feature from your chosen Primal Path subclass.",
+      "tags": [
+        "subclass_feature"
+      ],
+      "effects": []
+    },
+    {
+      "index": "rage_upgrade_3",
+      "name": "Rage (3 uses)",
+      "class": "barbarian",
+      "level": 6,
+      "feature_type": "passive",
+      "desc": "Your Rage uses increase to 3 per long rest.",
+      "tags": [
+        "rage",
+        "resource",
+        "rage_upgrade"
+      ],
+      "effects": [
+        "rage_upgrade_3-resource"
+      ]
+    },
+    {
+      "index": "feral_instinct",
+      "name": "Feral Instinct",
+      "class": "barbarian",
+      "level": 7,
+      "feature_type": "passive",
+      "desc": "You have advantage on initiative rolls. If you are surprised at the start of combat and aren't incapacitated, you can act normally on your first turn if you enter your rage before doing anything else.",
+      "tags": [
+        "advantage_initiative",
+        "surprised_immunity_while_raging"
+      ],
+      "effects": [
+        "feral_instinct-advantage"
+      ]
+    },
+    {
+      "index": "brutal_critical",
+      "name": "Brutal Critical",
+      "class": "barbarian",
+      "level": 9,
+      "feature_type": "passive",
+      "desc": "You can roll one additional weapon damage die when determining the extra damage for a critical hit with a melee attack.",
+      "tags": [
+        "brutal_critical",
+        "combat"
+      ],
+      "effects": []
+    },
+    {
+      "index": "relentless_rage",
+      "name": "Relentless Rage",
+      "class": "barbarian",
+      "level": 11,
+      "feature_type": "passive",
+      "desc": "If you drop to 0 HP while raging and don't die outright, you can make a DC 10 CON saving throw. On success, you drop to 1 HP instead. Each time you use this after the first, the DC increases by 5.",
+      "tags": [
+        "relentless_rage",
+        "rage",
+        "defensive"
+      ],
+      "effects": []
+    },
+    {
+      "index": "rage_upgrade_4",
+      "name": "Rage (4 uses)",
+      "class": "barbarian",
+      "level": 12,
+      "feature_type": "passive",
+      "desc": "Your Rage uses increase to 4 per long rest.",
+      "tags": [
+        "rage",
+        "resource",
+        "rage_upgrade"
+      ],
+      "effects": [
+        "rage_upgrade_4-resource"
+      ]
+    },
+    {
+      "index": "brutal_critical_2",
+      "name": "Brutal Critical (2 dice)",
+      "class": "barbarian",
+      "level": 13,
+      "feature_type": "passive",
+      "desc": "You can roll two additional weapon damage dice when determining the extra damage for a critical hit with a melee attack.",
+      "tags": [
+        "brutal_critical",
+        "brutal_critical_upgrade",
+        "combat"
+      ],
+      "effects": []
+    },
+    {
+      "index": "persistent_rage",
+      "name": "Persistent Rage",
+      "class": "barbarian",
+      "level": 15,
+      "feature_type": "passive",
+      "desc": "Your rage is so fierce that it ends early only if you fall unconscious or if you choose to end it.",
+      "tags": [
+        "rage",
+        "persistent_rage"
+      ],
+      "effects": []
+    },
+    {
+      "index": "rage_upgrade_5",
+      "name": "Rage (5 uses)",
+      "class": "barbarian",
+      "level": 16,
+      "feature_type": "passive",
+      "desc": "Your Rage uses increase to 5 per long rest.",
+      "tags": [
+        "rage",
+        "resource",
+        "rage_upgrade"
+      ],
+      "effects": [
+        "rage_upgrade_5-resource"
+      ]
+    },
+    {
+      "index": "brutal_critical_3",
+      "name": "Brutal Critical (3 dice)",
+      "class": "barbarian",
+      "level": 17,
+      "feature_type": "passive",
+      "desc": "You can roll three additional weapon damage dice when determining the extra damage for a critical hit with a melee attack.",
+      "tags": [
+        "brutal_critical",
+        "brutal_critical_upgrade",
+        "combat"
+      ],
+      "effects": []
+    },
+    {
+      "index": "indomitable_might",
+      "name": "Indomitable Might",
+      "class": "barbarian",
+      "level": 18,
+      "feature_type": "passive",
+      "desc": "If your total for a STR check is less than your STR score, you can use that score in place of the total.",
+      "tags": [
+        "indomitable_might"
+      ],
+      "effects": []
+    },
+    {
+      "index": "primal_champion",
+      "name": "Primal Champion",
+      "class": "barbarian",
+      "level": 20,
+      "feature_type": "passive",
+      "desc": "You embody primal power. Your STR and CON scores increase by 4 each. Your maximum for those scores is now 24.",
+      "tags": [
+        "primal_champion",
+        "stat_bonus"
+      ],
+      "effects": []
+    },
+    {
+      "index": "rage_unlimited",
+      "name": "Rage (Unlimited)",
+      "class": "barbarian",
+      "level": 20,
+      "feature_type": "passive",
+      "desc": "Your Rage uses are now unlimited.",
+      "tags": [
+        "rage",
+        "resource",
+        "rage_upgrade",
+        "rage_unlimited"
+      ],
+      "effects": []
+    },
+    {
+      "index": "spellcasting_cha",
+      "name": "Spellcasting",
+      "class": "bard",
+      "level": 1,
+      "feature_type": "action",
+      "desc": "You can cast bard spells using CHA as your spellcasting ability. You know a fixed number of spells and can cast them using spell slots.",
+      "tags": [
+        "spellcasting"
+      ],
+      "effects": []
+    },
+    {
+      "index": "bardic_inspiration_d6",
+      "name": "Bardic Inspiration (d6)",
+      "class": "bard",
+      "level": 1,
+      "feature_type": "bonus_action",
+      "desc": "As a bonus action, give one creature within 60 ft. a Bardic Inspiration die (d6). They can add it to one ability check, attack roll, or saving throw within 10 minutes. You have a number of uses equal to your CHA modifier (minimum 1), regained on a long rest.",
+      "tags": [
+        "bardic_inspiration",
+        "resource"
+      ],
+      "effects": [
+        "bardic_inspiration_d6-resource"
+      ]
+    },
+    {
+      "index": "jack_of_all_trades",
+      "name": "Jack of All Trades",
+      "class": "bard",
+      "level": 2,
+      "feature_type": "passive",
+      "desc": "You can add half your proficiency bonus, rounded down, to any ability check you make that doesn't already include your proficiency bonus.",
+      "tags": [
+        "jack_of_all_trades",
+        "skill"
+      ],
+      "effects": []
+    },
+    {
+      "index": "song_of_rest_d6",
+      "name": "Song of Rest (d6)",
+      "class": "bard",
+      "level": 2,
+      "feature_type": "passive",
+      "desc": "During a short rest, you can use soothing music to help revitalize your wounded allies. Each friendly creature that hears your performance and spends one or more Hit Dice regains an extra 1d6 hit points.",
+      "tags": [
+        "song_of_rest"
+      ],
+      "effects": []
+    },
+    {
+      "index": "bard_college",
+      "name": "Bard College",
+      "class": "bard",
+      "level": 3,
+      "feature_type": "passive",
+      "desc": "You delve into advanced techniques of a bard college of your choice. Your choice grants you features at 3rd level and again at 6th and 14th level.",
+      "tags": [
+        "subclass_choice",
+        "subclass_feature"
+      ],
+      "effects": []
+    },
+    {
+      "index": "expertise",
+      "name": "Expertise",
+      "class": "bard",
+      "level": 3,
+      "feature_type": "passive",
+      "desc": "Choose two of your skill proficiencies. Your proficiency bonus is doubled for any ability check you make that uses either of the chosen proficiencies.",
+      "tags": [
+        "expertise",
+        "skill"
+      ],
+      "effects": []
+    },
+    {
+      "index": "bardic_inspiration_d8",
+      "name": "Bardic Inspiration (d8)",
+      "class": "bard",
+      "level": 5,
+      "feature_type": "passive",
+      "desc": "Your Bardic Inspiration die increases to a d8.",
+      "tags": [
+        "bardic_inspiration",
+        "bardic_inspiration_upgrade"
+      ],
+      "effects": []
+    },
+    {
+      "index": "font_of_inspiration",
+      "name": "Font of Inspiration",
+      "class": "bard",
+      "level": 5,
+      "feature_type": "passive",
+      "desc": "You now regain all your expended uses of Bardic Inspiration when you finish a short or long rest.",
+      "tags": [
+        "bardic_inspiration",
+        "resource"
+      ],
+      "effects": []
+    },
+    {
+      "index": "countercharm",
+      "name": "Countercharm",
+      "class": "bard",
+      "level": 6,
+      "feature_type": "action",
+      "desc": "As an action, start a performance that lasts until the end of your next turn. During that time, you and any friendly creatures within 30 ft. have advantage on saving throws against being frightened or charmed.",
+      "tags": [
+        "countercharm",
+        "defensive"
+      ],
+      "effects": []
+    },
+    {
+      "index": "college_feature",
+      "name": "College Feature",
+      "class": "bard",
+      "level": 6,
+      "feature_type": "passive",
+      "desc": "You gain a feature from your chosen Bard College subclass.",
+      "tags": [
+        "subclass_feature"
+      ],
+      "effects": []
+    },
+    {
+      "index": "song_of_rest_d8",
+      "name": "Song of Rest (d8)",
+      "class": "bard",
+      "level": 9,
+      "feature_type": "passive",
+      "desc": "Your Song of Rest die increases to a d8.",
+      "tags": [
+        "song_of_rest",
+        "song_of_rest_upgrade"
+      ],
+      "effects": []
+    },
+    {
+      "index": "bardic_inspiration_d10",
+      "name": "Bardic Inspiration (d10)",
+      "class": "bard",
+      "level": 10,
+      "feature_type": "passive",
+      "desc": "Your Bardic Inspiration die increases to a d10.",
+      "tags": [
+        "bardic_inspiration",
+        "bardic_inspiration_upgrade"
+      ],
+      "effects": []
+    },
+    {
+      "index": "expertise_upgrade",
+      "name": "Expertise (2 more skills)",
+      "class": "bard",
+      "level": 10,
+      "feature_type": "passive",
+      "desc": "Choose two more of your skill proficiencies. Your proficiency bonus is doubled for those skills.",
+      "tags": [
+        "expertise",
+        "skill",
+        "expertise_upgrade"
+      ],
+      "effects": []
+    },
+    {
+      "index": "magical_secrets",
+      "name": "Magical Secrets",
+      "class": "bard",
+      "level": 10,
+      "feature_type": "passive",
+      "desc": "Choose two spells from any class. They count as bard spells for you.",
+      "tags": [
+        "magical_secrets",
+        "spellcasting"
+      ],
+      "effects": []
+    },
+    {
+      "index": "song_of_rest_d10",
+      "name": "Song of Rest (d10)",
+      "class": "bard",
+      "level": 13,
+      "feature_type": "passive",
+      "desc": "Your Song of Rest die increases to a d10.",
+      "tags": [
+        "song_of_rest",
+        "song_of_rest_upgrade"
+      ],
+      "effects": []
+    },
+    {
+      "index": "magical_secrets_2",
+      "name": "Magical Secrets (2 more)",
+      "class": "bard",
+      "level": 14,
+      "feature_type": "passive",
+      "desc": "Choose two more spells from any class. They count as bard spells for you.",
+      "tags": [
+        "magical_secrets",
+        "magical_secrets_upgrade",
+        "spellcasting"
+      ],
+      "effects": []
+    },
+    {
+      "index": "bardic_inspiration_d12",
+      "name": "Bardic Inspiration (d12)",
+      "class": "bard",
+      "level": 15,
+      "feature_type": "passive",
+      "desc": "Your Bardic Inspiration die increases to a d12.",
+      "tags": [
+        "bardic_inspiration",
+        "bardic_inspiration_upgrade"
+      ],
+      "effects": []
+    },
+    {
+      "index": "song_of_rest_d12",
+      "name": "Song of Rest (d12)",
+      "class": "bard",
+      "level": 17,
+      "feature_type": "passive",
+      "desc": "Your Song of Rest die increases to a d12.",
+      "tags": [
+        "song_of_rest",
+        "song_of_rest_upgrade"
+      ],
+      "effects": []
+    },
+    {
+      "index": "magical_secrets_3",
+      "name": "Magical Secrets (2 more)",
+      "class": "bard",
+      "level": 18,
+      "feature_type": "passive",
+      "desc": "Choose two more spells from any class. They count as bard spells for you.",
+      "tags": [
+        "magical_secrets",
+        "magical_secrets_upgrade",
+        "spellcasting"
+      ],
+      "effects": []
+    },
+    {
+      "index": "superior_inspiration",
+      "name": "Superior Inspiration",
+      "class": "bard",
+      "level": 20,
+      "feature_type": "passive",
+      "desc": "When you roll initiative and have no uses of Bardic Inspiration left, you regain one use.",
+      "tags": [
+        "bardic_inspiration",
+        "resource"
+      ],
+      "effects": []
+    },
+    {
+      "index": "spellcasting_wis",
+      "name": "Spellcasting",
+      "class": "cleric",
+      "level": 1,
+      "feature_type": "action",
+      "desc": "You can cast cleric spells using WIS as your spellcasting ability. You prepare spells each day from the full cleric list, choosing a number equal to your WIS modifier + cleric level.",
+      "tags": [
+        "spellcasting"
+      ],
+      "effects": []
+    },
+    {
+      "index": "divine_domain",
+      "name": "Divine Domain",
+      "class": "cleric",
+      "level": 1,
+      "feature_type": "passive",
+      "desc": "Choose a Divine Domain from your deity's portfolio. Your choice grants you domain spells and other features starting at 1st level.",
+      "tags": [
+        "subclass_choice",
+        "subclass_feature"
+      ],
+      "effects": []
+    },
+    {
+      "index": "channel_divinity",
+      "name": "Channel Divinity (1/rest)",
+      "class": "cleric",
+      "level": 2,
+      "feature_type": "action",
+      "desc": "You can channel divine energy directly from your deity, using that energy to fuel magical effects. You start with Turn Undead and one effect from your domain. You can use it once per short or long rest.",
+      "tags": [
+        "channel_divinity",
+        "resource"
+      ],
+      "effects": []
+    },
+    {
+      "index": "divine_domain_feature",
+      "name": "Divine Domain Feature",
+      "class": "cleric",
+      "level": 2,
+      "feature_type": "passive",
+      "desc": "You gain a Channel Divinity option from your Divine Domain subclass.",
+      "tags": [
+        "subclass_feature"
+      ],
+      "effects": []
+    },
+    {
+      "index": "turn_undead",
+      "name": "Turn Undead",
+      "class": "cleric",
+      "level": 2,
+      "feature_type": "action",
+      "desc": "As an action, present your holy symbol and speak a prayer censuring the undead. Each undead within 30 ft. must make a WIS saving throw (DC = 8 + proficiency + WIS mod). On a failed save, the creature is turned for 1 minute.",
+      "tags": [
+        "turn_undead",
+        "channel_divinity"
+      ],
+      "effects": []
+    },
+    {
+      "index": "cleric-divine_domain_feature",
+      "name": "Divine Domain Feature",
+      "class": "cleric",
+      "level": 3,
+      "feature_type": "passive",
+      "desc": "You gain a feature from your Divine Domain subclass.",
+      "tags": [
+        "subclass_feature"
+      ],
+      "effects": []
+    },
+    {
+      "index": "destroy_undead_cr12",
+      "name": "Destroy Undead (CR 1/2)",
+      "class": "cleric",
+      "level": 5,
+      "feature_type": "passive",
+      "desc": "When an undead of CR 1/2 or lower fails its saving throw against your Turn Undead, the creature is instantly destroyed.",
+      "tags": [
+        "turn_undead",
+        "destroy_undead"
+      ],
+      "effects": []
+    },
+    {
+      "index": "channel_divinity_2",
+      "name": "Channel Divinity (2/rest)",
+      "class": "cleric",
+      "level": 6,
+      "feature_type": "passive",
+      "desc": "You can now use Channel Divinity twice between rests.",
+      "tags": [
+        "channel_divinity",
+        "resource",
+        "channel_divinity_upgrade"
+      ],
+      "effects": []
+    },
+    {
+      "index": "destroy_undead_cr1",
+      "name": "Destroy Undead (CR 1)",
+      "class": "cleric",
+      "level": 8,
+      "feature_type": "passive",
+      "desc": "When an undead of CR 1 or lower fails its saving throw against your Turn Undead, the creature is instantly destroyed.",
+      "tags": [
+        "turn_undead",
+        "destroy_undead",
+        "destroy_undead_upgrade"
+      ],
+      "effects": []
+    },
+    {
+      "index": "divine_intervention",
+      "name": "Divine Intervention",
+      "class": "cleric",
+      "level": 10,
+      "feature_type": "action",
+      "desc": "You can call on your deity to intervene on your behalf. Roll d100; if the result is equal to or lower than your cleric level, your deity intervenes. On a success, you can't use this feature again for 7 days. On a failure, you can't use it again until you finish a long rest.",
+      "tags": [
+        "divine_intervention",
+        "resource"
+      ],
+      "effects": []
+    },
+    {
+      "index": "destroy_undead_cr2",
+      "name": "Destroy Undead (CR 2)",
+      "class": "cleric",
+      "level": 11,
+      "feature_type": "passive",
+      "desc": "When an undead of CR 2 or lower fails its saving throw against your Turn Undead, the creature is instantly destroyed.",
+      "tags": [
+        "turn_undead",
+        "destroy_undead",
+        "destroy_undead_upgrade"
+      ],
+      "effects": []
+    },
+    {
+      "index": "destroy_undead_cr3",
+      "name": "Destroy Undead (CR 3)",
+      "class": "cleric",
+      "level": 14,
+      "feature_type": "passive",
+      "desc": "When an undead of CR 3 or lower fails its saving throw against your Turn Undead, the creature is instantly destroyed.",
+      "tags": [
+        "turn_undead",
+        "destroy_undead",
+        "destroy_undead_upgrade"
+      ],
+      "effects": []
+    },
+    {
+      "index": "destroy_undead_cr4",
+      "name": "Destroy Undead (CR 4)",
+      "class": "cleric",
+      "level": 17,
+      "feature_type": "passive",
+      "desc": "When an undead of CR 4 or lower fails its saving throw against your Turn Undead, the creature is instantly destroyed.",
+      "tags": [
+        "turn_undead",
+        "destroy_undead",
+        "destroy_undead_upgrade"
+      ],
+      "effects": []
+    },
+    {
+      "index": "channel_divinity_3",
+      "name": "Channel Divinity (3/rest)",
+      "class": "cleric",
+      "level": 18,
+      "feature_type": "passive",
+      "desc": "You can now use Channel Divinity three times between rests.",
+      "tags": [
+        "channel_divinity",
+        "resource",
+        "channel_divinity_upgrade"
+      ],
+      "effects": []
+    },
+    {
+      "index": "divine_intervention_auto",
+      "name": "Divine Intervention (Auto Success)",
+      "class": "cleric",
+      "level": 20,
+      "feature_type": "passive",
+      "desc": "Your Divine Intervention call automatically succeeds. Once you use this feature, you can't use it again for 7 days.",
+      "tags": [
+        "divine_intervention",
+        "divine_intervention_upgrade"
+      ],
+      "effects": []
+    },
+    {
+      "index": "druidic",
+      "name": "Druidic",
+      "class": "druid",
+      "level": 1,
+      "feature_type": "passive",
+      "desc": "You know Druidic, the secret language of druids. You can speak it and use it to leave hidden messages. Creatures who don't know Druidic automatically fail to notice them.",
+      "tags": [
+        "druidic",
+        "language"
+      ],
+      "effects": []
+    },
+    {
+      "index": "druid-spellcasting_wis",
+      "name": "Spellcasting",
+      "class": "druid",
+      "level": 1,
+      "feature_type": "action",
+      "desc": "You can cast druid spells using WIS as your spellcasting ability. You prepare spells each day from the full druid list, choosing a number equal to your WIS modifier + druid level.",
+      "tags": [
+        "spellcasting"
+      ],
+      "effects": []
+    },
+    {
+      "index": "wild_shape_cr14",
+      "name": "Wild Shape (CR 1/4)",
+      "class": "druid",
+      "level": 2,
+      "feature_type": "action",
+      "desc": "Use your action to magically assume the shape of a beast with a CR of 1/4 or lower. No flying or swimming speed. Lasts up to half your druid level hours. 2 uses, regained on short or long rest.",
+      "tags": [
+        "wild_shape",
+        "resource",
+        "transformation"
+      ],
+      "effects": []
+    },
+    {
+      "index": "druid_circle",
+      "name": "Druid Circle",
+      "class": "druid",
+      "level": 2,
+      "feature_type": "passive",
+      "desc": "You choose to identify with a circle of druids. Your choice grants you features at 2nd level and again at 6th, 10th, and 14th levels.",
+      "tags": [
+        "subclass_choice",
+        "subclass_feature"
+      ],
+      "effects": []
+    },
+    {
+      "index": "wild_shape_cr12",
+      "name": "Wild Shape (CR 1/2)",
+      "class": "druid",
+      "level": 4,
+      "feature_type": "passive",
+      "desc": "Your Wild Shape now allows beast forms of CR 1/2 or lower. Still no flying speed.",
+      "tags": [
+        "wild_shape",
+        "wild_shape_upgrade",
+        "transformation"
+      ],
+      "effects": []
+    },
+    {
+      "index": "druid_circle_feature",
+      "name": "Druid Circle Feature",
+      "class": "druid",
+      "level": 6,
+      "feature_type": "passive",
+      "desc": "You gain a feature from your chosen Druid Circle subclass.",
+      "tags": [
+        "subclass_feature"
+      ],
+      "effects": []
+    },
+    {
+      "index": "wild_shape_cr1",
+      "name": "Wild Shape (CR 1)",
+      "class": "druid",
+      "level": 8,
+      "feature_type": "passive",
+      "desc": "Your Wild Shape now allows beast forms of CR 1 or lower.",
+      "tags": [
+        "wild_shape",
+        "wild_shape_upgrade",
+        "transformation"
+      ],
+      "effects": []
+    },
+    {
+      "index": "timeless_body_druid",
+      "name": "Timeless Body",
+      "class": "druid",
+      "level": 18,
+      "feature_type": "passive",
+      "desc": "The primal magic that you wield causes you to age more slowly. For every 10 years that pass, your body ages only 1 year.",
+      "tags": [
+        "timeless_body"
+      ],
+      "effects": []
+    },
+    {
+      "index": "beast_spells",
+      "name": "Beast Spells",
+      "class": "druid",
+      "level": 18,
+      "feature_type": "passive",
+      "desc": "You can cast many of your druid spells in any shape you assume using Wild Shape. You can perform the somatic and verbal components of a druid spell while in a beast shape.",
+      "tags": [
+        "beast_spells",
+        "wild_shape",
+        "spellcasting"
+      ],
+      "effects": []
+    },
+    {
+      "index": "archdruid",
+      "name": "Archdruid",
+      "class": "druid",
+      "level": 20,
+      "feature_type": "passive",
+      "desc": "You can use your Wild Shape an unlimited number of times. Additionally, you can ignore the verbal and somatic components of your druid spells, as well as any material components that lack a cost.",
+      "tags": [
+        "wild_shape",
+        "wild_shape_unlimited",
+        "spellcasting"
+      ],
+      "effects": []
+    },
+    {
+      "index": "fighting_style",
+      "name": "Fighting Style",
+      "class": "fighter",
+      "level": 1,
+      "feature_type": "passive",
+      "desc": "You adopt a particular style of fighting as your specialty. Choose one fighting style: Archery, Defense, Dueling, Great Weapon Fighting, Protection, or Two-Weapon Fighting.",
+      "tags": [
+        "fighting_style"
+      ],
+      "effects": []
+    },
+    {
+      "index": "second_wind",
+      "name": "Second Wind",
+      "class": "fighter",
+      "level": 1,
+      "feature_type": "bonus_action",
+      "desc": "As a bonus action, you can regain hit points equal to 1d10 + your fighter level. Once you use this feature, you must finish a short or long rest before you can use it again.",
+      "tags": [
+        "second_wind",
+        "resource",
+        "healing"
+      ],
+      "effects": []
+    },
+    {
+      "index": "action_surge",
+      "name": "Action Surge (1/rest)",
+      "class": "fighter",
+      "level": 2,
+      "feature_type": "action",
+      "desc": "On your turn, you can push yourself beyond your normal limits. You take one additional action on top of your regular action and a possible bonus action. Once you use this feature, you must finish a short or long rest before you can use it again.",
+      "tags": [
+        "action_surge",
+        "resource",
+        "combat"
+      ],
+      "effects": []
+    },
+    {
+      "index": "martial_archetype",
+      "name": "Martial Archetype",
+      "class": "fighter",
+      "level": 3,
+      "feature_type": "passive",
+      "desc": "You choose an archetype that you strive to emulate. Your choice grants you features at 3rd level and again at 7th, 10th, 15th, and 18th level.",
+      "tags": [
+        "subclass_choice",
+        "subclass_feature"
+      ],
+      "effects": []
+    },
+    {
+      "index": "martial_archetype_feature",
+      "name": "Martial Archetype Feature",
+      "class": "fighter",
+      "level": 7,
+      "feature_type": "passive",
+      "desc": "You gain a feature from your chosen Martial Archetype subclass.",
+      "tags": [
+        "subclass_feature"
+      ],
+      "effects": []
+    },
+    {
+      "index": "indomitable",
+      "name": "Indomitable (1/rest)",
+      "class": "fighter",
+      "level": 9,
+      "feature_type": "passive",
+      "desc": "You can reroll a saving throw that you fail. If you do, you must use the new roll. You can use this feature once between long rests.",
+      "tags": [
+        "indomitable",
+        "resource",
+        "defensive"
+      ],
+      "effects": []
+    },
+    {
+      "index": "extra_attack_3",
+      "name": "Extra Attack (3 attacks)",
+      "class": "fighter",
+      "level": 11,
+      "feature_type": "passive",
+      "desc": "You can attack three times whenever you take the Attack action on your turn.",
+      "tags": [
+        "extra_attack",
+        "extra_attack_upgrade",
+        "combat"
+      ],
+      "effects": []
+    },
+    {
+      "index": "indomitable_2",
+      "name": "Indomitable (2/rest)",
+      "class": "fighter",
+      "level": 13,
+      "feature_type": "passive",
+      "desc": "You can now use Indomitable twice between long rests.",
+      "tags": [
+        "indomitable",
+        "resource",
+        "indomitable_upgrade"
+      ],
+      "effects": []
+    },
+    {
+      "index": "action_surge_2",
+      "name": "Action Surge (2/rest)",
+      "class": "fighter",
+      "level": 17,
+      "feature_type": "passive",
+      "desc": "You can use Action Surge twice before needing a rest.",
+      "tags": [
+        "action_surge",
+        "resource",
+        "action_surge_upgrade"
+      ],
+      "effects": []
+    },
+    {
+      "index": "indomitable_3",
+      "name": "Indomitable (3/rest)",
+      "class": "fighter",
+      "level": 17,
+      "feature_type": "passive",
+      "desc": "You can now use Indomitable three times between long rests.",
+      "tags": [
+        "indomitable",
+        "resource",
+        "indomitable_upgrade"
+      ],
+      "effects": []
+    },
+    {
+      "index": "extra_attack_4",
+      "name": "Extra Attack (4 attacks)",
+      "class": "fighter",
+      "level": 20,
+      "feature_type": "passive",
+      "desc": "You can attack four times whenever you take the Attack action on your turn.",
+      "tags": [
+        "extra_attack",
+        "extra_attack_upgrade",
+        "combat"
+      ],
+      "effects": []
+    },
+    {
+      "index": "unarmored_defense_monk",
+      "name": "Unarmored Defense",
+      "class": "monk",
+      "level": 1,
+      "feature_type": "passive",
+      "desc": "While not wearing armor or using a shield, your AC equals 10 + your DEX modifier + your WIS modifier.",
+      "tags": [
+        "unarmored_defense",
+        "ac_bonus"
+      ],
+      "effects": [
+        "unarmored_defense_monk-ac-formula"
+      ]
+    },
+    {
+      "index": "martial_arts_d4",
+      "name": "Martial Arts (d4)",
+      "class": "monk",
+      "level": 1,
+      "feature_type": "passive",
+      "desc": "You can use DEX instead of STR for attack and damage rolls with unarmed strikes and monk weapons. Your unarmed strikes deal 1d4 damage. You can make one unarmed strike as a bonus action after using an Attack action with a monk weapon or unarmed strike.",
+      "tags": [
+        "martial_arts",
+        "combat"
+      ],
+      "effects": []
+    },
+    {
+      "index": "ki",
+      "name": "Ki",
+      "class": "monk",
+      "level": 2,
+      "feature_type": "passive",
+      "desc": "Your training allows you to harness the mystic energy of ki. You have ki points equal to your monk level. You regain all spent ki points at the end of a short or long rest.",
+      "tags": [
+        "ki",
+        "resource"
+      ],
+      "effects": []
+    },
+    {
+      "index": "flurry_of_blows",
+      "name": "Flurry of Blows",
+      "class": "monk",
+      "level": 2,
+      "feature_type": "bonus_action",
+      "desc": "Immediately after taking the Attack action, spend 1 ki point to make two unarmed strikes as a bonus action.",
+      "tags": [
+        "ki",
+        "flurry_of_blows",
+        "combat"
+      ],
+      "effects": []
+    },
+    {
+      "index": "patient_defense",
+      "name": "Patient Defense",
+      "class": "monk",
+      "level": 2,
+      "feature_type": "bonus_action",
+      "desc": "Spend 1 ki point to take the Dodge action as a bonus action on your turn.",
+      "tags": [
+        "ki",
+        "patient_defense",
+        "defensive"
+      ],
+      "effects": []
+    },
+    {
+      "index": "step_of_the_wind",
+      "name": "Step of the Wind",
+      "class": "monk",
+      "level": 2,
+      "feature_type": "bonus_action",
+      "desc": "Spend 1 ki point to take the Disengage or Dash action as a bonus action, and your jump distance is doubled for the turn.",
+      "tags": [
+        "ki",
+        "step_of_the_wind",
+        "movement"
+      ],
+      "effects": []
+    },
+    {
+      "index": "unarmored_movement_10",
+      "name": "Unarmored Movement (+10 ft.)",
+      "class": "monk",
+      "level": 2,
+      "feature_type": "passive",
+      "desc": "Your speed increases by 10 feet while you are not wearing armor or wielding a shield.",
+      "tags": [
+        "speed_bonus",
+        "unarmored_movement"
+      ],
+      "effects": [
+        "unarmored_movement_10-speed-bonus"
+      ]
+    },
+    {
+      "index": "monastic_tradition",
+      "name": "Monastic Tradition",
+      "class": "monk",
+      "level": 3,
+      "feature_type": "passive",
+      "desc": "You commit to a monastic tradition. Your choice grants you features at 3rd level and again at 6th, 11th, and 17th levels.",
+      "tags": [
+        "subclass_choice",
+        "subclass_feature"
+      ],
+      "effects": []
+    },
+    {
+      "index": "deflect_missiles",
+      "name": "Deflect Missiles",
+      "class": "monk",
+      "level": 3,
+      "feature_type": "reaction",
+      "desc": "When you are hit by a ranged weapon attack, use your reaction to reduce the damage by 1d10 + DEX modifier + monk level. If reduced to 0, you can catch and throw the missile as part of the same reaction (range 20/60).",
+      "tags": [
+        "deflect_missiles",
+        "defensive",
+        "reaction"
+      ],
+      "effects": []
+    },
+    {
+      "index": "slow_fall",
+      "name": "Slow Fall",
+      "class": "monk",
+      "level": 4,
+      "feature_type": "reaction",
+      "desc": "Use your reaction when you fall to reduce falling damage by an amount equal to 5 times your monk level.",
+      "tags": [
+        "slow_fall",
+        "defensive",
+        "reaction"
+      ],
+      "effects": []
+    },
+    {
+      "index": "stunning_strike",
+      "name": "Stunning Strike",
+      "class": "monk",
+      "level": 5,
+      "feature_type": "passive",
+      "desc": "When you hit another creature with a melee weapon attack, spend 1 ki point to try to stun that creature. It must make a CON saving throw. On failure, it is stunned until the end of your next turn.",
+      "tags": [
+        "ki",
+        "stunning_strike",
+        "combat"
+      ],
+      "effects": []
+    },
+    {
+      "index": "ki_empowered_strikes",
+      "name": "Ki-Empowered Strikes",
+      "class": "monk",
+      "level": 6,
+      "feature_type": "passive",
+      "desc": "Your unarmed strikes count as magical for the purpose of overcoming resistance and immunity.",
+      "tags": [
+        "ki",
+        "ki_empowered_strikes",
+        "combat"
+      ],
+      "effects": []
+    },
+    {
+      "index": "monastic_tradition_feature",
+      "name": "Monastic Tradition Feature",
+      "class": "monk",
+      "level": 6,
+      "feature_type": "passive",
+      "desc": "You gain a feature from your chosen Monastic Tradition subclass.",
+      "tags": [
+        "subclass_feature"
+      ],
+      "effects": []
+    },
+    {
+      "index": "unarmored_movement_15",
+      "name": "Unarmored Movement (+15 ft.)",
+      "class": "monk",
+      "level": 6,
+      "feature_type": "passive",
+      "desc": "Your unarmored movement speed bonus increases to +15 feet.",
+      "tags": [
+        "speed_bonus",
+        "unarmored_movement",
+        "unarmored_movement_upgrade"
+      ],
+      "effects": [
+        "unarmored_movement_15-speed-bonus"
+      ]
+    },
+    {
+      "index": "evasion",
+      "name": "Evasion",
+      "class": "monk",
+      "level": 7,
+      "feature_type": "passive",
+      "desc": "When subjected to an effect that allows a DEX saving throw for half damage, you instead take no damage on a success, and only half damage on a failure.",
+      "tags": [
+        "evasion",
+        "defensive"
+      ],
+      "effects": []
+    },
+    {
+      "index": "stillness_of_mind",
+      "name": "Stillness of Mind",
+      "class": "monk",
+      "level": 7,
+      "feature_type": "action",
+      "desc": "As an action, end one effect on yourself causing you to be charmed or frightened.",
+      "tags": [
+        "stillness_of_mind",
+        "defensive"
+      ],
+      "effects": []
+    },
+    {
+      "index": "unarmored_movement_15_walls",
+      "name": "Unarmored Movement (walls & water)",
+      "class": "monk",
+      "level": 9,
+      "feature_type": "passive",
+      "desc": "You gain the ability to move along vertical surfaces and across liquids on your turn without falling during the move.",
+      "tags": [
+        "unarmored_movement",
+        "movement"
+      ],
+      "effects": []
+    },
+    {
+      "index": "purity_of_body",
+      "name": "Purity of Body",
+      "class": "monk",
+      "level": 10,
+      "feature_type": "passive",
+      "desc": "Your mastery of the ki flowing through you makes you immune to disease and poison.",
+      "tags": [
+        "purity_of_body",
+        "immunity",
+        "defensive"
+      ],
+      "effects": [
+        "purity_of_body-immunity"
+      ]
+    },
+    {
+      "index": "unarmored_movement_20",
+      "name": "Unarmored Movement (+20 ft.)",
+      "class": "monk",
+      "level": 10,
+      "feature_type": "passive",
+      "desc": "Your unarmored movement speed bonus increases to +20 feet.",
+      "tags": [
+        "speed_bonus",
+        "unarmored_movement",
+        "unarmored_movement_upgrade"
+      ],
+      "effects": [
+        "unarmored_movement_20-speed-bonus"
+      ]
+    },
+    {
+      "index": "tongue_of_sun_moon",
+      "name": "Tongue of the Sun and Moon",
+      "class": "monk",
+      "level": 13,
+      "feature_type": "passive",
+      "desc": "You learn to touch the ki of other minds so that you understand all spoken languages, and all creatures that have a language understand what you say.",
+      "tags": [
+        "tongue_of_sun_moon",
+        "language"
+      ],
+      "effects": []
+    },
+    {
+      "index": "diamond_soul",
+      "name": "Diamond Soul",
+      "class": "monk",
+      "level": 14,
+      "feature_type": "passive",
+      "desc": "Your mastery of ki grants you proficiency in all saving throws. Additionally, whenever you make a saving throw and fail, you can spend 1 ki point to reroll and take the second result.",
+      "tags": [
+        "diamond_soul",
+        "defensive"
+      ],
+      "effects": []
+    },
+    {
+      "index": "unarmored_movement_25",
+      "name": "Unarmored Movement (+25 ft.)",
+      "class": "monk",
+      "level": 14,
+      "feature_type": "passive",
+      "desc": "Your unarmored movement speed bonus increases to +25 feet.",
+      "tags": [
+        "speed_bonus",
+        "unarmored_movement",
+        "unarmored_movement_upgrade"
+      ],
+      "effects": [
+        "unarmored_movement_25-speed-bonus"
+      ]
+    },
+    {
+      "index": "timeless_body_monk",
+      "name": "Timeless Body",
+      "class": "monk",
+      "level": 15,
+      "feature_type": "passive",
+      "desc": "Your ki sustains you so that you suffer none of the frailty of old age, and you can't be aged magically. You still die of old age.",
+      "tags": [
+        "timeless_body"
+      ],
+      "effects": []
+    },
+    {
+      "index": "martial_arts_d8",
+      "name": "Martial Arts (d8)",
+      "class": "monk",
+      "level": 15,
+      "feature_type": "passive",
+      "desc": "Your Martial Arts die increases to a d8.",
+      "tags": [
+        "martial_arts",
+        "martial_arts_upgrade",
+        "combat"
+      ],
+      "effects": []
+    },
+    {
+      "index": "martial_arts_d10",
+      "name": "Martial Arts (d10)",
+      "class": "monk",
+      "level": 17,
+      "feature_type": "passive",
+      "desc": "Your Martial Arts die increases to a d10.",
+      "tags": [
+        "martial_arts",
+        "martial_arts_upgrade",
+        "combat"
+      ],
+      "effects": []
+    },
+    {
+      "index": "empty_body",
+      "name": "Empty Body",
+      "class": "monk",
+      "level": 18,
+      "feature_type": "action",
+      "desc": "Spend 4 ki points to become invisible for 1 minute. During that time, you also have resistance to all damage except force. Additionally, spend 8 ki points to cast the astral projection spell, without needing material components.",
+      "tags": [
+        "ki",
+        "empty_body",
+        "combat",
+        "defensive"
+      ],
+      "effects": []
+    },
+    {
+      "index": "unarmored_movement_30",
+      "name": "Unarmored Movement (+30 ft.)",
+      "class": "monk",
+      "level": 18,
+      "feature_type": "passive",
+      "desc": "Your unarmored movement speed bonus increases to +30 feet.",
+      "tags": [
+        "speed_bonus",
+        "unarmored_movement",
+        "unarmored_movement_upgrade"
+      ],
+      "effects": [
+        "unarmored_movement_30-speed-bonus"
+      ]
+    },
+    {
+      "index": "perfect_self",
+      "name": "Perfect Self",
+      "class": "monk",
+      "level": 20,
+      "feature_type": "passive",
+      "desc": "When you roll for initiative and have no ki points remaining, you regain 4 ki points.",
+      "tags": [
+        "ki",
+        "perfect_self",
+        "resource"
+      ],
+      "effects": []
+    },
+    {
+      "index": "divine_sense",
+      "name": "Divine Sense",
+      "class": "paladin",
+      "level": 1,
+      "feature_type": "action",
+      "desc": "As an action, detect the presence of celestials, fiends, and undead within 60 ft. until the end of your next turn. Uses equal to 1 + CHA modifier, regained on a long rest.",
+      "tags": [
+        "divine_sense",
+        "resource"
+      ],
+      "effects": []
+    },
+    {
+      "index": "lay_on_hands",
+      "name": "Lay on Hands",
+      "class": "paladin",
+      "level": 1,
+      "feature_type": "action",
+      "desc": "Your blessed touch can heal wounds. You have a pool of healing power equal to 5 × your paladin level. As an action, restore any number of HP to a creature (drawn from the pool), or expend 5 HP from the pool to cure one disease or neutralize one poison.",
+      "tags": [
+        "lay_on_hands",
+        "resource",
+        "healing"
+      ],
+      "effects": []
+    },
+    {
+      "index": "paladin-fighting_style",
+      "name": "Fighting Style",
+      "class": "paladin",
+      "level": 2,
+      "feature_type": "passive",
+      "desc": "Adopt a fighting style: Defense, Dueling, Great Weapon Fighting, or Protection.",
+      "tags": [
+        "fighting_style"
+      ],
+      "effects": []
+    },
+    {
+      "index": "paladin-spellcasting_cha",
+      "name": "Spellcasting",
+      "class": "paladin",
+      "level": 2,
+      "feature_type": "action",
+      "desc": "You can cast paladin spells using CHA as your spellcasting ability. You prepare a number of spells equal to your CHA modifier + half your paladin level (minimum 1).",
+      "tags": [
+        "spellcasting"
+      ],
+      "effects": []
+    },
+    {
+      "index": "divine_smite",
+      "name": "Divine Smite",
+      "class": "paladin",
+      "level": 2,
+      "feature_type": "passive",
+      "desc": "When you hit a creature with a melee weapon attack, expend one spell slot to deal extra radiant damage: 2d8 for a 1st-level slot, +1d8 per slot level above 1st (max 5d8). +1d8 extra against undead or fiends.",
+      "tags": [
+        "divine_smite",
+        "damage_bonus",
+        "spellcasting",
+        "combat"
+      ],
+      "effects": []
+    },
+    {
+      "index": "divine_health",
+      "name": "Divine Health",
+      "class": "paladin",
+      "level": 3,
+      "feature_type": "passive",
+      "desc": "The divine magic flowing through you makes you immune to disease.",
+      "tags": [
+        "divine_health",
+        "defensive"
+      ],
+      "effects": []
+    },
+    {
+      "index": "sacred_oath",
+      "name": "Sacred Oath",
+      "class": "paladin",
+      "level": 3,
+      "feature_type": "passive",
+      "desc": "You swear the sacred oath that binds you as a paladin. Your choice grants you features at 3rd level and again at 7th, 15th, and 20th levels.",
+      "tags": [
+        "subclass_choice",
+        "subclass_feature"
+      ],
+      "effects": []
+    },
+    {
+      "index": "aura_of_protection",
+      "name": "Aura of Protection",
+      "class": "paladin",
+      "level": 6,
+      "feature_type": "passive",
+      "desc": "Whenever you or a friendly creature within 10 ft. must make a saving throw, the creature gains a bonus equal to your CHA modifier (minimum +1). You must be conscious to grant this bonus.",
+      "tags": [
+        "aura_of_protection",
+        "defensive"
+      ],
+      "effects": [
+        "aura_of_protection-stat-bonus"
+      ]
+    },
+    {
+      "index": "sacred_oath_feature",
+      "name": "Sacred Oath Feature",
+      "class": "paladin",
+      "level": 7,
+      "feature_type": "passive",
+      "desc": "You gain a feature from your chosen Sacred Oath subclass.",
+      "tags": [
+        "subclass_feature"
+      ],
+      "effects": []
+    },
+    {
+      "index": "aura_of_courage",
+      "name": "Aura of Courage",
+      "class": "paladin",
+      "level": 10,
+      "feature_type": "passive",
+      "desc": "You and friendly creatures within 10 ft. can't be frightened while you are conscious.",
+      "tags": [
+        "aura_of_courage",
+        "defensive"
+      ],
+      "effects": []
+    },
+    {
+      "index": "improved_divine_smite",
+      "name": "Improved Divine Smite",
+      "class": "paladin",
+      "level": 11,
+      "feature_type": "passive",
+      "desc": "You are so suffused with righteous might that all your melee weapon strikes carry divine power. Whenever you hit a creature with a melee weapon, the creature takes an extra 1d8 radiant damage.",
+      "tags": [
+        "divine_smite",
+        "improved_divine_smite",
+        "damage_bonus",
+        "combat"
+      ],
+      "effects": [
+        "improved_divine_smite-stat-bonus"
+      ]
+    },
+    {
+      "index": "cleansing_touch",
+      "name": "Cleansing Touch",
+      "class": "paladin",
+      "level": 14,
+      "feature_type": "action",
+      "desc": "Use an action to end one spell on yourself or on one willing creature you touch. Uses equal to your CHA modifier (minimum 1), regained on a long rest.",
+      "tags": [
+        "cleansing_touch",
+        "resource"
+      ],
+      "effects": []
+    },
+    {
+      "index": "aura_extended_30ft",
+      "name": "Aura Extension (30 ft.)",
+      "class": "paladin",
+      "level": 17,
+      "feature_type": "passive",
+      "desc": "The range of your Aura of Protection and Aura of Courage increases to 30 feet.",
+      "tags": [
+        "aura_of_protection",
+        "aura_of_courage",
+        "aura_upgrade"
+      ],
+      "effects": []
+    },
+    {
+      "index": "paladin-sacred_oath_feature",
+      "name": "Sacred Oath Feature",
+      "class": "paladin",
+      "level": 20,
+      "feature_type": "passive",
+      "desc": "You gain the capstone feature from your chosen Sacred Oath subclass.",
+      "tags": [
+        "subclass_feature"
+      ],
+      "effects": []
+    },
+    {
+      "index": "favored_enemy",
+      "name": "Favored Enemy",
+      "class": "ranger",
+      "level": 1,
+      "feature_type": "passive",
+      "desc": "Choose two types of favored enemies (aberrations, beasts, celestials, constructs, dragons, elementals, fey, fiends, giants, monstrosities, oozes, plants, or undead, or two humanoid races). You have advantage on Survival checks to track them and Intelligence checks to recall information about them.",
+      "tags": [
+        "favored_enemy",
+        "skill"
+      ],
+      "effects": []
+    },
+    {
+      "index": "natural_explorer",
+      "name": "Natural Explorer",
+      "class": "ranger",
+      "level": 1,
+      "feature_type": "passive",
+      "desc": "Choose a favored terrain. While in that terrain you are proficient in, your group can't become lost, you can move stealthily at normal pace, you find double the amount of food when foraging, and more.",
+      "tags": [
+        "natural_explorer",
+        "exploration"
+      ],
+      "effects": []
+    },
+    {
+      "index": "ranger-fighting_style",
+      "name": "Fighting Style",
+      "class": "ranger",
+      "level": 2,
+      "feature_type": "passive",
+      "desc": "Adopt a fighting style: Archery, Defense, Dueling, or Two-Weapon Fighting.",
+      "tags": [
+        "fighting_style"
+      ],
+      "effects": []
+    },
+    {
+      "index": "ranger-spellcasting_wis",
+      "name": "Spellcasting",
+      "class": "ranger",
+      "level": 2,
+      "feature_type": "action",
+      "desc": "You can cast ranger spells using WIS as your spellcasting ability.",
+      "tags": [
+        "spellcasting"
+      ],
+      "effects": []
+    },
+    {
+      "index": "primeval_awareness",
+      "name": "Primeval Awareness",
+      "class": "ranger",
+      "level": 3,
+      "feature_type": "action",
+      "desc": "Expend one spell slot to focus your awareness for 1 minute per slot level. You sense whether any of your favored enemies are present within 1 mile (or 6 miles in your favored terrain).",
+      "tags": [
+        "primeval_awareness",
+        "spellcasting"
+      ],
+      "effects": []
+    },
+    {
+      "index": "ranger_archetype",
+      "name": "Ranger Archetype",
+      "class": "ranger",
+      "level": 3,
+      "feature_type": "passive",
+      "desc": "Choose an archetype that you strive to emulate. Your choice grants you features at 3rd level and again at 7th and 11th levels.",
+      "tags": [
+        "subclass_choice",
+        "subclass_feature"
+      ],
+      "effects": []
+    },
+    {
+      "index": "favored_enemy_upgrade",
+      "name": "Favored Enemy & Natural Explorer (upgrade)",
+      "class": "ranger",
+      "level": 6,
+      "feature_type": "passive",
+      "desc": "You gain one additional favored enemy type and one additional favored terrain.",
+      "tags": [
+        "favored_enemy",
+        "natural_explorer",
+        "favored_enemy_upgrade"
+      ],
+      "effects": []
+    },
+    {
+      "index": "ranger_archetype_feature",
+      "name": "Ranger Archetype Feature",
+      "class": "ranger",
+      "level": 7,
+      "feature_type": "passive",
+      "desc": "You gain a feature from your chosen Ranger Archetype subclass.",
+      "tags": [
+        "subclass_feature"
+      ],
+      "effects": []
+    },
+    {
+      "index": "lands_stride",
+      "name": "Land's Stride",
+      "class": "ranger",
+      "level": 8,
+      "feature_type": "passive",
+      "desc": "Moving through nonmagical difficult terrain costs no extra movement. You can pass through nonmagical plants without being slowed or taking damage from thorns. You also have advantage on saving throws against plants that are magically created.",
+      "tags": [
+        "lands_stride",
+        "movement",
+        "exploration"
+      ],
+      "effects": []
+    },
+    {
+      "index": "hide_in_plain_sight",
+      "name": "Hide in Plain Sight",
+      "class": "ranger",
+      "level": 10,
+      "feature_type": "action",
+      "desc": "Spend 1 minute creating camouflage for yourself. You must have access to mud, dirt, plants, soot, or other naturally occurring materials. When you are camouflaged and remain motionless, you gain a +10 bonus to Stealth checks.",
+      "tags": [
+        "hide_in_plain_sight",
+        "skill",
+        "stealth"
+      ],
+      "effects": []
+    },
+    {
+      "index": "vanish",
+      "name": "Vanish",
+      "class": "ranger",
+      "level": 14,
+      "feature_type": "bonus_action",
+      "desc": "You can use the Hide action as a bonus action on your turn. Also, you can't be tracked by nonmagical means, unless you choose to leave a trail.",
+      "tags": [
+        "vanish",
+        "stealth",
+        "combat"
+      ],
+      "effects": []
+    },
+    {
+      "index": "feral_senses",
+      "name": "Feral Senses",
+      "class": "ranger",
+      "level": 18,
+      "feature_type": "passive",
+      "desc": "You gain preternatural senses. When attacking a creature you can't see, you don't have disadvantage if you know where it is. You are also aware of invisible creatures within 30 ft.",
+      "tags": [
+        "feral_senses",
+        "combat",
+        "defensive"
+      ],
+      "effects": []
+    },
+    {
+      "index": "foe_slayer",
+      "name": "Foe Slayer",
+      "class": "ranger",
+      "level": 20,
+      "feature_type": "passive",
+      "desc": "Once per turn when you attack one of your favored enemies, you can add your WIS modifier to the attack roll or the damage roll.",
+      "tags": [
+        "foe_slayer",
+        "favored_enemy",
+        "damage_bonus",
+        "combat"
+      ],
+      "effects": []
+    },
+    {
+      "index": "rogue-expertise",
+      "name": "Expertise",
+      "class": "rogue",
+      "level": 1,
+      "feature_type": "passive",
+      "desc": "Choose two of your skill proficiencies or one skill proficiency and your thieves' tools proficiency. Your proficiency bonus is doubled for those choices.",
+      "tags": [
+        "expertise",
+        "skill"
+      ],
+      "effects": []
+    },
+    {
+      "index": "sneak_attack_1d6",
+      "name": "Sneak Attack (1d6)",
+      "class": "rogue",
+      "level": 1,
+      "feature_type": "passive",
+      "desc": "Once per turn, deal an extra 1d6 damage to one creature you hit with an attack if you have advantage on the attack roll, or if a friendly creature is adjacent to the target and not incapacitated.",
+      "tags": [
+        "sneak_attack",
+        "damage_bonus",
+        "combat"
+      ],
+      "effects": []
+    },
+    {
+      "index": "thieves_cant",
+      "name": "Thieves' Cant",
+      "class": "rogue",
+      "level": 1,
+      "feature_type": "passive",
+      "desc": "You have learned thieves' cant, a secret mix of dialect, jargon, and code that allows you to hide messages in conversation.",
+      "tags": [
+        "thieves_cant",
+        "language"
+      ],
+      "effects": []
+    },
+    {
+      "index": "cunning_action",
+      "name": "Cunning Action",
+      "class": "rogue",
+      "level": 2,
+      "feature_type": "bonus_action",
+      "desc": "Your quick thinking and agility allow you to move and act quickly. You can take a bonus action on each of your turns to take the Dash, Disengage, or Hide action.",
+      "tags": [
+        "cunning_action",
+        "combat",
+        "stealth"
+      ],
+      "effects": []
+    },
+    {
+      "index": "roguish_archetype",
+      "name": "Roguish Archetype",
+      "class": "rogue",
+      "level": 3,
+      "feature_type": "passive",
+      "desc": "You choose an archetype that you emulate. Your choice grants you features at 3rd level and again at 9th, 13th, and 17th levels.",
+      "tags": [
+        "subclass_choice",
+        "subclass_feature"
+      ],
+      "effects": []
+    },
+    {
+      "index": "sneak_attack_2d6",
+      "name": "Sneak Attack (2d6)",
+      "class": "rogue",
+      "level": 3,
+      "feature_type": "passive",
+      "desc": "Your Sneak Attack damage increases to 2d6.",
+      "tags": [
+        "sneak_attack",
+        "sneak_attack_upgrade",
+        "damage_bonus",
+        "combat"
+      ],
+      "effects": []
+    },
+    {
+      "index": "uncanny_dodge",
+      "name": "Uncanny Dodge",
+      "class": "rogue",
+      "level": 5,
+      "feature_type": "reaction",
+      "desc": "When an attacker that you can see hits you with an attack, use your reaction to halve the attack's damage against you.",
+      "tags": [
+        "uncanny_dodge",
+        "defensive",
+        "reaction"
+      ],
+      "effects": []
+    },
+    {
+      "index": "sneak_attack_3d6",
+      "name": "Sneak Attack (3d6)",
+      "class": "rogue",
+      "level": 5,
+      "feature_type": "passive",
+      "desc": "Your Sneak Attack damage increases to 3d6.",
+      "tags": [
+        "sneak_attack",
+        "sneak_attack_upgrade",
+        "damage_bonus",
+        "combat"
+      ],
+      "effects": []
+    },
+    {
+      "index": "rogue-expertise_upgrade",
+      "name": "Expertise (2 more)",
+      "class": "rogue",
+      "level": 6,
+      "feature_type": "passive",
+      "desc": "Choose two more skill proficiencies to gain Expertise in.",
+      "tags": [
+        "expertise",
+        "expertise_upgrade",
+        "skill"
+      ],
+      "effects": []
+    },
+    {
+      "index": "rogue-evasion",
+      "name": "Evasion",
+      "class": "rogue",
+      "level": 7,
+      "feature_type": "passive",
+      "desc": "When subjected to an effect that allows a DEX saving throw for half damage, you take no damage on a success and only half damage on a failure.",
+      "tags": [
+        "evasion",
+        "defensive"
+      ],
+      "effects": []
+    },
+    {
+      "index": "sneak_attack_4d6",
+      "name": "Sneak Attack (4d6)",
+      "class": "rogue",
+      "level": 7,
+      "feature_type": "passive",
+      "desc": "Your Sneak Attack damage increases to 4d6.",
+      "tags": [
+        "sneak_attack",
+        "sneak_attack_upgrade",
+        "damage_bonus",
+        "combat"
+      ],
+      "effects": []
+    },
+    {
+      "index": "roguish_archetype_feature",
+      "name": "Roguish Archetype Feature",
+      "class": "rogue",
+      "level": 9,
+      "feature_type": "passive",
+      "desc": "You gain a feature from your chosen Roguish Archetype subclass.",
+      "tags": [
+        "subclass_feature"
+      ],
+      "effects": []
+    },
+    {
+      "index": "sneak_attack_5d6",
+      "name": "Sneak Attack (5d6)",
+      "class": "rogue",
+      "level": 9,
+      "feature_type": "passive",
+      "desc": "Your Sneak Attack damage increases to 5d6.",
+      "tags": [
+        "sneak_attack",
+        "sneak_attack_upgrade",
+        "damage_bonus",
+        "combat"
+      ],
+      "effects": []
+    },
+    {
+      "index": "reliable_talent",
+      "name": "Reliable Talent",
+      "class": "rogue",
+      "level": 11,
+      "feature_type": "passive",
+      "desc": "Whenever you make an ability check that lets you add your proficiency bonus, you can treat a d20 roll of 9 or lower as a 10.",
+      "tags": [
+        "reliable_talent",
+        "skill"
+      ],
+      "effects": []
+    },
+    {
+      "index": "sneak_attack_6d6",
+      "name": "Sneak Attack (6d6)",
+      "class": "rogue",
+      "level": 11,
+      "feature_type": "passive",
+      "desc": "Your Sneak Attack damage increases to 6d6.",
+      "tags": [
+        "sneak_attack",
+        "sneak_attack_upgrade",
+        "damage_bonus",
+        "combat"
+      ],
+      "effects": []
+    },
+    {
+      "index": "sneak_attack_7d6",
+      "name": "Sneak Attack (7d6)",
+      "class": "rogue",
+      "level": 13,
+      "feature_type": "passive",
+      "desc": "Your Sneak Attack damage increases to 7d6.",
+      "tags": [
+        "sneak_attack",
+        "sneak_attack_upgrade",
+        "damage_bonus",
+        "combat"
+      ],
+      "effects": []
+    },
+    {
+      "index": "blindsense",
+      "name": "Blindsense",
+      "class": "rogue",
+      "level": 14,
+      "feature_type": "passive",
+      "desc": "If you are able to hear, you are aware of the location of any hidden or invisible creature within 10 feet of you.",
+      "tags": [
+        "blindsense",
+        "defensive",
+        "combat"
+      ],
+      "effects": []
+    },
+    {
+      "index": "slippery_mind",
+      "name": "Slippery Mind",
+      "class": "rogue",
+      "level": 15,
+      "feature_type": "passive",
+      "desc": "You have acquired greater mental strength. You gain proficiency in WIS saving throws.",
+      "tags": [
+        "slippery_mind",
+        "defensive"
+      ],
+      "effects": []
+    },
+    {
+      "index": "sneak_attack_8d6",
+      "name": "Sneak Attack (8d6)",
+      "class": "rogue",
+      "level": 15,
+      "feature_type": "passive",
+      "desc": "Your Sneak Attack damage increases to 8d6.",
+      "tags": [
+        "sneak_attack",
+        "sneak_attack_upgrade",
+        "damage_bonus",
+        "combat"
+      ],
+      "effects": []
+    },
+    {
+      "index": "sneak_attack_9d6",
+      "name": "Sneak Attack (9d6)",
+      "class": "rogue",
+      "level": 17,
+      "feature_type": "passive",
+      "desc": "Your Sneak Attack damage increases to 9d6.",
+      "tags": [
+        "sneak_attack",
+        "sneak_attack_upgrade",
+        "damage_bonus",
+        "combat"
+      ],
+      "effects": []
+    },
+    {
+      "index": "elusive",
+      "name": "Elusive",
+      "class": "rogue",
+      "level": 18,
+      "feature_type": "passive",
+      "desc": "You are so evasive that attackers rarely gain the upper hand against you. No attack roll has advantage against you while you aren't incapacitated.",
+      "tags": [
+        "elusive",
+        "defensive"
+      ],
+      "effects": []
+    },
+    {
+      "index": "sneak_attack_10d6",
+      "name": "Sneak Attack (10d6)",
+      "class": "rogue",
+      "level": 19,
+      "feature_type": "passive",
+      "desc": "Your Sneak Attack damage increases to 10d6.",
+      "tags": [
+        "sneak_attack",
+        "sneak_attack_upgrade",
+        "damage_bonus",
+        "combat"
+      ],
+      "effects": []
+    },
+    {
+      "index": "stroke_of_luck",
+      "name": "Stroke of Luck",
+      "class": "rogue",
+      "level": 20,
+      "feature_type": "passive",
+      "desc": "You have an uncanny knack for succeeding when you need to. If your attack misses a target within range, you can turn the miss into a hit. Alternatively, if you fail an ability check, you can treat the d20 roll as a 20. Once you use this feature, you can't use it again until you finish a short or long rest.",
+      "tags": [
+        "stroke_of_luck",
+        "resource",
+        "combat"
+      ],
+      "effects": []
+    },
+    {
+      "index": "sorcerer-spellcasting_cha",
+      "name": "Spellcasting",
+      "class": "sorcerer",
+      "level": 1,
+      "feature_type": "action",
+      "desc": "You can cast sorcerer spells using CHA as your spellcasting ability.",
+      "tags": [
+        "spellcasting"
+      ],
+      "effects": []
+    },
+    {
+      "index": "sorcerous_origin",
+      "name": "Sorcerous Origin",
+      "class": "sorcerer",
+      "level": 1,
+      "feature_type": "passive",
+      "desc": "Choose a sorcerous origin, which describes the source of your innate magical power. Your choice grants you features at 1st level and again at 6th, 14th, and 18th levels.",
+      "tags": [
+        "subclass_choice",
+        "subclass_feature"
+      ],
+      "effects": []
+    },
+    {
+      "index": "font_of_magic",
+      "name": "Font of Magic",
+      "class": "sorcerer",
+      "level": 2,
+      "feature_type": "passive",
+      "desc": "You tap into a deep wellspring of magic within yourself. You have sorcery points equal to your sorcerer level.",
+      "tags": [
+        "font_of_magic",
+        "resource"
+      ],
+      "effects": []
+    },
+    {
+      "index": "flexible_casting",
+      "name": "Flexible Casting",
+      "class": "sorcerer",
+      "level": 2,
+      "feature_type": "action",
+      "desc": "You can use your sorcery points to gain additional spell slots, or sacrifice spell slots to gain additional sorcery points. Creating spell slots costs 2–7 sorcery points depending on level. Converting a slot to sorcery points gives points equal to slot level.",
+      "tags": [
+        "flexible_casting",
+        "spellcasting",
+        "resource"
+      ],
+      "effects": []
+    },
+    {
+      "index": "metamagic",
+      "name": "Metamagic (2 options)",
+      "class": "sorcerer",
+      "level": 3,
+      "feature_type": "passive",
+      "desc": "You gain the ability to twist your spells. Choose 2 Metamagic options: Careful Spell, Distant Spell, Empowered Spell, Extended Spell, Heightened Spell, Quickened Spell, Subtle Spell, or Twinned Spell.",
+      "tags": [
+        "metamagic",
+        "spellcasting"
+      ],
+      "effects": []
+    },
+    {
+      "index": "sorcerous_origin_feature",
+      "name": "Sorcerous Origin Feature",
+      "class": "sorcerer",
+      "level": 6,
+      "feature_type": "passive",
+      "desc": "You gain a feature from your chosen Sorcerous Origin subclass.",
+      "tags": [
+        "subclass_feature"
+      ],
+      "effects": []
+    },
+    {
+      "index": "metamagic_3",
+      "name": "Metamagic (3 options)",
+      "class": "sorcerer",
+      "level": 10,
+      "feature_type": "passive",
+      "desc": "You learn one additional Metamagic option.",
+      "tags": [
+        "metamagic",
+        "metamagic_upgrade",
+        "spellcasting"
+      ],
+      "effects": []
+    },
+    {
+      "index": "metamagic_4",
+      "name": "Metamagic (4 options)",
+      "class": "sorcerer",
+      "level": 17,
+      "feature_type": "passive",
+      "desc": "You learn one additional Metamagic option.",
+      "tags": [
+        "metamagic",
+        "metamagic_upgrade",
+        "spellcasting"
+      ],
+      "effects": []
+    },
+    {
+      "index": "sorcerous_restoration",
+      "name": "Sorcerous Restoration",
+      "class": "sorcerer",
+      "level": 20,
+      "feature_type": "passive",
+      "desc": "You regain 4 expended sorcery points whenever you finish a short rest.",
+      "tags": [
+        "font_of_magic",
+        "resource"
+      ],
+      "effects": []
+    },
+    {
+      "index": "otherworldly_patron",
+      "name": "Otherworldly Patron",
+      "class": "warlock",
+      "level": 1,
+      "feature_type": "passive",
+      "desc": "You have struck a bargain with an otherworldly being of your choice. Your choice grants you features at 1st level and again at 6th, 10th, and 14th levels.",
+      "tags": [
+        "subclass_choice",
+        "subclass_feature"
+      ],
+      "effects": []
+    },
+    {
+      "index": "pact_magic",
+      "name": "Pact Magic",
+      "class": "warlock",
+      "level": 1,
+      "feature_type": "action",
+      "desc": "You cast spells using CHA. Unlike other casters, your spell slots are all the same level and fully restore on a short or long rest.",
+      "tags": [
+        "pact_magic",
+        "spellcasting",
+        "resource"
+      ],
+      "effects": []
+    },
+    {
+      "index": "eldritch_invocations_2",
+      "name": "Eldritch Invocations (2)",
+      "class": "warlock",
+      "level": 2,
+      "feature_type": "passive",
+      "desc": "In your study of occult lore, you have unearthed eldritch invocations, fragments of forbidden knowledge that imbue you with an abiding magical ability. Choose 2 invocations from the list.",
+      "tags": [
+        "eldritch_invocations"
+      ],
+      "effects": []
+    },
+    {
+      "index": "pact_boon",
+      "name": "Pact Boon",
+      "class": "warlock",
+      "level": 3,
+      "feature_type": "passive",
+      "desc": "Your otherworldly patron bestows a gift upon you for your loyal service. Choose one: Pact of the Chain (familiar), Pact of the Blade (conjure pact weapon), or Pact of the Tome (Book of Shadows with cantrips).",
+      "tags": [
+        "pact_boon"
+      ],
+      "effects": []
+    },
+    {
+      "index": "eldritch_invocations_3",
+      "name": "Eldritch Invocations (3 total)",
+      "class": "warlock",
+      "level": 5,
+      "feature_type": "passive",
+      "desc": "You learn one additional eldritch invocation.",
+      "tags": [
+        "eldritch_invocations",
+        "eldritch_invocations_upgrade"
+      ],
+      "effects": []
+    },
+    {
+      "index": "patron_feature",
+      "name": "Otherworldly Patron Feature",
+      "class": "warlock",
+      "level": 6,
+      "feature_type": "passive",
+      "desc": "You gain a feature from your chosen Otherworldly Patron subclass.",
+      "tags": [
+        "subclass_feature"
+      ],
+      "effects": []
+    },
+    {
+      "index": "eldritch_invocations_4",
+      "name": "Eldritch Invocations (4 total)",
+      "class": "warlock",
+      "level": 7,
+      "feature_type": "passive",
+      "desc": "You learn one additional eldritch invocation.",
+      "tags": [
+        "eldritch_invocations",
+        "eldritch_invocations_upgrade"
+      ],
+      "effects": []
+    },
+    {
+      "index": "eldritch_invocations_5",
+      "name": "Eldritch Invocations (5 total)",
+      "class": "warlock",
+      "level": 9,
+      "feature_type": "passive",
+      "desc": "You learn one additional eldritch invocation.",
+      "tags": [
+        "eldritch_invocations",
+        "eldritch_invocations_upgrade"
+      ],
+      "effects": []
+    },
+    {
+      "index": "mystic_arcanum_6",
+      "name": "Mystic Arcanum (6th level)",
+      "class": "warlock",
+      "level": 11,
+      "feature_type": "action",
+      "desc": "Your patron bestows a magical secret. Choose one 6th-level spell as your arcanum. You can cast it once without a spell slot. Regained on a long rest.",
+      "tags": [
+        "mystic_arcanum",
+        "spellcasting",
+        "resource"
+      ],
+      "effects": []
+    },
+    {
+      "index": "eldritch_invocations_6",
+      "name": "Eldritch Invocations (6 total)",
+      "class": "warlock",
+      "level": 12,
+      "feature_type": "passive",
+      "desc": "You learn one additional eldritch invocation.",
+      "tags": [
+        "eldritch_invocations",
+        "eldritch_invocations_upgrade"
+      ],
+      "effects": []
+    },
+    {
+      "index": "mystic_arcanum_7",
+      "name": "Mystic Arcanum (7th level)",
+      "class": "warlock",
+      "level": 13,
+      "feature_type": "passive",
+      "desc": "Choose one 7th-level spell as an additional arcanum. Cast once per long rest without a slot.",
+      "tags": [
+        "mystic_arcanum",
+        "mystic_arcanum_upgrade",
+        "spellcasting",
+        "resource"
+      ],
+      "effects": []
+    },
+    {
+      "index": "mystic_arcanum_8",
+      "name": "Mystic Arcanum (8th level)",
+      "class": "warlock",
+      "level": 15,
+      "feature_type": "passive",
+      "desc": "Choose one 8th-level spell as an additional arcanum. Cast once per long rest without a slot.",
+      "tags": [
+        "mystic_arcanum",
+        "mystic_arcanum_upgrade",
+        "spellcasting",
+        "resource"
+      ],
+      "effects": []
+    },
+    {
+      "index": "eldritch_invocations_7",
+      "name": "Eldritch Invocations (7 total)",
+      "class": "warlock",
+      "level": 15,
+      "feature_type": "passive",
+      "desc": "You learn one additional eldritch invocation.",
+      "tags": [
+        "eldritch_invocations",
+        "eldritch_invocations_upgrade"
+      ],
+      "effects": []
+    },
+    {
+      "index": "mystic_arcanum_9",
+      "name": "Mystic Arcanum (9th level)",
+      "class": "warlock",
+      "level": 17,
+      "feature_type": "passive",
+      "desc": "Choose one 9th-level spell as an additional arcanum. Cast once per long rest without a slot.",
+      "tags": [
+        "mystic_arcanum",
+        "mystic_arcanum_upgrade",
+        "spellcasting",
+        "resource"
+      ],
+      "effects": []
+    },
+    {
+      "index": "eldritch_invocations_8",
+      "name": "Eldritch Invocations (8 total)",
+      "class": "warlock",
+      "level": 18,
+      "feature_type": "passive",
+      "desc": "You learn one additional eldritch invocation.",
+      "tags": [
+        "eldritch_invocations",
+        "eldritch_invocations_upgrade"
+      ],
+      "effects": []
+    },
+    {
+      "index": "eldritch_master",
+      "name": "Eldritch Master",
+      "class": "warlock",
+      "level": 20,
+      "feature_type": "action",
+      "desc": "You can spend 1 minute entreating your patron for aid to regain all your expended spell slots. Once you use this feature, you must finish a long rest before you can use it again.",
+      "tags": [
+        "eldritch_master",
+        "pact_magic",
+        "resource"
+      ],
+      "effects": []
+    },
+    {
+      "index": "spellcasting_int",
+      "name": "Spellcasting",
+      "class": "wizard",
+      "level": 1,
+      "feature_type": "action",
+      "desc": "You cast wizard spells using INT as your spellcasting ability. You have a spellbook containing 6 spells. You prepare a number equal to INT modifier + wizard level. You can copy spells found into your spellbook.",
+      "tags": [
+        "spellcasting",
+        "spellbook"
+      ],
+      "effects": []
+    },
+    {
+      "index": "arcane_recovery",
+      "name": "Arcane Recovery",
+      "class": "wizard",
+      "level": 1,
+      "feature_type": "passive",
+      "desc": "Once per day during a short rest, you can recover expended spell slots with a combined level equal to half your wizard level (rounded up, max 5th level).",
+      "tags": [
+        "arcane_recovery",
+        "resource",
+        "spellcasting"
+      ],
+      "effects": []
+    },
+    {
+      "index": "arcane_tradition",
+      "name": "Arcane Tradition",
+      "class": "wizard",
+      "level": 2,
+      "feature_type": "passive",
+      "desc": "You choose an arcane tradition, shaping your practice of magic. Your choice grants you features at 2nd level and again at 6th, 10th, and 14th levels.",
+      "tags": [
+        "subclass_choice",
+        "subclass_feature"
+      ],
+      "effects": []
+    },
+    {
+      "index": "arcane_tradition_feature",
+      "name": "Arcane Tradition Feature",
+      "class": "wizard",
+      "level": 6,
+      "feature_type": "passive",
+      "desc": "You gain a feature from your chosen Arcane Tradition subclass.",
+      "tags": [
+        "subclass_feature"
+      ],
+      "effects": []
+    },
+    {
+      "index": "spell_mastery",
+      "name": "Spell Mastery",
+      "class": "wizard",
+      "level": 18,
+      "feature_type": "passive",
+      "desc": "Choose one 1st-level and one 2nd-level spell in your spellbook. You can cast those spells at their lowest level without expending spell slots. Changing these spells requires 8 hours of study.",
+      "tags": [
+        "spell_mastery",
+        "spellcasting",
+        "resource"
+      ],
+      "effects": []
+    },
+    {
+      "index": "signature_spells",
+      "name": "Signature Spells",
+      "class": "wizard",
+      "level": 20,
+      "feature_type": "passive",
+      "desc": "Choose two 3rd-level spells in your spellbook as your signature spells. They are always prepared and don't count against your prepared spells. You can cast each once per short rest without a spell slot.",
+      "tags": [
+        "signature_spells",
+        "spellcasting",
+        "resource"
+      ],
+      "effects": []
+    }
+  ]
+}

@@ -20,7 +20,7 @@ from src.client.gui import assets
 from src.shared.services.level_up_service import LevelUpService
 from src.shared.services.class_service import ClassService
 from src.shared.services.feat_service import FeatService
-from src.shared.services.srd_constants import SRDConstants
+from src.shared.domain.srd_constants import SRDConstants
 
 def _section(text: str) -> QLabel:
     lbl = QLabel(text)

@@ -32,7 +32,7 @@ from src.shared.services.race_service import RaceService
 from src.shared.services.background_service import BackgroundService
 from src.shared.services.class_service import ClassService
 from src.shared.services.spell_service import SpellService
-from src.shared.services.srd_constants import SRDConstants
+from src.shared.domain.srd_constants import SRDConstants
 from src.shared import set_edition
 
 

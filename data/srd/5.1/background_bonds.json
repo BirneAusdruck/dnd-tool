@@ -1,0 +1,95 @@
+{
+  "background_bonds": [
+    {
+      "index": "acolyte",
+      "desc": [
+        "I would die to recover an ancient relic of my faith.",
+        "I owe my life to the priest who took me in."
+      ]
+    },
+    {
+      "index": "charlatan",
+      "desc": [
+        "I fleeced the wrong person and must work to avoid their investigators.",
+        "I owe everything to my mentor—a horrible person who taught me to survive."
+      ]
+    },
+    {
+      "index": "criminal",
+      "desc": [
+        "I'm trying to pay off an old debt I owe to a generous benefactor.",
+        "My ill-gotten gains go to support my family."
+      ]
+    },
+    {
+      "index": "entertainer",
+      "desc": [
+        "My instrument is my most treasured possession.",
+        "Someone stole my precious instrument, and someday I'll get it back."
+      ]
+    },
+    {
+      "index": "folk-hero",
+      "desc": [
+        "I have a family, but I have no idea where they are.",
+        "I protect those who cannot protect themselves."
+      ]
+    },
+    {
+      "index": "guild-artisan",
+      "desc": [
+        "The workshop where I learned my trade is the most important place in the world.",
+        "I owe my guild a great debt for forging me into the person I am."
+      ]
+    },
+    {
+      "index": "hermit",
+      "desc": [
+        "I entered seclusion to hide from the ones who might still be hunting me.",
+        "My isolation gave me great insight into a great evil that only I can destroy."
+      ]
+    },
+    {
+      "index": "noble",
+      "desc": [
+        "I will face any challenge to win the approval of my family.",
+        "My loyalty to my sovereign is unwavering."
+      ]
+    },
+    {
+      "index": "outlander",
+      "desc": [
+        "My family, clan, or tribe is the most important thing in my life.",
+        "An injury to the unspoiled wilderness is an injury to me."
+      ]
+    },
+    {
+      "index": "sage",
+      "desc": [
+        "I have an ancient text that holds terrible secrets that must not fall into the wrong hands.",
+        "My life's work is a series of tomes related to a specific field."
+      ]
+    },
+    {
+      "index": "sailor",
+      "desc": [
+        "I'm loyal to my captain first, everything else second.",
+        "I'll always remember my first ship."
+      ]
+    },
+    {
+      "index": "soldier",
+      "desc": [
+        "I would still lay down my life for the people I served with.",
+        "Someone saved my life on the battlefield. To this day, I owe that person."
+      ]
+    },
+    {
+      "index": "urchin",
+      "desc": [
+        "My town or city is my home, and I'll fight to defend it.",
+        "I sponsor an orphanage to keep others from enduring what I did."
+      ]
+    }
+  ]
+}

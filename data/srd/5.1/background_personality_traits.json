@@ -1,0 +1,95 @@
+{
+  "background_personality_traits": [
+    {
+      "index": "acolyte",
+      "desc": [
+        "I idolize a particular hero of my faith.",
+        "I can find common ground between the fiercest enemies."
+      ]
+    },
+    {
+      "index": "charlatan",
+      "desc": [
+        "I fall in and out of love easily.",
+        "I have a joke for every occasion."
+      ]
+    },
+    {
+      "index": "criminal",
+      "desc": [
+        "I always have a plan for what to do when things go wrong.",
+        "I am always calm, no matter what the situation."
+      ]
+    },
+    {
+      "index": "entertainer",
+      "desc": [
+        "I know a story relevant to almost every situation.",
+        "I love a good insult, even one directed at me."
+      ]
+    },
+    {
+      "index": "folk-hero",
+      "desc": [
+        "I judge people by their actions, not their words.",
+        "If someone is in trouble, I'm always ready to lend help."
+      ]
+    },
+    {
+      "index": "guild-artisan",
+      "desc": [
+        "I believe that anything worth doing is worth doing right.",
+        "I'm rude to people who lack my commitment to hard work."
+      ]
+    },
+    {
+      "index": "hermit",
+      "desc": [
+        "I've been isolated for so long that I rarely speak, preferring gestures.",
+        "I am utterly serene, even in the face of disaster."
+      ]
+    },
+    {
+      "index": "noble",
+      "desc": [
+        "My eloquent flattery makes everyone I talk to feel like the most wonderful person in the world.",
+        "I take great pains to look my best and follow the latest fashions."
+      ]
+    },
+    {
+      "index": "outlander",
+      "desc": [
+        "I'm driven by a wanderlust that led me away from home.",
+        "I watch over my friends as if they were a litter of newborn pups."
+      ]
+    },
+    {
+      "index": "sage",
+      "desc": [
+        "I use polysyllabic words to convey intelligence.",
+        "I've read every book in the world's greatest libraries."
+      ]
+    },
+    {
+      "index": "sailor",
+      "desc": [
+        "My friends know they can rely on me, no matter what.",
+        "I work hard so that I can play hard when the work is done."
+      ]
+    },
+    {
+      "index": "soldier",
+      "desc": [
+        "I'm always polite and respectful.",
+        "I'm haunted by memories of war. I fight these doubts with humor."
+      ]
+    },
+    {
+      "index": "urchin",
+      "desc": [
+        "I hide scraps of food and trinkets away in my pockets.",
+        "I ask a lot of questions."
+      ]
+    }
+  ]
+}

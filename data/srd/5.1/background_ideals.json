@@ -1,0 +1,95 @@
+{
+  "background_ideals": [
+    {
+      "index": "acolyte",
+      "desc": [
+        "Tradition. The ancient traditions must be preserved.",
+        "Charity. I always help those in need."
+      ]
+    },
+    {
+      "index": "charlatan",
+      "desc": [
+        "Independence. I am a free spirit—no one tells me what to do.",
+        "Fairness. I never target people who can't afford to lose a few coins."
+      ]
+    },
+    {
+      "index": "criminal",
+      "desc": [
+        "Freedom. Chains are meant to be broken.",
+        "Honor. I don't steal from others in the trade."
+      ]
+    },
+    {
+      "index": "entertainer",
+      "desc": [
+        "Beauty. When I perform, I make the world better than it was.",
+        "Creativity. The world is in need of new ideas and bold action."
+      ]
+    },
+    {
+      "index": "folk-hero",
+      "desc": [
+        "Respect. People deserve to be treated with dignity.",
+        "Sincerity. There's no good in pretending to be something I'm not."
+      ]
+    },
+    {
+      "index": "guild-artisan",
+      "desc": [
+        "Community. It's the duty of all to strengthen our community.",
+        "Aspiration. I work hard to be the best there is at my craft."
+      ]
+    },
+    {
+      "index": "hermit",
+      "desc": [
+        "Greater Good. My gifts are meant to be shared.",
+        "Logic. Emotions must not cloud logical thinking."
+      ]
+    },
+    {
+      "index": "noble",
+      "desc": [
+        "Responsibility. It is my duty to respect the authority of those above me.",
+        "Power. If I can attain more power, no one will tell me what to do."
+      ]
+    },
+    {
+      "index": "outlander",
+      "desc": [
+        "Change. Life is like the seasons; always changing.",
+        "Glory. I must earn glory in battle, for myself and my clan."
+      ]
+    },
+    {
+      "index": "sage",
+      "desc": [
+        "Knowledge. The path to power is through knowledge.",
+        "Logic. Emotions must not cloud logical thinking."
+      ]
+    },
+    {
+      "index": "sailor",
+      "desc": [
+        "Respect. The thing that keeps a ship together is mutual respect.",
+        "Freedom. The sea is freedom—no law, no king."
+      ]
+    },
+    {
+      "index": "soldier",
+      "desc": [
+        "Greater Good. Our lot is to lay down our lives in defense of others.",
+        "Responsibility. I do what I must and face the consequences."
+      ]
+    },
+    {
+      "index": "urchin",
+      "desc": [
+        "Respect. All people deserve to be treated with dignity.",
+        "Community. We have to take care of each other."
+      ]
+    }
+  ]
+}
