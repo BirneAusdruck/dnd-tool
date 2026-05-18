@@ -7,10 +7,11 @@ from src.shared.domain.definitions.item_definition import (
     MagicProperty, WeaponDefinition,
 )
 from src.shared.domain.srd_constants import (
-    ArmorCategory, DamageType, DieType, EffectCondition, EffectType,
+    ArmorCategory, DamageType, DieType,
     EquipmentCategory, MagicItemCategory, MagicItemRarity,
     WeaponCategory, WeaponMastery, WeaponProperty,
 )
+from src.shared.factories.effect_factory import EffectFactory
 
 
 def _map_container(raw: dict | None) -> ItemContainer:
@@ -36,18 +37,7 @@ def _map_value(raw_value) -> FlatModifier | DiceValue | None:
 
 
 def _map_effects(raw_list: list[dict]) -> tuple[EffectDefinition, ...]:
-    return tuple(
-        EffectDefinition(
-            index=e.get("index", ""),
-            effect_type=EffectType(e["effect_type"]),
-            target=e["target"],
-            value=_map_value(e.get("value")),
-            condition=EffectCondition(e["condition"]) if e.get("condition") else None,
-            is_complex=e.get("is_complex", False),
-                    duration=e.get("duration"),
-        )
-        for e in raw_list
-    )
+    return tuple(EffectFactory.create(e) for e in raw_list)
 
 
 def _map_damage(raw: dict | None) -> Damage | None:

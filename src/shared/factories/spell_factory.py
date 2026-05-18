@@ -1,17 +1,13 @@
 from __future__ import annotations
 
-from src.shared.domain.definitions.dice_value import DiceValue, FlatModifier
 from src.shared.domain.definitions.effect_definition import EffectDefinition
 from src.shared.domain.definitions.spell_definition import (
     MaterialComponent,
     SpellComponents,
     SpellDefinition,
 )
-from src.shared.domain.srd_constants import (
-    EffectCondition,
-    EffectType,
-    SpellSchool,
-)
+from src.shared.domain.srd_constants import SpellSchool
+from src.shared.factories.effect_factory import EffectFactory
 
 
 def _map_material(raw: dict | None) -> MaterialComponent | None:
@@ -34,25 +30,8 @@ def _map_components(raw: dict) -> SpellComponents:
     )
 
 
-def _map_value(raw_value) -> FlatModifier | DiceValue | None:
-    if isinstance(raw_value, int):
-        return FlatModifier(value=raw_value)
-    return None
-
-
 def _map_effects(raw_list: list[dict]) -> tuple[EffectDefinition, ...]:
-    return tuple(
-        EffectDefinition(
-            index=e.get("index", ""),
-            effect_type=EffectType(e["effect_type"]),
-            target=e["target"],
-            value=_map_value(e.get("value")),
-            condition=EffectCondition(e["condition"]) if e.get("condition") else None,
-            is_complex=e.get("is_complex", False),
-            duration=e.get("duration"),
-        )
-        for e in raw_list
-    )
+    return tuple(EffectFactory.create(e) for e in raw_list)
 
 
 class SpellFactory:

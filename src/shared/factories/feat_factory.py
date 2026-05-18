@@ -1,6 +1,5 @@
 from __future__ import annotations
 
-from src.shared.domain.definitions.dice_value import DiceValue, FlatModifier
 from src.shared.domain.definitions.effect_definition import EffectDefinition
 from src.shared.domain.definitions.feat_definition import (
     AbilityScorePrerequisite,
@@ -12,19 +11,13 @@ from src.shared.domain.definitions.feat_definition import (
     SpellcastingPrerequisite,
 )
 from src.shared.domain.srd_constants import (
-    Ability, ArmorProficiency, EffectCondition, EffectType,
-    FeatTag, FeatType, WeaponCategory, WeaponProficiency,
+    Ability, ArmorProficiency, FeatTag, FeatType, WeaponCategory, WeaponProficiency,
 )
+from src.shared.factories.effect_factory import EffectFactory
 
 _ARMOR_PROF_VALUES = {p.value for p in ArmorProficiency}
 _WEAPON_CATEGORY_VALUES = {p.value for p in WeaponCategory}
 _WEAPON_PROF_VALUES = {p.value for p in WeaponProficiency}
-
-
-def _map_value(raw_value) -> FlatModifier | DiceValue | None:
-    if isinstance(raw_value, int):
-        return FlatModifier(value=raw_value)
-    return None
 
 
 def _map_prerequisite(raw: dict, mode: str) -> Prerequisite:
@@ -54,18 +47,7 @@ def _map_prerequisite(raw: dict, mode: str) -> Prerequisite:
 
 
 def _map_effects(raw_list: list[dict]) -> tuple[EffectDefinition, ...]:
-    return tuple(
-        EffectDefinition(
-            index=e.get("index", ""),
-            effect_type=EffectType(e["effect_type"]),
-            target=e["target"],
-            value=_map_value(e.get("value")),
-            condition=EffectCondition(e["condition"]) if e.get("condition") else None,
-            is_complex=e.get("is_complex", False),
-                    duration=e.get("duration"),
-        )
-        for e in raw_list
-    )
+    return tuple(EffectFactory.create(e) for e in raw_list)
 
 
 class FeatFactory:

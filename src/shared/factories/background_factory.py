@@ -3,32 +3,14 @@ from __future__ import annotations
 from src.shared.domain.definitions.background_definition import (
     AbilityBonus, BackgroundDefinition, BackgroundEquipmentSet, BackgroundFeature,
 )
-from src.shared.domain.definitions.dice_value import DiceValue, FlatModifier
 from src.shared.domain.definitions.effect_definition import EffectDefinition
 from src.shared.domain.definitions.item_definition import EquipmentEntry
-from src.shared.domain.srd_constants import EffectCondition, EffectType, Skill, ShortAbility
-
-
-def _map_value(raw_value) -> FlatModifier | DiceValue | None:
-    if isinstance(raw_value, int):
-        return FlatModifier(value=raw_value)
-    return None
+from src.shared.domain.srd_constants import Skill, ShortAbility
+from src.shared.factories.effect_factory import EffectFactory
 
 
 def _map_effects(raw_list: list[dict]) -> tuple[EffectDefinition, ...]:
-    return tuple(
-        EffectDefinition(
-            index=e.get("index", ""),
-            effect_type=EffectType(e["effect_type"]),
-            target=e["target"],
-            value=_map_value(e.get("value")),
-            condition=EffectCondition(e["condition"]) if e.get("condition") else None,
-            is_complex=e.get("is_complex", False),
-                    duration=e.get("duration"),
-        )
-        for e in raw_list
-        if isinstance(e, dict)
-    )
+    return tuple(EffectFactory.create(e) for e in raw_list if isinstance(e, dict))
 
 
 class BackgroundFactory:

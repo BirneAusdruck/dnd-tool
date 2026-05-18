@@ -515,7 +515,39 @@ class EffectType(str, Enum):
     STABILIZE          = "stabilize"
     RESTORE_HP         = "restore_hp"
     DAMAGE_ON_TRIGGER  = "damage_on_trigger"
-    SPECIAL            = "special"      # is_complex=True; dispatch via index
+    CONDITION_APPLY    = "condition_apply"
+    SPELL_EFFECT       = "spell_effect"
+    NARRATIVE_FEATURE  = "narrative_feature"
+    SPECIAL            = "special"      # dispatch via index; keine strukturierten Felder möglich
+
+class Condition(str, Enum):
+    BLINDED       = "blinded"
+    CHARMED       = "charmed"
+    DEAFENED      = "deafened"
+    EXHAUSTION    = "exhaustion"
+    FRIGHTENED    = "frightened"
+    GRAPPLED      = "grappled"
+    INCAPACITATED = "incapacitated"
+    INVISIBLE     = "invisible"
+    PARALYZED     = "paralyzed"
+    PETRIFIED     = "petrified"
+    POISONED      = "poisoned"
+    PRONE         = "prone"
+    RESTRAINED    = "restrained"
+    STUNNED       = "stunned"
+    SURPRISED     = "surprised"
+    UNCONSCIOUS   = "unconscious"
+
+class AoEType(str, Enum):
+    SPHERE   = "sphere"
+    CONE     = "cone"
+    LINE     = "line"
+    CYLINDER = "cylinder"
+    CUBE     = "cube"
+
+class SpellAttackType(str, Enum):
+    RANGED_SPELL = "ranged_spell"
+    MELEE_SPELL  = "melee_spell"
 
 class EffectCondition(str, Enum):
     WHILE_RAGING        = "while_raging"
@@ -589,6 +621,27 @@ class SpellSchool(str, Enum):
 class EnvironmentStat(str, Enum):
     LIGHT_RADIUS_BRIGHT = "light_radius_bright"
     LIGHT_RADIUS_DIM    = "light_radius_dim"
+
+class ChoiceType(str, Enum):
+    DAMAGE_TYPE  = "damage_type"
+    TOOL         = "tool"
+    WEAPON       = "weapon"
+    SKILL        = "skill"
+    LANGUAGE     = "language"
+    SPELL_CLASS  = "spell_class"
+
+class EffectSourceCategory(str, Enum):
+    CLASS_FEATURE = "class_feature"
+    FEAT          = "feat"
+    ITEM          = "item"
+    SPELL         = "spell"
+    BACKGROUND    = "background"
+
+class RefreshOn(str, Enum):
+    SHORT_REST = "short_rest"
+    LONG_REST  = "long_rest"
+    DAWN       = "dawn"
+    NEVER      = "never"
 
 # alias
 Stat: TypeAlias = Ability | HpStat | CombatStat | AbilityCheck | AbilitySavingThrow | Skill | ResourceStat

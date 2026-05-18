@@ -1,8 +1,8 @@
 from __future__ import annotations
 
 from src.shared.domain.definitions.effect_definition import EffectDefinition
+from src.shared.factories.effect_factory import EffectFactory
 from src.shared.repositories.srd_repository import SRDRepository, get_active_edition
-from src.shared.domain.srd_constants import EffectCondition, EffectType
 
 
 class EffectService:
@@ -20,13 +20,7 @@ class EffectService:
 
     @classmethod
     def _from_raw(cls, raw: dict) -> EffectDefinition:
-        return EffectDefinition(
-            index=raw["index"],
-            effect_type=EffectType(raw["effect_type"]),
-            target=raw["target"],
-            value=raw.get("value"),
-            condition=EffectCondition(raw["condition"]) if raw.get("condition") else None,
-        )
+        return EffectFactory.create(raw)
 
     @classmethod
     def _load_all(cls) -> None:

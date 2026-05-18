@@ -3,7 +3,22 @@ from .class_definition import (
     ClassDefinition, SpellcastingInfo, SkillChoices,
     SubclassGroup, SubclassEntry, ClassStartingEquipment,
 )
-from .effect_definition import EffectDefinition
+from .effect_definition import (
+    EffectDefinition,
+    StatEffect,
+    RollModifierEffect,
+    ResistanceEffect,
+    MovementEffect,
+    ResourceEffect,
+    LightEffect,
+    HealEffect,
+    DamageEffect,
+    ProficiencyEffect,
+    ConditionEffect,
+    SpellEffect,
+    NarrativeEffect,
+    ComplexEffect,
+)
 from .feature_definition import FeatureDefinition
 from .spell_definition import SpellDefinition
 from .feat_definition import FeatDefinition
@@ -23,6 +38,19 @@ __all__ = [
     "ClassStartingEquipment",
     "FeatureDefinition",
     "EffectDefinition",
+    "StatEffect",
+    "RollModifierEffect",
+    "ResistanceEffect",
+    "MovementEffect",
+    "ResourceEffect",
+    "LightEffect",
+    "HealEffect",
+    "DamageEffect",
+    "ProficiencyEffect",
+    "ConditionEffect",
+    "SpellEffect",
+    "NarrativeEffect",
+    "ComplexEffect",
     "SpellDefinition",
     "FeatDefinition",
     "ItemDefinition",

@@ -14,9 +14,10 @@ from src.shared.domain.definitions.feature_definition import FeatureDefinition
 from src.shared.domain.definitions.item_definition import EquipmentEntry
 from src.shared.domain.srd_constants import (
     Ability, AbilitySavingThrow, ArmorProficiency, DieType,
-    EffectCondition, EffectType, FeatureTag, FeatureType,
+    FeatureTag, FeatureType,
     Skill, SpellCastingType, WeaponCategory, WeaponProficiency,
 )
+from src.shared.factories.effect_factory import EffectFactory
 
 def _map_value(raw_value) -> FlatModifier | DiceValue | None:
     if isinstance(raw_value, int):
@@ -167,15 +168,7 @@ class ClassFactory:
             feature_type=FeatureType(raw.get("feature_type", "passive")),
             tags=tuple(FeatureTag(t) for t in raw.get("tags", [])),
             effects=tuple(
-                EffectDefinition(
-                    index=e.get("index", ""),
-                    effect_type=EffectType(e["effect_type"]),
-                    target=e["target"],
-                    value=_map_value(e.get("value")),
-                    condition=EffectCondition(e["condition"]) if e.get("condition") else None,
-                    is_complex=e.get("is_complex", False),
-                    duration=e.get("duration"),
-                )
+                EffectFactory.create(e)
                 for e in raw.get("effects", [])
                 if isinstance(e, dict)
             ),
